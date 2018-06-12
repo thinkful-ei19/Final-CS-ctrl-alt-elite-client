@@ -102,6 +102,10 @@
     }
 
     //functionality
+    &__checkbox:not(:checked) ~ &__nav {
+        visibility: hidden;
+    }
+
     &__checkbox:checked ~ &__background {
         transform: scale(80);
     }
