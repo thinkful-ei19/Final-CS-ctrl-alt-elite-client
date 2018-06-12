@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
@@ -7,11 +8,16 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import TimePicker from './TimePicker';
+import { addAppointment } from '../actions/appointment';
 
-export default class AptForm extends React.Component {
+class AptForm extends React.Component {
   state = {
     open: false,
   };
+
+  // componentDidMount() {
+
+  // }
 
   handleClickOpen = () => {
     this.setState({ open: true });
@@ -22,6 +28,7 @@ export default class AptForm extends React.Component {
   };
 
   render() {
+    console.log('APTFORM PROPS', this.props);
     return (
       <div>
         <Button onClick={this.handleClickOpen}>Add Appointment</Button>
@@ -64,7 +71,11 @@ export default class AptForm extends React.Component {
             <Button onClick={this.handleClose} color="primary">
               Cancel
             </Button>
-            <Button onClick={this.handleClose} color="primary">
+            <Button onClick={() => {
+              this.props.dispatch(addAppointment())
+              this.handleClose
+              }} 
+              color="primary">
               Add
             </Button>
           </DialogActions>
@@ -73,3 +84,7 @@ export default class AptForm extends React.Component {
     );
   }
 }
+
+
+
+export default connect()(AptForm);
