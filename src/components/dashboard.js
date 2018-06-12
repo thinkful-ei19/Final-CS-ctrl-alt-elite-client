@@ -2,6 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import Calendar from 'react-calendar';
 import Schedule from './schedule';
+import Navigation from './navigation';
+
 
 import requiresLogin from './requires-login';
 
@@ -20,6 +22,7 @@ export class Dashboard extends React.Component {
         //console.log(this.state);
         return (
             <div>
+                <Navigation/>
                 <Calendar
                     onChange={this.onChange}
                     value={this.state.date}
@@ -30,8 +33,8 @@ export class Dashboard extends React.Component {
     }
 }
 
-const mapStateToProps = state => (
-console.log('this is dashboard state', state)
-);
+// const mapStateToProps = state => (
+// console.log('this is dashboard state', state)
+// );
 
-export default requiresLogin()(connect(mapStateToProps)(Dashboard));
+export default requiresLogin()(connect()(Dashboard));
