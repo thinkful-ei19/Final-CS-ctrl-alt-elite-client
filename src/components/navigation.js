@@ -5,7 +5,7 @@ import {clearAuthToken} from '../local-storage';
 
 class Navigation extends React.Component {
     logOut() {
-        console.log('LOOK');
+        console.log('clearing authToken and logging out user');
         this.props.dispatch(clearAuth());
         clearAuthToken();
     }
@@ -24,7 +24,16 @@ class Navigation extends React.Component {
                 <ul className="navigation__list">
                     <li className="navigation__item"><a href="" className="navigation__link"><span>01</span>Home</a></li>
                     <li className="navigation__item"><a href="" className="navigation__link"><span>02</span>Clients</a></li>
-                    <li className="navigation__item"><a href="" className="navigation__link"><span>03</span>Logout</a></li>
+                    <li className="navigation__item">
+                        <a 
+                          href="" 
+                            onClick={(e) => {
+                            e.preventDefault();
+                            this.logOut();
+                            }}
+                          className="navigation__link"><span>03</span>Logout
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
