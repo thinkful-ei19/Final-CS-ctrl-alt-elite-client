@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import moment from 'moment';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
@@ -11,12 +12,23 @@ import TimePicker from './TimePicker';
 import { addAppointment } from '../actions/appointment';
 
 class AptForm extends React.Component {
-  state = {
-    open: false,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false,
+      name: '',
+      phone: '',
+      email: '',
+      date: '',
+      time: ''
+    };
+  }
+  
 
   // componentDidMount() {
-
+  //   const decodedToken = jwtDecode(this.props.authToken)
+  //   const username = decodedToken.sub
+  //   this.props.dispatch(getUserInfo(this.props.authToken, username));
   // }
 
   handleClickOpen = () => {
@@ -27,8 +39,35 @@ class AptForm extends React.Component {
     this.setState({ open: false });
   };
 
+  handleSubmitValue = (event) => {
+    if (event.target.id === 'name') {
+      this.setState({
+        name: event.target.value
+      });
+    }
+    if (event.target.id === 'phone') {
+      this.setState({
+        phone: event.target.value
+      });
+    }
+    if ( event.target.id === 'email') {
+      this.setState({
+        email: event.target.value
+      });
+    }
+    if ( event.target.id === 'date') {
+      this.setState({
+        date: event.target.value
+      });
+    }
+    if ( event.target.id === 'time') {
+      this.setState({
+        time: event.target.value
+      });
+    }
+  }
+
   render() {
-    console.log('APTFORM PROPS', this.props);
     return (
       <div>
         <Button onClick={this.handleClickOpen}>Add Appointment</Button>
@@ -36,6 +75,7 @@ class AptForm extends React.Component {
           open={this.state.open}
           onClose={this.handleClose}
           aria-labelledby="form-dialog-title"
+          onChange={(event) => this.handleSubmitValue(event)}
         >
           <DialogTitle id="form-dialog-title">Appointment Form</DialogTitle>
           <DialogContent>
@@ -60,11 +100,15 @@ class AptForm extends React.Component {
             <TextField
               autoFocus
               margin="dense"
-              id="name"
+              id="email"
               label="Email Address"
               type="email"
               fullWidth
             />
+             <TextField 
+             type="date"
+             id="date"
+              />
             <TimePicker />
           </DialogContent>
           <DialogActions>
@@ -72,9 +116,18 @@ class AptForm extends React.Component {
               Cancel
             </Button>
             <Button onClick={() => {
-              this.props.dispatch(addAppointment())
-              this.handleClose
-              }} 
+            console.log('submit');
+            const values = {
+              name: this.state.name,
+              phone: this.state.phone,
+              email: this.state.email,
+              date: this.state.date,
+              time: this.state.time
+            }
+            this.props.dispatch(addAppointment(this.props.authToken, values, this.props.currentUser.id))
+            this.handleClose();
+          }}
+              type="submit"
               color="primary">
               Add
             </Button>
@@ -85,6 +138,12 @@ class AptForm extends React.Component {
   }
 }
 
+const mapStateToProps = state => {
+  // console.log('STATE:', state.auth.currentUser.id);
+  return {
+      authToken: state.auth.authToken,
+      currentUser: state.auth.currentUser
+  }
+};
 
-
-export default connect()(AptForm);
+export default connect(mapStateToProps)(AptForm);

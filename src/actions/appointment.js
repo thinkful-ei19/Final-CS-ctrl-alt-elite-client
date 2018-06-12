@@ -1,5 +1,6 @@
 import { API_BASE_URL } from '../config';
 import { normalizeResponseErrors } from './utils';
+import moment from 'moment';
 
 export const ADD_APPOINTMENT_REQUEST = 'ADD_APPOINTMENT_REQUEST';
 export const addAppointmentRequest = () => ({
@@ -18,14 +19,22 @@ export const addAppointmentError = error => ({
     error
 });
 
-export const addAppointment = (values, id) => (dispatch, getState) => {
-    const authToken = getState().auth.authToken;
-    dispatch(addAppointmentRequest())
-    console.log('STRINGIFIED VALUES:',JSON.stringify(values));
-    // const newItem = { name: values };
+export const addAppointment = (authToken, appointment, id) => (dispatch) => {
+    console.log('DISPATCHING');
+    dispatch(addAppointmentRequest());
+    const newAppointment = { 
+        time: moment(String(appointment.date + ' ' + appointment.time)).format(),
+        client: {
+            name: appointment.name,
+            phone: appointment.phone,
+            email: appointment.email
+        }, 
+        notes: null 
+    };
+    // console.log('STRINGIFIED VALUES:', JSON.stringify(newAppointment));
     fetch(`${API_BASE_URL}/appointments/${id}`, {
         method: 'POST', 
-        body: JSON.stringify(values),
+        body: JSON.stringify(newAppointment),
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',

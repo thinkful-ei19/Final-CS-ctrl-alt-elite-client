@@ -16,11 +16,6 @@ export class Dashboard extends React.Component {
         }
     };
 
-    componentWillMount() {
-        const decodedToken = jwtDecode(this.props.authToken)
-        const username = decodedToken.sub
-        this.props.dispatch(getUserInfo(this.props.authToken, username))
-    }
 
     onChange = (date) => 
         this.setState({ date });
@@ -39,8 +34,11 @@ export class Dashboard extends React.Component {
     }
 }
 
-const mapStateToProps = state => ({
-    authToken: state.auth.authToken
-});
+const mapStateToProps = state => {
+    return {
+        authToken: state.auth.authToken,
+        currentUser: state.auth.currentUser
+    }
+};
 
 export default requiresLogin()(connect(mapStateToProps)(Dashboard));
