@@ -15,7 +15,7 @@ export default class Dashboard extends React.Component {
         this.setState({ date });
 
     render() {
-        console.log(this.state);
+        //console.log(this.state);
         return (
             <div>
                 <HeaderBar />
