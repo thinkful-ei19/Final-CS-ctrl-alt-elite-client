@@ -39,5 +39,6 @@ export default function reducer(state = initialState, action) {
             error: action.error
         });
     }
+
     return state;
 }

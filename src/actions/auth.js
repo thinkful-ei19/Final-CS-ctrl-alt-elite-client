@@ -42,6 +42,29 @@ const storeAuthInfo = (authToken, dispatch) => {
     saveAuthToken(authToken);
 };
 
+export const getUserInfo = (authToken, username) => dispatch => {
+    return fetch(`${API_BASE_URL}/users`, {
+        method: 'POST',
+        headers: {
+            Authorization: `Bearer ${authToken}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            username: username
+        })
+    })
+    .then(res => normalizeResponseErrors(res))
+    .then(res => res.json())
+    .then(res => {
+        if (res !== 'User Not Found') {
+            dispatch(authSuccess(res))
+        } else {
+            console.log(`Could not find information for user: ${username}`)
+        }
+    })
+    .catch(err => dispatch(authError(err)))
+}
+
 export const login = (username, password) => dispatch => {
     console.log(`logging in user: ${username}`);
     dispatch(authRequest());
@@ -60,7 +83,10 @@ export const login = (username, password) => dispatch => {
             // errors which follow a consistent format
             .then(res => normalizeResponseErrors(res))
             .then(res => res.json())
-            .then(({authToken}) => storeAuthInfo(authToken, dispatch))
+            .then(({authToken}) => {
+                storeAuthInfo(authToken, dispatch)
+                dispatch(getUserInfo(authToken, username))
+            })
             .catch(err => {
                 const {code} = err;
                 const message =
@@ -99,5 +125,5 @@ export const refreshAuthToken = () => (dispatch, getState) => {
             dispatch(authError(err));
             dispatch(clearAuth());
             clearAuthToken(authToken);
-        });
+    });
 };
