@@ -162,3 +162,41 @@ button {
 .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
   top: 0;
   transform: rotate(-135deg); }
+
+.login-form {
+  font-size: 1.6rem;
+  margin: 0 auto;
+  padding: 10rem;
+  text-align: left; }
+  .login-form__input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: 1.5rem 2rem;
+    color: inherit;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #373737;
+    border-bottom: 1px solid #373737;
+    width: 100%;
+    display: block;
+    transition: all .3s; }
+    .login-form__input:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+      border-bottom: 5px solid #C0B283;
+      transform: translateY(-5%); }
+    .login-form__input:focus:invalid {
+      border-color: #a33; }
+    .login-form__input::-webkit-input-placeholder {
+      color: #373737; }
+  .login-form__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: .7rem;
+    display: block; }
+  .login-form__input:placeholder-shown + .login-form__label {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+    transform: translateY(-4rem); }
