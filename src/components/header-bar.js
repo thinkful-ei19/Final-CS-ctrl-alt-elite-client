@@ -10,6 +10,7 @@ import {clearAuthToken} from '../local-storage';
 
 export class HeaderBar extends React.Component {
     logOut() {
+        console.log('LOOK');
         this.props.dispatch(clearAuth());
         clearAuthToken();
     }
@@ -17,20 +18,27 @@ export class HeaderBar extends React.Component {
     render() {
         // Only render the log out button if we are logged in
         let logOutButton;
-        if (this.props.loggedIn) {
-            logOutButton = (
-                <button className="logout-button"
-                  onClick={() => this.logOut()}>
-                  LOG OUT
-                </button>
-            );
-        }
+        // if (this.props.loggedIn) {
+        //     logOutButton = (
+        //         <button
+        //           onClick={() => this.logOut()}>
+        //           LOG OUT
+        //         </button>
+        //     );
+        // }
 
 
         return (
-            <div className="header-bar">
-                {logOutButton}
+            <div>
+                {/* {logOutButton} */}
+                <a
+                  onClick={() => console.log('looooook')}>
+                  LOG OUT
+                </a>
+                
+
             </div>
+            
         );
     }
 }

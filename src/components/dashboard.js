@@ -1,9 +1,11 @@
 import React from 'react';
-import HeaderBar from './header-bar';
+import {connect} from 'react-redux';
 import Calendar from 'react-calendar';
 import Schedule from './schedule';
 
-export default class Dashboard extends React.Component {
+import requiresLogin from './requires-login';
+
+export class Dashboard extends React.Component {
     constructor(props) {
         super()
         this.state = {
@@ -18,8 +20,6 @@ export default class Dashboard extends React.Component {
         //console.log(this.state);
         return (
             <div>
-                <HeaderBar />
-                {/*This is the Dashboard*/}
                 <Calendar
                     onChange={this.onChange}
                     value={this.state.date}
@@ -29,3 +29,9 @@ export default class Dashboard extends React.Component {
         )
     }
 }
+
+const mapStateToProps = state => (
+console.log('this is dashboard state', state)
+);
+
+export default requiresLogin()(connect(mapStateToProps)(Dashboard));
