@@ -49,7 +49,7 @@ li {
   display: none; }
 
 .navigation__button {
-  background-color: #C0B283;
+  background-color: #D6EAF8;
   height: 7rem;
   width: 7rem;
   position: fixed;
@@ -76,7 +76,7 @@ li {
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
-  background-image: radial-gradient(#C0B283, #DCD0C0);
+  background-image: radial-gradient(#D6EAF8, white);
   z-index: 100;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
   @media (max-width: 60em) {
@@ -128,7 +128,7 @@ li {
 
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
-  color: #C0B283;
+  color: #D6EAF8;
   transform: translateX(1rem); }
 
 .navigation__checkbox:not(:checked) ~ .navigation__nav {
@@ -147,7 +147,7 @@ li {
   .navigation__icon, .navigation__icon::before, .navigation__icon::after {
     width: 3rem;
     height: 2px;
-    background-color: #DCD0C0;
+    background-color: white;
     display: inline-block; }
   .navigation__icon::before, .navigation__icon::after {
     content: "";
@@ -196,7 +196,7 @@ li {
     .login-form__input:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-      border-bottom: 5px solid #C0B283;
+      border-bottom: 5px solid #D6EAF8;
       transform: translateY(-5%); }
     .login-form__input:focus:invalid {
       border-color: #a33; }
@@ -215,8 +215,6 @@ li {
     transform: translateY(-4rem); }
 
 .calendar {
-  margin-left: auto;
-  margin-right: auto;
   font-family: 'Roboto', sans-serif;
   font-size: 2rem;
   text-align: center;
@@ -230,7 +228,8 @@ li {
     display: inline-block;
     margin: 2rem; }
   .calendar__header-row__header {
-    display: inline-block; }
+    display: inline-block;
+    padding-bottom: 5rem; }
   .calendar__days__day {
     display: inline-block;
     width: 14.2%;
@@ -241,5 +240,5 @@ li {
     padding: 4% 0 4% 0; }
     .calendar__blocks-row__blocks:hover {
       cursor: pointer;
-      background-color: #D6EAF8;
+      background-color: #EBF5FB;
       border-radius: 20%; }

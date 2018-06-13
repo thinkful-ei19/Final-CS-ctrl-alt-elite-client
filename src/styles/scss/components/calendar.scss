@@ -1,14 +1,14 @@
 .calendar {
  
-    margin-left: auto;
-    margin-right: auto;
+    // margin-left: auto;
+    // margin-right: auto;
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
     text-align: center;
     max-width: 70rem; 
     text-transform: uppercase; 
     color: #616A6B;
-
+    // border: 2px solid pink;
     &__header-row {
 
         &__previous {
@@ -23,6 +23,7 @@
 
         &__header {
             display: inline-block;
+            padding-bottom: 5rem;
         }
     }
 
@@ -45,7 +46,7 @@
 
             &:hover {
                 cursor: pointer;
-                background-color: #D6EAF8;
+                background-color: #EBF5FB;
                 border-radius: 20%; 
             }
 
