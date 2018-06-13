@@ -31,7 +31,7 @@ function ScheduleList(props) {
             </ul>
           </div>
         } />
-        <ConfirmDelete />
+        <ConfirmDelete aptId={apt.id} />
       </ListItem>
       )
     })

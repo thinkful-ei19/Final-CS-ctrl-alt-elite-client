@@ -1,7 +1,7 @@
 import { API_BASE_URL } from '../config';
 import { normalizeResponseErrors } from './utils';
 import moment from 'moment';
-import { getUserInfoById } from './auth';
+import { getUserInfoById, getUserInfo } from './auth';
 
 export const ADD_APPOINTMENT_REQUEST = 'ADD_APPOINTMENT_REQUEST';
 export const addAppointmentRequest = () => ({
@@ -77,8 +77,51 @@ export const addAppointment = (authToken, appointment, id) => (dispatch) => {
         res.json()
     })
     .then(appointment => {
-        dispatch(addAppointmentSuccess(appointment));
+        dispatch(addAppointmentSuccess(appointment))
+        dispatch(getUserInfoById(authToken, id));
     }).catch(err => {
         dispatch(addAppointmentError());
     });
 };
+
+export const DELETE_APPOINTMENT_REQUEST = 'DELETE_APPOINTMENT_REQUEST';
+export const deleteAppointmentRequest = () => ({
+    type: DELETE_APPOINTMENT_REQUEST
+});
+
+export const DELETE_APPOINTMENT_SUCCESS = 'DELETE_APPOINTMENT_SUCCESS';
+export const deleteAppointmentSuccess = appointments => ({
+    type: DELETE_APPOINTMENT_SUCCESS,
+    appointments
+});
+
+export const DELETE_APPOINTMENT_ERROR = 'DELETE_APPOINTMENT_ERROR';
+export const deleteAppointmentError = error => ({
+    type: DELETE_APPOINTMENT_ERROR,
+    error
+});
+
+export const deleteAppointment = (authToken, id, userId) => (dispatch) => {
+    dispatch(deleteAppointmentRequest());
+    console.log(`deleting appointment with aptId: ${id} for user: ${userId}`);
+    fetch(`${API_BASE_URL}/appointments/${id}`, {
+        method: 'DELETE', 
+        body: JSON.stringify({userId}),
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${authToken}`
+          }
+    })
+    .then(res => normalizeResponseErrors(res))
+    .then(appointment => {
+        console.log(appointment);
+        dispatch(deleteAppointmentSuccess(appointment))
+    })
+    .then(() => {
+        dispatch(getUserInfoById(authToken, userId))
+    })
+    .catch(err => {
+        dispatch(deleteAppointmentError(err));
+    });
+}

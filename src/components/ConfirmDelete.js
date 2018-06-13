@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -8,6 +9,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
+import { deleteAppointment } from '../actions/appointment';
 
 
 class ConfirmDelete extends React.Component {
@@ -24,6 +26,9 @@ class ConfirmDelete extends React.Component {
   };
 
   render() {
+    // console.log('currentUser id', this.props.currentUser.id);
+    // console.log('authToken', this.props.authToken);
+    // console.log('this is the aptId to delete', this.props.aptId);
     return (
       <div>
         <IconButton aria-label="Delete" onClick={this.handleClickOpen}>
@@ -45,7 +50,12 @@ class ConfirmDelete extends React.Component {
             <Button onClick={this.handleClose} color="primary">
               Cancel
             </Button>
-            <Button onClick={this.handleClose} color="primary" autoFocus>
+            <Button onClick={() => {
+              this.props.dispatch(deleteAppointment(this.props.authToken, this.props.aptId, this.props.currentUser.id));
+              this.handleClose();
+              }}
+              color="primary" 
+              autoFocus>
               Confirm
             </Button>
           </DialogActions>
@@ -55,4 +65,12 @@ class ConfirmDelete extends React.Component {
   }
 }
 
-export default ConfirmDelete;
+const mapStateToProps = state => {
+console.log('STATE CURRENTUSER:', state.auth.currentUser);
+  return {
+    authToken: state.auth.authToken,
+    currentUser: state.auth.currentUser
+  }
+};
+
+export default connect(mapStateToProps)(ConfirmDelete);
