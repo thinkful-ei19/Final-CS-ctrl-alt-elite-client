@@ -27,7 +27,6 @@ export const setDate = date => ({
 })
 
 export const addClient = (authToken, client, id) => (dispatch) => {
-    console.log(client);
     fetch(`${API_BASE_URL}/clients/${id}`, {
         method: 'POST', 
         body: JSON.stringify(client),
@@ -60,9 +59,6 @@ export const addAppointment = (authToken, appointment, id) => (dispatch) => {
         }, 
         notes: appointment.notes
     };
-    if (appointment.checked === true) {
-        dispatch(addClient(authToken, newAppointment.client, id))
-    }
     fetch(`${API_BASE_URL}/appointments/${id}`, {
         method: 'POST', 
         body: JSON.stringify(newAppointment),
@@ -73,7 +69,12 @@ export const addAppointment = (authToken, appointment, id) => (dispatch) => {
           }
     })
     .then(res => normalizeResponseErrors(res))
-    .then(res => res.json())
+    .then(res => {
+        if (appointment.checked === true) {
+            dispatch(addClient(authToken, newAppointment.client, id))
+        }
+        res.json()
+    })
     .then(appointment => {
         dispatch(addAppointmentSuccess(appointment));
     }).catch(err => {
