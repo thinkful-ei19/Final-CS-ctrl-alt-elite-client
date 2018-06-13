@@ -212,10 +212,12 @@ button {
     transform: translateY(-4rem); }
 
 .calendar {
+  margin-left: auto;
+  margin-right: auto;
   font-family: 'Roboto', sans-serif;
   font-size: 2rem;
   text-align: center;
-  max-width: 60rem; }
+  max-width: 70rem; }
   .calendar__header-row__previous {
     display: inline-block;
 
