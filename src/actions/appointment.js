@@ -40,6 +40,7 @@ export const addClient = (authToken, client, id) => (dispatch) => {
     .then(res => normalizeResponseErrors(res))
     .then(res => res.json())
     .then(response => {
+        console.log('this is response', response);
         dispatch(addAppointmentSuccess(response));
         dispatch(getUserInfoById(authToken, id))
     }).catch(err => {

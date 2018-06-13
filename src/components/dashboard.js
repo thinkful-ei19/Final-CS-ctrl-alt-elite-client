@@ -1,10 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import jwtDecode from 'jwt-decode';
 import Calendar from 'react-calendar';
 import Schedule from './schedule';
 import Navigation from './navigation';
-import { getUserInfo } from '../actions/auth';
 import { setDate } from '../actions/appointment';
 
 import requiresLogin from './requires-login';
