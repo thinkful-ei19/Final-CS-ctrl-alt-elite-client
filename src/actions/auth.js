@@ -67,6 +67,26 @@ export const getUserInfo = (authToken, username) => dispatch => {
     .catch(err => dispatch(authError(err)))
 }
 
+export const getUserInfoById = (authToken, id) => dispatch => {
+    return fetch(`${API_BASE_URL}/users/${id}`, {
+        method: 'GET',
+        headers: {
+            Authorization: `Bearer ${authToken}`,
+        }
+    })
+    .then(res => normalizeResponseErrors(res))
+    .then(res => res.json())
+    .then(res => {
+        if (res !== 'User Not Found') {
+            console.log(res)
+            dispatch(authSuccess(res))
+        } else {
+            console.log(`Could not find information for user ID: ${id}`)
+        }
+    })
+    .catch(err => dispatch(authError(err)))
+}
+
 export const login = (username, password) => dispatch => {
     console.log(`logging in user: ${username}`);
     dispatch(authRequest());

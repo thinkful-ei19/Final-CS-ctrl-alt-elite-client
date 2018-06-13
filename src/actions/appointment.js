@@ -1,6 +1,7 @@
 import { API_BASE_URL } from '../config';
 import { normalizeResponseErrors } from './utils';
 import moment from 'moment';
+import { getUserInfoById } from './auth';
 
 export const ADD_APPOINTMENT_REQUEST = 'ADD_APPOINTMENT_REQUEST';
 export const addAppointmentRequest = () => ({
@@ -39,6 +40,7 @@ export const addClient = (authToken, client, id) => (dispatch) => {
     .then(res => res.json())
     .then(response => {
         dispatch(addAppointmentSuccess(response));
+        dispatch(getUserInfoById(authToken, id))
     }).catch(err => {
         dispatch(addAppointmentError());
     });
@@ -60,7 +62,6 @@ export const addAppointment = (authToken, appointment, id) => (dispatch) => {
     if (appointment.checked === true) {
         dispatch(addClient(authToken, newAppointment.client, id))
     }
-    // console.log('STRINGIFIED VALUES:', JSON.stringify(newAppointment));
     fetch(`${API_BASE_URL}/appointments/${id}`, {
         method: 'POST', 
         body: JSON.stringify(newAppointment),
@@ -73,7 +74,6 @@ export const addAppointment = (authToken, appointment, id) => (dispatch) => {
     .then(res => normalizeResponseErrors(res))
     .then(res => res.json())
     .then(appointment => {
-        console.log(appointment);
         dispatch(addAppointmentSuccess(appointment));
     }).catch(err => {
         dispatch(addAppointmentError());
