@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
+import { changeTab } from '../actions/tabs';
 
 class Navigation extends React.Component {
     logOut() {
@@ -22,8 +23,12 @@ class Navigation extends React.Component {
 
             <nav className="navigation__nav">
                 <ul className="navigation__list">
-                    <li className="navigation__item"><a href="" className="navigation__link">Home</a></li>
-                    <li className="navigation__item"><a href="" className="navigation__link">Clients</a></li>
+                    <li className="navigation__item"><a href=""
+                        onClick={() => {this.props.dispatch(changeTab('dashboard'))}}
+                    className="navigation__link">Home</a></li>
+                    <li className="navigation__item"><a 
+                    onClick={() => {this.props.dispatch(changeTab('clients'))}}
+                    href="" className="navigation__link">Clients</a></li>
                     <li className="navigation__item">
                         <a 
                           href="" 

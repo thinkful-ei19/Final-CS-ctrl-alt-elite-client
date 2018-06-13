@@ -5,6 +5,7 @@ import { loadAuthToken } from './local-storage';
 import authReducer from './reducers/auth';
 import appointmentReducer from './reducers/appointment';
 import calendarReducer from './reducers/calendar';
+import tabsReducer from './reducers/tabs';
 import { setAuthToken, refreshAuthToken } from './actions/auth';
 
 const store = createStore(
@@ -12,7 +13,8 @@ const store = createStore(
         form: formReducer,
         auth: authReducer,
         appointmentReducer,
-        calendarReducer
+        calendarReducer,
+        tabsReducer
     }),
     applyMiddleware(thunk)
 );
