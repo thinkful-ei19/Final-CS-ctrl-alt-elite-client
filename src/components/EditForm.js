@@ -11,7 +11,7 @@ import TimePicker from './TimePicker';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 import SvgIcon from '@material-ui/core/SvgIcon';
-import { addAppointment } from '../actions/appointment';
+import { editAppointment } from '../actions/appointment';
 
 class EditForm extends React.Component {
     constructor(props) {
@@ -149,8 +149,12 @@ class EditForm extends React.Component {
                             value={this.state.email}
                         />
                         <TextField
+                            autoFocus
+                            margin="dense"
+                            label="Date"
                             type="date"
                             id="date"
+                            value={this.state.date}
                         />
                         <TimePicker />
                         <TextField
@@ -179,12 +183,13 @@ class EditForm extends React.Component {
                                 checked: this.state.checked,
                                 notes: this.state.notes
                             }
-                            this.props.dispatch(''(this.props.authToken, values, this.props.currentUser.id))
+                            console.log(values)
+                            this.props.dispatch(editAppointment(this.props.authToken, values, this.props.aptId, this.props.currentUser.id))
                             this.handleClose();
                         }}
                             type="submit"
                             color="primary">
-                            Add
+                            Edit
             </Button>
                     </DialogActions>
                 </Dialog>

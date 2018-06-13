@@ -45,9 +45,7 @@ class Calendar extends React.Component {
                     <button onClick={increment} className="calendar__header-row__next">&#8594;</button>
                 </div>
                 <Days/>
-                <div className="calendar__blocks-row">
-                    <Dates/>
-                </div>
+                <Dates/>
             </div>
         )
     }
