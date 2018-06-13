@@ -4,6 +4,9 @@ import {connect} from 'react-redux';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import Icon from '@material-ui/core/Icon';
+import IconButton from '@material-ui/core/IconButton';
+import DeleteIcon from '@material-ui/icons/Delete';
 import moment from 'moment';
 
 function ScheduleList(props) {
@@ -30,6 +33,9 @@ function ScheduleList(props) {
             </ul>
           </div>
         } />
+        <IconButton aria-label="Delete">
+        <DeleteIcon />
+      </IconButton>
       </ListItem>
       )
     })
