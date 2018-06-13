@@ -26,6 +26,7 @@ function ScheduleList(props) {
               <li>Name: {apt.client.name}</li>              
               <li>Phone: {apt.client.phone}</li>
               <li>Email: {apt.client.email}</li>
+              <li>Notes: {apt.client.notes}</li>
             </ul>
           </div>
         } />

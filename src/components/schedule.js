@@ -9,7 +9,7 @@ export default function PaperSheet(props) {
   // const { classes } = props;
   return (
     <div>
-      <Paper >
+      <Paper className="schedule">
           <AptForm />
         <Typography variant="headline" component="h3">
           Schedule

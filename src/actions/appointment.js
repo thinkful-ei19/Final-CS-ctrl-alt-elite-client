@@ -55,9 +55,9 @@ export const addAppointment = (authToken, appointment, id) => (dispatch) => {
         client: {
             name: appointment.name,
             phone: appointment.phone,
-            email: appointment.email
+            email: appointment.email,
+            notes: appointment.notes
         }, 
-        notes: null 
     };
     if (appointment.checked === true) {
         dispatch(addClient(authToken, newAppointment.client, id))
