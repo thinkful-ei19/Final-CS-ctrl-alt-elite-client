@@ -10,7 +10,6 @@ function ScheduleList(props) {
   
   let buildList;
   try {
-    console.log(props)
     const appointments = props.currentUser.appointments.filter((apt) => {
       if (moment(apt.time).format('MM DD YYYY') === moment(props.date).format('MM DD YYYY')) {
         return apt
@@ -24,7 +23,7 @@ function ScheduleList(props) {
           <div>
             <ul>
               <li>{moment(apt.time).format('MMMM Do YYYY, h:mm:ss A')}</li>              
-              <li> Name: {apt.client.name}</li>              
+              <li>Name: {apt.client.name}</li>              
               <li>Phone: {apt.client.phone}</li>
               <li>Email: {apt.client.email}</li>
             </ul>

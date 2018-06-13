@@ -37,6 +37,5 @@ export default function appointmentsReducer(state=initialState, action) {
             date: action.date
         });
     }
-    console.log(state)
     return state;
 } 

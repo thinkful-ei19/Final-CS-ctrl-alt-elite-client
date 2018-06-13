@@ -20,7 +20,8 @@ class AptForm extends React.Component {
       phone: '',
       email: '',
       date: '',
-      time: ''
+      time: '',
+      checked: false
     };
   }
   
@@ -67,7 +68,29 @@ class AptForm extends React.Component {
     }
   }
 
+  selectClient(id) {
+    const component = this;
+    this.props.currentUser.clients.forEach((client) => {
+      if (client.id === id) {
+        component.setState({
+          name: client.name,
+          phone: client.phone,
+          email: client.email
+        })
+      }
+    })
+
+    
+  }
+
   render() {
+
+    const buildOptions = this.props.currentUser.clients.map((client) => {
+      return (
+        <option key={client.id} value={client.id}>{client.name}</option>
+      )
+    })
+
     return (
       <div>
         <Button onClick={this.handleClickOpen}>Add Appointment</Button>
@@ -82,6 +105,10 @@ class AptForm extends React.Component {
             <DialogContentText>
               Fill out this form with client information in order to create a new appointment.
             </DialogContentText>
+            <select onChange={(event) => {this.selectClient(event.target.value)}}>
+              <option style={{display: 'none'}} disabled selected value></option>
+              {buildOptions}
+            </select>
             <TextField
               autoFocus
               margin="dense"
@@ -89,6 +116,7 @@ class AptForm extends React.Component {
               label="Client Name"
               type="name"
               fullWidth
+              value={this.state.name}
             /><TextField
             autoFocus
             margin="dense"
@@ -96,6 +124,7 @@ class AptForm extends React.Component {
             label="Phone Number"
             type="phonenumber"
             fullWidth
+            value={this.state.phone}            
           />
             <TextField
               autoFocus
@@ -104,6 +133,7 @@ class AptForm extends React.Component {
               label="Email Address"
               type="email"
               fullWidth
+              value={this.state.email}              
             />
              <TextField 
              type="date"
@@ -112,17 +142,19 @@ class AptForm extends React.Component {
             <TimePicker />
           </DialogContent>
           <DialogActions>
+            <label>Save this client for future appointments</label>
+            <input onChange={(event) => this.setState({checked: event.target.checked})} type="checkbox"/>
             <Button onClick={this.handleClose} color="primary">
               Cancel
             </Button>
             <Button onClick={() => {
-            console.log('submit');
             const values = {
               name: this.state.name,
               phone: this.state.phone,
               email: this.state.email,
               date: this.state.date,
-              time: this.state.time
+              time: this.state.time,
+              checked: this.state.checked
             }
             this.props.dispatch(addAppointment(this.props.authToken, values, this.props.currentUser.id))
             this.handleClose();
