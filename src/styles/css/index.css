@@ -42,6 +42,9 @@ body {
 button {
   cursor: pointer; }
 
+li {
+  list-style-type: none; }
+
 .navigation__checkbox {
   display: none; }
 
@@ -217,25 +220,25 @@ button {
   font-family: 'Roboto', sans-serif;
   font-size: 2rem;
   text-align: center;
-  max-width: 70rem; }
+  max-width: 70rem;
+  text-transform: uppercase;
+  color: #616A6B; }
   .calendar__header-row__previous {
     display: inline-block;
-
     margin: 3rem 2rem; }
   .calendar__header-row__next {
     display: inline-block;
-    margin: 3rem 2rem; }
+    margin: 2rem; }
   .calendar__header-row__header {
     display: inline-block; }
   .calendar__days__day {
-    font-weight: 700;
     display: inline-block;
     width: 14.2%;
-    padding-top: 2%; }
+    font-weight: 700; }
   .calendar__blocks-row__blocks {
     display: inline-block;
     width: 14.2%;
-    padding: 4% 0 4% 0 }
+    padding: 4% 0 4% 0; }
     .calendar__blocks-row__blocks:hover {
       cursor: pointer;
       background-color: #aaf; }
