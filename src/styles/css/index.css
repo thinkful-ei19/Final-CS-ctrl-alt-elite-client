@@ -1,9 +1,9 @@
 .selected-date {
-  background-color: #aaf; }
+  border: 2px solid #D5DBDB;
+  border-radius: 20%; }
 
 .appointment-date {
-  color: red;
-  background-color: #aaa; }
+  color: red; }
 
 * {
   padding: 0;
@@ -241,4 +241,5 @@ li {
     padding: 4% 0 4% 0; }
     .calendar__blocks-row__blocks:hover {
       cursor: pointer;
-      background-color: #aaf; }
+      background-color: #D6EAF8;
+      border-radius: 20%; }
