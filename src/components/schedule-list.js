@@ -5,6 +5,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ConfirmDelete from './ConfirmDelete';
+import EditForm from './EditForm';
 import moment from 'moment';
 
 function ScheduleList(props) {
@@ -31,6 +32,7 @@ function ScheduleList(props) {
             </ul>
           </div>
         } />
+        <EditForm />
         <ConfirmDelete aptId={apt.id} />
       </ListItem>
       )
