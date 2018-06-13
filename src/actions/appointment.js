@@ -19,6 +19,12 @@ export const addAppointmentError = error => ({
     error
 });
 
+export const SET_DATE = 'SET_DATE';
+export const setDate = date => ({
+    type: SET_DATE,
+    date
+})
+
 export const addAppointment = (authToken, appointment, id) => (dispatch) => {
     console.log('DISPATCHING');
     dispatch(addAppointmentRequest());

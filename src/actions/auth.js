@@ -38,7 +38,8 @@ export const authError = error => ({
 const storeAuthInfo = (authToken, dispatch) => {
     const decodedToken = jwtDecode(authToken);
     dispatch(setAuthToken(authToken));
-    dispatch(authSuccess(decodedToken.user));
+    // dispatch(authSuccess(decodedToken.user));
+    dispatch(getUserInfo(authToken, decodedToken.user.username))
     saveAuthToken(authToken);
 };
 
@@ -57,6 +58,7 @@ export const getUserInfo = (authToken, username) => dispatch => {
     .then(res => res.json())
     .then(res => {
         if (res !== 'User Not Found') {
+            console.log(res)
             dispatch(authSuccess(res))
         } else {
             console.log(`Could not find information for user: ${username}`)
