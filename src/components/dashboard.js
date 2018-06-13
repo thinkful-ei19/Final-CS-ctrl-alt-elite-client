@@ -1,33 +1,20 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import Calendar from 'react-calendar';
+// import Calendar from 'react-calendar';
 import Schedule from './schedule';
 import Navigation from './navigation';
 import { setDate } from '../actions/appointment';
+import Calendar from './calendar';
 
 import requiresLogin from './requires-login';
 
 export class Dashboard extends React.Component {
-    constructor(props) {
-        super()
-        this.state = {
-            date: new Date()
-        }
-    };
 
-
-    onChange = (date) => {
-        this.setState({ date })
-        this.props.dispatch(setDate(date))
-    }
     render() {
         return (
             <div>
                 <Navigation/>
-                <Calendar
-                    onChange={this.onChange}
-                    value={this.state.date}
-                />
+                <Calendar />
                 <Schedule />
             </div>
         )
@@ -37,7 +24,8 @@ export class Dashboard extends React.Component {
 const mapStateToProps = state => {
     return {
         authToken: state.auth.authToken,
-        currentUser: state.auth.currentUser
+        currentUser: state.auth.currentUser,
+        selectedDate: state.calendarReducer.selectedDate
     }
 };
 
