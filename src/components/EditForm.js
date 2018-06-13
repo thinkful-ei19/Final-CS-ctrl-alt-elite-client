@@ -169,7 +169,7 @@ class EditForm extends React.Component {
                             id="date"
                             value={this.state.date}
                         />
-                        <TimePicker />
+                        <TimePicker time={this.state.time} />
                         <TextField
                             autoFocus
                             margin="dense"
@@ -196,7 +196,10 @@ class EditForm extends React.Component {
                                 checked: this.state.checked,
                                 notes: this.state.notes
                             }
-                            console.log(values)
+                            if (values.name === '' || values.date === '' || values.time === '') {
+                                alert('Please fill out the form entirely (notes optional)')
+                                return
+                              }
                             this.props.dispatch(editAppointment(this.props.authToken, values, this.props.aptId, this.props.currentUser.id))
                             this.handleClose();
                         }}
