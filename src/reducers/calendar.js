@@ -13,8 +13,9 @@ export default function reducer(state = initialState, action) {
             selectedMonth: action.month
         });
     } else if (action.type === CHANGE_YEAR) {
+        console.log(action.year)
         return Object.assign({}, state, {
-            selectedMonth: action.year
+            selectedYear: action.year
         });
     } else if (action.type === SELECT_DATE) {
         return Object.assign({}, state, {
