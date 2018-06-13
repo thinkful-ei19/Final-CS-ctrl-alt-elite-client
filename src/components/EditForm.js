@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import moment from 'moment';
+
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
@@ -76,6 +78,18 @@ class EditForm extends React.Component {
         }
     }
 
+    componentWillMount() {
+        const aptInfo = this.props.aptInfo
+        this.setState({
+            name: aptInfo.client.name,
+            phone: aptInfo.client.phone,
+            email: aptInfo.client.email,
+            date: moment(aptInfo.time).format('YYYY-MM-DD'),
+            time: moment(aptInfo.time).format('hh:mm'),
+            notes: aptInfo.notes,
+        })
+    }
+
     selectClient(id) {
         console.log('Is running');
         const component = this;
@@ -93,7 +107,7 @@ class EditForm extends React.Component {
     }
 
     render() {
-
+        console.log(this.state)
         const buildOptions = this.props.currentUser.clients.map((client) => {
             return (
                 <option key={client.id} value={client.id}>{client.name}</option>
