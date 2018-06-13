@@ -14,7 +14,7 @@ function ScheduleList(props) {
   let buildList;
   try {
     const appointments = props.currentUser.appointments.filter((apt) => {
-      if (moment(apt.time).format('MM DD YYYY') === moment(props.date).format('MM DD YYYY')) {
+      if (moment(apt.time).format('YYYY MM DD') === moment(props.selectedDate).format('YYYY MM DD')) {
         return apt
       }
     });
@@ -62,7 +62,7 @@ function ScheduleList(props) {
 
 const mapStateToProps = state => ({
   currentUser: state.auth.currentUser,
-  date: state.appointmentReducer.date
+  selectedDate: state.calendarReducer.selectedDate
 });
 
 export default connect(mapStateToProps)(ScheduleList);

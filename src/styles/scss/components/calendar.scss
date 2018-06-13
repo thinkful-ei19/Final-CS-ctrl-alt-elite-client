@@ -1,0 +1,48 @@
+.calendar {
+    font-size: 2rem;
+    text-align: center;
+    max-width: 40rem;
+
+    &__header-row {
+
+        &__previous {
+            display: inline-block;
+            margin: 0 2rem;
+        }
+
+        &__next {
+            display: inline-block;
+            margin: 0 2rem;            
+        }
+
+        &__header {
+            display: inline-block;
+        }
+    }
+
+    &__days {
+
+        &__day {
+            display: inline-block;
+            width: 14.2%;
+        }
+    }
+
+    &__blocks-row {
+
+
+        &__blocks {
+            display: inline-block;
+            width: 14.2%;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #aaf;
+            }
+
+            // &:nth-child(7n+1), &:nth-child(7n+7) {
+            //     color: red;
+            // }
+        }
+    }
+}

@@ -1,3 +1,10 @@
+.selected-date {
+  background-color: #aaf; }
+
+.appointment-date {
+  color: red;
+  background-color: #aaa; }
+
 * {
   padding: 0;
   margin: 0;
@@ -203,3 +210,25 @@ button {
     visibility: hidden;
     transition: all .3s;
     transform: translateY(-4rem); }
+
+.calendar {
+  font-size: 2rem;
+  text-align: center;
+  max-width: 40rem; }
+  .calendar__header-row__previous {
+    display: inline-block;
+    margin: 0 2rem; }
+  .calendar__header-row__next {
+    display: inline-block;
+    margin: 0 2rem; }
+  .calendar__header-row__header {
+    display: inline-block; }
+  .calendar__days__day {
+    display: inline-block;
+    width: 14.2%; }
+  .calendar__blocks-row__blocks {
+    display: inline-block;
+    width: 14.2%; }
+    .calendar__blocks-row__blocks:hover {
+      cursor: pointer;
+      background-color: #aaf; }
