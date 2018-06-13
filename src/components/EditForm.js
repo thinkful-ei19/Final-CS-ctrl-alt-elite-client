@@ -151,7 +151,6 @@ class EditForm extends React.Component {
                         <TextField
                             autoFocus
                             margin="dense"
-                            label="Date"
                             type="date"
                             id="date"
                             value={this.state.date}
