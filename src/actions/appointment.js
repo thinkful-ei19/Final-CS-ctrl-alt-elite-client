@@ -27,6 +27,7 @@ export const setDate = date => ({
 })
 
 export const addClient = (authToken, client, id) => (dispatch) => {
+    console.log(client);
     fetch(`${API_BASE_URL}/clients/${id}`, {
         method: 'POST', 
         body: JSON.stringify(client),
@@ -55,9 +56,9 @@ export const addAppointment = (authToken, appointment, id) => (dispatch) => {
         client: {
             name: appointment.name,
             phone: appointment.phone,
-            email: appointment.email,
-            notes: appointment.notes
+            email: appointment.email
         }, 
+        notes: appointment.notes
     };
     if (appointment.checked === true) {
         dispatch(addClient(authToken, newAppointment.client, id))

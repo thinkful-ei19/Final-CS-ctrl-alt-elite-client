@@ -75,6 +75,7 @@ class AptForm extends React.Component {
   }
 
   selectClient(id) {
+    console.log('Is running');
     const component = this;
     this.props.currentUser.clients.forEach((client) => {
       if (client.id === id) {
