@@ -8,14 +8,12 @@ import AptForm from './AptForm';
 export default function PaperSheet(props) {
   // const { classes } = props;
   return (
-    <div>
-      <Paper className="schedule">
+      <Paper className="schedule appointments">
           <AptForm />
         {/* <Typography variant="headline" component="h3">
           Schedule
         </Typography> */}
         <ScheduleList />
       </Paper>
-    </div>
   );
 }

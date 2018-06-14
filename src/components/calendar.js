@@ -13,7 +13,6 @@ class Calendar extends React.Component {
         let currentMonth = this.props.selectedMonth;
         let currentYear = this.props.selectedYear;
         const component = this;
-        console.log(this.props)
         const monthYear = moment(String(`${currentYear}-${currentMonth}`)).format('MMMM YYYY');
         function increment() {
             currentMonth ++
