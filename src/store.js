@@ -6,6 +6,7 @@ import authReducer from './reducers/auth';
 import appointmentReducer from './reducers/appointment';
 import calendarReducer from './reducers/calendar';
 import tabsReducer from './reducers/tabs';
+import clientsReducer from './reducers/clients';
 import { setAuthToken, refreshAuthToken } from './actions/auth';
 
 const store = createStore(
@@ -13,6 +14,7 @@ const store = createStore(
         form: formReducer,
         auth: authReducer,
         appointmentReducer,
+        clientsReducer,
         calendarReducer,
         tabsReducer
     }),

@@ -58,7 +58,6 @@ export const getUserInfo = (authToken, username) => dispatch => {
     .then(res => res.json())
     .then(res => {
         if (res !== 'User Not Found') {
-            console.log(res)
             dispatch(authSuccess(res))
         } else {
             console.log(`Could not find information for user: ${username}`)

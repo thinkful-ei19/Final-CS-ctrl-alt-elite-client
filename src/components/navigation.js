@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import { Link } from 'react-router-dom';
 import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
 import { changeTab } from '../actions/tabs';
@@ -23,12 +24,21 @@ class Navigation extends React.Component {
 
             <nav className="navigation__nav">
                 <ul className="navigation__list">
-                    <li className="navigation__item"><a href=""
-                        onClick={() => {this.props.dispatch(changeTab('dashboard'))}}
-                    className="navigation__link">Home</a></li>
-                    <li className="navigation__item"><a 
-                    onClick={() => {this.props.dispatch(changeTab('clients'))}}
-                    href="" className="navigation__link">Clients</a></li>
+
+                    <li className="navigation__item">
+                        <Link to="/dashboard"
+                                    onClick={() => {this.props.dispatch(changeTab('dashboard'))}}
+                                    className="navigation__link">Home
+                        </Link>
+                    </li>
+
+                    <li className="navigation__item">
+                        <Link to="/clients"
+                            onClick={() => {this.props.dispatch(changeTab('clients'))}}
+                            className="navigation__link">Clients
+                        </Link>
+                    </li>
+
                     <li className="navigation__item">
                         <a 
                           href="" 
@@ -39,6 +49,7 @@ class Navigation extends React.Component {
                           className="navigation__link">Logout
                         </a>
                     </li>
+
                 </ul>
             </nav>
         </div>

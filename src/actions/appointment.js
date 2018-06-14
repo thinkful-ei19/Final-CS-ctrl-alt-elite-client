@@ -1,7 +1,7 @@
 import { API_BASE_URL } from '../config';
 import { normalizeResponseErrors } from './utils';
 import moment from 'moment';
-import { getUserInfoById, getUserInfo } from './auth';
+import { getUserInfoById } from './auth';
 
 export const ADD_APPOINTMENT_REQUEST = 'ADD_APPOINTMENT_REQUEST';
 export const addAppointmentRequest = () => ({

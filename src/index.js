@@ -8,7 +8,6 @@ import store from './store';
 // import './index.css';
 import './styles/css/index.css'
 
-console.log(store.getState())
 
 ReactDOM.render(
     <Provider store={store}>

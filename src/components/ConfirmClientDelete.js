@@ -9,10 +9,10 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 // import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
-import { deleteAppointment } from '../actions/appointment';
+import { deleteClient } from '../actions/clients';
 
 
-class ConfirmDelete extends React.Component {
+class ConfirmClientDelete extends React.Component {
   state = {
     open: false,
   };
@@ -26,9 +26,9 @@ class ConfirmDelete extends React.Component {
   };
 
   render() {
-    // console.log('currentUser id', this.props.currentUser.id);
+    console.log('userId', this.props.currentUser.id);
     // console.log('authToken', this.props.authToken);
-    // console.log('this is the aptId to delete', this.props.aptId);
+    console.log('this is the clientId to delete', this.props.clientId);
     return (
       <div>
         <IconButton aria-label="Delete" onClick={this.handleClickOpen}>
@@ -43,7 +43,7 @@ class ConfirmDelete extends React.Component {
           <DialogTitle id="alert-dialog-title">{"Confirm Appointment Deletion"}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
-              Are you sure you want to delete your appointment?
+              Are you sure you want to delete this client?
             </DialogContentText>
           </DialogContent>
           <DialogActions>
@@ -51,7 +51,7 @@ class ConfirmDelete extends React.Component {
               Cancel
             </Button>
             <Button onClick={() => {
-              this.props.dispatch(deleteAppointment(this.props.authToken, this.props.aptId, this.props.currentUser.id));
+              this.props.dispatch(deleteClient(this.props.authToken, this.props.clientId, this.props.currentUser.id));
               this.handleClose();
               }}
               color="primary" 
@@ -66,11 +66,10 @@ class ConfirmDelete extends React.Component {
 }
 
 const mapStateToProps = state => {
-console.log('STATE CURRENTUSER:', state.auth.currentUser);
   return {
     authToken: state.auth.authToken,
     currentUser: state.auth.currentUser
   }
 };
 
-export default connect(mapStateToProps)(ConfirmDelete);
+export default connect(mapStateToProps)(ConfirmClientDelete);
