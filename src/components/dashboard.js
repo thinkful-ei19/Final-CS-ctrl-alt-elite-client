@@ -5,20 +5,31 @@ import Schedule from './schedule';
 import Navigation from './navigation';
 import { setDate } from '../actions/appointment';
 import Calendar from './calendar';
-
+import background from '../media/blue.jpg';
 import requiresLogin from './requires-login';
+
+
+const sectionStyle = {
+    backgroundSize: "100% 100%",
+    height: "100VH",
+    backgroundRepeat: "no-repeat",
+    backgroundImage: `url(${background})`
+  };
 
 export class Dashboard extends React.Component {
 
+    
     render() {
         return (
-            <div>
-                <Navigation/>
-                <div className="components">
-                    <Calendar />
-                    <Schedule />
+            <section style={ sectionStyle }>
+                <div>
+                    <Navigation/>
+                    <div className="components">
+                        <Calendar />
+                        <Schedule />
+                    </div>
                 </div>
-            </div>
+            </section>
         )
     }
 }
