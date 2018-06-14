@@ -19,7 +19,7 @@ class AptForm extends React.Component {
       phone: '',
       email: '',
       date: '',
-      time: '',
+      time: '10:00',
       notes: '',
       checked: false
     };
@@ -171,6 +171,10 @@ class AptForm extends React.Component {
                 time: this.state.time,
                 checked: this.state.checked,
                 notes: this.state.notes
+              }
+              if (values.name === '' || values.date === '' || values.time === '') {
+                alert('Please fill out the form entirely (notes optional)')
+                return
               }
               this.props.dispatch(addAppointment(this.props.authToken, values, this.props.currentUser.id))
               this.handleClose();

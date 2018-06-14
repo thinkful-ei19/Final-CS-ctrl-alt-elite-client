@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import moment from 'moment';
+
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
@@ -11,7 +13,7 @@ import TimePicker from './TimePicker';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 import SvgIcon from '@material-ui/core/SvgIcon';
-import { addAppointment } from '../actions/appointment';
+import { editAppointment } from '../actions/appointment';
 
 class EditForm extends React.Component {
     constructor(props) {
@@ -76,6 +78,18 @@ class EditForm extends React.Component {
         }
     }
 
+    componentWillMount() {
+        const aptInfo = this.props.aptInfo
+        this.setState({
+            name: aptInfo.client.name,
+            phone: aptInfo.client.phone,
+            email: aptInfo.client.email,
+            date: moment(aptInfo.time).format('YYYY-MM-DD'),
+            time: moment(aptInfo.time).format('hh:mm'),
+            notes: aptInfo.notes,
+        })
+    }
+
     selectClient(id) {
         console.log('Is running');
         const component = this;
@@ -93,7 +107,7 @@ class EditForm extends React.Component {
     }
 
     render() {
-
+        console.log(this.state)
         const buildOptions = this.props.currentUser.clients.map((client) => {
             return (
                 <option key={client.id} value={client.id}>{client.name}</option>
@@ -149,10 +163,13 @@ class EditForm extends React.Component {
                             value={this.state.email}
                         />
                         <TextField
+                            autoFocus
+                            margin="dense"
                             type="date"
                             id="date"
+                            value={this.state.date}
                         />
-                        <TimePicker />
+                        <TimePicker time={this.state.time} />
                         <TextField
                             autoFocus
                             margin="dense"
@@ -179,12 +196,16 @@ class EditForm extends React.Component {
                                 checked: this.state.checked,
                                 notes: this.state.notes
                             }
-                            this.props.dispatch(''(this.props.authToken, values, this.props.currentUser.id))
+                            if (values.name === '' || values.date === '' || values.time === '') {
+                                alert('Please fill out the form entirely (notes optional)')
+                                return
+                              }
+                            this.props.dispatch(editAppointment(this.props.authToken, values, this.props.aptId, this.props.currentUser.id))
                             this.handleClose();
                         }}
                             type="submit"
                             color="primary">
-                            Add
+                            Edit
             </Button>
                     </DialogActions>
                 </Dialog>

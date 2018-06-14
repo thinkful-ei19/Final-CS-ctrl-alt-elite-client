@@ -13,14 +13,13 @@ class Calendar extends React.Component {
         let currentMonth = this.props.selectedMonth;
         let currentYear = this.props.selectedYear;
         const component = this;
-
+        console.log(this.props)
         const monthYear = moment(String(`${currentYear}-${currentMonth}`)).format('MMMM YYYY');
         function increment() {
             currentMonth ++
             if (currentMonth > 12) {
                 currentMonth = 1
-                currentYear ++
-                component.props.dispatch(changeYear(currentYear))
+                component.props.dispatch(changeYear(Number(currentYear) + 1))
             }
             if (currentMonth < 10) {
                 currentMonth = '0' + currentMonth
@@ -31,8 +30,7 @@ class Calendar extends React.Component {
             currentMonth --
             if (currentMonth < 1) {
                 currentMonth = 12
-                currentYear --
-                component.props.dispatch(changeYear(currentYear))
+                component.props.dispatch(changeYear(Number(currentYear) - 1))
             }
             if (currentMonth < 10) {
                 currentMonth = '0' + currentMonth
@@ -55,9 +53,7 @@ class Calendar extends React.Component {
                 </IconButton>
                 </div>
                 <Days/>
-                <div className="calendar__blocks-row">
-                    <Dates/>
-                </div>
+                <Dates/>
             </div>
         )
     }
