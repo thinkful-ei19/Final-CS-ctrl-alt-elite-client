@@ -1,6 +1,6 @@
 .selected-date {
   border-radius: 45%;
-  background-image: radial-gradient(rgba(55, 55, 55, 0.1), rgba(55, 55, 55, 0.1)); }
+  background-image: radial-gradient(rgba(0, 0, 0, 0.1), rgba(55, 55, 55, 0.1)); }
 
 .appointment-date {
   color: red; }
