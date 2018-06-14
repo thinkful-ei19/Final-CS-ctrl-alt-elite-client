@@ -5,11 +5,10 @@ import {Redirect} from 'react-router-dom';
 import Schedule from './schedule';
 import Navigation from './navigation';
 import { setDate } from '../actions/appointment';
-import Calendar from './calendar';
 
 import requiresLogin from './requires-login';
 
-export class Dashboard extends React.Component {
+export class Clients extends React.Component {
 
     componentDidMount() {
         if (this.props.selectedTab === 'clients') {
@@ -18,12 +17,11 @@ export class Dashboard extends React.Component {
     }
 
     render() {
-        console.log('DASHBOARDS PROPS', this.props);
+        console.log('CLIENTS PROPS:', this.props);
         return (
             <div>
+                This is the client Page
                 <Navigation/>
-                <Calendar />
-                <Schedule />
             </div>
         )
     }
@@ -38,4 +36,4 @@ const mapStateToProps = state => {
     }
 };
 
-export default requiresLogin()(connect(mapStateToProps)(Dashboard));
+export default requiresLogin()(connect(mapStateToProps)(Clients));
