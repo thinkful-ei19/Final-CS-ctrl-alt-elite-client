@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
 import Schedule from './schedule';
 import Navigation from './navigation';
-import { setDate } from '../actions/appointment';
+// import { setDate } from '../actions/appointment';
 import Calendar from './calendar';
 import background from '../media/blue.jpg';
 import requiresLogin from './requires-login';
@@ -26,6 +26,7 @@ export class Dashboard extends React.Component {
     }
 
     render() {
+        console.log('DASHBOARDS PROPS', this.props.currentUser.clients);
         return (
             <section style={ sectionStyle }>
                 <div>
