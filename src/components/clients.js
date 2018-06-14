@@ -27,7 +27,6 @@ export class Clients extends React.Component {
 }
 
 const mapStateToProps = state => {
-    console.log('STATE', state);
     return {
         authToken: state.auth.authToken,
         currentUser: state.auth.currentUser,

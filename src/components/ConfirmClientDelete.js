@@ -26,9 +26,9 @@ class ConfirmClientDelete extends React.Component {
   };
 
   render() {
-    console.log('userId', this.props.currentUser.id);
+    // console.log('userId', this.props.currentUser.id);
     // console.log('authToken', this.props.authToken);
-    console.log('this is the clientId to delete', this.props.clientId);
+    // console.log('this is the clientId to delete', this.props.clientId);
     return (
       <div>
         <IconButton aria-label="Delete" onClick={this.handleClickOpen}>
