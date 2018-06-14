@@ -4,6 +4,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ConfirmClientDelete from './ConfirmClientDelete';
+import EditClientForm from './EditClientForm';
 
 
 import requiresLogin from './requires-login';
@@ -19,12 +20,13 @@ export class ClientsList extends React.Component {
                         Phone: {client.phone} <br />
                         Email: {client.email} <br />
                     </ListItemText>
+                    <EditClientForm clientInfo={client} clientId={client.id}/>
                     <ConfirmClientDelete clientId={client.id} />
                 </ListItem>
            )
         });
         // const sortedClientList = clientList.sort((a, b) => a - b);
-        console.log('CLIENTSLIST PROPS:', this.props.user.clients);
+        // console.log('CLIENTSLIST PROPS:', this.props.user.clients);
         return (
             <div>
                 Client List
