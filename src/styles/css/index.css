@@ -177,26 +177,26 @@ li {
   transform: rotate(-135deg); }
 
 .login-form {
-  font-size: 1.6rem;
+  font-size: 2.2rem;
   margin: 0 auto;
   padding: 10rem;
-  text-align: left; }
+  text-align: left;
+  font-family: 'Roboto', sans-serif; }
   .login-form__input {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     font-family: inherit;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 3rem;
     color: inherit;
-    border-radius: 2px;
+    border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.5);
-    border: 1px solid #373737;
-    border-bottom: 1px solid #373737;
+    border: 1px solid #E5E8E8;
+    border-bottom: 1px solid #E5E8E8;
     width: 100%;
     display: block;
     transition: all .3s; }
     .login-form__input:focus {
       outline: none;
-      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-      border-bottom: 5px solid #D6EAF8;
+      border-bottom: 1px solid #D6EAF8;
       transform: translateY(-5%); }
     .login-form__input:focus:invalid {
       border-color: #a33; }
@@ -213,6 +213,19 @@ li {
     visibility: hidden;
     transition: all .3s;
     transform: translateY(-4rem); }
+
+.form-error {
+  color: red; }
+
+.login-button {
+  border-radius: 5px;
+  margin-top: 20px;
+  border: 1px solid #E5E8E8;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  background-color: #D4E6F1;
+  color: white;
+  font-size: 2.2rem; }
 
 .calendar {
   font-family: 'Roboto', sans-serif;
