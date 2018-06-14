@@ -14,7 +14,7 @@ function ScheduleList(props) {
   try {
     const appointments = props.currentUser.appointments.filter((apt) => {
       if (moment(apt.time).format('YYYY MM DD') === moment(props.selectedDate).format('YYYY MM DD')) {
-        return apt
+        return apt;
       }
     });
     buildList = appointments.map((apt) => {

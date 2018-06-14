@@ -1,4 +1,4 @@
-import moment from 'moment';
+// import moment from 'moment';
 import { SELECT_TAB } from '../actions/tabs';
 
 const initialState = {

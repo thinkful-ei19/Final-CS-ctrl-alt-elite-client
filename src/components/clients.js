@@ -10,11 +10,11 @@ import requiresLogin from './requires-login';
 
 export class Clients extends React.Component {
 
-    componentDidMount() {
-        if (this.props.selectedTab === 'clients') {
-            return <Redirect to='/clients' />
-        }
-    }
+    // componentDidMount() {
+    //     if (this.props.selectedTab === 'clients') {
+    //         return <Redirect to='/clients' />
+    //     }
+    // }
 
     render() {
         console.log('CLIENTS PROPS:', this.props);
