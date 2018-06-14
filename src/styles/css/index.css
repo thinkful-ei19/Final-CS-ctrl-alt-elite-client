@@ -217,13 +217,13 @@ li {
 .form-error {
   color: red; }
 
-.login-button {
+.login-button, .register-button {
   border-radius: 5px;
   margin-top: 20px;
   border: 1px solid #E5E8E8;
   width: 100%;
   padding: 1.5rem 2rem;
-  background-color: #D4E6F1;
+  background-color: #CCD1D1;
   color: white;
   font-size: 2.2rem; }
 

@@ -14,7 +14,7 @@ export function LandingPage(props) {
 
     return (
         <div className="login-form">
-            <h2>Welcome!</h2>
+            <h1>Welcome!</h1>
             <br/>
             <LoginForm />
             <br/>
