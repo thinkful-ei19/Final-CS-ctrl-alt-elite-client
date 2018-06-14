@@ -45,37 +45,33 @@ export const deleteClient = (authToken, id, userId) => (dispatch) => {
 }
 
 
-// export const editClient = (authToken, values, id, userId) => (dispatch) => {
+export const editClient = (authToken, values, id, userId) => (dispatch) => {
+console.log('updating client info');
 
+    const updateObject = {
+            email: values.email,
+            name: values.name,
+            phone: values.phone 
+    }
+console.log('heres the updateObject', updateObject);
 
-//     const updateObject = {
-//         time: moment(String(values.date + ' ' + values.time)).format(),
-//         notes: values.notes,
-//         client: {
-//             email: values.email,
-//             name: values.name,
-//             phone: values.phone,
-//         }
-//     }
+    fetch(`${API_BASE_URL}/clients/${id}`, {
+        method: 'PUT', 
+        body: JSON.stringify(updateObject),
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${authToken}`
+          }
+    })
+    .then((res) => {
+        res.json()
+    })
+    .then(() => {
+        dispatch(getUserInfoById(authToken, userId))
+    })
+    .catch((result) => {
+        console.error(result)
+    })
 
-//     fetch(`${API_BASE_URL}/appointments/${id}`, {
-//         method: 'PUT', 
-//         body: JSON.stringify(updateObject),
-//         headers: {
-//             'Accept': 'application/json',
-//             'Content-Type': 'application/json',
-//             Authorization: `Bearer ${authToken}`
-//           }
-//     })
-//     .then((res) => {
-//         res.json()
-//     })
-//     .then((result) => {
-//         console.log(result)
-//         dispatch(getUserInfoById(authToken, userId))
-//     })
-//     .catch((result) => {
-//         console.error(result)
-//     })
-
-// }
+}
