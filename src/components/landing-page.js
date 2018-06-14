@@ -17,8 +17,7 @@ export function LandingPage(props) {
             <h1>Welcome!</h1>
             <br/>
             <LoginForm />
-            <br/>
-            Don't have an account? <Link style={{ textDecoration: 'none' }} to="/register">Register</Link>
+            <br/>Don't have an account? <Link style={{ textDecoration: 'none' }} to="/register">Register</Link>
         </div>
     );
 }
