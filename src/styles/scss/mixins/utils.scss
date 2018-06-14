@@ -1,10 +1,19 @@
 .selected-date {
     // background-color: #aaf;
-    border: 1px solid #D5DBDB; 
+    // border: 1px solid #D5DBDB; 
     border-radius: 45%; 
+    background-image: radial-gradient(rgba(transparent, .1), rgba($color-four, .1));
 }
 
 .appointment-date {
     color: red;
     // background-color: #aaa;
+}
+
+.previous-appointment-date {
+    color: blue;
+}
+
+.other-month-date {
+    color: #aaa;
 }
