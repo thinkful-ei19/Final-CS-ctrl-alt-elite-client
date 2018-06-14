@@ -10,18 +10,32 @@ import requiresLogin from './requires-login';
 
 export class Clients extends React.Component {
 
-    // componentDidMount() {
-    //     if (this.props.selectedTab === 'clients') {
-    //         return <Redirect to='/clients' />
-    //     }
-    // }
+    componentDidMount() {
+        if (this.props.selectedTab === 'dashboard') {
+            return <Redirect to='/dashboard' />
+        }
+    }
 
     render() {
-        console.log('CLIENTS PROPS:', this.props);
+        const clientList = this.props.currentUser.clients.map((client, index) => {
+           return (
+                <li key={index}>
+                    Name: {client.name}
+                    Phone: {client.phone}
+                    Email: {client.email}
+                </li>
+           )
+        });
+        console.log('CLIENTS PROPS:', this.props.currentUser.clients);
         return (
             <div>
                 This is the client Page
                 <Navigation/>
+                <div>
+                    <ul>
+                        {clientList}
+                    </ul>
+                </div>
             </div>
         )
     }

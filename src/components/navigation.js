@@ -26,21 +26,16 @@ class Navigation extends React.Component {
                 <ul className="navigation__list">
 
                     <li className="navigation__item">
-                        <Link to="/dashboard">
-                                <a href=""
+                        <Link to="/dashboard"
                                     onClick={() => {this.props.dispatch(changeTab('dashboard'))}}
                                     className="navigation__link">Home
-                                </a>
                         </Link>
                     </li>
 
-
                     <li className="navigation__item">
-                        <Link to="/clients">
-                            <a href="" 
+                        <Link to="/clients"
                             onClick={() => {this.props.dispatch(changeTab('clients'))}}
                             className="navigation__link">Clients
-                            </a>
                         </Link>
                     </li>
 
