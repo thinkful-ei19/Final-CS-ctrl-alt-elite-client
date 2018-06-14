@@ -1,12 +1,11 @@
 import React from 'react';
 import {connect} from 'react-redux';
-// import Calendar from 'react-calendar';
 import {Redirect} from 'react-router-dom';
-import Schedule from './schedule';
 import Navigation from './navigation';
-import { setDate } from '../actions/appointment';
+import { ClientsList } from './clients-list';
 
 import requiresLogin from './requires-login';
+
 
 export class Clients extends React.Component {
 
@@ -17,31 +16,18 @@ export class Clients extends React.Component {
     }
 
     render() {
-        const clientList = this.props.currentUser.clients.map((client, index) => {
-           return (
-                <li key={index}>
-                    Name: {client.name}
-                    Phone: {client.phone}
-                    Email: {client.email}
-                </li>
-           )
-        });
-        console.log('CLIENTS PROPS:', this.props.currentUser.clients);
         return (
             <div>
                 This is the client Page
                 <Navigation/>
-                <div>
-                    <ul>
-                        {clientList}
-                    </ul>
-                </div>
+                <ClientsList user={this.props.currentUser}/>
             </div>
         )
     }
 }
 
 const mapStateToProps = state => {
+    console.log('STATE', state);
     return {
         authToken: state.auth.authToken,
         currentUser: state.auth.currentUser,
