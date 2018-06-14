@@ -18,7 +18,7 @@ export function LandingPage(props) {
             <br/>
             <LoginForm />
             <br/>
-            Don't have an account? <Link to="/register">Register</Link>
+            Don't have an account? <Link style={{ textDecoration: 'none' }} to="/register">Register</Link>
         </div>
     );
 }
