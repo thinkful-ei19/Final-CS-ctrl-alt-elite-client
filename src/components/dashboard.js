@@ -14,8 +14,10 @@ export class Dashboard extends React.Component {
         return (
             <div>
                 <Navigation/>
-                <Calendar />
-                <Schedule />
+                <div className="components">
+                    <Calendar />
+                    <Schedule />
+                </div>
             </div>
         )
     }

@@ -23,7 +23,7 @@ function ScheduleList(props) {
         <ListItemText
         primary={
           <div>
-            <ul>
+            <ul className="schedule-li">
               <li>{moment(apt.time).format('MMMM Do YYYY, h:mm:ss A')}</li>              
               <li>Name: {apt.client.name}</li>              
               <li>Phone: {apt.client.phone}</li>

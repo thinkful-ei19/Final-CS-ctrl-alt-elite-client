@@ -11,9 +11,9 @@ export default function PaperSheet(props) {
     <div>
       <Paper className="schedule">
           <AptForm />
-        <Typography variant="headline" component="h3">
+        {/* <Typography variant="headline" component="h3">
           Schedule
-        </Typography>
+        </Typography> */}
         <ScheduleList />
       </Paper>
     </div>

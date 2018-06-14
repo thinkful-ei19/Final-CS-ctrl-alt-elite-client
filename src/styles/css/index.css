@@ -231,6 +231,7 @@ li {
   font-size: 2.2rem; }
 
 .calendar {
+  padding-top: 5rem;
   font-family: 'Roboto', sans-serif;
   font-size: 2rem;
   text-align: center;
@@ -258,3 +259,10 @@ li {
       cursor: pointer;
       background-color: #EBF5FB;
       border-radius: 20%; }
+
+.components {
+  display: flex;
+  justify-content: center; }
+
+.schedule-li {
+  font-size: 15px; }
