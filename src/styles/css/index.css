@@ -252,7 +252,7 @@ li {
   .calendar__header-row__header {
     display: inline-block;
     padding-bottom: 5rem;
-    min-width: 20rem; }
+    min-width: 30rem; }
   .calendar__days__day {
     display: inline-block;
     width: 14.2%;
