@@ -10,6 +10,9 @@
   margin: 0;
   box-sizing: inherit; }
 
+a {
+  text-decoration: none; }
+
 html {
   font-size: 62.5%; }
   @media (max-width: 112.5em) {
@@ -113,7 +116,7 @@ li {
 .navigation__link:link, .navigation__link:visited {
   display: inline-block;
   font-size: 3rem;
-  font-weight: 300;
+  font-weight: 500;
   padding: 1rem 2rem;
   color: #fff;
   text-decoration: none;
