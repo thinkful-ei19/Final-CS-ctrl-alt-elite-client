@@ -227,18 +227,74 @@ export class Dates extends React.Component {
                     }
                 })
                 if (component.props.selectedDate === date.value) {
+                    if (found !== null) {
+                        if (moment(date.value).valueOf() > moment().valueOf()) {
+                            if (date.ref === 'previous' || date.ref === 'next') {
+                                return (
+                                    <a onClick={(event) => component.props.dispatch(selectDate(date.value))} className="selected-date calendar__blocks-row__blocks appointment-date other-month-date" value={date.value} ref={date.ref} key={date.value}>
+                                        {date.day}
+                                    </a>
+                                    )
+                            }
+                            return (
+                            <a onClick={(event) => component.props.dispatch(selectDate(date.value))} className="selected-date calendar__blocks-row__blocks appointment-date" value={date.value} ref={date.ref} key={date.value}>
+                                {date.day}
+                            </a>
+                            )
+                        }
+                        if (date.ref === 'previous' || date.ref === 'next') {
+                            return (
+                                <a onClick={(event) => component.props.dispatch(selectDate(date.value))} className="selected-date calendar__blocks-row__blocks previous-appointment-date other-month-date" value={date.value} ref={date.ref} key={date.value}>
+                                    {date.day}
+                                </a>
+                                )
+                        }
+                        return (
+                            <a onClick={(event) => component.props.dispatch(selectDate(date.value))} className="selected-date calendar__blocks-row__blocks previous-appointment-date" value={date.value} ref={date.ref} key={date.value}>
+                                {date.day}
+                            </a>
+                        )
+                    }
                     return (
-                        <a onClick={(event) => component.props.dispatch(selectDate(date.value))} className="calendar__blocks-row__blocks selected-date" value={date.value} ref={date.ref} key={date.value}>
+                        <a onClick={(event) => component.props.dispatch(selectDate(date.value))} className="selected-date calendar__blocks-row__blocks" value={date.value} ref={date.ref} key={date.value}>
                             {date.day}
                         </a>
                     )
                 }
                 if (found !== null) {
+                    if (moment(date.value).valueOf() > moment().valueOf()) {
+                        if (date.ref === 'previous' || date.ref === 'next') {
+                            return (
+                                <a onClick={(event) => component.props.dispatch(selectDate(date.value))} className="calendar__blocks-row__blocks appointment-date other-month-date" value={date.value} ref={date.ref} key={date.value}>
+                                    {date.day}
+                                </a>
+                                )
+                        }
+                        return (
+                        <a onClick={(event) => component.props.dispatch(selectDate(date.value))} className="calendar__blocks-row__blocks appointment-date" value={date.value} ref={date.ref} key={date.value}>
+                            {date.day}
+                        </a>
+                        )
+                    }
+                    if (date.ref === 'previous' || date.ref === 'next') {
+                        return (
+                            <a onClick={(event) => component.props.dispatch(selectDate(date.value))} className="calendar__blocks-row__blocks previous-appointment-date other-month-date" value={date.value} ref={date.ref} key={date.value}>
+                                {date.day}
+                            </a>
+                            )
+                    }
                     return (
-                    <a onClick={(event) => component.props.dispatch(selectDate(date.value))} className="calendar__blocks-row__blocks appointment-date" value={date.value} ref={date.ref} key={date.value}>
-                        {date.day}
-                    </a>
+                        <a onClick={(event) => component.props.dispatch(selectDate(date.value))} className="calendar__blocks-row__blocks previous-appointment-date" value={date.value} ref={date.ref} key={date.value}>
+                            {date.day}
+                        </a>
                     )
+                }
+                if (date.ref === 'previous' || date.ref === 'next') {
+                    return (
+                        <a onClick={(event) => component.props.dispatch(selectDate(date.value))} className="calendar__blocks-row__blocks other-month-date" value={date.value} ref={date.ref} key={date.value}>
+                            {date.day}
+                        </a>
+                        )
                 }
                 return (
                     <a onClick={(event) => component.props.dispatch(selectDate(date.value))} className="calendar__blocks-row__blocks" value={date.value} ref={date.ref} key={date.value}>

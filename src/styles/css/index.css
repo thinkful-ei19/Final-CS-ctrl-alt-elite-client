@@ -1,9 +1,15 @@
 .selected-date {
-  border: 1px solid #D5DBDB;
-  border-radius: 45%; }
+  border-radius: 45%;
+  background-image: radial-gradient(rgba(55, 55, 55, 0.1), rgba(55, 55, 55, 0.1)); }
 
 .appointment-date {
   color: red; }
+
+.previous-appointment-date {
+  color: blue; }
+
+.other-month-date {
+  color: #aaa; }
 
 * {
   padding: 0;
@@ -52,7 +58,7 @@ li {
   display: none; }
 
 .navigation__button {
-  background-color: #D6EAF8;
+  background-color: #F4F4F4;
   height: 7rem;
   width: 7rem;
   position: fixed;
@@ -118,10 +124,10 @@ li {
   font-size: 3rem;
   font-weight: 500;
   padding: 1rem 2rem;
-  color: #fff;
+  color: #373737;
   text-decoration: none;
   text-transform: uppercase;
-  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #373737 50%);
   background-size: 230%;
   transition: all .4s; }
 
@@ -150,7 +156,7 @@ li {
   .navigation__icon, .navigation__icon::before, .navigation__icon::after {
     width: 3rem;
     height: 2px;
-    background-color: white;
+    background-color: #373737;
     display: inline-block; }
   .navigation__icon::before, .navigation__icon::after {
     content: "";
@@ -245,7 +251,8 @@ li {
     margin: 2rem; }
   .calendar__header-row__header {
     display: inline-block;
-    padding-bottom: 5rem; }
+    padding-bottom: 5rem;
+    min-width: 20rem; }
   .calendar__days__day {
     display: inline-block;
     width: 14.2%;
@@ -258,6 +265,11 @@ li {
       cursor: pointer;
       background-color: #EBF5FB;
       border-radius: 20%; }
+
+.appointments {
+  width: 50rem; }
+  .appointments__list {
+    line-height: 1.2; }
 
 .components {
   display: flex;
