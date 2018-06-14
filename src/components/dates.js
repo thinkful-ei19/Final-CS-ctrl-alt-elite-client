@@ -9,7 +9,7 @@ export class Dates extends React.Component {
         const component = this;
         const currentYear = String(this.props.selectedYear);
         const fixedCurrentYear = moment().format('YYYY');
-        const currentMonth = String(this.props.selectedMonth)
+        const currentMonth = String(this.props.selectedMonth);
         const fixedCurrentMonth = moment().format('MM');
         const maxDays = moment(`${currentYear}-${currentMonth}-01`).daysInMonth()
         const firstDayOfMonth = moment(`${currentYear}-${currentMonth}-01`).startOf('month').format('e');

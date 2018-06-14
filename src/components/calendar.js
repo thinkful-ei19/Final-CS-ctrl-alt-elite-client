@@ -4,6 +4,8 @@ import moment from 'moment';
 import { changeMonth, changeYear } from '../actions/calendar';
 import Days from './days';
 import Dates from './dates';
+import SvgIcon from '@material-ui/core/SvgIcon';
+import IconButton from '@material-ui/core/IconButton';
 
 class Calendar extends React.Component {
 
@@ -38,9 +40,17 @@ class Calendar extends React.Component {
         return (
             <div className="calendar">
                 <div className="calendar__header-row">
-                    <button onClick={decrement} className="calendar__header-row__previous">&#8592;</button>
+                <IconButton aria-label="next month" onClick={decrement}>
+                    <SvgIcon>
+                    <path xmlns="http://www.w3.org/2000/svg" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </SvgIcon>
+                </IconButton>
                     <h2 className="calendar__header-row__header">{monthYear}</h2>
-                    <button onClick={increment} className="calendar__header-row__next">&#8594;</button>
+                <IconButton aria-label="next month" onClick={increment}>
+                    <SvgIcon>
+                    <path xmlns="http://www.w3.org/2000/svg" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                    </SvgIcon>
+                </IconButton>
                 </div>
                 <Days/>
                 <Dates/>
