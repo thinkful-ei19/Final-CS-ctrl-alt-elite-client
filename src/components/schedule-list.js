@@ -25,9 +25,9 @@ function ScheduleList(props) {
           <div>
             <ul className="schedule-li">
               <li>{moment(apt.time).format('MMMM Do YYYY, h:mm:ss A')}</li>              
-              <li>Name: {apt.client.name}</li>              
-              <li>Phone: {apt.client.phone}</li>
-              <li>Email: {apt.client.email}</li>
+              <li>{apt.client.name}</li>              
+              <li>{apt.client.phone}</li>
+              <li>{apt.client.email}</li>
               <li>Notes: {apt.notes}</li>
             </ul>
           </div>
