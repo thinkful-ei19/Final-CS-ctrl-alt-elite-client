@@ -231,11 +231,10 @@ li {
   font-size: 2.2rem; }
 
 .calendar {
-  padding-top: 5rem;
   font-family: 'Roboto', sans-serif;
   font-size: 2rem;
   text-align: center;
-  max-width: 70rem;
+  max-width: 60rem;
   text-transform: uppercase;
   color: #616A6B; }
   .calendar__header-row__previous {
@@ -262,7 +261,11 @@ li {
 
 .components {
   display: flex;
-  justify-content: center; }
+  justify-content: space-evenly;
+  padding-top: 5rem; }
+
+.schedule {
+  margin-top: 16rem; }
 
 .schedule-li {
   font-size: 15px; }
