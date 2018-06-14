@@ -1,6 +1,18 @@
 .appointments {
     width: 50rem;
-    
+}
+
+//Specificity is required to overwrite plugin CSS
+.appointments-specify .appointments {
+
+    &__add-appointment {
+        font-size: 2rem;
+            background-image: linear-gradient(to left, rgba($color-one, .8), rgba($color-one, .8));
+
+        &:hover {
+        }
+    }
+
     &__list {
         line-height: 1.2;
         

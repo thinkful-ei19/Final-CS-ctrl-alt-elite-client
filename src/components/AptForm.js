@@ -98,8 +98,8 @@ class AptForm extends React.Component {
     })
 
     return (
-      <div>
-        <Button onClick={this.handleClickOpen}>Add Appointment</Button>
+      <div className="appointments-specify">
+        <Button className="appointments__add-appointment" onClick={this.handleClickOpen}>Add Appointment</Button>
         <Dialog
           open={this.state.open}
           onClose={this.handleClose}
