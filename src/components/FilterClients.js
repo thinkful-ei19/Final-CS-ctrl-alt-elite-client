@@ -19,7 +19,7 @@ export default class FilterClients extends React.Component {
     render() {
         const component = this;
         const clientFilter = this.props.user.clients.filter((client) => {
-           if (client.name.slice(0, component.state.input.length) === component.state.input) {
+           if (client.name.slice(0, component.state.input.length).toLowerCase() === component.state.input.toLowerCase()) {
             return client;
            }
         })
