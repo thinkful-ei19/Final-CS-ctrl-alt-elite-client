@@ -103,7 +103,7 @@ class EditClientForm extends React.Component {
                     aria-labelledby="form-dialog-title"
                     onChange={(event) => this.handleSubmitValue(event)}
                 >
-                    <DialogTitle id="form-dialog-title">Updater Client Information</DialogTitle>
+                    <DialogTitle id="form-dialog-title">Update Client Information</DialogTitle>
                     <DialogContent>
                         <TextField
                             autoFocus
