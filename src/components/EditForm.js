@@ -200,6 +200,16 @@ class EditForm extends React.Component {
                                 alert('Please fill out the form entirely (notes optional)')
                                 return
                               }
+                              let check = false;
+                              this.props.currentUser.appointments.forEach((apt) => {
+                                if (moment(apt.time).format('YYYY MM DD HH mm'), moment(String(values.date + ' ' + values.time)).format('YYYY MM DD HH mm')) {
+                                  check = true;
+                                }
+                              })
+                              if (check === true) {
+                                alert('This time slot if already taken, please choose another.')
+                                return;
+                              }
                             this.props.dispatch(editAppointment(this.props.authToken, values, this.props.aptId, this.props.currentUser.id))
                             this.handleClose();
                         }}
