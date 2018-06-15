@@ -116,8 +116,8 @@ class EditForm extends React.Component {
               <option key={client.id} value={client.id}>{client.name}</option>
             )
           })
-          dropDownMenu = <select onChange={(event) => { this.selectClient(event.target.value) }}>
-          <option style={{ display: 'none' }} disabled selected value></option>
+          dropDownMenu = <select onChange={(event) => { this.selectClient(event.target.value) }} defaultValue='blank'>
+          <option style={{ display: 'none' }} disabled value='blank'></option>
           {buildOptions}
           </select>
         }
