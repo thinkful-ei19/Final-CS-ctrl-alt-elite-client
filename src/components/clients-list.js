@@ -7,24 +7,25 @@ import ConfirmClientDelete from './ConfirmClientDelete';
 import EditClientForm from './EditClientForm';
 
 
+
 import requiresLogin from './requires-login';
 
 export class ClientsList extends React.Component {
 
     render() {
-        const clientList = this.props.user.clients.map((client) => {
-           return (
-                <ListItem key={client.id} button>
-                    <ListItemText>
-                        Name: {client.name} <br />
-                        Phone: {client.phone} <br />
-                        Email: {client.email} <br />
-                    </ListItemText>
-                    <EditClientForm clientInfo={client} clientId={client.id}/>
-                    <ConfirmClientDelete clientId={client.id} />
-                </ListItem>
-           )
-        });
+        const clientList = this.props.filteredList.map((client) => {
+            return (
+                 <ListItem key={client.id} button>
+                     <ListItemText>
+                         Name: {client.name} <br />
+                         Phone: {client.phone} <br />
+                         Email: {client.email} <br />
+                     </ListItemText>
+                     <EditClientForm clientInfo={client} clientId={client.id}/>
+                     <ConfirmClientDelete clientId={client.id} />
+                 </ListItem>
+            )
+         });
         return (
             <div>
                 Client List
@@ -35,15 +36,5 @@ export class ClientsList extends React.Component {
         )
     }
 }
-
-// const mapStateToProps = state => {
-//     console.log('CLIENTSLIST STATE', state);
-//     return {
-//         authToken: state.auth.authToken,
-//         currentUser: state.auth.currentUser,
-//         selectedDate: state.calendarReducer.selectedDate,
-//         selectedTab: state.tabsReducer.selectedTab
-//     }
-// };
 
 export default requiresLogin()(connect()(ClientsList));
