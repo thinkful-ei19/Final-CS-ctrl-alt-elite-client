@@ -2,7 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
 import Navigation from './navigation';
-import { ClientsList } from './clients-list';
+import ClientsList from './clients-list';
+import AddClientForm from './AddClientForm';
 
 import requiresLogin from './requires-login';
 
@@ -20,6 +21,7 @@ export class Clients extends React.Component {
             <div>
                 This is the client Page
                 <Navigation/>
+                <AddClientForm />
                 <ClientsList user={this.props.currentUser}/>
             </div>
         )
