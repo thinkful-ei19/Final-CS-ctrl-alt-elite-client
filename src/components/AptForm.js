@@ -179,7 +179,8 @@ class AptForm extends React.Component {
               }
               let check = false;
               this.props.currentUser.appointments.forEach((apt) => {
-                if (moment(apt.time).format('YYYY MM DD HH mm'), moment(String(values.date + ' ' + values.time)).format('YYYY MM DD HH mm')) {
+                if (moment(apt.time).format('YYYY MM DD HH mm') === moment(String(values.date + ' ' + values.time)).format('YYYY MM DD HH mm')) {
+                  console.log()
                   check = true;
                 }
               })
