@@ -145,7 +145,7 @@ class AptForm extends React.Component {
               type="date"
               id="date"
             />
-            <TimePicker />
+            <TimePicker props={this.state.time}/>
             <TextField
               autoFocus
               margin="dense"

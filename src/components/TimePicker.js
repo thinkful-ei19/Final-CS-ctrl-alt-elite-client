@@ -24,7 +24,7 @@ function TimePicker(props) {
         id="time"
         label="Appointment Times"
         type="time"
-        defaultValue={props.time}
+        defaultValue='10:00'
         className={classes.textField}
         InputLabelProps={{
           shrink: true,
