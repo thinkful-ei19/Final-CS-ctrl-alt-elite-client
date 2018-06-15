@@ -34,11 +34,12 @@ export default class FilterClients extends React.Component {
                     //     e.target.filter.value ='';
                     // }}
                     >
-                    <label className="filter-clients__label" htmlFor="filter">Filter by name</label>
+                    <label className="filter-clients__label" htmlFor="filter"></label>
                     <input
                         type="text"
                         name="filter"
                         id="filter"
+                        placeholder="Filter by name"
                         onChange={(e) => {
                             this.onChange(e)
                         }}

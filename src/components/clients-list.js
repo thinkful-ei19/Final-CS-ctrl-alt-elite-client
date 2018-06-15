@@ -17,9 +17,9 @@ export class ClientsList extends React.Component {
             return (
                  <ListItem key={client.id} button>
                      <ListItemText>
-                         Name: {client.name} <br />
-                         Phone: {client.phone} <br />
-                         Email: {client.email} <br />
+                         {client.name} <br />
+                         {client.phone} <br />
+                         {client.email} <br />
                      </ListItemText>
                      <EditClientForm clientInfo={client} clientId={client.id}/>
                      <ConfirmClientDelete clientId={client.id} />
@@ -28,7 +28,6 @@ export class ClientsList extends React.Component {
          });
         return (
             <div>
-                Client List
                 <List>
                     {clientList}
                 </List>

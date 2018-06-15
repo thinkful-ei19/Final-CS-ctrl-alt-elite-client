@@ -20,7 +20,6 @@ export class Clients extends React.Component {
     render() {
         return (
             <div>
-                This is the client Page
                 <Navigation/>
                 <AddClientForm />
                 <FilterClients user={this.props.currentUser} />
