@@ -188,6 +188,19 @@ class AptForm extends React.Component {
                 alert('This time slot if already taken, please choose another.')
                 return;
               }
+              if (values.checked === true) {
+                check = false;
+                this.props.currentUser.clients.forEach((client) => {
+                  if (client.name === values.name) {
+                    check = true;
+                  }
+                })
+                if (check === true) {
+                  alert('This client name already exists! Please choose a different client name.')
+                  return;
+                }
+              }
+
               this.props.dispatch(addAppointment(this.props.authToken, values, this.props.currentUser.id))
               this.handleClose();
             }}
