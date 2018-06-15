@@ -25,6 +25,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "build-css": "node-sass-chokidar src/styles/scss/index.scss -o src/styles/css",
-    "watch-css": "npm run build-css && node-sass-chokidar src/styles/scss/index.scss -o src/styles/css --watch --recursive"
+    "watch-css": "npm run build-css && node-sass-chokidar src/styles/scss/index.scss -o src/styles/css --watch --recursive",
+    "deploy": "npm run build && netlify deploy -p ./build"
   }
 }
