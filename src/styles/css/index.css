@@ -267,10 +267,11 @@ li {
       background-color: #EBF5FB;
       border-radius: 20%; }
 
-.appointments {
-  width: 50rem; }
+.appointments__schedule-list {
+  max-height: 80rem;
+  overflow-y: scroll; }
 
-.appointments-specify .appointments__add-appointment {
+.appointments__add-appointment {
   font-size: 2rem;
   background-image: linear-gradient(to left, rgba(214, 234, 248, 0.8), rgba(214, 234, 248, 0.8)); }
 
