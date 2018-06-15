@@ -92,11 +92,20 @@ class AptForm extends React.Component {
 
   render() {
 
-    const buildOptions = this.props.currentUser.clients.map((client) => {
-      return (
-        <option key={client.id} value={client.id}>{client.name}</option>
-      )
-    })
+    let dropDownMenu;
+    if (this.props.currentUser.clients.length > 0) {
+      const buildOptions = this.props.currentUser.clients.map((client) => {
+        return (
+          <option key={client.id} value={client.id}>{client.name}</option>
+        )
+      })
+      dropDownMenu = <select onChange={(event) => { this.selectClient(event.target.value) }}>
+      <option style={{ display: 'none' }} disabled selected value></option>
+      {buildOptions}
+    </select>
+
+    }
+
 
     return (
       <div className="appointments-specify">
@@ -112,10 +121,10 @@ class AptForm extends React.Component {
             <DialogContentText>
               Fill out this form with client information in order to create a new appointment.
             </DialogContentText>
-            <select onChange={(event) => { this.selectClient(event.target.value) }}>
-              <option style={{ display: 'none' }} disabled selected value></option>
-              {buildOptions}
-            </select>
+
+              {dropDownMenu}
+
+
             <TextField
               autoFocus
               margin="dense"
