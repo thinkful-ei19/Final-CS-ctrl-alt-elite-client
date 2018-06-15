@@ -107,13 +107,18 @@ class EditForm extends React.Component {
     }
 
     render() {
-        console.log(this.state)
-        const buildOptions = this.props.currentUser.clients.map((client) => {
+        let dropDownMenu;
+        if (this.props.currentUser.clients.length > 0) {
+          const buildOptions = this.props.currentUser.clients.map((client) => {
             return (
-                <option key={client.id} value={client.id}>{client.name}</option>
+              <option key={client.id} value={client.id}>{client.name}</option>
             )
-        })
-
+          })
+          dropDownMenu = <select onChange={(event) => { this.selectClient(event.target.value) }}>
+          <option style={{ display: 'none' }} disabled selected value></option>
+          {buildOptions}
+          </select>
+        }
         return (
             <div>
                 <IconButton aria-label="Edit" onClick={this.handleClickOpen}>
@@ -132,10 +137,7 @@ class EditForm extends React.Component {
                         <DialogContentText>
                             Fill out this form with client information in order to update an existing appointment.
             </DialogContentText>
-                        <select onChange={(event) => { this.selectClient(event.target.value) }}>
-                            <option style={{ display: 'none' }} disabled selected value></option>
-                            {buildOptions}
-                        </select>
+                        {dropDownMenu}
                         <TextField
                             autoFocus
                             margin="dense"
