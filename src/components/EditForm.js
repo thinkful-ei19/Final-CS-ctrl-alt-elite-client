@@ -24,9 +24,10 @@ class EditForm extends React.Component {
             phone: '',
             email: '',
             date: '',
-            time: '',
+            time: '10:00',
             notes: '',
-            checked: false
+            checked: false,
+            previousTime: ''
         };
     }
 
@@ -87,6 +88,7 @@ class EditForm extends React.Component {
             date: moment(aptInfo.time).format('YYYY-MM-DD'),
             time: moment(aptInfo.time).format('hh:mm'),
             notes: aptInfo.notes,
+            previousTime: this.props.aptTime,
         })
     }
 
@@ -201,16 +203,19 @@ class EditForm extends React.Component {
                             if (values.name === '' || values.date === '' || values.time === '') {
                                 alert('Please fill out the form entirely (notes optional)')
                                 return
-                              }
-                              let check = false;
-                              this.props.currentUser.appointments.forEach((apt) => {
-                                if (moment(apt.time).format('YYYY MM DD HH mm') === moment(String(values.date + ' ' + values.time)).format('YYYY MM DD HH mm')) {
-                                  check = true;
-                                }
-                              })
-                              if (check === true) {
-                                alert('This time slot if already taken, please choose another.')
-                                return;
+                            }
+                            if (this.props.aptTime !== moment(String(values.date + ' ' + values.time)).format('YYYY MM DD HH mm')) {
+                                let check = false;
+                                this.props.currentUser.appointments.forEach((apt) => {
+                                    console.log(moment(apt.time).format('YYYY MM DD HH mm'), moment(String(values.date + ' ' + values.time)).format('YYYY MM DD HH mm'))                                    
+                                    if (moment(apt.time).format('YYYY MM DD HH mm') === moment(String(values.date + ' ' + values.time)).format('YYYY MM DD HH mm')) {
+                                        check = true;
+                                    }
+                                  })
+                                  if (check === true) {
+                                    alert('This time slot if already taken by another appointment, please choose another.')
+                                    return;
+                                  }
                               }
                               if (values.checked === true) {
                                 check = false;

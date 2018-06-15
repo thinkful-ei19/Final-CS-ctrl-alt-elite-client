@@ -28,7 +28,6 @@ export class Dashboard extends React.Component {
     }
 
     render() {
-        console.log('DASHBOARDS PROPS', this.props.currentUser.clients);
         return (
             <section style={ sectionStyle }>
                 <div>
