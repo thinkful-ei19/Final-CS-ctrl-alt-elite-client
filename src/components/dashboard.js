@@ -8,6 +8,8 @@ import Navigation from './navigation';
 import Calendar from './calendar';
 import background from '../media/blue.jpg';
 import requiresLogin from './requires-login';
+import AptForm from './AptForm';
+
 
 
 const sectionStyle = {
@@ -33,6 +35,7 @@ export class Dashboard extends React.Component {
                     <Navigation/>
                     <div className="components">
                         <Calendar />
+                        <AptForm />
                         <Schedule />
                     </div>
                 </div>
