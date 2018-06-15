@@ -38,7 +38,16 @@ class AptForm extends React.Component {
   };
 
   handleClose = () => {
-    this.setState({ open: false });
+    this.setState({ 
+      open: false,
+      name: '',
+      phone: '',
+      email: '',
+      date: '',
+      time: '10:00',
+      notes: '',
+      checked: false
+     });
   };
 
   handleSubmitValue = (event) => {
