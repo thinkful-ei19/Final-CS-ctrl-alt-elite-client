@@ -66,7 +66,6 @@ class ConfirmDelete extends React.Component {
 }
 
 const mapStateToProps = state => {
-console.log('STATE CURRENTUSER:', state.auth.currentUser);
   return {
     authToken: state.auth.authToken,
     currentUser: state.auth.currentUser
