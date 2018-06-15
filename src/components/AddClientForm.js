@@ -26,7 +26,12 @@ handleClickOpen = () => {
   };
 
   handleClose = () => {
-    this.setState({ open: false });
+    this.setState({
+         open: false,
+         name: '',
+         phone: '',
+         email: ''
+         });
   };
 
   handleSubmitValue = (event) => {
@@ -48,7 +53,6 @@ handleClickOpen = () => {
   }
 
   selectClient(id) {
-    console.log('Is running');
     const component = this;
     this.props.currentUser.clients.forEach((client) => {
       if (client.id === id) {
@@ -59,18 +63,9 @@ handleClickOpen = () => {
         })
       }
     })
-
-
   }
 
   render() {
-
-    // const buildOptions = this.props.currentUser.clients.map((client) => {
-    //   return (
-    //     <option key={client.id} value={client.id}>{client.name}</option>
-    //   )
-    // })
-
     return (
       <div>
         <Button onClick={this.handleClickOpen}>Add Client</Button>
@@ -138,7 +133,6 @@ handleClickOpen = () => {
 }
 
 const mapStateToProps = state => {
-  // console.log('STATE:', state.auth.currentUser.id);
   return {
     authToken: state.auth.authToken,
     currentUser: state.auth.currentUser
