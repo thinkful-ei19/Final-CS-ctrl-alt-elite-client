@@ -268,7 +268,7 @@ li {
       border-radius: 20%; }
 
 .appointments__schedule-list {
-  max-height: 80rem;
+  max-height: 50rem;
   overflow-y: scroll; }
 
 .appointments__add-appointment {

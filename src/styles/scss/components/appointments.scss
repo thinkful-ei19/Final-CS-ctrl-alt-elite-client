@@ -2,7 +2,7 @@
 .appointments {
 
     &__schedule-list {
-        max-height: 80rem;
+        max-height: 50rem;
         overflow-y: scroll;
     }
 
@@ -11,6 +11,7 @@
             background-image: linear-gradient(to left, rgba($color-one, .8), rgba($color-one, .8));
 
         &:hover {
+                     
         }
     }
 
