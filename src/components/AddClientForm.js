@@ -113,10 +113,20 @@ handleClickOpen = () => {
                 email: this.state.email
               }
               if (values.name === '') {
-                alert('Please fill out the form entirely (notes optional)')
+                alert('Please fill out the form entirely.')
                 return
               }
-              this.props.dispatch(addClient(this.props.authToken, values, this.props.currentUser.id))
+              let check = false;
+              this.props.currentUser.clients.forEach((client) => {
+                if (client.name === values.name) {
+                  check = true;
+                }
+              })
+              if (check === true) {
+                alert('This client name already exists! Please choose a different client name.')
+                return;
+              }
+            this.props.dispatch(addClient(this.props.authToken, values, this.props.currentUser.id))
               this.handleClose();
             }}
               type="submit"
