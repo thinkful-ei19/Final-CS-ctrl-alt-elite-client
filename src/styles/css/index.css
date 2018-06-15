@@ -52,6 +52,7 @@ button {
   cursor: pointer; }
 
 li {
+  line-height: 1.7 !important;
   list-style-type: none; }
 
 .navigation__checkbox {
@@ -272,9 +273,6 @@ li {
 .appointments-specify .appointments__add-appointment {
   font-size: 2rem;
   background-image: linear-gradient(to left, rgba(214, 234, 248, 0.8), rgba(214, 234, 248, 0.8)); }
-
-.appointments-specify .appointments__list {
-  line-height: 1.2; }
 
 .components {
   display: flex;
