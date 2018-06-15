@@ -251,8 +251,7 @@ li {
   margin: 0 auto;
   padding: 10rem;
   text-align: left;
-  font-family: 'Roboto', sans-serif;
-  background: #D0ECE7; }
+  font-family: 'Roboto', sans-serif; }
   .login-form__input {
     font-size: 1.9rem;
     font-family: inherit;
