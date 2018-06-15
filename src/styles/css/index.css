@@ -115,16 +115,6 @@ li {
   padding: 3px;
   transition: all .2s; }
 
-.btn-text:hover {
-  background-color: #D6EAF8;
-  color: #fff;
-  box-shadow: 0 1rem rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px); }
-
-.btn-text:active {
-  box-shadow: 0 1rem rgba(0, 0, 0, 0.15);
-  transform: translateY(0); }
-
 .navigation__checkbox {
   display: none; }
 
@@ -261,7 +251,8 @@ li {
   margin: 0 auto;
   padding: 10rem;
   text-align: left;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  background: #D0ECE7; }
   .login-form__input {
     font-size: 1.9rem;
     font-family: inherit;
@@ -355,4 +346,8 @@ li {
     text-align: center; }
 
 #app-name {
-  font-size: 80px; }
+  font-size: 80px;
+  margin-top: 6rem; }
+
+#app-description {
+  font-size: 20px; }
