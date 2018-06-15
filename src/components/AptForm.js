@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import moment from 'moment';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
@@ -174,7 +175,18 @@ class AptForm extends React.Component {
               }
               if (values.name === '' || values.date === '' || values.time === '') {
                 alert('Please fill out the form entirely (notes optional)')
-                return
+                return;
+              }
+              let check = false;
+              this.props.currentUser.appointments.forEach((apt) => {
+                if (moment(apt.time).format('YYYY MM DD HH mm') === moment(String(values.date + ' ' + values.time)).format('YYYY MM DD HH mm')) {
+                  console.log()
+                  check = true;
+                }
+              })
+              if (check === true) {
+                alert('This time slot if already taken, please choose another.')
+                return;
               }
               this.props.dispatch(addAppointment(this.props.authToken, values, this.props.currentUser.id))
               this.handleClose();

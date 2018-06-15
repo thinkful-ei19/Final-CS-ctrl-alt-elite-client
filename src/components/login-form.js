@@ -49,9 +49,6 @@ export class LoginForm extends React.Component {
                     disabled={this.props.pristine || this.props.submitting}>
                     Log in
                 </button>
-                {/* <Button variant="contained" href="#contained-buttons" disabled={this.props.pristine || this.props.submitting} className="login-button login-form__button">
-                    Log in
-                </Button> */}
             </form>
         );
     }

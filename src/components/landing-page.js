@@ -1,6 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import background from '../media/pencil.jpg';
 
 
@@ -19,7 +18,7 @@ export default function LandingPage(props) {
                 <h1>APP-NAME</h1>
             
                 <p>A simple appointment scheduling app with automated notifications</p>
-                <button className="landing-page __button">GET STARTED</button>
+                <button className="landing-page __button"><Link style={{ textDecoration: 'none' }} to="/login">GET STARTED</Link></button>
             </div>
         </section>
     );
