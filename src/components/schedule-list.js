@@ -14,12 +14,12 @@ function ScheduleList(props) {
   try {
     const appointments = props.currentUser.appointments.filter((apt) => {
       if (moment(apt.time).format('YYYY MM DD') === moment(props.selectedDate).format('YYYY MM DD')) {
-        return apt;
+        return apt
       }
     });
     buildList = appointments.map((apt) => {
       return (
-      <ListItem className="appointments__div" key={apt.id} button>
+      <ListItem key={apt.id} button>
         <ListItemText
         primary={
           <div>
@@ -39,7 +39,7 @@ function ScheduleList(props) {
     })
     return (
       <div >
-        <List component="nav">
+        <List component="nav" className="appointments__schedule-list">
           {buildList}
         </List>
       </div>

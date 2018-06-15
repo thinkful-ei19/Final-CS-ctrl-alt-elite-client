@@ -1,9 +1,10 @@
-.appointments {
-    width: 50rem;
-}
-
 //Specificity is required to overwrite plugin CSS
-.appointments-specify .appointments {
+.appointments {
+
+    &__schedule-list {
+        max-height: 80rem;
+        overflow-y: scroll;
+    }
 
     &__add-appointment {
         font-size: 2rem;
