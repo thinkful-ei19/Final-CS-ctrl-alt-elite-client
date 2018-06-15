@@ -269,7 +269,7 @@ li {
 
 .appointments__schedule-list {
   max-height: 50rem;
-  overflow-y: scroll; }
+  overflow-y: auto; }
 
 .appointments__add-appointment {
   font-size: 2rem;
