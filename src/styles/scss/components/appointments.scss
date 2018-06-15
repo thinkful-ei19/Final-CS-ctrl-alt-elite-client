@@ -1,5 +1,9 @@
 .appointments {
     width: 50rem;
+    
+    &__div {
+        margin-top: 20px;
+    }
 }
 
 //Specificity is required to overwrite plugin CSS
@@ -20,4 +24,6 @@
 
         }
     }
+
+
 }
