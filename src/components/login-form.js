@@ -3,9 +3,10 @@ import { Field, reduxForm, focus } from 'redux-form';
 import Input from './input';
 import { login } from '../actions/auth';
 import { required, nonEmpty } from '../validators';
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 
 // import './login-form.css';
+
 
 export class LoginForm extends React.Component {
     onSubmit(values) {
@@ -48,9 +49,6 @@ export class LoginForm extends React.Component {
                     disabled={this.props.pristine || this.props.submitting}>
                     <span className="btn-text" >Log in</span>
                 </button>
-                {/* <Button variant="contained" href="#contained-buttons" disabled={this.props.pristine || this.props.submitting} className="login-button login-form__button">
-                    Log in
-                </Button> */}
             </form>
         );
     }

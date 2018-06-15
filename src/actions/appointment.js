@@ -27,7 +27,7 @@ export const setDate = date => ({
 })
 
 export const addClient = (authToken, client, id) => (dispatch) => {
-    console.log(`adding client: ${client.name}`);
+    console.log(`adding client: ${client}`);
     fetch(`${API_BASE_URL}/clients/${id}`, {
         method: 'POST', 
         body: JSON.stringify(client),
@@ -129,8 +129,6 @@ export const deleteAppointment = (authToken, id, userId) => (dispatch) => {
 
 
 export const editAppointment = (authToken, values, id, userId) => (dispatch) => {
-
-
     const updateObject = {
         time: moment(String(values.date + ' ' + values.time)).format(),
         notes: values.notes,
@@ -140,6 +138,8 @@ export const editAppointment = (authToken, values, id, userId) => (dispatch) => 
             phone: values.phone,
         }
     }
+
+    console.log('updateOBJ!!', updateObject.client);
 
     fetch(`${API_BASE_URL}/appointments/${id}`, {
         method: 'PUT', 
@@ -151,9 +151,12 @@ export const editAppointment = (authToken, values, id, userId) => (dispatch) => 
           }
     })
     .then((res) => {
+        if (values.checked === true) {
+            dispatch(addClient(authToken, updateObject.client, userId))
+        }
         res.json()
     })
-    .then((result) => {
+    .then(() => {
         dispatch(getUserInfoById(authToken, userId))
     })
     .catch((result) => {

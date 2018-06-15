@@ -1,29 +1,26 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import background from '../media/pencil.jpg';
 
-import LoginForm from './login-form';
 
-// import './landing-page.css';
+const sectionStyle = {
+    backgroundSize: "100% 100%",
+    height: "100VH",
+    backgroundRepeat: "no-repeat",
+    backgroundImage: `url(${background})`
+};
 
-export function LandingPage(props) {
-    // If we are logged in redirect straight to the user's dashboard
-    if (props.loggedIn) {
-        return <Redirect to="/dashboard" />;
-    }
+export default function LandingPage(props) {
 
-    return (
-        <div className="login-form">
-            <h1>Welcome!</h1>
-            <br/>
-            <LoginForm />
-            <br/>Don't have an account? <Link style={{ textDecoration: 'none' }} to="/register">Register</Link>
-        </div>
+    return(
+        <section style={ sectionStyle }>
+            <div className="landing-page">
+                <h1 id="app-name">APP-NAME</h1>
+            
+                <p>A simple appointment scheduling app with automated notifications</p>
+                <button className="landing-page __button"><Link style={{ textDecoration: 'none' }} to="/login">GET STARTED</Link></button>
+            </div>
+        </section>
     );
 }
 
-const mapStateToProps = state => ({
-    loggedIn: state.auth.currentUser !== null
-});
-
-export default connect(mapStateToProps)(LandingPage);

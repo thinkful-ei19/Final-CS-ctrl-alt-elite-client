@@ -1,5 +1,5 @@
 .selected-date {
-  border-radius: 45%;
+  border-radius: 20%;
   background-image: radial-gradient(rgba(0, 0, 0, 0.1), rgba(55, 55, 55, 0.1)); }
 
 .appointment-date {
@@ -348,3 +348,11 @@ li {
 
 .schedule-li {
   font-size: 15px; }
+
+.landing-page {
+  text-align: center; }
+  .landing-page__button {
+    text-align: center; }
+
+#app-name {
+  font-size: 80%; }
