@@ -15,7 +15,7 @@ export default function LandingPage(props) {
     return(
         <section style={ sectionStyle }>
             <div className="landing-page">
-                <h1>APP-NAME</h1>
+                <h1 id="app-name">APP-NAME</h1>
             
                 <p>A simple appointment scheduling app with automated notifications</p>
                 <button className="landing-page __button"><Link style={{ textDecoration: 'none' }} to="/login">GET STARTED</Link></button>

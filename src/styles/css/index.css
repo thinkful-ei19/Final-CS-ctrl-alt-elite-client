@@ -348,3 +348,11 @@ li {
 
 .schedule-li {
   font-size: 15px; }
+
+.landing-page {
+  text-align: center; }
+  .landing-page__button {
+    text-align: center; }
+
+#app-name {
+  font-size: 80%; }
