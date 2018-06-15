@@ -10,6 +10,5 @@ export function LandingPage1(props) {
 
             <p>Let's get you started...</p>
         </div>
-    
     );
 }
