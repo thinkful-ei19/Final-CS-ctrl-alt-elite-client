@@ -32,7 +32,7 @@ function ScheduleList(props) {
             </ul>
           </div>
         } />
-        <EditForm aptInfo={apt} aptId={apt.id} />
+        <EditForm aptTime={moment(apt.time).format('YYYY MM DD HH mm')} aptInfo={apt} aptId={apt.id} />
         <ConfirmDelete aptId={apt.id} />
       </ListItem>
       )

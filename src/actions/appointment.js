@@ -130,7 +130,6 @@ export const deleteAppointment = (authToken, id, userId) => (dispatch) => {
 
 export const editAppointment = (authToken, values, id, userId) => (dispatch) => {
 
-    console.log(values)
 
     const updateObject = {
         time: moment(String(values.date + ' ' + values.time)).format(),
@@ -155,7 +154,6 @@ export const editAppointment = (authToken, values, id, userId) => (dispatch) => 
         res.json()
     })
     .then((result) => {
-        console.log(result)
         dispatch(getUserInfoById(authToken, userId))
     })
     .catch((result) => {
