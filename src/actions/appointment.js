@@ -27,6 +27,7 @@ export const setDate = date => ({
 })
 
 export const addClient = (authToken, client, id) => (dispatch) => {
+    console.log(`adding client: ${client.name}`);
     fetch(`${API_BASE_URL}/clients/${id}`, {
         method: 'POST', 
         body: JSON.stringify(client),
@@ -39,7 +40,7 @@ export const addClient = (authToken, client, id) => (dispatch) => {
     .then(res => normalizeResponseErrors(res))
     .then(res => res.json())
     .then(response => {
-        console.log('this is response', response);
+        console.log('this is response when adding a client:', response);
         dispatch(addAppointmentSuccess(response));
         dispatch(getUserInfoById(authToken, id))
     }).catch(err => {

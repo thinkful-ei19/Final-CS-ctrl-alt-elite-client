@@ -25,8 +25,6 @@ export class ClientsList extends React.Component {
                 </ListItem>
            )
         });
-        // const sortedClientList = clientList.sort((a, b) => a - b);
-        // console.log('CLIENTSLIST PROPS:', this.props.user.clients);
         return (
             <div>
                 Client List
