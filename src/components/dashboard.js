@@ -6,7 +6,7 @@ import Schedule from './schedule';
 import Navigation from './navigation';
 // import { setDate } from '../actions/appointment';
 import Calendar from './calendar';
-import background from '../media/blue.jpg';
+import background from '../media/bleu.jpg';
 import requiresLogin from './requires-login';
 import AptForm from './AptForm';
 

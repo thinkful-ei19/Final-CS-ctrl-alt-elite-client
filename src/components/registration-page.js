@@ -1,10 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
-
+import background from '../media/yellow2.jpg';
 import RegistrationForm from './registration-form';
 
-// import './registration-page.css';
+const sectionStyle = {
+    backgroundSize: "100% 100%",
+    height: "100VH",
+    backgroundRepeat: "no-repeat",
+    backgroundImage: `url(${background})`
+  };
 
 export function RegistrationPage(props) {
     // If we are logged in (which happens automatically when registration
@@ -13,13 +18,17 @@ export function RegistrationPage(props) {
         return <Redirect to="/dashboard" />;
     }
     return (
-        <div>
+        <section style={ sectionStyle }>
             <div>
-                <h1>Register New User</h1>
-                <RegistrationForm />
-                <Link to="/login">Login</Link>
+                <div className="register">
+                    {/* <h1>Register New User</h1> */}
+                    <p className="register__p">Back to <Link to="/login">Login</Link></p>
+                    <RegistrationForm />
+                    <br/>
+                    
+                </div>
             </div>
-        </div>
+        </section>
     );
 }
 
