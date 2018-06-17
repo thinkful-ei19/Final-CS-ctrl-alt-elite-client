@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
 import LoginForm from './login-form';
-import background from '../media/yellow.jpg';
+import background from '../media/workspace.jpg';
 
 
 const sectionStyle = {

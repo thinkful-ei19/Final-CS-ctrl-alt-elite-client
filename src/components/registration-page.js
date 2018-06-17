@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
-import background from '../media/yellow2.jpg';
+import background from '../media/workspace.jpg';
 import RegistrationForm from './registration-form';
 
 const sectionStyle = {
