@@ -75,8 +75,15 @@
 
         &__li {
             display: inline-block;            
-            font-size: 1rem;
-            
+            font-size: 1.25rem;
+        }
+
+        &__client {
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
