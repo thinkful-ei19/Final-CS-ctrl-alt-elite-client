@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { LineChart, Line, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 import moment from 'moment';
 
 // import { Chart } from 'chart.js';
@@ -60,12 +62,35 @@ export default class PieChartComp extends React.Component{
             }           
        });
        console.log(`1: ${janCount}, 2: ${febCount}, .... 6: ${juneCount}, 7: ${julyCount}, 8: ${augCount}, 12 ${decCount}`);
-
-  	return (
-          <div>
-              LOOK HERE
+       const data = [
+        {name: 'Jan', appointments: janCount},
+        {name: 'Feb', appointments: febCount},
+        {name: 'March', appointments: marCount},
+        {name: 'April', appointments: aprCount},
+        {name: 'May', appointments: mayCount},
+        {name: 'June', appointments: juneCount},
+        {name: 'July', appointments: julyCount},
+        {name: 'August', appointments: augCount},
+        {name: 'Sept', appointments: septCount},
+        {name: 'Oct', appointments: octCount},
+        {name: 'Nov', appointments: novCount},
+        {name: 'Dec', appointments: decCount}
+    ]
+       return(
+        <LineChart width={780} height={250} data={data}
+        margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip cursor={false}/>
+        <Legend verticalAlign="top" height={36} iconType='rect'/>
+        <Line type="monotoneX" dataKey="appointments" stroke="#5DADE2" dot={{ stroke: '#5DADE2', strokeWidth: .5 }}/>
+        </LineChart>
     
-        </div>
     );
 }
 }
+
+
+
+
+
