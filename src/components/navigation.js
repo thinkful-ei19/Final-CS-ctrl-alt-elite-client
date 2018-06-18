@@ -27,8 +27,8 @@ class Navigation extends React.Component {
 
                     <li className="navigation__item">
                         <Link to="/dashboard"
-                                    onClick={() => {this.props.dispatch(changeTab('dashboard'))}}
-                                    className="navigation__link">Home
+                            onClick={() => {this.props.dispatch(changeTab('dashboard'))}}
+                            className="navigation__link">Home
                         </Link>
                     </li>
 
