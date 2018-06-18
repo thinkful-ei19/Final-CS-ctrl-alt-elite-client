@@ -37,7 +37,7 @@ export class Dashboard extends React.Component {
                         <div className="components">
                             <WeeklyView />
                             <AptForm />
-                            <Schedule />
+                            <Schedule />                            
                         </div>
                     </div>
                 </section>

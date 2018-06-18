@@ -115,7 +115,7 @@ class WeeklyView extends React.Component {
         renderSelectedWeek.forEach((day) => {
             buildJSX.push(
                 <li key={day.value} className="weekly-view__weekly__li">
-                    <p id={day.value} className="weekly-view__weekly__date">{moment(day.value).format('MMM DD')}</p>
+                    <p id={day.value} className="weekly-view__weekly__date">{moment(day.value).format('DD')}</p>
                 </li>
             )
         })
