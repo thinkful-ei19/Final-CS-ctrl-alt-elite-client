@@ -40,6 +40,13 @@ class Navigation extends React.Component {
                     </li>
 
                     <li className="navigation__item">
+                        <Link to="/reports"
+                            onClick={() => {this.props.dispatch(changeTab('reports'))}}
+                            className="navigation__link">Reports
+                        </Link>
+                    </li>
+
+                    <li className="navigation__item">
                         <a 
                           href="" 
                             onClick={(e) => {
