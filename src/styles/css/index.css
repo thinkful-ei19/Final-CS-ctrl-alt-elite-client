@@ -3,10 +3,10 @@
   background-image: radial-gradient(rgba(0, 0, 0, 0.1), rgba(55, 55, 55, 0.1)); }
 
 .appointment-date {
-  color: red; }
+  color: #CD6155; }
 
 .previous-appointment-date {
-  color: blue; }
+  color: #7FB3D5; }
 
 .other-month-date {
   color: #aaa; }
