@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 // import Chart from 'chart.js';
 import Navigation from './navigation';
 import LineGraph from './reportsLineGraph';
