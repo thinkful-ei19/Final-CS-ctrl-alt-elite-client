@@ -27,8 +27,8 @@ class Navigation extends React.Component {
 
                     <li className="navigation__item">
                         <Link to="/dashboard"
-                                    onClick={() => {this.props.dispatch(changeTab('dashboard'))}}
-                                    className="navigation__link">Home
+                            onClick={() => {this.props.dispatch(changeTab('dashboard'))}}
+                            className="navigation__link">Home
                         </Link>
                     </li>
 
@@ -36,6 +36,13 @@ class Navigation extends React.Component {
                         <Link to="/clients"
                             onClick={() => {this.props.dispatch(changeTab('clients'))}}
                             className="navigation__link">Clients
+                        </Link>
+                    </li>
+
+                    <li className="navigation__item">
+                        <Link to="/reports"
+                            onClick={() => {this.props.dispatch(changeTab('reports'))}}
+                            className="navigation__link">Reports
                         </Link>
                     </li>
 
