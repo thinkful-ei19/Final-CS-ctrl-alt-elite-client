@@ -4,6 +4,7 @@ import {Redirect} from 'react-router-dom';
 import Navigation from './navigation';
 import AddClientForm from './AddClientForm';
 import FilterClients from './FilterClients';
+import PieChartComp from './pie-chart';
 
 
 import requiresLogin from './requires-login';
@@ -23,6 +24,7 @@ export class Clients extends React.Component {
                 <Navigation/>
                 <AddClientForm />
                 <FilterClients user={this.props.currentUser} />
+                <PieChartComp user={this.props.currentUser} />
             </div>
         )
     }
