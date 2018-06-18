@@ -7,6 +7,7 @@ import LogIn from './components/login';
 import Dashboard from './components/dashboard';
 import RegistrationPage from './components/registration-page';
 import WeeklyView from './components/weekly-view';
+import Reports from './components/reports';
 
 import { refreshAuthToken } from './actions/auth';
 import Clients from './components/clients';
@@ -55,6 +56,7 @@ export class App extends React.Component {
                 <Route exact path="/weekly" component={WeeklyView} />                
                 <Route exact path="/clients" component={Clients} />
                 <Route exact path="/register" component={RegistrationPage} />
+                <Route exact path="/reports" component={Reports} />
             </div>
             
         );
