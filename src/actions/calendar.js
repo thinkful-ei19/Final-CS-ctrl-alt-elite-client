@@ -13,3 +13,15 @@ export const selectDate = date => ({
     type: SELECT_DATE,
     date
 })
+
+export const SELECT_WEEK = 'SELECT_WEEK';
+export const selectWeek = (action) => ({
+    type: SELECT_WEEK,
+    action
+})
+
+export const TOGGLE_CALENDAR = 'TOGGLE_CALENDAR';
+export const toggleCalendar = (toggle) => ({
+    type: TOGGLE_CALENDAR,
+    toggle
+})

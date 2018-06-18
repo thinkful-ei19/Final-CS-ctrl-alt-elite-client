@@ -354,3 +354,44 @@ li {
 
 #app-description {
   font-size: 20px; }
+
+.weekly-view {
+  padding: 1rem;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  width: 70%; }
+  .weekly-view__weekly {
+    font-size: 2rem; }
+    .weekly-view__weekly__header {
+      display: flex;
+      flex: 1;
+      justify-content: space-around; }
+    .weekly-view__weekly__days__day {
+      display: inline-block;
+      width: 12.5%;
+      padding: 0 5rem; }
+    .weekly-view__weekly__li {
+      display: inline-block;
+      width: 12.5%;
+      padding: 0 5rem;
+      font-size: 2rem; }
+  .weekly-view__hourly {
+    overflow-y: auto; }
+    .weekly-view__hourly__ul {
+      display: flex;
+      flex-direction: column;
+      height: 70vh; }
+    .weekly-view__hourly__li {
+      font-size: 2rem;
+      flex: 1;
+      width: 100%; }
+      .weekly-view__hourly__li__hour__row__block {
+        display: inline-block;
+        height: 5vh;
+        width: 12.5%;
+        padding: 2rem; }
+  .weekly-view__appointment__ul {
+    font-size: 2rem;
+    overflow: hidden; }
+  .weekly-view__appointment__li {
+    display: inline-block;
+    font-size: 1rem; }

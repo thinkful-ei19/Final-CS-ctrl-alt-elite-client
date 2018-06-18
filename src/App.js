@@ -6,6 +6,7 @@ import LandingPage from './components/landing-page';
 import LogIn from './components/login';
 import Dashboard from './components/dashboard';
 import RegistrationPage from './components/registration-page';
+import WeeklyView from './components/weekly-view';
 
 import { refreshAuthToken } from './actions/auth';
 import Clients from './components/clients';
@@ -48,10 +49,10 @@ export class App extends React.Component {
             
             <div className="app">
                 {/* <HeaderBar /> */}
-                
                 <Route exact path="/" component={LandingPage} />
                 <Route exact path="/login" component={LogIn} />
                 <Route exact path="/dashboard" component={Dashboard} />
+                <Route exact path="/weekly" component={WeeklyView} />                
                 <Route exact path="/clients" component={Clients} />
                 <Route exact path="/register" component={RegistrationPage} />
             </div>
