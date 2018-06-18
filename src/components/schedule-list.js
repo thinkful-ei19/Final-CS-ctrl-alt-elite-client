@@ -12,11 +12,20 @@ function ScheduleList(props) {
   
   let buildList;
   try {
-    const appointments = props.currentUser.appointments.filter((apt) => {
-      if (moment(apt.time).format('YYYY MM DD') === moment(props.selectedDate).format('YYYY MM DD')) {
-        return apt
-      }
-    });
+    console.log(props)
+    
+    let appointments;
+    if (props.selectedAppointment !== null && props.calendar === 'weekly') {
+      appointments = [props.selectedAppointment];
+    } else {
+      appointments = props.currentUser.appointments.filter((apt) => {
+        if (moment(apt.time).format('YYYY MM DD') === moment(props.selectedDate).format('YYYY MM DD')) {
+          return apt
+        }
+      });
+    }
+    console.log(appointments)
+    
     buildList = appointments.map((apt) => {
       return (
       <ListItem key={apt.id} button>
@@ -60,7 +69,9 @@ function ScheduleList(props) {
 
 const mapStateToProps = state => ({
   currentUser: state.auth.currentUser,
-  selectedDate: state.calendarReducer.selectedDate
+  selectedDate: state.calendarReducer.selectedDate,
+  selectedAppointment: state.appointmentReducer.selectedAppointment,
+  calendar: state.calendarReducer.calendar
 });
 
 export default connect(mapStateToProps)(ScheduleList);

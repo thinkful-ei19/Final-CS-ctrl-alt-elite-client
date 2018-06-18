@@ -26,6 +26,12 @@ export const setDate = date => ({
     date
 })
 
+export const SELECT_APPOINTMENT = 'SELECT_APPOINTMENT';
+export const selectAppointment = apt => ({
+    type: SELECT_APPOINTMENT,
+    apt
+})
+
 export const addClient = (authToken, client, id) => (dispatch) => {
     console.log(`adding client: ${client}`);
     fetch(`${API_BASE_URL}/clients/${id}`, {

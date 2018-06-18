@@ -1,8 +1,16 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import moment from 'moment';
+import { selectAppointment } from '../actions/appointment';
 
 class Hourly extends React.Component {
+
+    getApt(id) {
+        const apt = this.props.currentUser.appointments.find((apt) => {
+            return apt.id === id;
+        })
+        this.props.dispatch(selectAppointment(apt))
+    }
 
     render() {
         try {
@@ -26,8 +34,7 @@ class Hourly extends React.Component {
                 if (Number(moment(apt.time).format('HH')) > lastHour) {
                     lastHour = Number(moment(apt.time).format('HH'))
                 }
-                })
-
+            })
             if (lastHour - firstHour < 8) {
                 lastHour = String(Number(firstHour) + 8);
             }
@@ -39,12 +46,15 @@ class Hourly extends React.Component {
                     let day = <li key={j} className="weekly-view__hourly__li__hour__row__block"></li>;
                     appointments.forEach((apt) => {
                         if (Number(moment(apt.time).format('HH')) === i && moment(apt.time).day() === j) { 
+                            console.log(apt.id)
                             switch(moment(apt.time).day()) {
                                 case 0:
                                     day = 
                                     <li key={j} className="weekly-view__hourly__li__hour__row__block">
                                         <ul className="weekly-view__appointment__ul">
-                                            <li className="weekly-view__appointment__li">{apt.client.name}</li>
+                                            <li className="weekly-view__appointment__li">
+                                                <a onClick={(event) => this.getApt(event.target.id)} id={apt.id} className="weekly-view__appointment__client">{apt.client.name}</a>
+                                            </li>
                                         </ul>
                                     </li>
                                     break
@@ -52,7 +62,9 @@ class Hourly extends React.Component {
                                     day = 
                                     <li key={j} className="weekly-view__hourly__li__hour__row__block">
                                         <ul className="weekly-view__appointment__ul">
-                                            <li className="weekly-view__appointment__li">{apt.client.name}</li>
+                                            <li className="weekly-view__appointment__li">
+                                                <a onClick={(event) => this.getApt(event.target.id)} id={apt.id} className="weekly-view__appointment__client">{apt.client.name}</a>
+                                            </li>
                                         </ul>
                                     </li>                            
                                     break
@@ -60,7 +72,9 @@ class Hourly extends React.Component {
                                     day = 
                                     <li key={j} className="weekly-view__hourly__li__hour__row__block">
                                         <ul className="weekly-view__appointment__ul">
-                                            <li className="weekly-view__appointment__li">{apt.client.name}</li>
+                                            <li className="weekly-view__appointment__li">
+                                                <a onClick={(event) => this.getApt(event.target.id)} id={apt.id} className="weekly-view__appointment__client">{apt.client.name}</a>
+                                            </li>
                                         </ul>
                                     </li>     
                                     break
@@ -68,7 +82,9 @@ class Hourly extends React.Component {
                                     day = 
                                     <li key={j} className="weekly-view__hourly__li__hour__row__block">
                                         <ul className="weekly-view__appointment__ul">
-                                            <li className="weekly-view__appointment__li">{apt.client.name}</li>
+                                            <li className="weekly-view__appointment__li">
+                                                <a onClick={(event) => this.getApt(event.target.id)} id={apt.id} className="weekly-view__appointment__client">{apt.client.name}</a>
+                                            </li>
                                         </ul>
                                     </li>     
                                     break
@@ -76,7 +92,9 @@ class Hourly extends React.Component {
                                     day = 
                                     <li key={j} className="weekly-view__hourly__li__hour__row__block">
                                         <ul className="weekly-view__appointment__ul">
-                                            <li className="weekly-view__appointment__li">{apt.client.name}</li>
+                                            <li className="weekly-view__appointment__li">
+                                                <a onClick={(event) => this.getApt(event.target.id)} id={apt.id} className="weekly-view__appointment__client">{apt.client.name}</a>
+                                            </li>
                                         </ul>
                                     </li>     
                                     break
@@ -84,7 +102,9 @@ class Hourly extends React.Component {
                                     day = 
                                     <li key={j} className="weekly-view__hourly__li__hour__row__block">
                                         <ul className="weekly-view__appointment__ul">
-                                            <li className="weekly-view__appointment__li">{apt.client.name}</li>
+                                            <li className="weekly-view__appointment__li">
+                                                <a onClick={(event) => this.getApt(event.target.id)} id={apt.id} className="weekly-view__appointment__client">{apt.client.name}</a>
+                                            </li>
                                         </ul>
                                     </li>     
                                     break
@@ -92,12 +112,14 @@ class Hourly extends React.Component {
                                     day = 
                                     <li key={j} className="weekly-view__hourly__li__hour__row__block">
                                         <ul className="weekly-view__appointment__ul">
-                                            <li className="weekly-view__appointment__li">{apt.client.name}</li>
+                                            <li className="weekly-view__appointment__li">
+                                                <a onClick={(event) => this.getApt(event.target.id)} id={apt.id} className="weekly-view__appointment__client">{apt.client.name}</a>
+                                            </li>
                                         </ul>
                                     </li>     
                                     break
                                 default:
-                                    day = <li key={j} className="weekly-view__hourly__li__hour__row__block">test</li>;
+                                    day = <li key={j} className="weekly-view__hourly__li__hour__row__block"></li>;
                             } 
                         }
                     })

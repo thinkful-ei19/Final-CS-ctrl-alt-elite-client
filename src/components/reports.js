@@ -1,9 +1,12 @@
 import React from 'react';
+
+import { connect } from 'react-redux';
+import requiresLogin from './requires-login';
 // import Chart from 'chart.js';
 import Navigation from './navigation';
 import LineGraph from './reportsLineGraph';
 
-export default class Reports extends React.Component {
+class Reports extends React.Component {
 
     render() {
     //     const ctx = "myChart";
@@ -34,8 +37,19 @@ export default class Reports extends React.Component {
         return(
             <div>
                 <Navigation />
-                <LineGraph />
+                <LineGraph user={this.props.currentUser}/>
             </div>
         
         )} 
 }
+
+const mapStateToProps = state => {
+    return {
+        authToken: state.auth.authToken,
+        currentUser: state.auth.currentUser,
+        selectedDate: state.calendarReducer.selectedDate,
+        selectedTab: state.tabsReducer.selectedTab
+    }
+};
+
+export default requiresLogin()(connect(mapStateToProps)(Reports));

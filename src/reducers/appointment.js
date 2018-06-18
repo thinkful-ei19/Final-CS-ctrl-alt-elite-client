@@ -3,14 +3,16 @@ import {
     ADD_APPOINTMENT_REQUEST,
     ADD_APPOINTMENT_SUCCESS,
     ADD_APPOINTMENT_ERROR,
-    SET_DATE
+    SET_DATE,
+    SELECT_APPOINTMENT
 } from '../actions/appointment';
 
 const initialState = {
     appointments: [],
     error: null,
     loading: null,
-    date: moment().format('MM DD YYYY')
+    date: moment().format('MM DD YYYY'),
+    selectedAppointment: null
 }
 
 export default function appointmentsReducer(state=initialState, action) {
@@ -37,5 +39,11 @@ export default function appointmentsReducer(state=initialState, action) {
             date: action.date
         });
     }
+    else if (action.type === SELECT_APPOINTMENT) {
+        return Object.assign({}, state, {
+            selectedAppointment: action.apt
+        });
+    }
+    
     return state;
 } 
