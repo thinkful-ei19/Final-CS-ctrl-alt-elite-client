@@ -34,10 +34,10 @@ function ScheduleList(props) {
           <div>
             <ul className="appointments__list schedule-li">
               <li className="appointments__list__item">{moment(apt.time).format('MMMM Do YYYY, h:mm A')}</li>              
-              <li className="appointments__list__item">Name: {apt.client.name}</li>              
-              <li className="appointments__list__item">Phone: {apt.client.phone}</li>
-              <li className="appointments__list__item">Email: {apt.client.email}</li>
-              <li className="appointments__list__item">Notes: {apt.notes}</li>
+              <li className="appointments__list__item">{apt.client.name}</li>              
+              <li className="appointments__list__item">{apt.client.phone}</li>
+              <li className="appointments__list__item">{apt.client.email}</li>
+              <li className="appointments__list__item">{apt.notes}</li>
             </ul>
           </div>
         } />
