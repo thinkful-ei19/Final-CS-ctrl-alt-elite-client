@@ -16,7 +16,7 @@ const store = createStore(
         appointmentReducer,
         clientsReducer,
         calendarReducer,
-        tabsReducer
+        tabsReducer,
     }),
     applyMiddleware(thunk)
 );

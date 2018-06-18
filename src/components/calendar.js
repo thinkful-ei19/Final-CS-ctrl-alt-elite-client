@@ -1,13 +1,18 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import moment from 'moment';
-import { changeMonth, changeYear } from '../actions/calendar';
+import { changeMonth, changeYear, toggleCalendar } from '../actions/calendar';
 import Days from './days';
 import Dates from './dates';
 import SvgIcon from '@material-ui/core/SvgIcon';
 import IconButton from '@material-ui/core/IconButton';
 
 class Calendar extends React.Component {
+
+    toggleCalendar() {
+        console.log(this)
+        this.props.dispatch(toggleCalendar('weekly'))
+    }
 
     render() {
         let currentMonth = this.props.selectedMonth;
@@ -38,6 +43,7 @@ class Calendar extends React.Component {
         }
         return (
             <div className="calendar">
+                <button onClick={() => this.toggleCalendar()} className="calendar__toggle-button">Change View</button>
                 <div className="calendar__header-row">
                 <IconButton aria-label="next month" onClick={decrement}>
                     <SvgIcon>
@@ -63,7 +69,8 @@ const mapStateToProps = state => {
         authToken: state.auth.authToken,
         currentUser: state.auth.currentUser,
         selectedMonth: state.calendarReducer.selectedMonth,
-        selectedYear: state.calendarReducer.selectedYear
+        selectedYear: state.calendarReducer.selectedYear,
+        calendar: state.calendarReducer.calendar        
     }
 };
 

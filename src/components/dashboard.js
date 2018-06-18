@@ -6,6 +6,7 @@ import Schedule from './schedule';
 import Navigation from './navigation';
 // import { setDate } from '../actions/appointment';
 import Calendar from './calendar';
+import WeeklyView from './weekly-view'
 import background from '../media/oceanBlue.jpg';
 import requiresLogin from './requires-login';
 import AptForm from './AptForm';
@@ -28,6 +29,20 @@ export class Dashboard extends React.Component {
     }
 
     render() {
+        if (this.props.calendar === 'weekly') {
+            return (
+                <section style={ sectionStyle }>
+                    <div>
+                        <Navigation/>
+                        <div className="components">
+                            <WeeklyView />
+                            <AptForm />
+                            <Schedule />
+                        </div>
+                    </div>
+                </section>
+            )
+        }
         return (
             <section style={ sectionStyle }>
                 <div>
@@ -48,7 +63,8 @@ const mapStateToProps = state => {
         authToken: state.auth.authToken,
         currentUser: state.auth.currentUser,
         selectedDate: state.calendarReducer.selectedDate,
-        selectedTab: state.tabsReducer.selectedTab
+        selectedTab: state.tabsReducer.selectedTab,
+        calendar: state.calendarReducer.calendar
     }
 };
 

@@ -1,0 +1,82 @@
+.weekly-view {
+    padding: 1rem;
+    background-image: linear-gradient(to right, rgba(black, .1), rgba(black, .1));
+    width: 70%;
+
+    &__weekly {
+        font-size: 2rem;
+
+        &__header {
+            display: flex;
+            flex: 1;
+            justify-content: space-around;
+        }
+    
+        &__days {
+
+            &__day {
+                display: inline-block;
+                width: 12.5%;
+                padding: 0 5rem;                
+            }
+        }
+    
+        &__ul {
+
+        }
+
+        &__li {
+            display: inline-block;
+            width: 12.5%;
+            padding: 0 5rem;   
+            font-size: 2rem;                         
+        }
+    }
+    
+    &__hourly {
+        overflow-y: auto;
+
+
+        &__ul {
+            display: flex;
+            flex-direction: column;
+            height: 70vh;
+            
+        }
+
+        &__li {
+            font-size: 2rem;
+            flex: 1;
+            width: 100%;
+
+            &__hour {
+
+
+                &__row {
+
+                    
+                    &__block {
+                        display: inline-block;
+                        height: 5vh;
+                        width: 12.5%;
+                        padding: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &__appointment {
+        
+        &__ul {
+            font-size: 2rem;
+            overflow: hidden;
+        }
+
+        &__li {
+            display: inline-block;            
+            font-size: 1rem;
+            
+        }
+    }
+}
