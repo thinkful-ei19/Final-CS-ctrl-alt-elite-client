@@ -143,9 +143,11 @@ class AptForm extends React.Component {
               className="appointments__input"
               autoFocus
               margin="dense"
+              // name="phoneMask"
               id="phone"
               label="Phone Number"
-              type="phonenumber"
+              type="tel" 
+              // {...phoneMask}
               fullWidth
               value={this.state.phone}
             />

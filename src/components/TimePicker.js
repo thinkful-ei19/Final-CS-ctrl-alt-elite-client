@@ -16,7 +16,7 @@ const styles = theme => ({
 });
 
 function TimePicker(props) {
-  const { classes } = props;
+  // const { classes } = props;
 
   return (
     <form className="appointments-form" noValidate>
