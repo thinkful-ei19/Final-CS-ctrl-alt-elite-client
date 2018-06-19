@@ -114,7 +114,6 @@ export default class LineGraph extends React.Component{
                             margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
                             onClick={(e) => {         
                                 if (e !== null) {
-                                    console.log('this is e:', e);
                                     this.handleClick(e.activeLabel)
                                 }   
                             }}>
