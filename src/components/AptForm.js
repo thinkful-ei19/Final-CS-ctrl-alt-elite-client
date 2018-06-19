@@ -120,6 +120,7 @@ class AptForm extends React.Component {
       <div className="appointments-specify">
         <Button className="appointments__add-appointment" onClick={this.handleClickOpen}>Add Appointment</Button>
         <Dialog
+          className="appointments__dialog"
           open={this.state.open}
           onClose={this.handleClose}
           aria-labelledby="form-dialog-title"
@@ -127,14 +128,12 @@ class AptForm extends React.Component {
         >
           <DialogTitle id="form-dialog-title">Appointment Form</DialogTitle>
           <DialogContent>
-            <DialogContentText>
+            <DialogContentText className="appointments__text">
               Fill out this form with client information in order to create a new appointment.
             </DialogContentText>
-
               {dropDownMenu}
-
-
             <TextField
+              className="appointments__input"
               autoFocus
               margin="dense"
               id="name"
@@ -143,6 +142,7 @@ class AptForm extends React.Component {
               fullWidth
               value={this.state.name}
             /><TextField
+              className="appointments__input"
               autoFocus
               margin="dense"
               id="phone"
@@ -152,6 +152,7 @@ class AptForm extends React.Component {
               value={this.state.phone}
             />
             <TextField
+              className="appointments__input"
               autoFocus
               margin="dense"
               id="email"
@@ -161,11 +162,13 @@ class AptForm extends React.Component {
               value={this.state.email}
             />
             <TextField
+              className="appointments__input"
               type="date"
               id="date"
             />
             <TimePicker props={this.state.time}/>
             <TextField
+              className="appointments__input"
               autoFocus
               margin="dense"
               id="notes"
@@ -176,12 +179,12 @@ class AptForm extends React.Component {
             />
           </DialogContent>
           <DialogActions>
-            <label>Save this client for future appointments</label>
+            <label className="appointments__label">Save this client for future appointments</label>
             <input onChange={(event) => this.setState({ checked: event.target.checked })} type="checkbox" />
-            <Button onClick={this.handleClose} color="primary">
+            <Button className="appointments__button" onClick={this.handleClose} color="primary">
               Cancel
             </Button>
-            <Button onClick={() => {
+            <Button className="appointments__button" onClick={() => {
               const values = {
                 name: this.state.name,
                 phone: this.state.phone,
