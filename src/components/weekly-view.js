@@ -4,7 +4,6 @@ import moment from 'moment';
 import { selectWeek, toggleCalendar } from '../actions/calendar';
 import Hourly from './hourly';
 import WeeklyDays from './weekly-days';
-// import Dates from './dates';
 import SvgIcon from '@material-ui/core/SvgIcon';
 import IconButton from '@material-ui/core/IconButton';
 

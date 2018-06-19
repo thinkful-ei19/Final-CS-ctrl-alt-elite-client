@@ -10,11 +10,6 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import TimePicker from './TimePicker';
 import { addAppointment } from '../actions/appointment';
-// import { createTextMask } from 'redux-form-input-masks';
-
-// const phoneMask = createTextMask({
-//   pattern: '(999) 999-9999',
-// });
 
 class AptForm extends React.Component {
   constructor(props) {

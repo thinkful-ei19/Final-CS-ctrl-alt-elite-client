@@ -1,12 +1,27 @@
 import React from 'react';
-// import { connect } from 'react-redux';
 import { LineChart, Line, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 import moment from 'moment';
 
 
 export default class LineGraph extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            click: false
+        };
+    }
+    
+    handleClick(month) {
+        this.setState({
+            name: month,
+            click: true
+        });
+    }
+
 	render () {
-        let janCount = 0;
+           let apptInfo = []; 
+           let janCount = 0;
            let febCount = 0;
            let marCount = 0;
            let aprCount = 0;
@@ -18,13 +33,11 @@ export default class LineGraph extends React.Component{
            let octCount = 0;
            let novCount = 0;
            let decCount = 0;
-       // console.log('APPT ARRAY', this.props.user.appointments);
-        // console.log('PROPS', this.props.user.appointments.time);
-       const totalAppointmentsForUser = this.props.user.appointments.length;
-       console.log('this is the total amount of appts for user', totalAppointmentsForUser);
-       const filterAppts = this.props.user.appointments.map((appointment) => {
+
+           const totalAppointmentsForUser = this.props.user.appointments.length;
+           
+           const filterAppts = this.props.user.appointments.map((appointment) => {
            const formatTime = moment(appointment.time).format('MMMM Do YYYY');
-           // console.log(formatTime);
            if (formatTime.includes('January')) {
                 janCount ++;
            } if (formatTime.includes('February')) {
@@ -51,31 +64,121 @@ export default class LineGraph extends React.Component{
                 decCount ++;
             }           
        });
-       console.log(`1: ${janCount}, 2: ${febCount}, .... 6: ${juneCount}, 7: ${julyCount}, 8: ${augCount}, 12 ${decCount}`);
+
+        const filterApptList = this.props.user.appointments.map((appointment) => {
+        const formatTime = moment(appointment.time).format('MMMM');
+        const arrayOfTime = formatTime.split(' ');
+        
+        if(arrayOfTime[0] === this.state.name) {
+            apptInfo.push(appointment);
+        }
+       });
+
+       const apptDataList = apptInfo.map((appt) => {
+           return (
+                <li key={appt.id}>
+                Date of Appt: {moment(appt.time).format('MMMM Do YYYY')} <br/>
+                Client Name: {appt.client.name} <br/>
+                Client Email: {appt.client.email} <br/>
+                Client Phone: {appt.client.phone} <br/>
+                Appt Notes: {appt.notes} <br /> <br />
+                </li>
+           );
+       });
+
        const data = [
-        {name: 'Jan', appointments: janCount},
-        {name: 'Feb', appointments: febCount},
+        {name: 'January', appointments: janCount},
+        {name: 'February', appointments: febCount},
         {name: 'March', appointments: marCount},
         {name: 'April', appointments: aprCount},
         {name: 'May', appointments: mayCount},
         {name: 'June', appointments: juneCount},
         {name: 'July', appointments: julyCount},
         {name: 'August', appointments: augCount},
-        {name: 'Sept', appointments: septCount},
-        {name: 'Oct', appointments: octCount},
-        {name: 'Nov', appointments: novCount},
-        {name: 'Dec', appointments: decCount}
+        {name: 'September', appointments: septCount},
+        {name: 'October', appointments: octCount},
+        {name: 'November', appointments: novCount},
+        {name: 'December', appointments: decCount}
     ]
-       return(
-            <LineChart width={780} height={250} data={data}
-            margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip cursor={false}/>
-            <Legend verticalAlign="top" height={36} iconType='rect'/>
-            <Line type="monotoneX" dataKey="appointments" stroke="#5DADE2" dot={{ stroke: '#5DADE2', strokeWidth: .5 }}/>
-            </LineChart>
-        );
+
+    const apptPercentage = Math.floor((apptInfo.length / totalAppointmentsForUser) * 100);
+
+        if (this.state.click === true) {
+            return(
+                <div>
+                    <div>
+                        <LineChart 
+                            width={780} 
+                            height={250} 
+                            data={data}
+                            margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+                            onClick={(e) => {         
+                                if (e !== null) {
+                                    this.handleClick(e.activeLabel)
+                                }   
+                            }}>
+                        <XAxis dataKey="name" />
+                        <YAxis />
+                        <Tooltip cursor={false} />
+                        <Legend 
+                            verticalAlign="top" 
+                            height={36} 
+                            iconType='rect'
+                        />
+                        <Line 
+                            type="monotoneX" 
+                            dataKey="appointments" 
+                            stroke="#5DADE2" 
+                            dot={{ 
+                                stroke: '#5DADE2', 
+                                strokeWidth: .5
+                            }}/>
+                        </LineChart>
+                    </div>
+                    <h1>Monthly Appointments History</h1>
+                    <h2>{this.state.name}</h2>
+                    <h3>{apptPercentage}% of your appointments were from {this.state.name}</h3> <br />
+                    <ul>
+                        {apptDataList}
+                    </ul>
+                 </div>
+             );
+        } else {
+            return(
+                <div>
+                    <div>
+                        <LineChart 
+                            width={780} 
+                            height={250} 
+                            data={data}
+                            margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+                            onClick={(e) => {         
+                                if (e !== null) {
+                                this.handleClick(e.activeLabel)
+                                }   
+                            }}>
+                        <XAxis dataKey="name" />
+                        <YAxis />
+                        <Tooltip cursor={false} />
+                        <Legend 
+                            verticalAlign="top" 
+                            height={36} 
+                            iconType='rect'
+                        />
+                        <Line 
+                            type="monotoneX" 
+                            dataKey="appointments" 
+                            stroke="#5DADE2" 
+                            dot={{ 
+                                stroke: '#5DADE2', 
+                                strokeWidth: .5
+                            }}/>
+                        </LineChart>
+                    </div>
+                    <h1>Click graph to see appointment history per month</h1>
+                 </div>
+             );
+        }
     }
 }
 
