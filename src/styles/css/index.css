@@ -377,7 +377,8 @@ li {
 
 .weekly-view {
   padding: 1rem;
-  width: 70%; }
+  width: 70%;
+  overflow-y: auto; }
   .weekly-view__weekly {
     font-size: 2rem;
     color: #616A6B; }
@@ -386,41 +387,43 @@ li {
       flex: 1;
       justify-content: space-around; }
     .weekly-view__weekly__days__day {
+      border: 1px solid black;
       display: inline-block;
       width: 12.5%;
-      padding: 0 5rem;
       color: #616A6B;
-      font-weight: 700; }
+      font-weight: 700;
+      text-align: center; }
+    .weekly-view__weekly__ul {
+      display: flex; }
     .weekly-view__weekly__li {
-      display: inline-block;
+      border: 1px solid black;
       width: 12.5%;
-      padding: 0 5rem;
-      font-size: 2rem; }
+      font-size: 2rem;
+      text-align: center; }
     .weekly-view__weekly__month {
       text-transform: uppercase; }
-  .weekly-view__hourly {
-    overflow-y: auto;
-    color: #616A6B; }
-    .weekly-view__hourly__ul {
-      display: flex;
-      flex-direction: column;
-      height: 70vh; }
-    .weekly-view__hourly__li {
-      font-size: 2rem;
-      flex: 1;
-      width: 113%; }
+  .weekly-view__hourly__ul {
+    color: #616A6B;
+    display: flex;
+    flex-direction: column;
+    height: 70vh; }
+  .weekly-view__hourly__li {
+    font-size: 2rem; }
+    .weekly-view__hourly__li__hour__row {
+      display: flex; }
       .weekly-view__hourly__li__hour__row__block {
-        display: inline-block;
+        align-self: middle;
         height: 5vh;
-        width: 11.5%;
-        padding: 3.2rem;
+        width: 12.5%;
+        padding: 2rem;
+        margin-bottom: 1rem;
         border: 1px solid black; }
   .weekly-view__appointment__ul {
     font-size: 2rem;
     overflow: hidden; }
   .weekly-view__appointment__li {
-    display: inline-block;
-    font-size: 1.25rem; }
+    font-size: 1.25rem;
+    text-align: center; }
   .weekly-view__appointment__client {
     cursor: pointer; }
     .weekly-view__appointment__client:hover {
