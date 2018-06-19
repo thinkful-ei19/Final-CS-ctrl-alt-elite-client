@@ -14,15 +14,19 @@ export default class LineGraph extends React.Component{
     }
     
     handleClick(month) {
-        this.setState({
-            name: month,
-            click: true
-        });
+        try {
+            this.setState({
+                name: month,
+                click: true
+            });
+        } catch(error) {
+            console.error(error);
+        }
+        
     }
 
 	render () {
-           let apptInfo = [];
-           
+           let apptInfo = []; 
            let janCount = 0;
            let febCount = 0;
            let marCount = 0;
@@ -35,11 +39,12 @@ export default class LineGraph extends React.Component{
            let octCount = 0;
            let novCount = 0;
            let decCount = 0;
-        // console.log('APPT ARRAY', this.props.user.appointments);
-        // console.log('PROPS', this.props.user.appointments.time);
-       const totalAppointmentsForUser = this.props.user.appointments.length;
-    //    console.log('this is the total amount of appts for user', totalAppointmentsForUser);
-       const filterAppts = this.props.user.appointments.map((appointment) => {
+
+           const totalAppointmentsForUser = this.props.user.appointments.length;
+    
+           // console.log('this is the total amount of appts for user', totalAppointmentsForUser);
+       
+           const filterAppts = this.props.user.appointments.map((appointment) => {
            const formatTime = moment(appointment.time).format('MMMM Do YYYY');
            if (formatTime.includes('January')) {
                 janCount ++;
@@ -67,8 +72,8 @@ export default class LineGraph extends React.Component{
                 decCount ++;
             }           
        });
-    //    console.log(`1: ${janCount}, 2: ${febCount}, .... 6: ${juneCount}, 7: ${julyCount}, 8: ${augCount}, 12 ${decCount}`);
-       const filterApptList = this.props.user.appointments.map((appointment) => {
+
+        const filterApptList = this.props.user.appointments.map((appointment) => {
         const formatTime = moment(appointment.time).format('MMMM');
         const arrayOfTime = formatTime.split(' ');
         
@@ -95,13 +100,13 @@ export default class LineGraph extends React.Component{
 
        // console.log('check it', apptDataList);
 
-       const handleMessage = () => {
-        if (apptDataList === []) {
-            this.setState({
-                apptMessage: 'There were no appointments this month.'
-            })
-           }
-    }
+    //    const handleMessage = () => {
+    //     if (apptDataList === []) {
+    //         this.setState({
+    //             apptMessage: 'There were no appointments this month.'
+    //         })
+    //        }
+    // }
 
     // console.log('message', this.state.apptMessage);
        
@@ -135,7 +140,12 @@ export default class LineGraph extends React.Component{
                      data={data}
                      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
                      onClick={(e) => {
-                         this.handleClick(e.activeLabel)
+                         
+                         if (e !== null) {
+                            console.log('this is e:', e);
+                            this.handleClick(e.activeLabel)
+                         } 
+                         
                      }}>
                  <XAxis dataKey="name" />
                  <YAxis />
@@ -176,7 +186,10 @@ export default class LineGraph extends React.Component{
                      data={data}
                      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
                      onClick={(e) => {
-                         this.handleClick(e.activeLabel)
+                         
+                            this.handleClick(e.activeLabel)
+    
+                         
                      }}>
                  <XAxis dataKey="name" />
                  <YAxis />
@@ -196,7 +209,7 @@ export default class LineGraph extends React.Component{
                      }}/>
                  </LineChart>
                  </div>
-                 
+                 <h1>Click graph to see appointment history per month</h1>
                  </div>
              );
         }
