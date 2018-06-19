@@ -82,13 +82,12 @@ export default class LineGraph extends React.Component{
        
        const apptDataList = apptInfo.map((appt) => {
            return (
-        //    <li>{appt.client}</li>
-        <li key={appt.id}>
-        Client Name: {appt.client.name}
-        Client Email: {appt.client.email}
-        Client Phone: {appt.client.phone}
-        Appt Notes: {appt.notes}
-        </li>
+                <li key={appt.id}>
+                Client Name: {appt.client.name}
+                Client Email: {appt.client.email}
+                Client Phone: {appt.client.phone}
+                Appt Notes: {appt.notes}
+                </li>
            )
        });
 
@@ -140,7 +139,8 @@ export default class LineGraph extends React.Component{
                 }}/>
             </LineChart>
             </div>
-            <h1>{this.state.name}</h1>
+            <h1>Monthly Appointments History</h1>
+            <h2>{this.state.name}</h2>
             <ul>
                 {apptDataList}
             </ul>
