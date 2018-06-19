@@ -141,8 +141,6 @@ class AptForm extends React.Component {
               value={this.state.name}
             />
             <TextField
-
-            /><TextField
               className="appointments__input"
               autoFocus
               margin="dense"
