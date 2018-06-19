@@ -377,7 +377,6 @@ li {
 
 .weekly-view {
   padding: 1rem;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1));
   width: 70%; }
   .weekly-view__weekly {
     font-size: 2rem;
