@@ -3,7 +3,7 @@
   background-image: radial-gradient(rgba(0, 0, 0, 0.1), rgba(55, 55, 55, 0.1)); }
 
 .appointment-date {
-  color: #CD6155; }
+  color: #E74C3C; }
 
 .previous-appointment-date {
   color: #7FB3D5; }
@@ -360,7 +360,8 @@ li {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
   width: 70%; }
   .weekly-view__weekly {
-    font-size: 2rem; }
+    font-size: 2rem;
+    color: #616A6B; }
     .weekly-view__weekly__header {
       display: flex;
       flex: 1;
@@ -368,14 +369,18 @@ li {
     .weekly-view__weekly__days__day {
       display: inline-block;
       width: 12.5%;
-      padding: 0 5rem; }
+      padding: 0 5rem;
+      color: #616A6B; }
     .weekly-view__weekly__li {
       display: inline-block;
       width: 12.5%;
       padding: 0 5rem;
       font-size: 2rem; }
+    .weekly-view__weekly__month {
+      text-transform: uppercase; }
   .weekly-view__hourly {
-    overflow-y: auto; }
+    overflow-y: auto;
+    color: #616A6B; }
     .weekly-view__hourly__ul {
       display: flex;
       flex-direction: column;

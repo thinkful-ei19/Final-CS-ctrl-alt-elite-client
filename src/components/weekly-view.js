@@ -123,7 +123,7 @@ class WeeklyView extends React.Component {
         return (
             <div className="weekly-view">
                 <div className="weekly-view__weekly">
-                    <button onClick={() => this.toggleCalendar()} className="weekly-view__toggle-button">Change View</button>                                    
+                    <button onClick={() => this.toggleCalendar()} className="btn login-button">Monthly</button>                                    
                     <div className="weekly-view__weekly__header">
                         <button onClick={decrementWeek} className="weekly-view__weekly__previous">&#8592;</button>
                         <h2 className="weekly-view__weekly__month">{monthYear}</h2>

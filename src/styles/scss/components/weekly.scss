@@ -5,6 +5,7 @@
 
     &__weekly {
         font-size: 2rem;
+        color: $color-gray;  
 
         &__header {
             display: flex;
@@ -17,7 +18,8 @@
             &__day {
                 display: inline-block;
                 width: 12.5%;
-                padding: 0 5rem;                
+                padding: 0 5rem;  
+                color: $color-gray;              
             }
         }
     
@@ -31,10 +33,15 @@
             padding: 0 5rem;   
             font-size: 2rem;                         
         }
+
+        &__month {
+            text-transform: uppercase;
+        }
     }
     
     &__hourly {
         overflow-y: auto;
+        color: $color-gray;  
 
 
         &__ul {
