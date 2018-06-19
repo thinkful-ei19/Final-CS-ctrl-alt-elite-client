@@ -45,81 +45,15 @@ class Hourly extends React.Component {
                 for (let j=0; j<7; j++) {
                     let day = <li key={j} className="weekly-view__hourly__li__hour__row__block"></li>;
                     appointments.forEach((apt) => {
-                        if (Number(moment(apt.time).format('HH')) === i && moment(apt.time).day() === j) { 
-                            switch(moment(apt.time).day()) {
-                                case 0:
-                                    day = 
-                                    <li key={j} className="weekly-view__hourly__li__hour__row__block">
-                                        <ul className="weekly-view__appointment__ul">
-                                            <li className="weekly-view__appointment__li">
-                                                <a onClick={(event) => this.getApt(event.target.id)} id={apt.id} className="weekly-view__appointment__client">{apt.client.name}</a>
-                                            </li>
-                                        </ul>
+                        if (Number(moment(apt.time).format('MM')) === Number(this.props.selectedMonth) && Number(moment(apt.time).format('HH')) === i && moment(apt.time).day() === j) { 
+                            day = 
+                            <li key={j} className="weekly-view__hourly__li__hour__row__block">
+                                <ul className="weekly-view__appointment__ul">
+                                    <li className="weekly-view__appointment__li">
+                                        <a onClick={(event) => this.getApt(event.target.id)} id={apt.id} className="weekly-view__appointment__client">{apt.client.name}</a>
                                     </li>
-                                    break
-                                case 1:
-                                    day = 
-                                    <li key={j} className="weekly-view__hourly__li__hour__row__block">
-                                        <ul className="weekly-view__appointment__ul">
-                                            <li className="weekly-view__appointment__li">
-                                                <a onClick={(event) => this.getApt(event.target.id)} id={apt.id} className="weekly-view__appointment__client">{apt.client.name}</a>
-                                            </li>
-                                        </ul>
-                                    </li>                            
-                                    break
-                                case 2:
-                                    day = 
-                                    <li key={j} className="weekly-view__hourly__li__hour__row__block">
-                                        <ul className="weekly-view__appointment__ul">
-                                            <li className="weekly-view__appointment__li">
-                                                <a onClick={(event) => this.getApt(event.target.id)} id={apt.id} className="weekly-view__appointment__client">{apt.client.name}</a>
-                                            </li>
-                                        </ul>
-                                    </li>     
-                                    break
-                                case 3:
-                                    day = 
-                                    <li key={j} className="weekly-view__hourly__li__hour__row__block">
-                                        <ul className="weekly-view__appointment__ul">
-                                            <li className="weekly-view__appointment__li">
-                                                <a onClick={(event) => this.getApt(event.target.id)} id={apt.id} className="weekly-view__appointment__client">{apt.client.name}</a>
-                                            </li>
-                                        </ul>
-                                    </li>     
-                                    break
-                                case 4:
-                                    day = 
-                                    <li key={j} className="weekly-view__hourly__li__hour__row__block">
-                                        <ul className="weekly-view__appointment__ul">
-                                            <li className="weekly-view__appointment__li">
-                                                <a onClick={(event) => this.getApt(event.target.id)} id={apt.id} className="weekly-view__appointment__client">{apt.client.name}</a>
-                                            </li>
-                                        </ul>
-                                    </li>     
-                                    break
-                                case 5:
-                                    day = 
-                                    <li key={j} className="weekly-view__hourly__li__hour__row__block">
-                                        <ul className="weekly-view__appointment__ul">
-                                            <li className="weekly-view__appointment__li">
-                                                <a onClick={(event) => this.getApt(event.target.id)} id={apt.id} className="weekly-view__appointment__client">{apt.client.name}</a>
-                                            </li>
-                                        </ul>
-                                    </li>     
-                                    break
-                                case 6:
-                                    day = 
-                                    <li key={j} className="weekly-view__hourly__li__hour__row__block">
-                                        <ul className="weekly-view__appointment__ul">
-                                            <li className="weekly-view__appointment__li">
-                                                <a onClick={(event) => this.getApt(event.target.id)} id={apt.id} className="weekly-view__appointment__client">{apt.client.name}</a>
-                                            </li>
-                                        </ul>
-                                    </li>     
-                                    break
-                                default:
-                                    day = <li key={j} className="weekly-view__hourly__li__hour__row__block"></li>;
-                            } 
+                                </ul>
+                            </li>
                         }
                     })
                     arr.push(day)                                                                   
