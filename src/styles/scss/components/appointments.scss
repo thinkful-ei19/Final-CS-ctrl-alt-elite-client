@@ -1,7 +1,26 @@
 //Specificity is required to overwrite plugin CSS
+
 .appointments {
 
+
+    &__dialog {
+        transform: scale(1.5);        
+    }
+
+    &__text {
+        font-size: 1.5rem !important;
+    }
+
+    &__button {
+        font-size: 1.5rem !important;
+    }
+
+    &__input * {
+        font-size: 1.5rem !important;
+    }
+
     &__schedule-list {
+        opacity: 1;
         max-height: 50rem;
         overflow-y: auto;
     }
@@ -21,6 +40,9 @@
 
         }
     }
+}
 
-
+#appointments-form {
+    font-size: 1.5rem !important;
+    
 }
