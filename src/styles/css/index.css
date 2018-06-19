@@ -425,3 +425,9 @@ li {
     cursor: pointer; }
     .weekly-view__appointment__client:hover {
       text-decoration: underline; }
+
+.report {
+  color: #616A6B; }
+  .report__title {
+    text-align: center;
+    font-size: 2.5rem; }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { LineChart, Line, XAxis, YAxis, Tooltip, Legend } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import moment from 'moment';
 
 
@@ -107,33 +107,35 @@ export default class LineGraph extends React.Component{
             return(
                 <div>
                     <div>
-                        <LineChart 
-                            width={780} 
-                            height={250} 
-                            data={data}
-                            margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-                            onClick={(e) => {         
-                                if (e !== null) {
-                                    this.handleClick(e.activeLabel)
-                                }   
-                            }}>
-                        <XAxis dataKey="name" />
-                        <YAxis />
-                        <Tooltip cursor={false} />
-                        <Legend 
-                            verticalAlign="top" 
-                            height={36} 
-                            iconType='rect'
-                        />
-                        <Line 
-                            type="monotoneX" 
-                            dataKey="appointments" 
-                            stroke="#5DADE2" 
-                            dot={{ 
-                                stroke: '#5DADE2', 
-                                strokeWidth: .5
-                            }}/>
-                        </LineChart>
+                        <ResponsiveContainer width={500} height="65%">
+                            <LineChart 
+                                width={780} 
+                                height={250} 
+                                data={data}
+                                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+                                onClick={(e) => {         
+                                    if (e !== null) {
+                                        this.handleClick(e.activeLabel)
+                                    }   
+                                }}>
+                            <XAxis dataKey="name" />
+                            <YAxis />
+                            <Tooltip cursor={false} />
+                            <Legend 
+                                verticalAlign="top" 
+                                height={36} 
+                                iconType='rect'
+                            />
+                            <Line 
+                                type="monotoneX" 
+                                dataKey="appointments" 
+                                stroke="#5DADE2" 
+                                dot={{ 
+                                    stroke: '#5DADE2', 
+                                    strokeWidth: .5
+                                }}/>
+                            </LineChart>
+                        </ResponsiveContainer>
                     </div>
                     <h1>Monthly Appointments History</h1>
                     <h2>{this.state.name}</h2>
@@ -147,6 +149,7 @@ export default class LineGraph extends React.Component{
             return(
                 <div>
                     <div>
+
                         <LineChart 
                             width={780} 
                             height={250} 
@@ -175,7 +178,7 @@ export default class LineGraph extends React.Component{
                             }}/>
                         </LineChart>
                     </div>
-                    <h1>Click graph to see appointment history per month</h1>
+                    <p className="instructions">Click graph to see appointment history per month</p>
                  </div>
              );
         }

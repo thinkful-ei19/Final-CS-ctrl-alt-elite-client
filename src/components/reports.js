@@ -8,9 +8,9 @@ class Reports extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="report">
                 <Navigation />
-                <h1>Yearly Appointments</h1>
+                <h1 className="report__title">Annual Report</h1>
                 <LineGraph user={this.props.currentUser}/>
             </div>
         );
