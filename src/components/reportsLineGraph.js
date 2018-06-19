@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import { LineChart, Line, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 import moment from 'moment';
 

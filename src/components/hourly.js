@@ -39,7 +39,7 @@ class Hourly extends React.Component {
                 lastHour = String(Number(firstHour) + 8);
             }
             let JSXArr = [];
-            let weekApts = [];       
+            // let weekApts = [];       
             for (let i=firstHour; i<=lastHour; i++) {
                 let arr = []
                 for (let j=0; j<7; j++) {

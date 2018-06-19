@@ -52,10 +52,10 @@
             
         }
 
-        &__li {
+        &__li { //appointments
             font-size: 2rem;
             flex: 1;
-            width: 100%;
+            width: 113%;
 
             &__hour {
 
@@ -67,7 +67,7 @@
                         display: inline-block;
                         height: 5vh;
                         width: 11.5%;
-                        padding: 2rem;
+                        padding: 2.5rem;
                     }
                 }
             }
