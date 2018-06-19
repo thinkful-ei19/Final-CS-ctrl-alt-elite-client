@@ -15,11 +15,11 @@ class Hourly extends React.Component {
     render() {
         try {
             let firstHour = 9;
-            let lastHour = 17;                       
+            let lastHour = 17;   
             const appointments = this.props.currentUser.appointments
                 .filter((apt) => {
-                    if ((moment(apt.time).valueOf()) > moment(this.props.dates[0]).valueOf() 
-                    && (moment(apt.time).valueOf()) < moment(this.props.dates[6]).valueOf()) {
+                    if ((moment(apt.time).valueOf()) >= moment(this.props.dates[0].value).valueOf() 
+                    && (moment(apt.time).valueOf()) <= (moment(this.props.dates[6].value).valueOf() + 86400000)) {
                         return apt;
                     }
                 })
@@ -45,6 +45,7 @@ class Hourly extends React.Component {
                 for (let j=0; j<7; j++) {
                     let day = <li key={j} className="weekly-view__hourly__li__hour__row__block"></li>;
                     appointments.forEach((apt) => {
+                        
                         if (Number(moment(apt.time).format('MM')) === Number(this.props.selectedMonth) && Number(moment(apt.time).format('HH')) === i && moment(apt.time).day() === j) { 
                             day = 
                             <li key={j} className="weekly-view__hourly__li__hour__row__block">
