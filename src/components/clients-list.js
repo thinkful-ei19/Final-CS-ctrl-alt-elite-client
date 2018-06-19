@@ -26,7 +26,6 @@ export class ClientsList extends React.Component {
                  </ListItem>
             )
          });
-         console.log('CLIENTLIST', clientList);
         return (
             <div>
                 <List>
