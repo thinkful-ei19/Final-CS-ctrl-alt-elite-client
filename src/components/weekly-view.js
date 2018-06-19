@@ -125,9 +125,19 @@ class WeeklyView extends React.Component {
                 <div className="weekly-view__weekly">
                     <button onClick={() => this.toggleCalendar()} className="btn login-button">Monthly</button>                                    
                     <div className="weekly-view__weekly__header">
-                        <button onClick={decrementWeek} className="weekly-view__weekly__previous">&#8592;</button>
+                        <IconButton aria-label="previous week" className="weekly-view__weekly__previous" onClick={decrementWeek}>
+                            <SvgIcon>
+                            <path xmlns="http://www.w3.org/2000/svg" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                            </SvgIcon>
+                        </IconButton>
+ 
                         <h2 className="weekly-view__weekly__month">{monthYear}</h2>
-                        <button onClick={incrementWeek} className="weekly-view__weekly__next">&#8594;</button>
+                        <IconButton aria-label="next week" className="weekly-view__weekly__next" onClick={incrementWeek}>
+                            <SvgIcon>
+                            <path xmlns="http://www.w3.org/2000/svg" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                            </SvgIcon>
+                         </IconButton>
+               
                     </div>
                     <WeeklyDays />                                                
                     <ul className="weekly-view__weekly__ul" >
