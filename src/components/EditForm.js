@@ -93,7 +93,6 @@ class EditForm extends React.Component {
     }
 
     selectClient(id) {
-        console.log('Is running');
         const component = this;
         this.props.currentUser.clients.forEach((client) => {
             if (client.id === id) {
@@ -212,7 +211,6 @@ class EditForm extends React.Component {
                             if (this.props.aptTime !== moment(String(values.date + ' ' + values.time)).format('YYYY MM DD HH mm')) {
                                 let check = false;
                                 this.props.currentUser.appointments.forEach((apt) => {
-                                    console.log(moment(apt.time).format('YYYY MM DD HH mm'), moment(String(values.date + ' ' + values.time)).format('YYYY MM DD HH mm'))                                    
                                     if (moment(apt.time).format('YYYY MM DD HH mm') === moment(String(values.date + ' ' + values.time)).format('YYYY MM DD HH mm')) {
                                         check = true;
                                     }
