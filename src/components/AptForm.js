@@ -101,7 +101,6 @@ class AptForm extends React.Component {
   }
 
   render() {
-
     let dropDownMenu;
     if (this.props.currentUser.clients.length > 0) {
       const buildOptions = this.props.currentUser.clients.map((client) => {
@@ -113,9 +112,7 @@ class AptForm extends React.Component {
       <option style={{ display: 'none' }} disabled value='blank'></option>
       {buildOptions}
     </select>
-
     }
-
 
     return (
       <div className="appointments-specify">
