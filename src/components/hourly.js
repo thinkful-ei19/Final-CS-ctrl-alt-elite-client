@@ -46,7 +46,6 @@ class Hourly extends React.Component {
                     let day = <li key={j} className="weekly-view__hourly__li__hour__row__block"></li>;
                     appointments.forEach((apt) => {
                         if (Number(moment(apt.time).format('HH')) === i && moment(apt.time).day() === j) { 
-                            console.log(apt.id)
                             switch(moment(apt.time).day()) {
                                 case 0:
                                     day = 
@@ -155,7 +154,6 @@ class Hourly extends React.Component {
 }
 
 const mapStateToProps = state => {
-    console.log(state)
     return {
         authToken: state.auth.authToken,
         currentUser: state.auth.currentUser,

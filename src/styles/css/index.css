@@ -323,13 +323,29 @@ li {
       background-color: #EBF5FB;
       border-radius: 20%; }
 
+.appointments__dialog {
+  transform: scale(1.5); }
+
+.appointments__text {
+  font-size: 1.5rem !important; }
+
+.appointments__button {
+  font-size: 1.5rem !important; }
+
+.appointments__input * {
+  font-size: 1.5rem !important; }
+
 .appointments__schedule-list {
+  opacity: 1;
   max-height: 50rem;
   overflow-y: auto; }
 
 .appointments__add-appointment {
   font-size: 2rem;
   background-image: linear-gradient(to left, rgba(214, 234, 248, 0.8), rgba(214, 234, 248, 0.8)); }
+
+#appointments-form {
+  font-size: 1.5rem !important; }
 
 .components {
   display: flex;
