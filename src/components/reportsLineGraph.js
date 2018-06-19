@@ -5,8 +5,12 @@ import moment from 'moment';
 
 
 export default class LineGraph extends React.Component{
+    handleClick() {
+        console.log('hi');
+    }
+
 	render () {
-        let janCount = 0;
+           let janCount = 0;
            let febCount = 0;
            let marCount = 0;
            let aprCount = 0;
@@ -18,7 +22,7 @@ export default class LineGraph extends React.Component{
            let octCount = 0;
            let novCount = 0;
            let decCount = 0;
-       // console.log('APPT ARRAY', this.props.user.appointments);
+        // console.log('APPT ARRAY', this.props.user.appointments);
         // console.log('PROPS', this.props.user.appointments.time);
        const totalAppointmentsForUser = this.props.user.appointments.length;
        console.log('this is the total amount of appts for user', totalAppointmentsForUser);
@@ -67,13 +71,28 @@ export default class LineGraph extends React.Component{
         {name: 'Dec', appointments: decCount}
     ]
        return(
-            <LineChart width={780} height={250} data={data}
-            margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+            <LineChart 
+                width={780} 
+                height={250} 
+                data={data}
+                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
             <XAxis dataKey="name" />
             <YAxis />
-            <Tooltip cursor={false}/>
-            <Legend verticalAlign="top" height={36} iconType='rect'/>
-            <Line type="monotoneX" dataKey="appointments" stroke="#5DADE2" dot={{ stroke: '#5DADE2', strokeWidth: .5 }}/>
+            <Tooltip cursor={false} />
+            <Legend 
+                verticalAlign="top" 
+                height={36} 
+                iconType='rect'
+            />
+            <Line 
+                type="monotoneX" 
+                dataKey="appointments" 
+                stroke="#5DADE2" 
+                onMouseDown={() => console.log('hi')}
+                dot={{ 
+                    stroke: '#5DADE2', 
+                    strokeWidth: .5
+                }}/>
             </LineChart>
         );
     }

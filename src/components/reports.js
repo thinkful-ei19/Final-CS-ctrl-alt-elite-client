@@ -37,6 +37,7 @@ class Reports extends React.Component {
         return(
             <div>
                 <Navigation />
+                <h1>Yearly Appointments</h1>
                 <LineGraph user={this.props.currentUser}/>
             </div>
         
