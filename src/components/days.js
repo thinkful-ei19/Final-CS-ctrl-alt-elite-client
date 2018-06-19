@@ -4,15 +4,15 @@ export default class Days extends React.Component {
     
     render() {
         return (
-            <div className="calendar__days">
-                <span className="calendar__days__day">SUN</span>
-                <span className="calendar__days__day">MON</span>
-                <span className="calendar__days__day">TUE</span>
-                <span className="calendar__days__day">WED</span>
-                <span className="calendar__days__day">THU</span>
-                <span className="calendar__days__day">FRI</span>
-                <span className="calendar__days__day">SAT</span>
-            </div>
+            <ul className="calendar__days">
+                <li className="calendar__days__day">SUN</li>
+                <li className="calendar__days__day">MON</li>
+                <li className="calendar__days__day">TUE</li>
+                <li className="calendar__days__day">WED</li>
+                <li className="calendar__days__day">THU</li>
+                <li className="calendar__days__day">FRI</li>
+                <li className="calendar__days__day">SAT</li>
+            </ul>
         )
     }
 
