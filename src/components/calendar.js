@@ -43,7 +43,7 @@ class Calendar extends React.Component {
         }
         return (
             <div className="calendar">
-                <button onClick={() => this.toggleCalendar()} className="calendar__toggle-button">Change View</button>
+                <button onClick={() => this.toggleCalendar()}className="btn login-button">Weekly</button>
                 <div className="calendar__header-row">
                 <IconButton aria-label="next month" onClick={decrement}>
                     <SvgIcon>
