@@ -2,7 +2,6 @@
 
 .appointments {
 
-
     &__dialog {
         transform: scale(1.3);        
     }
@@ -17,6 +16,10 @@
 
     &__input * {
         font-size: 1rem !important;
+    }
+
+    &__time {
+        display: inline-block;
     }
 
     &__schedule-list {
@@ -42,7 +45,7 @@
     }
 }
 
-#appointments-form {
+.appointments-form {
     font-size: 1.5rem !important;
-    
+    display: inline-block;
 }
