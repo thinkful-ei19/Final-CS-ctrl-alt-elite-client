@@ -3,6 +3,7 @@
     padding: 1rem;
     // background-image: linear-gradient(to right, rgba(black, .05), rgba(black, .1));
     width: 70%;
+    overflow-y: auto;
 
     &__weekly {
         font-size: 2rem;
@@ -17,23 +18,25 @@
         &__days {
 
             &__day {
+                border: 1px solid black;
                 display: inline-block;
                 width: 12.5%;
-                padding: 0 5rem;  
                 color: $color-gray;  
-                font-weight: 700;            
+                font-weight: 700;           
+                text-align: center; 
             }
         }
     
         &__ul {
-
+            display: flex;
+            
         }
 
         &__li {
-            display: inline-block;
+            border: 1px solid black;
             width: 12.5%;
-            padding: 0 5rem;   
-            font-size: 2rem;                         
+            font-size: 2rem;        
+            text-align: center; 
         }
 
         &__month {
@@ -42,34 +45,38 @@
     }
     
     &__hourly {
-        overflow-y: auto;
-        color: $color-gray;  
-
 
         &__ul {
+            color: $color-gray;
             display: flex;
             flex-direction: column;
             height: 70vh;
-            
         }
 
         &__li { //appointments
             font-size: 2rem;
-            flex: 1;
-            width: 113%;
+
+            &:nth-of-type(5) { //Target Row
+                
+            }
 
             &__hour {
 
-
                 &__row {
-                    
-                    
+                    display: flex;
+
                     &__block {
-                        display: inline-block;
+                        align-self: middle;
                         height: 5vh;
-                        width: 11.5%;
-                        padding: 3.2rem;
-                        border: 1px solid black
+                        width: 12.5%;
+                        padding: 2rem;
+                        margin-bottom: 1rem;
+                        border: 1px solid black;
+                        
+                        &:nth-of-type(1) { //Target Column
+                            
+                        }
+            
                     }
                 }
             }
@@ -84,8 +91,8 @@
         }
 
         &__li {
-            display: inline-block;            
             font-size: 1.25rem;
+            text-align: center; 
         }
 
         &__client {

@@ -143,8 +143,8 @@ class WeeklyView extends React.Component {
                         <li key='placeholder' className="weekly-view__weekly__li"></li>
                         {buildJSX}
                     </ul>
+                    <Hourly dates={renderSelectedWeek}/>
                 </div>
-                <Hourly dates={renderSelectedWeek}/>                
             </div>
         )
     }
