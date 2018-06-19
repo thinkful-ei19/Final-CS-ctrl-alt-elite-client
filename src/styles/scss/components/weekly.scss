@@ -1,4 +1,5 @@
 .weekly-view {
+//each block fixed width and flexbox 8 pieces each row starting from months days
     padding: 1rem;
     // background-image: linear-gradient(to right, rgba(black, .05), rgba(black, .1));
     width: 70%;
@@ -61,13 +62,14 @@
 
 
                 &__row {
-
+                    
                     
                     &__block {
                         display: inline-block;
                         height: 5vh;
                         width: 11.5%;
                         padding: 3.2rem;
+                        border: 1px solid black
                     }
                 }
             }

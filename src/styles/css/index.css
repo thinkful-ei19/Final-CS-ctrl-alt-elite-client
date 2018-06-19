@@ -413,7 +413,8 @@ li {
         display: inline-block;
         height: 5vh;
         width: 11.5%;
-        padding: 3.2rem; }
+        padding: 3.2rem;
+        border: 1px solid black; }
   .weekly-view__appointment__ul {
     font-size: 2rem;
     overflow: hidden; }
