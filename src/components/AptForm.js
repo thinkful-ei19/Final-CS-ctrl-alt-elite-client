@@ -10,7 +10,6 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import TimePicker from './TimePicker';
 import { addAppointment } from '../actions/appointment';
-import PhoneInput from "react-phone-input-auto-format";
 
 class AptForm extends React.Component {
   constructor(props) {
