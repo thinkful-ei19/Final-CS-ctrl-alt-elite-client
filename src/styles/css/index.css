@@ -302,7 +302,7 @@ li {
   color: #616A6B; }
   .calendar__header-row__previous {
     display: inline-block;
-    margin: 3rem 2rem; }
+    margin: 2rem; }
   .calendar__header-row__next {
     display: inline-block;
     margin: 2rem; }
