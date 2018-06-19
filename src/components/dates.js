@@ -50,7 +50,7 @@ export class Dates extends React.Component {
                 dateArray.push(
                 {
                     value: `${currentYear}-${nextMonth}-0${i}`,
-                    day: `${i}`,
+                    day: `0${i}`,
                     ref: 'next',
                     month: 'previous'
                 }
@@ -90,7 +90,7 @@ export class Dates extends React.Component {
                     dateArray.push(
                     {
                         value: `${currentYear}-${nextMonth}-0${i}`,
-                        day: `${i}`,
+                        day: `0${i}`,
                         ref: 'next',
                         month: 'current'
                     }
@@ -129,7 +129,7 @@ export class Dates extends React.Component {
                     dateArray.push(
                     {
                         value: `${currentYear}-${nextMonth}-0${i}`,
-                        day: `${i}`,
+                        day: `0${i}`,
                         ref: 'next',
                         month: 'previous'
                     }
@@ -168,7 +168,7 @@ export class Dates extends React.Component {
                     dateArray.push(
                     {
                         value: `${currentYear}-${nextMonth}-0${i}`,
-                        day: `${i}`,
+                        day: `0${i}`,
                         ref: 'next',
                         month: 'future'
                     }
@@ -208,7 +208,7 @@ export class Dates extends React.Component {
                     dateArray.push(
                     {
                         value: `${currentYear}-${nextMonth}-0${i}`,
-                        day: `${i}`,
+                        day: `0${i}`,
                         ref: 'next',
                         month: 'future'
                     }
