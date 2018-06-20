@@ -18,7 +18,9 @@ export default function LandingPage(props) {
                 <h1 id="app-name">SCHEDULR</h1>
             
                 <p id="app-description">A simple appointment scheduling app with automated notifications</p>
-                <button className="btn login-button"><Link style={{ textDecoration: 'none' }} to="/login">GET STARTED</Link></button>
+                <Link style={{ textDecoration: 'none' }} to="/login">
+                    <button className="btn login-button">GET STARTED</button>
+                </Link>
             </div>
         </section>
     );
