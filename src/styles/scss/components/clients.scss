@@ -29,29 +29,29 @@
         font-family: inherit;
         font-size: inherit;
         color: inherit;
-        background-color: var(--color-grey-light-2);
+        background-color: $color-grey-light-2;
         border: none;
-        padding: .7rem 2rem;
+        padding: 1.7rem 1.5rem;
         border-radius: 100px;
-        width: 90%;
+        width: 20%;
         transition: all .2s;
         margin-right: -3.25rem;
         &:focus {
             outline: none;
-            width: 100%;
-            background-color: var(--color-grey-light-3);
+            width: 30%;
+            background-color: $color-grey-light-3;
         }
         &::-webkit-input-placeholder {
             font-weight: 100;
-            color: var(--color-grey-light-4);
+            color: $color-grey-light-4;
         }
     }
     &__input:focus + &__button {
-        background-color: var(--color-grey-light-3);
+        background-color: $color-grey-light-3;
     }
     &__button {
         border: none;
-        background-color: var(--color-grey-light-2);
+        background-color: $color-grey-light-2;
         &:focus {
             outline: none;
         }
@@ -62,6 +62,6 @@
     &__icon {
         height: 2rem;
         width: 2rem;
-        fill: var(--color-grey-dark-3);
+        fill: $color-grey-dark-3;
     }
 }
