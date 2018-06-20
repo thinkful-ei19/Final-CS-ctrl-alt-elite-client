@@ -27,7 +27,7 @@ export class ClientsList extends React.Component {
             )
          });
         return (
-            <div>
+            <div className="client-list">
                 <List>
                     {clientList}
                 </List>

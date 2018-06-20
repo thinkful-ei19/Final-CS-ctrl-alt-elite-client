@@ -24,7 +24,7 @@ export default class FilterClients extends React.Component {
            }
         })
         return (
-            <div>
+            <div className="filter">
                 <form
                     className="filter-clients__form"
                     // onSubmit={(e) => {
