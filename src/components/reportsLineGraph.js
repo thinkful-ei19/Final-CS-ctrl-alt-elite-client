@@ -19,6 +19,13 @@ export default class LineGraph extends React.Component{
         });
     }
 
+    handleBackClick() {
+        this.setState({
+            name: '',
+            click: false
+        });
+    }
+
 	render () {
            let apptInfo = []; 
            let janCount = 0;
@@ -137,6 +144,8 @@ export default class LineGraph extends React.Component{
                             </LineChart>
                         </ResponsiveContainer>
                     </div>
+                    <button 
+                    onClick={() => this.handleBackClick()}>Back</button>
                     <h1>Monthly Appointments History</h1>
                     <h2>{this.state.name}</h2>
                     <h3>{apptPercentage}% of your appointments were from {this.state.name}</h3> <br />
