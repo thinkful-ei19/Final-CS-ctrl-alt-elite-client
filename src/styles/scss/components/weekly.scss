@@ -60,11 +60,11 @@
             //     // border: .5px solid #EAEDED;
             //     // opacity: 0.5;
             //     color: $color-black;
-            background-image: linear-gradient(to right, rgba(blue, .05), rgba(blue, .05))
+            background-image: linear-gradient(to right, rgba(#5499C7, .1), rgba(#5499C7, .1))
             }
 
             &:nth-of-type(even) { 
-                background-image: linear-gradient(to right, rgba(dodgerblue, .1), rgba(white, .1))
+                background-image: linear-gradient(to right, rgba(white, .1), rgba(white, .1))
             }
 
             &__hour {

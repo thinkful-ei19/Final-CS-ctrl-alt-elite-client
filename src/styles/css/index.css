@@ -408,9 +408,9 @@ li {
   .weekly-view__hourly__li {
     font-size: 2rem; }
     .weekly-view__hourly__li:nth-of-type(odd) {
-      background-image: linear-gradient(to right, rgba(0, 0, 255, 0.05), rgba(0, 0, 255, 0.05)); }
+      background-image: linear-gradient(to right, rgba(84, 153, 199, 0.1), rgba(84, 153, 199, 0.1)); }
     .weekly-view__hourly__li:nth-of-type(even) {
-      background-image: linear-gradient(to right, rgba(30, 144, 255, 0.1), rgba(255, 255, 255, 0.1)); }
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)); }
     .weekly-view__hourly__li__hour__row {
       display: flex; }
       .weekly-view__hourly__li__hour__row__block {
