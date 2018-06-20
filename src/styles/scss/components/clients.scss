@@ -11,14 +11,20 @@
 
 .client-list {
     padding: 15rem;
-
+    transform: scale(1.4);
+    width: 50%
+    
 }
 
-.filter{
-    &__input{
-        display: inline;
-    }
-}
+// .filter{
+//     &__input{
+//         display: inline;
+//     }
+// }
+// display: flex;
+// flex: 1;
+// justify-content: space-around;
+// width: 50%;
 
 .search {
     flex: 0 0 40%;
@@ -38,7 +44,7 @@
         margin-right: -3.25rem;
         &:focus {
             outline: none;
-            width: 30%;
+            width: 25%;
             background-color: $color-grey-light-3;
         }
         &::-webkit-input-placeholder {

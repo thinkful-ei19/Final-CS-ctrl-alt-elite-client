@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import requiresLogin from './requires-login';
 import Navigation from './navigation';
 import LineGraph from './reportsLineGraph';
-import background from '../media/deskSide.jpg';
+import background from '../media/whiteHoriz.jpg';
 
 
 const sectionStyle = {

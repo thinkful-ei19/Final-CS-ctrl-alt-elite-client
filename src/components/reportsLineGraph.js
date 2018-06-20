@@ -150,7 +150,9 @@ export default class LineGraph extends React.Component{
                         </ResponsiveContainer>
                     </div>
                     <button 
-                    onClick={() => this.handleBackClick()}>Back</button>
+                        className="btn login-button"
+                        onClick={() => this.handleBackClick()}>Back
+                    </button>
                     <h1>Monthly Appointments History</h1>
                     <h2>{this.state.name}</h2>
                     <h3>{apptPercentage}% of your appointments were from {this.state.name}</h3> <br />

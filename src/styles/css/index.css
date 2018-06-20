@@ -449,10 +449,9 @@ li {
   border: 1px solid #E5E8E8; }
 
 .client-list {
-  padding: 15rem; }
-
-.filter__input {
-  display: inline; }
+  padding: 15rem;
+  transform: scale(1.4);
+  width: 50%; }
 
 .search {
   flex: 0 0 40%;
@@ -472,7 +471,7 @@ li {
     margin-right: -3.25rem; }
     .search__input:focus {
       outline: none;
-      width: 30%;
+      width: 25%;
       background-color: #f0eeee; }
     .search__input::-webkit-input-placeholder {
       font-weight: 100;
