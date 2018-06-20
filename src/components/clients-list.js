@@ -13,7 +13,18 @@ import requiresLogin from './requires-login';
 export class ClientsList extends React.Component {
 
     render() {
-        const clientList = this.props.filteredList.map((client) => {
+
+        const sortFunction = (a, b) => {
+            if (a.name < b.name) {
+                return -1;
+            } if (a.name > b.name) {
+                return 1;
+            }
+            return 0;
+        }
+        const sortedClientList = this.props.filteredList.sort(sortFunction);
+
+        const clientList = sortedClientList.map((client) => {
             return (
                  <ListItem key={client.id} button>
                      <ListItemText>
@@ -26,6 +37,8 @@ export class ClientsList extends React.Component {
                  </ListItem>
             )
          });
+        
+         
         return (
             <div className="client-list">
                 <List>
