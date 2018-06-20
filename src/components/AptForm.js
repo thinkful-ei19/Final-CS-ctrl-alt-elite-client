@@ -10,6 +10,8 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import TimePicker from './TimePicker';
 import { addAppointment } from '../actions/appointment';
+import SvgIcon from '@material-ui/core/SvgIcon';
+import IconButton from '@material-ui/core/IconButton';
 
 class AptForm extends React.Component {
   constructor(props) {
@@ -115,7 +117,22 @@ class AptForm extends React.Component {
 
     return (
       <div className="appointments-specify">
-        <Button className="appointments__add-appointment" onClick={this.handleClickOpen}>Add Appointment</Button>
+        <IconButton aria-label="add appointment" onClick={this.handleClickOpen}>
+            <SvgIcon>
+            <path xmlns="http://www.w3.org/2000/svg" d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M16,13h-3v3c0,0.55-0.45,1-1,1h0c-0.55,0-1-0.45-1-1   v-3H8c-0.55,0-1-0.45-1-1v0c0-0.55,0.45-1,1-1h3V8c0-0.55,0.45-1,1-1h0c0.55,0,1,0.45,1,1v3h3c0.55,0,1,0.45,1,1v0   C17,12.55,16.55,13,16,13z"/>
+            </SvgIcon>
+        </IconButton>
+        {/* <IconButton aria-label="add appointment" onClick={this.handleClickOpen}>
+            <SvgIcon>
+            <path xmlns="http://www.w3.org/2000/svg" d="M12,7L12,7c-0.55,0-1,0.45-1,1v3H8c-0.55,0-1,0.45-1,1v0c0,0.55,0.45,1,1,1h3v3c0,0.55,0.45,1,1,1h0c0.55,0,1-0.45,1-1v-3   h3c0.55,0,1-0.45,1-1v0c0-0.55-0.45-1-1-1h-3V8C13,7.45,12.55,7,12,7z M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10   S17.52,2,12,2z M12,20c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20z"/>
+            </SvgIcon>
+        </IconButton>
+        <IconButton aria-label="add appointment" onClick={this.handleClickOpen}>
+            <SvgIcon>
+            <path xmlns="http://www.w3.org/2000/svg" d="M18,13h-5v5c0,0.55-0.45,1-1,1h0c-0.55,0-1-0.45-1-1v-5H6c-0.55,0-1-0.45-1-1v0c0-0.55,0.45-1,1-1h5V6c0-0.55,0.45-1,1-1h0   c0.55,0,1,0.45,1,1v5h5c0.55,0,1,0.45,1,1v0C19,12.55,18.55,13,18,13z"/>
+            </SvgIcon>
+        </IconButton> */}
+
         <Dialog
           className="appointments__dialog"
           open={this.state.open}

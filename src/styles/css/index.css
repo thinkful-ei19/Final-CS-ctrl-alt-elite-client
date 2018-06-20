@@ -381,13 +381,13 @@ li {
   overflow-y: auto; }
   .weekly-view__weekly {
     font-size: 2rem;
-    color: #616A6B; }
+    color: #616A6B;
+    text-align: center; }
     .weekly-view__weekly__header {
       display: flex;
       flex: 1;
       justify-content: space-around; }
     .weekly-view__weekly__days__day {
-      border: 1px solid black;
       display: inline-block;
       width: 12.5%;
       color: #616A6B;
@@ -396,7 +396,6 @@ li {
     .weekly-view__weekly__ul {
       display: flex; }
     .weekly-view__weekly__li {
-      border: 1px solid black;
       width: 12.5%;
       font-size: 2rem;
       text-align: center; }
@@ -409,15 +408,19 @@ li {
     height: 70vh; }
   .weekly-view__hourly__li {
     font-size: 2rem; }
+    .weekly-view__hourly__li:nth-of-type(odd) {
+      background-image: linear-gradient(to right, rgba(84, 153, 199, 0.1), rgba(84, 153, 199, 0.1)); }
+    .weekly-view__hourly__li:nth-of-type(even) {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)); }
     .weekly-view__hourly__li__hour__row {
       display: flex; }
       .weekly-view__hourly__li__hour__row__block {
         align-self: middle;
         height: 5vh;
         width: 12.5%;
-        padding: 2rem;
-        margin-bottom: 1rem;
-        border: 1px solid black; }
+        padding: 2rem; }
+        .weekly-view__hourly__li__hour__row__block:nth-of-type(1) {
+          color: #616A6B; }
   .weekly-view__appointment__ul {
     font-size: 2rem;
     overflow: hidden; }
@@ -428,3 +431,22 @@ li {
     cursor: pointer; }
     .weekly-view__appointment__client:hover {
       text-decoration: underline; }
+
+.report {
+  color: #616A6B; }
+  .report__title {
+    text-align: center;
+    font-size: 2.5rem; }
+
+#filter {
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  text-align: left;
+  padding: 1.5rem 3rem;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  border: 1px solid #E5E8E8; }
+
+.client-list {
+  padding: 15rem; }

@@ -58,10 +58,23 @@ class Hourly extends React.Component {
                     })
                     arr.push(day)                                                                   
                 }
+                let time = "am";
+                let number = i;
+                if(i > 12) {
+                    time = "pm";
+                    number = number - 12;
+                }
+                if(i === 12) {
+                    time = "pm";
+                }
+                if(i === 0) {
+                    number = 12;
+                }
+                
                 JSXArr.push(
                 <li key={i} className="weekly-view__hourly__li">
                     <ul className="weekly-view__hourly__li__hour__row">
-                        <li className="weekly-view__hourly__li__hour__row__block">{i}:00</li>                    
+                        <li className="weekly-view__hourly__li__hour__row__block">{number}:00 {time}</li>                    
                         {arr}
                     </ul>
                 </li>

@@ -7,6 +7,14 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { addClient} from '../actions/appointment';
+import SvgIcon from '@material-ui/core/SvgIcon';
+import IconButton from '@material-ui/core/IconButton';
+import { createTextMask } from 'redux-form-input-masks';
+
+
+const phoneMask = createTextMask({
+  pattern: '(999) 999-9999',
+});
 
 class AddClientForm extends React.Component {
   constructor(props) {
@@ -65,8 +73,13 @@ handleClickOpen = () => {
 
   render() {
     return (
-      <div>
-        <Button onClick={this.handleClickOpen}>Add Client</Button>
+      <div className="filter">
+        <IconButton aria-label="weekly calendar" onClick={this.handleClickOpen}>
+            <SvgIcon>
+            <path xmlns="http://www.w3.org/2000/svg" d="M15,12c2.21,0,4-1.79,4-4s-1.79-4-4-4s-4,1.79-4,4S12.79,12,15,12z M6,10V8c0-0.55-0.45-1-1-1h0C4.45,7,4,7.45,4,8v2H2   c-0.55,0-1,0.45-1,1v0c0,0.55,0.45,1,1,1h2v2c0,0.55,0.45,1,1,1h0c0.55,0,1-0.45,1-1v-2h2c0.55,0,1-0.45,1-1v0c0-0.55-0.45-1-1-1H6   z M15,14c-2.67,0-8,1.34-8,4v1c0,0.55,0.45,1,1,1h14c0.55,0,1-0.45,1-1v-1C23,15.34,17.67,14,15,14z"/>
+            </SvgIcon>
+        </IconButton>
+        {/* <Button onClick={this.handleClickOpen}>Add Client</Button> */}
         <Dialog
           open={this.state.open}
           onClose={this.handleClose}
@@ -83,12 +96,16 @@ handleClickOpen = () => {
               type="name"
               fullWidth
               value={this.state.name}
-            /><TextField
+            />
+            <TextField
               autoFocus
               margin="dense"
               id="phone"
               label="Phone Number"
-              type="phonenumber"
+              name="phone"
+              component="input"
+              type="tel"
+              {...phoneMask}
               fullWidth
               value={this.state.phone}
             />

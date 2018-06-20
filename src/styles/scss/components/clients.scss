@@ -1,0 +1,15 @@
+#filter {
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+    padding: 1.5rem 3rem;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    border: 1px solid $color-five;
+}
+
+.client-list {
+    padding: 15rem;
+
+}
