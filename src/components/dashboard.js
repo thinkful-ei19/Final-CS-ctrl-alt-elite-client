@@ -7,7 +7,7 @@ import Navigation from './navigation';
 // import { setDate } from '../actions/appointment';
 import Calendar from './calendar';
 import WeeklyView from './weekly-view'
-import background from '../media/oceanBlue.jpg';
+import background from '../media/deskSide.jpg';
 import requiresLogin from './requires-login';
 import AptForm from './AptForm';
 
