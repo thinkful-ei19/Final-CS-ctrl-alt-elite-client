@@ -381,7 +381,8 @@ li {
   overflow-y: auto; }
   .weekly-view__weekly {
     font-size: 2rem;
-    color: #616A6B; }
+    color: #616A6B;
+    text-align: center; }
     .weekly-view__weekly__header {
       display: flex;
       flex: 1;
@@ -436,3 +437,13 @@ li {
   .report__title {
     text-align: center;
     font-size: 2.5rem; }
+
+#filter {
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  text-align: left;
+  padding: 1.5rem 3rem;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  border: 1px solid #E5E8E8; }
