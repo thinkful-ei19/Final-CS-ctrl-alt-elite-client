@@ -9,12 +9,6 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import { addClient} from '../actions/appointment';
 import SvgIcon from '@material-ui/core/SvgIcon';
 import IconButton from '@material-ui/core/IconButton';
-import { createTextMask } from 'redux-form-input-masks';
-
-
-const phoneMask = createTextMask({
-  pattern: '(999) 999-9999',
-});
 
 class AddClientForm extends React.Component {
   constructor(props) {
@@ -102,10 +96,7 @@ handleClickOpen = () => {
               margin="dense"
               id="phone"
               label="Phone Number"
-              name="phone"
-              component="input"
-              type="tel"
-              {...phoneMask}
+              type="phonenumber"
               fullWidth
               value={this.state.phone}
             />

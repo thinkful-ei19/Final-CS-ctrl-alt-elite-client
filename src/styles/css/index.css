@@ -450,3 +450,6 @@ li {
 
 .client-list {
   padding: 15rem; }
+
+.filter__input {
+  display: inline; }
