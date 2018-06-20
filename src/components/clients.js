@@ -8,6 +8,15 @@ import FilterClients from './FilterClients';
 
 import requiresLogin from './requires-login';
 
+import background from '../media/deskSide.jpg';
+
+
+const sectionStyle = {
+    backgroundSize: "100% 100%",
+    height: "100VH",
+    backgroundRepeat: "no-repeat",
+    backgroundImage: `url(${background})`
+  };
 
 export class Clients extends React.Component {
 
@@ -19,11 +28,13 @@ export class Clients extends React.Component {
 
     render() {
         return (
-            <div>
-                <Navigation/>
-                <AddClientForm />
-                <FilterClients user={this.props.currentUser} />
-            </div>
+            <section style={ sectionStyle }>
+                <div>
+                    <Navigation/>
+                    <AddClientForm />
+                    <FilterClients user={this.props.currentUser} />
+                </div>
+            </section>
         )
     }
 }
