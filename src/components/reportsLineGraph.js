@@ -74,7 +74,11 @@ export default class LineGraph extends React.Component{
         }
        });
 
-       const apptDataList = apptInfo.map((appt) => {
+       const sortedList = apptInfo.sort((a,b) => {
+        return moment(a.time).valueOf() - moment(b.time).valueOf()
+     });
+
+       const apptDataList = sortedList.map((appt) => {
            return (
                 <li key={appt.id}>
                 Date of Appt: {moment(appt.time).format('MMMM Do YYYY')} <br/>
@@ -86,6 +90,7 @@ export default class LineGraph extends React.Component{
            );
        });
 
+    
        const data = [
         {name: 'January', appointments: janCount},
         {name: 'February', appointments: febCount},

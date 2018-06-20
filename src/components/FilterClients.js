@@ -26,14 +26,7 @@ export default class FilterClients extends React.Component {
         return (
             <div>
                 <form
-                    className="filter-clients__form"
-                    // onSubmit={(e) => {
-                    //     e.preventDefault();
-                    //     const inputValue = e.target.filter.value;
-                    //     this.onSubmit(inputValue);
-                    //     e.target.filter.value ='';
-                    // }}
-                    >
+                    className="filter-clients__form">
                     <label className="filter-clients__label" htmlFor="filter"></label>
                     <input
                         type="text"
