@@ -82,14 +82,8 @@
                         &:nth-of-type(1) { //Column
                             color: $color-gray;
                          }                    
-                        &:nth-of-type(even) { //Column
-                           color: $color-gray;
-                        //    background-image: linear-gradient(to right, rgba(grey, .05), rgba(grey, .05))
-                        }
-                        &:nth-of-type(odd) { //Column
-                            color: $color-black;
-                            // background-image: linear-gradient(to right, rgba(grey, .1), rgba(grey, .1))         
-                         }
+
+
                          
             
                     }

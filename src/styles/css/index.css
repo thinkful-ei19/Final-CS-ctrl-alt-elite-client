@@ -420,10 +420,6 @@ li {
         padding: 2rem; }
         .weekly-view__hourly__li__hour__row__block:nth-of-type(1) {
           color: #616A6B; }
-        .weekly-view__hourly__li__hour__row__block:nth-of-type(even) {
-          color: #616A6B; }
-        .weekly-view__hourly__li__hour__row__block:nth-of-type(odd) {
-          color: #000; }
   .weekly-view__appointment__ul {
     font-size: 2rem;
     overflow: hidden; }
