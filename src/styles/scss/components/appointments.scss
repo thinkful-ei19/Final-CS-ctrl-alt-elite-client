@@ -5,6 +5,22 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    text-align: left;
+    padding: 1rem;
+
+    &__edit{
+        visibility: hidden;
+    }
+
+    &__delete{
+        visibility: hidden;
+    }
+    
+    &:hover {
+        .appointments__edit, .appointments__delete{
+            visibility: visible;
+        }
+    }
     
     &__list {
         
@@ -20,6 +36,9 @@
             color: $color-grey-dark-3;
             font-size: 1.5rem;
             line-height: 1.2;
+        }
+        &__notes {
+            color: $color-grey-dark-1;
         }
     }
 
@@ -53,9 +72,7 @@
         font-size: 2rem;
         background-image: linear-gradient(to left, rgba($color-one, .8), rgba($color-one, .8));
 
-        &:hover {
 
-        }
     }
 
     &__list {
@@ -66,33 +83,14 @@
     }
 }
 
-.appointments-part2{
-    text-align: right;
-    padding: 1rem;
-}
+
 
 .appointments-form {
     font-size: 1.5rem !important;
     display: inline-block;
 }
 
-.appointments {
-
-    text-align: left;
-    padding: 1rem;
-
-    &__edit{
-        visibility: hidden;
-    }
-
-    &__delete{
-        visibility: hidden;
-    }
-    
-    &:hover {
-        .appointments__edit, .appointments__delete{
-            visibility: visible;
-        }
-    }
-
+.appointments-specify {
+    text-align: right;
+    padding: 2rem;
 }
