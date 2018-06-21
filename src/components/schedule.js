@@ -6,8 +6,8 @@ import ScheduleList from './schedule-list';
 export default function Schedule(props) {
   // const { classes } = props;
   return (
-      <Paper className="schedule appointments">
+      <div className="schedule">
         <ScheduleList />
-      </Paper>
+      </div>
   );
 }
