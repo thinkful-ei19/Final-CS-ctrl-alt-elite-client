@@ -10,7 +10,7 @@ import WeeklyView from './weekly-view'
 import background from '../media/whiteHoriz.jpg';
 import requiresLogin from './requires-login';
 import AptForm from './AptForm';
-import oceanBackground from '../media/oceanBlue.jpg';
+import oceanBackground from '../media/whiteHoriz.jpg';
 
 export class Dashboard extends React.Component {
 
