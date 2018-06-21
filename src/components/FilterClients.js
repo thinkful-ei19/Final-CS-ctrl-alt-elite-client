@@ -1,6 +1,6 @@
 import React from 'react';
 import ClientsList from './clients-list';
-import IconButton from '@material-ui/core/IconButton';
+// import IconButton from '@material-ui/core/IconButton';
 import SvgIcon from '@material-ui/core/SvgIcon';
 
 

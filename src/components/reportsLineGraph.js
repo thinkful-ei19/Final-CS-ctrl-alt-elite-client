@@ -91,8 +91,7 @@ export default class LineGraph extends React.Component{
                 Date of Appt: {moment(appt.time).format('MMMM Do YYYY')} <br/>
                 Client Name: {appt.client.name} <br/>
                 Client Email: {appt.client.email} <br/>
-                Client Phone: {appt.client.phone} <br/>
-                Appt Notes: {appt.notes} <br /> <br />
+                Client Phone: {appt.client.phone} <br/> <br/>
                 </li>
            );
        });
