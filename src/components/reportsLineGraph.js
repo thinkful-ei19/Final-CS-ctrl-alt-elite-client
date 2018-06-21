@@ -98,18 +98,18 @@ export default class LineGraph extends React.Component{
 
     
        const data = [
-        {name: 'January', appointments: janCount},
-        {name: 'February', appointments: febCount},
-        {name: 'March', appointments: marCount},
-        {name: 'April', appointments: aprCount},
-        {name: 'May', appointments: mayCount},
-        {name: 'June', appointments: juneCount},
-        {name: 'July', appointments: julyCount},
-        {name: 'August', appointments: augCount},
-        {name: 'September', appointments: septCount},
-        {name: 'October', appointments: octCount},
-        {name: 'November', appointments: novCount},
-        {name: 'December', appointments: decCount}
+        {name: 'JAN', appointments: janCount},
+        {name: 'FEB', appointments: febCount},
+        {name: 'MAR', appointments: marCount},
+        {name: 'APR', appointments: aprCount},
+        {name: 'MAY', appointments: mayCount},
+        {name: 'JUN', appointments: juneCount},
+        {name: 'JUL', appointments: julyCount},
+        {name: 'AUG', appointments: augCount},
+        {name: 'SEP', appointments: septCount},
+        {name: 'OCT', appointments: octCount},
+        {name: 'NOV', appointments: novCount},
+        {name: 'DEC', appointments: decCount}
     ]
 
     const apptPercentage = Math.floor((apptInfo.length / totalAppointmentsForUser) * 100);
@@ -117,9 +117,10 @@ export default class LineGraph extends React.Component{
         if (this.state.click === true) {
             return(
                 <div>
-                    <div>
+                    <div className="linechart">
                         <ResponsiveContainer width={500} height="65%">
                             <LineChart 
+                                
                                 width={780} 
                                 height={250} 
                                 data={data}
@@ -149,7 +150,8 @@ export default class LineGraph extends React.Component{
                         </ResponsiveContainer>
                     </div>
                     <button 
-                    onClick={() => this.handleBackClick()}>Back</button>
+                        className="btn login-button"
+                        onClick={() => this.handleBackClick()}>Back</button>
                     <h1>Monthly Appointments History</h1>
                     <h2>{this.state.name}</h2>
                     <h3>{apptPercentage}% of your appointments were from {this.state.name}</h3> <br />
@@ -161,9 +163,10 @@ export default class LineGraph extends React.Component{
         } else {
             return(
                 <div>
-                    <div>
+                    <div className="linechart">
 
                         <LineChart 
+                            
                             width={780} 
                             height={250} 
                             data={data}

@@ -1,4 +1,5 @@
 .navigation {
+    font-family: 'Roboto', sans-serif;
     &__checkbox {
         display: none;
     }
@@ -12,7 +13,7 @@
         right: 6rem;
         border-radius: 50%;
         z-index: 102;
-        box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        box-shadow: 0 1rem 3rem rgba($color-four, .1);
         text-align: center;
         cursor: pointer;
 
@@ -80,10 +81,10 @@
             font-size: 3rem;
             font-weight: 500;
             padding: 1rem 2rem;
-            color: $color-four;
+            color: $color-gray;
             text-decoration: none;
             text-transform: uppercase;
-            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-four 50%);
+            // background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-four 50%);
             background-size: 230%;
             transition: all .4s;
         }
@@ -96,7 +97,7 @@
         &:hover,
         &:active {
             background-position: 100%;
-            color: $color-one;
+            color: $color-black;
             transform: translateX(1rem);
         }
     }
@@ -141,13 +142,13 @@
         &::after {top: .8rem; }
     }
 
-    &__button:hover &__icon::before {
-        top: -1rem;
-    }
+    // &__button:hover &__icon::before {
+    //     top: -1rem;
+    // }
 
-    &__button:hover &__icon::after {
-        top: 1rem;
-    }
+    // &__button:hover &__icon::after {
+    //     top: 1rem;
+    // }
 
     &__checkbox:checked + &__button &__icon {
         background-color: transparent;

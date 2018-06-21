@@ -7,6 +7,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ConfirmDelete from './ConfirmDelete';
 import EditForm from './EditForm';
 import moment from 'moment';
+import AptForm from './AptForm';
 
 function ScheduleList(props) {
   
@@ -30,8 +31,9 @@ function ScheduleList(props) {
       //   <ListItemText
       //   primary={
         <div className="appointments">
+        
             <ul className="appointments__list schedule-li">
-              <li className="appointments__list__item">{moment(apt.time).format('MMMM Do YYYY, h:mm A')}</li>              
+              <li className="appointments__list__item">{moment(apt.time).format('MMMM Do, h:mm A')}</li>              
               <li className="appointments__list__item">{apt.client.name}</li>              
               <li className="appointments__list__item">{apt.client.phone}</li>
               <li className="appointments__list__item">{apt.client.email}</li>
@@ -45,7 +47,8 @@ function ScheduleList(props) {
       )
     })
     return (
-      <div >
+      <div className="appointments-part2">
+        <AptForm />
         <List component="nav" className="appointments__schedule-list">
           {buildList}
         </List>

@@ -7,9 +7,10 @@ import Navigation from './navigation';
 // import { setDate } from '../actions/appointment';
 import Calendar from './calendar';
 import WeeklyView from './weekly-view'
-import oceanBackground from '../media/oceanBlue.jpg';
+import background from '../media/whiteHoriz.jpg';
 import requiresLogin from './requires-login';
-import AptForm from './AptForm';
+// import AptForm from './AptForm';
+import oceanBackground from '../media/whiteHoriz.jpg';
 
 export class Dashboard extends React.Component {
 
@@ -53,7 +54,7 @@ export class Dashboard extends React.Component {
                         <Navigation/>
                         <div className="components">
                             <WeeklyView />
-                            <AptForm />
+                            {/* <AptForm /> */}
                             <Schedule />                            
                         </div>
                     </div>
@@ -66,7 +67,7 @@ export class Dashboard extends React.Component {
                     <Navigation/>
                     <div className="components">
                         <Calendar />
-                        <AptForm />
+                        {/* <AptForm /> */}
                         <Schedule />
                     </div>
                 </div>

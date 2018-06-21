@@ -23,9 +23,7 @@
         
         &:focus {
             outline: none;
-            // box-shadow: 0 1rem 2rem rgba($color-black, .1);
             border-bottom: 1px solid $color-one;
-            transform: translateY(-5%);
         }
 
         &:focus:invalid {
@@ -62,6 +60,8 @@
     // border-radius: 5px;
     margin-top: 20px;
     float: center;
+    color: #3c48a0;
+    font-weight: 400;
     // border: 1px solid $color-five;
     // width: 100%;
     // padding: 1.5rem 2rem;

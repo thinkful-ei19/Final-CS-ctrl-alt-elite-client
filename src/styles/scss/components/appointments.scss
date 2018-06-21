@@ -56,7 +56,33 @@
     }
 }
 
+.appointments-part2{
+    text-align: right;
+    padding: 1rem;
+}
+
 .appointments-form {
     font-size: 1.5rem !important;
     display: inline-block;
+}
+
+.appointments {
+
+    text-align: left;
+    padding: 1rem;
+
+    &__edit{
+        visibility: hidden;
+    }
+
+    &__delete{
+        visibility: hidden;
+    }
+    
+    &:hover {
+        .appointments__edit, .appointments__delete{
+            visibility: visible;
+        }
+    }
+
 }
