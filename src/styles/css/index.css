@@ -431,6 +431,9 @@ li {
     text-align: center;
     font-size: 2.5rem; }
 
+.linechart {
+  text-align: center; }
+
 #filter {
   box-sizing: border-box;
   display: block;
