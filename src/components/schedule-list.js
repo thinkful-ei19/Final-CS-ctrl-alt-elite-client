@@ -31,7 +31,7 @@ function ScheduleList(props) {
         primary={
           <div>
             <ul className="appointments__list schedule-li">
-              <li className="appointments__list__item">{moment(apt.time).format('MMMM Do YYYY, h:mm A')}</li>              
+              <li className="appointments__list__item">{moment(apt.time).format('MMMM Do, h:mm A')}</li>              
               <li className="appointments__list__item">{apt.client.name}</li>              
               <li className="appointments__list__item">{apt.client.phone}</li>
               <li className="appointments__list__item">{apt.client.email}</li>

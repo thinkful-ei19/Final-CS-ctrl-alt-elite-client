@@ -30,8 +30,8 @@ class ConfirmDelete extends React.Component {
     // console.log('authToken', this.props.authToken);
     // console.log('this is the aptId to delete', this.props.aptId);
     return (
-      <div>
-        <IconButton aria-label="Delete" onClick={this.handleClickOpen}>
+      <div className="appointments-specify">
+        <IconButton className="appointments-specify__delete" aria-label="Delete" onClick={this.handleClickOpen}>
         <DeleteIcon />
         </IconButton>
         <Dialog

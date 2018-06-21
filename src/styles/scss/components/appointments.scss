@@ -1,21 +1,22 @@
 //Specificity is required to overwrite plugin CSS
 
-.appointments {
-
+div .appointments {
+    background: linear-gradient(to left, rgba($color-one, .2), rgba($color-one, .2));
+    box-shadow: none;
     &__dialog {
         transform: scale(1.3);        
     }
 
     &__text {
-        font-size: 1.5rem !important;
+        font-size: 1.5rem;
     }
 
     &__button {
-        font-size: 1rem !important;
+        font-size: 1rem;
     }
 
     &__input * {
-        font-size: 1rem !important;
+        font-size: 1rem;
     }
 
     &__time {
@@ -48,4 +49,24 @@
 .appointments-form {
     font-size: 1.5rem !important;
     display: inline-block;
+}
+
+.appointments-specify {
+    text-align: right;
+    padding: 1rem;
+
+    &__edit{
+        visibility: hidden;
+    }
+
+    &__delete{
+        visibility: hidden;
+    }
+    
+    &:hover {
+        .appointments-specify__edit, .appointments-specify__delete{
+            visibility: visible;
+        }
+    }
+
 }
