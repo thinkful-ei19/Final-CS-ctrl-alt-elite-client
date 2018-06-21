@@ -10,15 +10,7 @@ import WeeklyView from './weekly-view'
 import background from '../media/whiteHoriz.jpg';
 import requiresLogin from './requires-login';
 import AptForm from './AptForm';
-
-
-
-const sectionStyle = {
-    backgroundSize: "100% 100%",
-    height: "100VH",
-    backgroundRepeat: "no-repeat",
-    backgroundImage: `url(${background})`
-  };
+import oceanBackground from '../media/oceanBlue.jpg';
 
 export class Dashboard extends React.Component {
 
@@ -29,6 +21,32 @@ export class Dashboard extends React.Component {
     }
 
     render() {
+
+        //Put section style in here to be reactive to props.
+        let sectionStyle = {
+            backgroundSize: "100% 100%",
+            height: "100VH",
+            backgroundRepeat: "no-repeat",
+            backgroundImage: `url(${oceanBackground})`
+        };
+        switch (this.props.theme) {
+            case 'default':
+                sectionStyle = {
+                    backgroundSize: "100% 100%",
+                    height: "100VH",
+                    backgroundRepeat: "no-repeat",
+                    backgroundImage: `url(${oceanBackground})`
+                };
+            case 'ocean':
+                sectionStyle = {
+                    backgroundSize: "100% 100%",
+                    height: "100VH",
+                    backgroundRepeat: "no-repeat",
+                    backgroundImage: `url(${oceanBackground})`
+                };
+        }
+
+
         if (this.props.calendar === 'weekly') {
             return (
                 <section style={ sectionStyle }>
@@ -64,7 +82,8 @@ const mapStateToProps = state => {
         currentUser: state.auth.currentUser,
         selectedDate: state.calendarReducer.selectedDate,
         selectedTab: state.tabsReducer.selectedTab,
-        calendar: state.calendarReducer.calendar
+        calendar: state.calendarReducer.calendar,
+        theme: state.tabsReducer.theme
     }
 };
 

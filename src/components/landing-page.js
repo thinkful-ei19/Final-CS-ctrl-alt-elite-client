@@ -15,10 +15,12 @@ export default function LandingPage(props) {
     return(
         <section style={ sectionStyle }>
             <div className="landing-page">
-                <h1 id="app-name">SCHEDULR</h1>
+                <h1 id="app-name">SCHEDUL-R</h1>
             
                 <p id="app-description">A simple appointment scheduling app with automated notifications</p>
-                <button className="btn login-button"><Link style={{ textDecoration: 'none' }} to="/login">GET STARTED</Link></button>
+                <Link style={{ textDecoration: 'none' }} to="/login">
+                    <button className="btn login-button">GET STARTED</button>
+                </Link>
             </div>
         </section>
     );

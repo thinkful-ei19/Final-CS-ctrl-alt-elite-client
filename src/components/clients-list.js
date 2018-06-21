@@ -26,6 +26,7 @@ export class ClientsList extends React.Component {
 
         const clientList = sortedClientList.map((client) => {
             return (
+                <div className="client">
                  <ListItem key={client.id} button>
                      <ListItemText>
                          {client.name} <br />
@@ -35,6 +36,7 @@ export class ClientsList extends React.Component {
                      <EditClientForm clientInfo={client} clientId={client.id}/>
                      <ConfirmClientDelete clientId={client.id} />
                  </ListItem>
+                </div>
             )
          });
         
