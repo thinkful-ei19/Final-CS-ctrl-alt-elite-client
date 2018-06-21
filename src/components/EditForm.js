@@ -121,9 +121,8 @@ class EditForm extends React.Component {
           </select>
         }
         return (
-            <div className="appointments-specify">
-
-                <IconButton className="appointments-specify__edit" aria-label="Edit" onClick={this.handleClickOpen}>
+            <div className="appointments__edit">
+                <IconButton aria-label="Edit" onClick={this.handleClickOpen}>
                     <SvgIcon>
                     <path xmlns="http://www.w3.org/2000/svg" d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
                     </SvgIcon>
@@ -139,7 +138,7 @@ class EditForm extends React.Component {
                     <DialogContent>
                         <DialogContentText>
                             Fill out this form with client information in order to update an existing appointment.
-            </DialogContentText>
+                </DialogContentText>
                         {dropDownMenu}
                         <TextField
                             className="appointments__input"
@@ -194,7 +193,7 @@ class EditForm extends React.Component {
                         <input onChange={(event) => this.setState({ checked: event.target.checked })} type="checkbox" />
                         <Button className="appointments__button" onClick={this.handleClose} color="primary">
                             Cancel
-            </Button>
+                        </Button>
                         <Button className="appointments__button" onClick={() => {
                             const values = {
                                 name: this.state.name,
@@ -239,7 +238,7 @@ class EditForm extends React.Component {
                             type="submit"
                             color="primary">
                             Edit
-            </Button>
+                    </Button>
                     </DialogActions>
                 </Dialog>
             </div>

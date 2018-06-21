@@ -63,7 +63,7 @@ handleClickOpen = () => {
         })
       }
     })
-  }
+  } 
 
   render() {
     return (

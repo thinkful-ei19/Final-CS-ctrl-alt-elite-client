@@ -7,9 +7,8 @@ import AptForm from './AptForm';
 export default function Schedule(props) {
   // const { classes } = props;
   return (
-      <Paper className="schedule appointments">
-        <AptForm />
+      <div className="schedule">
         <ScheduleList />
-      </Paper>
+      </div>
   );
 }

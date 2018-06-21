@@ -304,39 +304,44 @@ li {
       background-color: #EBF5FB;
       border-radius: 20%; }
 
-div .appointments {
-  background: linear-gradient(to left, rgba(214, 234, 248, 0.2), rgba(214, 234, 248, 0.2));
-  box-shadow: none; }
-  div .appointments__dialog {
+.appointments {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row; }
+  .appointments__dialog {
     transform: scale(1.3); }
-  div .appointments__text {
+  .appointments__text {
     font-size: 1.5rem; }
-  div .appointments__button {
+  .appointments__button {
     font-size: 1rem; }
-  div .appointments__input * {
+  .appointments__input * {
     font-size: 1rem; }
-  div .appointments__time {
+  .appointments__time {
     display: inline-block; }
-  div .appointments__schedule-list {
+  .appointments__schedule-list {
     opacity: 1;
     max-height: 50rem;
     overflow-y: auto; }
-  div .appointments__add-appointment {
+  .appointments__add-appointment {
     font-size: 2rem;
     background-image: linear-gradient(to left, rgba(214, 234, 248, 0.8), rgba(214, 234, 248, 0.8)); }
+
+.appointments-part2 {
+  text-align: right;
+  padding: 1rem; }
 
 .appointments-form {
   font-size: 1.5rem !important;
   display: inline-block; }
 
-.appointments-specify {
-  text-align: right;
+.appointments {
+  text-align: left;
   padding: 1rem; }
-  .appointments-specify__edit {
+  .appointments__edit {
     visibility: hidden; }
-  .appointments-specify__delete {
+  .appointments__delete {
     visibility: hidden; }
-  .appointments-specify:hover .appointments-specify__edit, .appointments-specify:hover .appointments-specify__delete {
+  .appointments:hover .appointments__edit, .appointments:hover .appointments__delete {
     visibility: visible; }
 
 .components {
