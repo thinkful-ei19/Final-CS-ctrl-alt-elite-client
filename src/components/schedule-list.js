@@ -21,17 +21,15 @@ function ScheduleList(props) {
         if (moment(apt.time).format('YYYY MM DD') === moment(props.selectedDate).format('YYYY MM DD')) {
           return apt;
         }
-      });
+      }).sort((a,b) => {return moment(a.time).valueOf() - moment(b.time).valueOf()});
     }
     console.log(appointments)
-    
     buildList = appointments.map((apt) => {
       return (
       // <ListItem key={apt.id} button>
       //   <ListItemText
       //   primary={
-        <div className="appointments">
-        
+        <div key={apt.id} className="appointments">
             <ul className="appointments__list schedule-li">
               <li className="appointments__list__item">{moment(apt.time).format('MMMM Do, h:mm A')}</li>              
               <li className="appointments__list__item">{apt.client.name}</li>              
