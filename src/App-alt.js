@@ -14,9 +14,9 @@ import Clients from './components/clients';
 
 
 // import './app.css';
-import './styles/css/index.css'
+import './styles/css/index-alt.css'
 
-export class App extends React.Component {
+export class App2 extends React.Component {
     componentDidUpdate(prevProps) {
         if (!prevProps.loggedIn && this.props.loggedIn) {
             // When we are logged in, refresh the auth token periodically

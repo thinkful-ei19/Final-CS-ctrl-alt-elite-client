@@ -6,15 +6,36 @@ import {clearAuthToken} from '../local-storage';
 import { changeTab } from '../actions/tabs';
 
 class Navigation extends React.Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            checked: false
+        }
+    }
+
     logOut() {
         console.log('clearing authToken and logging out user');
         this.props.dispatch(clearAuth());
         clearAuthToken();
     }
+
+    toggleMenu() {
+        if (this.state.checked === false) {
+            this.setState({checked: true})
+        } else {
+            this.setState({checked: false})
+        }
+    }
+
     render() {
         return (
         <div className="navigation">
-            <input type="checkbox" className="navigation__checkbox" id="navi-toggle"/>
+            <input 
+            onClick={() => {
+                this.toggleMenu()
+            }}
+            ref='checkbox' type="checkbox" checked={this.state.checked} className="navigation__checkbox" id="navi-toggle"/>
 
             <label htmlFor="navi-toggle" className="navigation__button">
                 <span className="navigation__icon">&nbsp;</span>
@@ -27,21 +48,30 @@ class Navigation extends React.Component {
 
                     <li className="navigation__item">
                         <Link to="/dashboard"
-                            onClick={() => {this.props.dispatch(changeTab('dashboard'))}}
+                            onClick={() => {
+                                this.props.dispatch(changeTab('dashboard'))
+                                this.toggleMenu()
+                            }}
                             className="navigation__link">Home
                         </Link>
                     </li>
 
                     <li className="navigation__item">
                         <Link to="/clients"
-                            onClick={() => {this.props.dispatch(changeTab('clients'))}}
+                            onClick={() => {
+                                this.props.dispatch(changeTab('clients'))
+                                this.toggleMenu()
+                            }}
                             className="navigation__link">Clients
                         </Link>
                     </li>
 
                     <li className="navigation__item">
                         <Link to="/reports"
-                            onClick={() => {this.props.dispatch(changeTab('reports'))}}
+                            onClick={() => {
+                                this.props.dispatch(changeTab('reports'))
+                                this.toggleMenu()
+                            }}
                             className="navigation__link">Reports
                         </Link>
                     </li>
@@ -65,7 +95,8 @@ class Navigation extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    loggedIn: state.auth.currentUser !== null
+    loggedIn: state.auth.currentUser !== null,
+    selectedTab: state.tabsReducer.selectedTab,
 });
 
 export default connect(mapStateToProps)(Navigation);
