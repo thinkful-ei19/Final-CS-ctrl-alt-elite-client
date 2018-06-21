@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import Navigation from './navigation';
-import AddClientForm from './AddClientForm';
 import FilterClients from './FilterClients';
 
 
@@ -31,7 +30,6 @@ export class Clients extends React.Component {
             <section style={ sectionStyle }>
                 <div>
                     <Navigation/>
-                    <AddClientForm />
                     <FilterClients user={this.props.currentUser} />
                 </div>
             </section>
