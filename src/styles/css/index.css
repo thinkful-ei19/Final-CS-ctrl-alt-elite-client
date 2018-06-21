@@ -124,13 +124,13 @@ li {
     right: 6rem;
     border-radius: 50%;
     z-index: 102;
-    box-shadow: 0 1rem 3rem rgba(55, 55, 55, 0.1);
+    box-shadow: 0 1rem 3rem rgba(55, 55, 55, 0.2);
     text-align: center;
     cursor: pointer; }
     @media (max-width: 60em) {
       .navigation__button {
-        top: 4rem;
-        right: 4rem; } }
+        top: 3rem;
+        right: 3rem; } }
     @media (max-width: 40em) {
       .navigation__button {
         top: 3rem;

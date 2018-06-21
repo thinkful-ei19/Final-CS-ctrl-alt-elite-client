@@ -1,5 +1,5 @@
 import React from 'react';
-import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, CartesianGrid } from 'recharts';
 import moment from 'moment';
 
 
@@ -130,11 +130,12 @@ export default class LineGraph extends React.Component{
                                         this.handleClick(e.activeLabel)
                                     }   
                                 }}>
+                                 <CartesianGrid strokeDasharray="3 3" />
                             <XAxis dataKey="name" />
                             <YAxis />
                             <Tooltip cursor={false} />
                             <Legend 
-                                verticalAlign="top" 
+                               
                                 height={36} 
                                 iconType='rect'
                             />
@@ -164,7 +165,7 @@ export default class LineGraph extends React.Component{
             return(
                 <div>
                     <div className="linechart">
-
+                    <p className="instructions">Click graph to see appointment history</p>
                         <LineChart 
                             
                             width={780} 
@@ -176,11 +177,12 @@ export default class LineGraph extends React.Component{
                                 this.handleClick(e.activeLabel)
                                 }   
                             }}>
+                             <CartesianGrid strokeDasharray="3 3" />
                         <XAxis dataKey="name" />
                         <YAxis />
                         <Tooltip cursor={false} />
                         <Legend 
-                            verticalAlign="top" 
+                            
                             height={36} 
                             iconType='rect'
                         />
@@ -194,7 +196,7 @@ export default class LineGraph extends React.Component{
                             }}/>
                         </LineChart>
                     </div>
-                    <p className="instructions">Click graph to see appointment history per month</p>
+                    
                  </div>
              );
         }
