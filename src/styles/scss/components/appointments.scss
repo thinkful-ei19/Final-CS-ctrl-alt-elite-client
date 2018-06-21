@@ -2,20 +2,31 @@
 
 .appointments {
 
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    
+    &__list {
+
+        &__item {
+
+        }
+    }
+
     &__dialog {
         transform: scale(1.3);        
     }
 
     &__text {
-        font-size: 1.5rem !important;
+        font-size: 1.5rem;
     }
 
     &__button {
-        font-size: 1rem !important;
+        font-size: 1rem;
     }
 
     &__input * {
-        font-size: 1rem !important;
+        font-size: 1rem;
     }
 
     &__time {

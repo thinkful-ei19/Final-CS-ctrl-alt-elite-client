@@ -26,10 +26,10 @@ function ScheduleList(props) {
     
     buildList = appointments.map((apt) => {
       return (
-      <ListItem key={apt.id} button>
-        <ListItemText
-        primary={
-          <div>
+      // <ListItem key={apt.id} button>
+      //   <ListItemText
+      //   primary={
+        <div className="appointments">
             <ul className="appointments__list schedule-li">
               <li className="appointments__list__item">{moment(apt.time).format('MMMM Do YYYY, h:mm A')}</li>              
               <li className="appointments__list__item">{apt.client.name}</li>              
@@ -37,11 +37,11 @@ function ScheduleList(props) {
               <li className="appointments__list__item">{apt.client.email}</li>
               <li className="appointments__list__item">{apt.notes}</li>
             </ul>
-          </div>
-        } />
-        <EditForm aptTime={moment(apt.time).format('YYYY MM DD HH mm')} aptInfo={apt} aptId={apt.id} />
-        <ConfirmDelete aptId={apt.id} />
-      </ListItem>
+          <EditForm aptTime={moment(apt.time).format('YYYY MM DD HH mm')} aptInfo={apt} aptId={apt.id} />
+          <ConfirmDelete aptId={apt.id} />
+        </div>
+      //   } />
+      // </ListItem>
       )
     })
     return (
