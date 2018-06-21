@@ -259,6 +259,9 @@ li {
     width: 60%;
     display: block;
     transition: all .3s; }
+    .login-form__input:focus {
+      outline: none;
+      border-bottom: 1px solid #D6EAF8; }
     .login-form__input:focus:invalid {
       border-color: #a33; }
     .login-form__input::-webkit-input-placeholder {
@@ -280,7 +283,9 @@ li {
 
 .login-button, .register-button {
   margin-top: 20px;
-  float: center; }
+  float: center;
+  color: #3c48a0;
+  font-weight: 400; }
 
 .register {
   margin: 0 auto;
