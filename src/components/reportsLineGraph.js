@@ -73,7 +73,7 @@ export default class LineGraph extends React.Component{
        });
 
         const filterApptList = this.props.user.appointments.map((appointment) => {
-        const formatTime = moment(appointment.time).format('MMMM');
+        const formatTime = moment(appointment.time).format('MMM').toUpperCase();
         const arrayOfTime = formatTime.split(' ');
         
         if(arrayOfTime[0] === this.state.name) {

@@ -8,7 +8,7 @@ import FilterClients from './FilterClients';
 
 import requiresLogin from './requires-login';
 
-import background from '../media/deskSide.jpg';
+import background from '../media/whiteHoriz.jpg';
 
 
 const sectionStyle = {
