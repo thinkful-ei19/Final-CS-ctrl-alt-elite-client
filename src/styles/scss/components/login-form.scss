@@ -21,12 +21,12 @@
         display: block;
         transition: all .3s;
         
-        &:focus {
-            outline: none;
-            // box-shadow: 0 1rem 2rem rgba($color-black, .1);
-            border-bottom: 1px solid $color-one;
-            transform: translateY(-5%);
-        }
+        // &:focus {
+        //     outline: none;
+        //     // box-shadow: 0 1rem 2rem rgba($color-black, .1);
+        //     border-bottom: 1px solid $color-one;
+        //     transform: translateY(-5%);
+        // }
 
         &:focus:invalid {
             border-color: #a33;

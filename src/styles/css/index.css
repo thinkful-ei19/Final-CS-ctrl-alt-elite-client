@@ -259,10 +259,6 @@ li {
     width: 60%;
     display: block;
     transition: all .3s; }
-    .login-form__input:focus {
-      outline: none;
-      border-bottom: 1px solid #D6EAF8;
-      transform: translateY(-5%); }
     .login-form__input:focus:invalid {
       border-color: #a33; }
     .login-form__input::-webkit-input-placeholder {
