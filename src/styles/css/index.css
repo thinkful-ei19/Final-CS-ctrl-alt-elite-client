@@ -331,7 +331,7 @@ li {
     font-size: 1.5rem;
     line-height: 1.2; }
   .appointments__list__notes {
-    color: #333; }
+    color: #999; }
   .appointments__dialog {
     transform: scale(1.3); }
   .appointments__text {
