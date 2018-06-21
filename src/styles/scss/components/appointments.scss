@@ -7,9 +7,19 @@
     flex-direction: row;
     
     &__list {
-
-        &__item {
-
+        
+        &__time {
+            color: $color-purple;
+            line-height: 1.2;
+        }
+        &__name {
+            color: $color-gray;
+            line-height: 1.4;
+        }
+        &__phone, &__email {
+            color: $color-grey-dark-3;
+            font-size: 1.5rem;
+            line-height: 1.2;
         }
     }
 
@@ -33,7 +43,7 @@
         display: inline-block;
     }
 
-    &__schedule-list {
+    &__schedule-li {
         opacity: 1;
         max-height: 50rem;
         overflow-y: auto;

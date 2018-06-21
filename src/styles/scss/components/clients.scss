@@ -16,6 +16,13 @@
     
 }
 
+.client {
+
+    &__name {
+        
+    }
+}
+
 // .filter{
 //     &__input{
 //         display: inline;
@@ -35,7 +42,7 @@
         font-family: inherit;
         font-size: inherit;
         color: inherit;
-        background-color: $color-grey-light-3;
+        background-color: $color-white;
         border: none;
         padding: 1.7rem 1.5rem;
         border-radius: 100px;
@@ -45,7 +52,7 @@
         &:focus {
             outline: none;
             width: 25%;
-            background-color: $color-grey-light-3;
+            background-color: $color-white;
         }
         &::-webkit-input-placeholder {
             font-weight: 100;

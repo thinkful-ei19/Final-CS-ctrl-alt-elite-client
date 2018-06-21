@@ -33,11 +33,11 @@ function ScheduleList(props) {
         <div className="appointments">
         
             <ul className="appointments__list schedule-li">
-              <li className="appointments__list__item">{moment(apt.time).format('MMMM Do, h:mm A')}</li>              
-              <li className="appointments__list__item">{apt.client.name}</li>              
-              <li className="appointments__list__item">{apt.client.phone}</li>
-              <li className="appointments__list__item">{apt.client.email}</li>
-              <li className="appointments__list__item">{apt.notes}</li>
+              <li className="appointments__list__time">{moment(apt.time).format('MMMM Do, h:mm A')}</li>              
+              <li className="appointments__list__name">{apt.client.name}</li>              
+              <li className="appointments__list__phone">{apt.client.phone}</li>
+              <li className="appointments__list__email">{apt.client.email}</li>
+              <li className="appointments__list__notes">{apt.notes}</li>
             </ul>
           <EditForm aptTime={moment(apt.time).format('YYYY MM DD HH mm')} aptInfo={apt} aptId={apt.id} />
           <ConfirmDelete aptId={apt.id} />

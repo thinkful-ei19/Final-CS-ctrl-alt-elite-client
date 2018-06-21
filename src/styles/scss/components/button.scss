@@ -88,3 +88,18 @@
     //     transform: translateY(0);
     // }
 }
+
+
+.login-button, .register-button {
+    // border-radius: 5px;
+    margin-top: 20px;
+    float: center;
+    color: $color-purple;
+    font-weight: 400;
+    // border: 1px solid $color-five;
+    // width: 100%;
+    // padding: 1.5rem 2rem;
+    // background-color: #CCD1D1;
+    // color: white;
+    // font-size: 2.2rem;
+}

@@ -36,6 +36,10 @@ export class ClientsList extends React.Component {
                      <EditClientForm clientInfo={client} clientId={client.id}/>
                      <ConfirmClientDelete clientId={client.id} />
                  </ListItem>
+
+                    {/* <div className="client__name">{client.name}</div>
+                    <div className="client__phone">{client.phone}</div> 
+                    <div className="client__email">{client.email}</div> */}
                 </div>
             )
          });

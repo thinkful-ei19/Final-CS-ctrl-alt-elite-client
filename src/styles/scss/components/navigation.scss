@@ -142,13 +142,13 @@
         &::after {top: .8rem; }
     }
 
-    // &__button:hover &__icon::before {
-    //     top: -1rem;
-    // }
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
 
-    // &__button:hover &__icon::after {
-    //     top: 1rem;
-    // }
+    &__button:hover &__icon::after {
+        top: 1rem;
+    }
 
     &__checkbox:checked + &__button &__icon {
         background-color: transparent;
