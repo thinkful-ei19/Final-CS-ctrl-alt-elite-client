@@ -10,10 +10,26 @@
         color: $color-gray;  
         text-align: center;
 
+        &__previous {
+            display: inline-block;
+            margin: 2rem;
+        }
+
+        &__next {
+            display: inline-block;
+            margin: 2rem;            
+        }
+
+        &__month {
+            display: inline-block;
+            padding-bottom: 5rem;
+            min-width: 30rem;
+        }
+        
         &__header {
-            display: flex;
-            flex: 1;
-            justify-content: space-around;
+            // display: flex;
+            // flex: 1;
+            // justify-content: space-around;
         }
     
         &__days { 
@@ -83,10 +99,10 @@
                         &:nth-of-type(1) { //Column
                             color: $color-gray;
                          }                    
+                    }
 
-
-                         
-            
+                    &__time {
+                        transform: translateY(-33.33%);
                     }
                 }
             }

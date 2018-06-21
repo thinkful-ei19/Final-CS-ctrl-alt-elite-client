@@ -10,17 +10,58 @@
 }
 
 .client-list {
-    margin: 15rem;
+    // margin: 15rem 15rem 15rem 30%;
+    margin: 10rem auto;
     transform: scale(1.4);
-    width: 50%;
-    
+    width: 30%;
+}
+
+.client-list-div {
+    overflow-y: auto;
+    height: 40vh;
 }
 
 .client {
+    padding: 1rem;
 
-    &__name {
-        
+    &__list {
+        display: inline-block;
+
+        &__name {
+            font-size: 1.5rem;
+            color: $color-gray;
+            line-height: 1.4;
+        }
+        &__phone, &__email {
+            color: $color-grey-dark-3;
+            font-size: 1.5rem;
+            line-height: 1.2;
+        }
     }
+
+    &__edit-form {
+        float: right;
+        visibility: hidden;
+        // display: inline-block;
+    }
+
+    &__delete-form {
+        float: right;
+        visibility: hidden;
+        // display: inline-block;
+    }
+
+    &:hover {
+        .client__edit-form, .client__delete-form {
+            visibility: visible;
+        }
+    }
+}
+
+.add-client-button-flexbox {
+    display: flex;
+    justify-content: flex-end;
+    // transform: translateY(30%);
 }
 
 // .filter{
@@ -38,6 +79,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 12.5rem;
+
     &__input {
         font-family: inherit;
         font-size: inherit;

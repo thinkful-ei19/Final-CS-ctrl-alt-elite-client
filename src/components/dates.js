@@ -242,6 +242,13 @@ export class Dates extends React.Component {
                             </a>
                             )
                         }
+                        if (moment().format('YYYY MM DD') === moment(date.value).format('YYYY MM DD')) {
+                            return (
+                                <a onClick={(event) => component.props.dispatch(selectDate(date.value))} className="calendar__blocks-row__blocks current-day" value={date.value} ref={date.ref} key={date.value}>
+                                    {date.day}
+                                </a>
+                                )
+                        }
                         if (date.ref === 'previous' || date.ref === 'next') {
                             return (
                                 <a onClick={(event) => component.props.dispatch(selectDate(date.value))} className="selected-date calendar__blocks-row__blocks previous-appointment-date other-month-date" value={date.value} ref={date.ref} key={date.value}>
@@ -282,6 +289,13 @@ export class Dates extends React.Component {
                             {date.day}
                         </a>
                         )
+                    }
+                    if (moment().format('YYYY MM DD') === moment(date.value).format('YYYY MM DD')) {
+                        return (
+                            <a onClick={(event) => component.props.dispatch(selectDate(date.value))} className="calendar__blocks-row__blocks current-day" value={date.value} ref={date.ref} key={date.value}>
+                                {date.day}
+                            </a>
+                            )
                     }
                     if (date.ref === 'previous' || date.ref === 'next') {
                         return (

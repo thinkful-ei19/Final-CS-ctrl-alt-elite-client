@@ -74,7 +74,7 @@ class Hourly extends React.Component {
                 JSXArr.push(
                 <li key={i} className="weekly-view__hourly__li">
                     <ul className="weekly-view__hourly__li__hour__row">
-                        <li className="weekly-view__hourly__li__hour__row__block">{number}:00 {time}</li>                    
+                        <li className="weekly-view__hourly__li__hour__row__block"><p className="weekly-view__hourly__li__hour__row__time">{number}:00 {time}</p></li>                    
                         {arr}
                     </ul>
                 </li>

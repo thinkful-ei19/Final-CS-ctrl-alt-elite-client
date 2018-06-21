@@ -1,4 +1,5 @@
 import React from 'react';
+import AddClientForm from './AddClientForm';
 import {connect} from 'react-redux';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -27,16 +28,13 @@ export class ClientsList extends React.Component {
         const clientList = sortedClientList.map((client) => {
             return (
                 <div className="client">
-                 <ListItem key={client.id} button>
-                     <ListItemText>
-                         {client.name} <br />
-                         {client.phone} <br />
-                         {client.email} <br />
-                     </ListItemText>
-                     <EditClientForm clientInfo={client} clientId={client.id}/>
-                     <ConfirmClientDelete clientId={client.id} />
-                 </ListItem>
-
+                 <ul className="client__list" key={client.id} button>
+                        <li className="client__list__name">{client.name}</li>
+                        <li className="client__list__phone">{client.phone}</li>
+                        <li className="client__list__email">{client.email}</li>
+                 </ul>
+                <ConfirmClientDelete clientId={client.id} />
+                 <EditClientForm clientInfo={client} clientId={client.id}/>
                     {/* <div className="client__name">{client.name}</div>
                     <div className="client__phone">{client.phone}</div> 
                     <div className="client__email">{client.email}</div> */}
@@ -47,9 +45,12 @@ export class ClientsList extends React.Component {
          
         return (
             <div className="client-list">
-                <List>
-                    {clientList}
-                </List>
+                <div className="add-client-button-flexbox">
+                    <AddClientForm/>
+                </div>
+                <div className="client-list-div">
+                {clientList}
+                </div>
             </div>
         )
     }

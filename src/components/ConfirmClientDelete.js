@@ -30,7 +30,7 @@ class ConfirmClientDelete extends React.Component {
     // console.log('authToken', this.props.authToken);
     // console.log('this is the clientId to delete', this.props.clientId);
     return (
-      <div>
+      <div className="client__delete-form">
         <IconButton aria-label="Delete" onClick={this.handleClickOpen}>
         <DeleteIcon />
         </IconButton>
