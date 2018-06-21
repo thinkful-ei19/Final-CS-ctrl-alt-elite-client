@@ -63,7 +63,7 @@ export class Dashboard extends React.Component {
         }
         return (
             <section style={ sectionStyle }>
-                <div>
+                <div className="dashboard">
                     <Navigation/>
                     <div className="components">
                         <Calendar />

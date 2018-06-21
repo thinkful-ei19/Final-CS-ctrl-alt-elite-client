@@ -5,11 +5,40 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    text-align: left;
+    padding: 1rem;
+
+    &__edit{
+        visibility: hidden;
+    }
+
+    &__delete{
+        visibility: hidden;
+    }
+    
+    &:hover {
+        .appointments__edit, .appointments__delete{
+            visibility: visible;
+        }
+    }
     
     &__list {
-
-        &__item {
-
+        
+        &__time {
+            color: $color-purple;
+            line-height: 1.2;
+        }
+        &__name {
+            color: $color-gray;
+            line-height: 1.4;
+        }
+        &__phone, &__email {
+            color: $color-grey-dark-3;
+            font-size: 1.5rem;
+            line-height: 1.2;
+        }
+        &__notes {
+            color: $color-grey-dark-3;
         }
     }
 
@@ -33,7 +62,7 @@
         display: inline-block;
     }
 
-    &__schedule-list {
+    &__schedule-li {
         opacity: 1;
         max-height: 50rem;
         overflow-y: auto;
@@ -43,9 +72,7 @@
         font-size: 2rem;
         background-image: linear-gradient(to left, rgba($color-one, .8), rgba($color-one, .8));
 
-        &:hover {
 
-        }
     }
 
     &__list {
@@ -56,33 +83,14 @@
     }
 }
 
-.appointments-part2{
-    text-align: right;
-    padding: 1rem;
-}
+
 
 .appointments-form {
     font-size: 1.5rem !important;
     display: inline-block;
 }
 
-.appointments {
-
-    text-align: left;
-    padding: 1rem;
-
-    &__edit{
-        visibility: hidden;
-    }
-
-    &__delete{
-        visibility: hidden;
-    }
-    
-    &:hover {
-        .appointments__edit, .appointments__delete{
-            visibility: visible;
-        }
-    }
-
+.appointments-specify {
+    text-align: right;
+    padding: 2rem;
 }
