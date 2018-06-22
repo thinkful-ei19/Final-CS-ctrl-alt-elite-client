@@ -287,7 +287,9 @@ li {
   text-align: center;
   max-width: 60rem;
   text-transform: uppercase;
-  color: #616A6B; }
+  color: #616A6B;
+  display: inline-block;
+  margin-right: 20rem; }
   .calendar__header-row__previous {
     display: inline-block;
     margin: 2rem; }
@@ -363,22 +365,17 @@ li {
   text-align: right;
   padding: 0 2rem; }
 
-.components {
-  display: flex;
-  justify-content: space-evenly;
-  padding-top: 5rem; }
-
 .schedule {
-  margin-top: 16rem; }
+  display: inline-block;
+  width: 40rem;
+  margin-top: 15rem;
+  vertical-align: top; }
 
 .schedule-li {
   font-size: 15px; }
 
 .landing-page {
-  text-align: center;
   font-family: 'Roboto', sans-serif; }
-  .landing-page__button {
-    text-align: center; }
 
 #app-name {
   font-size: 80px;
@@ -386,6 +383,137 @@ li {
 
 #app-description {
   font-size: 20px; }
+
+.head {
+  background-color: #F4F4F4;
+  height: 95vh; }
+
+.nav {
+  padding: 2rem;
+  text-align: right;
+  position: fixed;
+  width: 100%;
+  background-image: linear-gradient(to right, rgba(51, 51, 51, 0.9), rgba(51, 51, 51, 0.9));
+  text-transform: uppercase; }
+  .nav__button {
+    padding: 1.5rem;
+    margin: 0 2.5rem;
+    cursor: pointer;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: 'Carter One', cursive; }
+    .nav__button:hover {
+      color: black; }
+    .nav__button:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1rem;
+      bottom: 0;
+      left: 0;
+      background-color: #000;
+      opacity: .3;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s; }
+    .nav__button:hover:before {
+      visibility: visible;
+      -webkit-transform: scale(1);
+      transform: scale(1); }
+
+.welcome {
+  background-image: url("../images/head.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%; }
+  .welcome__screen {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%; }
+  .welcome__message {
+    color: white;
+    font-family: 'Candal', cursive;
+    font-size: 3.2rem; }
+    .welcome__message__top {
+      position: absolute;
+      margin-top: 30rem;
+      margin-left: 25rem; }
+    .welcome__message__bottom {
+      position: absolute;
+      margin-top: 40rem;
+      margin-left: 25rem; }
+
+.about {
+  background-color: white;
+  height: 70vh;
+  padding: 20rem 40rem; }
+  .about__left {
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle; }
+  .about__header {
+    font-size: 3.2rem;
+    font-family: 'Candal', cursive; }
+  .about__right {
+    width: 50%;
+    display: inline-block;
+    font-size: 1.8rem;
+    vertical-align: middle; }
+
+.whats-new {
+  background-color: white;
+  padding: 10rem 40rem; }
+  .whats-new__header {
+    text-align: center;
+    font-size: 3.2rem;
+    font-family: 'Candal', cursive; }
+  .whats-new__left {
+    display: inline-block;
+    padding-top: 5rem;
+    width: 50%;
+    vertical-align: middle; }
+  .whats-new__right {
+    width: 50%;
+    padding-top: 5rem;
+    display: inline-block;
+    font-size: 1.8rem;
+    vertical-align: middle; }
+
+.about-us {
+  background-color: #333;
+  color: white;
+  padding: 5rem; }
+  .about-us__header {
+    text-align: center;
+    font-size: 1.8rem;
+    padding-bottom: 2rem; }
+  .about-us__person {
+    display: inline-block;
+    width: 25%;
+    text-align: center; }
+    .about-us__person__list__item {
+      padding: .5rem; }
+    .about-us__person__list__name {
+      font-size: 1.8rem; }
+    .about-us__person__list__portfolio {
+      font-size: 1.2rem; }
+      .about-us__person__list__portfolio__text {
+        color: grey; }
+        .about-us__person__list__portfolio__text:hover {
+          text-decoration: underline; }
+    .about-us__person__list__github {
+      display: inline-block;
+      margin: 0 .5rem; }
+    .about-us__person__list__linkedin {
+      display: inline-block;
+      margin: 0 .5rem; }
 
 .weekly-view {
   padding: 1rem;
@@ -575,6 +703,10 @@ li {
     height: 2rem;
     width: 2rem;
     fill: #999; }
+
+.components {
+  padding-top: 5rem;
+  text-align: center; }
 
 .dashboard {
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)); }
