@@ -426,11 +426,11 @@ li {
       transform: scale(1); }
 
 .welcome {
-  background-image: url("../images/joke.jpg");
-  margin-top: 12rem;
+  background-image: url("../images/head.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100%;
-  width: 100%;
-  background-repeat: no-repeat; }
+  width: 100%; }
   .welcome__screen {
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
     background-repeat: no-repeat;

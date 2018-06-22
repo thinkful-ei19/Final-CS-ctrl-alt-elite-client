@@ -26,7 +26,6 @@ export default function LandingPage(props) {
             </div> */}
             <nav className="nav">
                 <img className="nav__header" />
-                <h1 style={{float: 'left', fontSize: 24, color: 'red'}}>SEALFUL</h1>
                 <a className="nav__button">Home</a>
                 <a className="nav__button">About</a> 
                 <a className="nav__button">What's new?</a>
@@ -39,12 +38,8 @@ export default function LandingPage(props) {
                 <div className="welcome">
                     <div className="welcome__screen">
                         <span className="welcome__message">
-                            <h1 className="welcome__message__top">Getting screamed at and</h1>
-                            <h1 className="welcome__message__bottom">overworked has never been easier</h1>
-                            <a></a>
-                            {/* <h1 className="welcome__message__top">Making appointments</h1>
-                            <h1 className="welcome__message__bottom"> has never been easier</h1> */}
-                            <a></a>
+                            <h1 className="welcome__message__top">Making appointments</h1>
+                            <h1 className="welcome__message__bottom"> has never been easier</h1>
                         </span>
                     </div>
                 </div>
@@ -80,9 +75,7 @@ export default function LandingPage(props) {
             <div className="whats-new">
                 <h2 className="whats-new__header">Always on the go? Our mobile app has you covered!</h2>
                 <div className="whats-new__left">
-                    <img style={{width: '50%'}} src="https://cdn-images-1.medium.com/max/447/1*K55PZiMuEeM4CPZp5ei9uQ.png" />
-                    {/* //To be re-added, long live the seals. */}
-                    {/* <img style={{width: '50%'}} src="https://www.boostmobile.com/content/dam/boostmobile/en/products/phones/apple-iphone-6s-plus/space-gray/iphone6sPlus_SpaceGray_front@3x.png.transform/pdpCarousel/image.jpg" /> */}
+                    <img style={{width: '50%'}} src="https://www.boostmobile.com/content/dam/boostmobile/en/products/phones/apple-iphone-6s-plus/space-gray/iphone6sPlus_SpaceGray_front@3x.png.transform/pdpCarousel/image.jpg" />
                 </div>
                 <div className="whats-new__right">
                 <h3 className="whats-new__list__item__header">Schedulr can go wherever your phone goes</h3>
