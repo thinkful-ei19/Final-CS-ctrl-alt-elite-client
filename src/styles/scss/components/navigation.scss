@@ -1,5 +1,6 @@
 .navigation {
     font-family: 'Roboto', sans-serif;
+    backface-visibility: hidden;
     &__checkbox {
         display: none;
     }
