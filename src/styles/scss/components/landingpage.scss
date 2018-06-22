@@ -73,16 +73,12 @@
 }
 
 .welcome {
-    // background-image: url('../images/head.jpg');
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // height: 100%;
-    // width: 100%;
-    background-image: url('../images/joke.jpg');
-    margin-top: 12rem;
+    background-image: url('../images/head.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100%;
     width: 100%;
-    background-repeat: no-repeat;
+    // margin-top: 6.5rem;
 
     &__screen {
         background-image: linear-gradient(to right, rgba(white, .15), rgba(white, .15));
