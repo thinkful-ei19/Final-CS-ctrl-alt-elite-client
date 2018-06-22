@@ -118,10 +118,12 @@ li {
   margin-top: 20px;
   float: center;
   color: #3c48a0;
-  font-weight: 400; }
+  font-weight: 400;
+  background-color: 'white'; }
 
 .navigation {
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  backface-visibility: hidden; }
   .navigation__checkbox {
     display: none; }
   .navigation__button {
@@ -564,11 +566,14 @@ li {
         align-self: middle;
         height: 5vh;
         width: 12.5%;
-        padding: 2rem; }
+        padding: 2rem;
+        white-space: nowrap;
+        justify-content: center;
+        text-overflow: ellipsis;
+        display: flex;
+        align-items: center; }
         .weekly-view__hourly__li__hour__row__block:nth-of-type(1) {
           color: #616A6B; }
-      .weekly-view__hourly__li__hour__row__time {
-        transform: translateY(-33.33%); }
   .weekly-view__appointment__ul {
     font-size: 2rem;
     overflow: hidden; }
