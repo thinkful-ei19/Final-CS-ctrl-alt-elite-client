@@ -17,7 +17,7 @@
     }
     
     &:hover {
-        .appointments__edit, .appointments__delete{
+        .appointments__edit, .appointments__delete {
             visibility: visible;
         }
     }
@@ -72,12 +72,10 @@
     &__add-appointment {
         font-size: 2rem;
         background-image: linear-gradient(to left, rgba($color-one, .8), rgba($color-one, .8));
-
-
     }
 
     &__list {
-        
+
         &__item {
 
         }
