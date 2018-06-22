@@ -432,7 +432,7 @@ li {
   height: 100%;
   width: 100%; }
   .welcome__screen {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -452,7 +452,7 @@ li {
 
 .about {
   background-color: white;
-  height: 90vh;
+  height: 70vh;
   padding: 20rem 40rem; }
   .about__left {
     display: inline-block;
@@ -463,6 +463,25 @@ li {
     font-family: 'Candal', cursive; }
   .about__right {
     width: 50%;
+    display: inline-block;
+    font-size: 1.8rem;
+    vertical-align: middle; }
+
+.whats-new {
+  background-color: white;
+  padding: 10rem 40rem; }
+  .whats-new__header {
+    text-align: center;
+    font-size: 3.2rem;
+    font-family: 'Candal', cursive; }
+  .whats-new__left {
+    display: inline-block;
+    padding-top: 5rem;
+    width: 50%;
+    vertical-align: middle; }
+  .whats-new__right {
+    width: 50%;
+    padding-top: 5rem;
     display: inline-block;
     font-size: 1.8rem;
     vertical-align: middle; }
@@ -485,6 +504,10 @@ li {
       font-size: 1.8rem; }
     .about-us__person__list__portfolio {
       font-size: 1.2rem; }
+      .about-us__person__list__portfolio__text {
+        color: grey; }
+        .about-us__person__list__portfolio__text:hover {
+          text-decoration: underline; }
     .about-us__person__list__github {
       display: inline-block;
       margin: 0 .5rem; }

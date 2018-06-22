@@ -74,7 +74,14 @@ export default function LandingPage(props) {
                 </div>
             </div>
             <div className="whats-new">
-
+                <h2 className="whats-new__header">Always on the go? Our mobile app has you covered!</h2>
+                <div className="whats-new__left">
+                    <img style={{width: '50%'}} src="https://www.boostmobile.com/content/dam/boostmobile/en/products/phones/apple-iphone-6s-plus/space-gray/iphone6sPlus_SpaceGray_front@3x.png.transform/pdpCarousel/image.jpg" />
+                </div>
+                <div className="whats-new__right">
+                <h3 className="whats-new__list__item__header">Schedulr can go wherever your phone goes</h3>
+                    <p className="whats-new__list__item__details">Enjoy all of the features Schedulr has to offer on mobile! Whether you are the one visiting your clients or not, Schedulr will always be with you.</p>
+                </div>
             </div>
             <div className="about-us">
                 <h4 className="about-us__header">This web application crafted and designed by:</h4>
@@ -83,7 +90,7 @@ export default function LandingPage(props) {
                         <ul className="about-us__person__list">
                             <li className="about-us__person__list__item about-us__person__list__name">Julie Kim</li>
                             <li className="about-us__person__list__item about-us__person__list__portfolio">
-                                <a href="" target="blank">Visit her webpage</a>
+                                <a className="about-us__person__list__portfolio__text" href="" target="blank">Visit her webpage</a>
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__github">
                                 <a href="https://github.com/joulay" target="blank"><img src={githubIcon}/></a>                                                
@@ -97,7 +104,7 @@ export default function LandingPage(props) {
                         <ul className="about-us__person__list">
                             <li className="about-us__person__list__item about-us__person__list__name">Alexa Scott</li>
                             <li className="about-us__person__list__item about-us__person__list__portfolio">
-                                <a href="" target="blank">Visit her webpage</a>
+                                <a className="about-us__person__list__portfolio__text" href="" target="blank">Visit her webpage</a>
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__github">
                                 <a href="https://github.com/AlexaScott33" target="blank"><img src={githubIcon}/></a>                                                
@@ -111,7 +118,7 @@ export default function LandingPage(props) {
                         <ul className="about-us__person__list">
                             <li className="about-us__person__list__item about-us__person__list__name">Joshua Hutchinson</li>
                             <li className="about-us__person__list__item about-us__person__list__portfolio">
-                                <a href="" target="blank">Visit his webpage</a>
+                                <a className="about-us__person__list__portfolio__text" href="" target="blank">Visit his webpage</a>
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__github">
                                 <a href="https://github.com/JTHUTCH94" target="blank"><img src={githubIcon}/></a>                                                
@@ -125,7 +132,7 @@ export default function LandingPage(props) {
                         <ul className="about-us__person__list">
                             <li className="about-us__person__list__item about-us__person__list__name">Christopher Whiteman</li>
                             <li className="about-us__person__list__item about-us__person__list__portfolio">
-                                <a href="http://www.chris-whiteman.com" target="blank">Visit his webpage</a>
+                                <a className="about-us__person__list__portfolio__text" href="http://www.chris-whiteman.com" target="blank">Visit his webpage</a>
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__github">
                                 <a href="https://github.com/cjszk" target="blank"><img src={githubIcon}/></a>                                                

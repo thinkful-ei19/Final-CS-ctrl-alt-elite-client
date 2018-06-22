@@ -81,7 +81,7 @@
     // margin-top: 6.5rem;
 
     &__screen {
-        background-image: linear-gradient(to right, rgba(white, .2), rgba(white, .2));
+        background-image: linear-gradient(to right, rgba(white, .15), rgba(white, .15));
         background-repeat: no-repeat;
         background-size: cover;
         height: 100%;
@@ -108,7 +108,7 @@
 
 .about {
     background-color: white;
-    height: 90vh;
+    height: 70vh;
     padding: 20rem 40rem;
 
     &__left {
@@ -124,6 +124,33 @@
 
     &__right {
         width: 50%;
+        display: inline-block;
+        font-size: 1.8rem;
+        vertical-align: middle;
+
+    }
+}
+
+.whats-new {
+    background-color: white;
+    padding: 10rem 40rem;
+
+    &__header {
+        text-align: center;
+        font-size: 3.2rem;
+        font-family: 'Candal', cursive;
+    }
+
+    &__left {
+        display: inline-block;
+        padding-top: 5rem;
+        width: 50%;
+        vertical-align: middle;
+    }
+    
+    &__right {
+        width: 50%;
+        padding-top: 5rem;
         display: inline-block;
         font-size: 1.8rem;
         vertical-align: middle;
@@ -163,6 +190,14 @@
 
             &__portfolio {
                 font-size: 1.2rem;
+
+                &__text {
+                    color: grey;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
             }
 
             &__github {
