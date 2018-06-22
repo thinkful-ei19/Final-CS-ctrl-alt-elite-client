@@ -96,13 +96,18 @@
                         padding: 2rem;
                         // margin-bottom: 1rem;
                         // border: 1px solid black;
+                        white-space: nowrap;
+                        justify-content: center;
+                        text-overflow: ellipsis;
+                        display: flex;
+                        align-items: center;
                         &:nth-of-type(1) { //Column
                             color: $color-gray;
                          }                    
                     }
 
                     &__time {
-                        transform: translateY(-33.33%);
+                       
                     }
                 }
             }

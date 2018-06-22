@@ -1,6 +1,5 @@
 .btn {
     float: center; 
-
     &,
     &:link,
     &:visited {
@@ -96,6 +95,7 @@
     float: center;
     color: $color-purple;
     font-weight: 400;
+    background-color: 'white';
     // border: 1px solid $color-five;
     // width: 100%;
     // padding: 1.5rem 2rem;
