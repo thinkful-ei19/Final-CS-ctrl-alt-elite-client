@@ -42,7 +42,7 @@
         color: white;
         text-decoration: none;
         font-size: 1.5rem;
-        font-family: 'Carter One', cursive;
+        font-family: sans-serif;
 
         &:hover {
             color: black;
@@ -52,11 +52,11 @@
             content: "";
             position: absolute;
             width: 100%;
-            height: 1rem;
-            bottom: 0;
+            // height: 1rem;
+            // bottom: 0;
             left: 0;
             background-color: #000;
-            opacity: .3;
+            // opacity: .3;
             visibility: hidden;
             -webkit-transform: scaleX(0);
             transform: scaleX(0);
@@ -81,7 +81,7 @@
     // margin-top: 6.5rem;
 
     &__screen {
-        background-image: linear-gradient(to right, rgba(white, .15), rgba(white, .15));
+        background-image: linear-gradient(to right, rgba(white, .1), rgba(white, .1));
         background-repeat: no-repeat;
         background-size: cover;
         height: 100%;
@@ -89,8 +89,8 @@
     }
 
     &__message {
-        color: white;
-        font-family: 'Candal', cursive;
+        color:black;
+        font-family: sans-serif;
         font-size: 3.2rem;
 
         &__top {

@@ -28,11 +28,10 @@ export default function LandingPage(props) {
                 <img className="nav__header" />
                 <a className="nav__button">Home</a>
                 <a className="nav__button">About</a> 
-                <a className="nav__button">What's new?</a>
                 <Link to="/login">
                     <a className="nav__button">Login</a>
                 </Link>
-                <a className="nav__button">Signup</a>
+                <a className="nav__button">Sign up</a>
             </nav>
             <div className="head">
                 <div className="welcome">

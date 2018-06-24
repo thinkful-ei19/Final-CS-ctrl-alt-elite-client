@@ -116,54 +116,6 @@ export default class LineGraph extends React.Component{
 
     const apptPercentage = Math.floor((apptInfo.length / totalAppointmentsForUser) * 100);
 
-        // if (this.state.click === true) {
-            // return(
-            //     <div>
-            //         <div className="linechart">
-            //             <ResponsiveContainer width={500} height="65%">
-            //                 <LineChart 
-                                
-            //                     width={780} 
-            //                     height={250} 
-            //                     data={data}
-            //                     margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-            //                     onClick={(e) => {         
-            //                         if (e !== null) {
-            //                             this.handleClick(e.activeLabel)
-            //                         }   
-            //                     }}>
-            //                      <CartesianGrid strokeDasharray="3 3" />
-            //                 <XAxis dataKey="name" />
-            //                 <YAxis />
-            //                 <Tooltip cursor={false} />
-            //                 <Legend 
-                               
-            //                     height={36} 
-            //                     iconType='rect'
-            //                 />
-            //                 <Line 
-            //                     type="monotoneX" 
-            //                     dataKey="appointments" 
-            //                     stroke="#5DADE2" 
-            //                     dot={{ 
-            //                         stroke: '#5DADE2', 
-            //                         strokeWidth: .5
-            //                     }}/>
-            //                 </LineChart>
-            //             </ResponsiveContainer>
-            //         </div>
-            //         <button 
-            //             className="btn login-button"
-            //             onClick={() => this.handleBackClick()}>Back</button>
-            //         <h1>Monthly Appointments History</h1>
-            //         <h2>{this.state.name}</h2>
-            //         <h3>{apptPercentage}% of your appointments were from {this.state.name}</h3> <br />
-            //         <ul className="report__list">
-            //             {apptDataList}
-            //         </ul>
-            //      </div>
-            //  );
-        // } else {
             return(
                 <div>
                     <div className="linechart report__left">
