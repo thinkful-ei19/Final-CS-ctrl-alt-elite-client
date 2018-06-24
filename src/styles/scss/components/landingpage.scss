@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Carme');
+
 .landing-page {
     
     // text-align: center;
@@ -89,19 +91,21 @@
     }
 
     &__message {
-        color:black;
-        font-family: sans-serif;
+        color:$color-one;
+        font-family: 'Carme', sans-serif;
         font-size: 3.2rem;
 
         &__top {
             position: absolute;
-            margin-top: 30rem;
-            margin-left: 25rem;
+            text-transform: uppercase;
+            margin-top: 35rem;
+            margin-left: 20rem;
         }
         &__bottom {
             position: absolute;
+            text-transform: uppercase;
             margin-top: 40rem;
-            margin-left: 25rem;
+            margin-left: 20.5rem;
         }
     }
 }

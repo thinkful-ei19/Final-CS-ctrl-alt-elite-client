@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Carme");
 .selected-date {
   border-radius: 20%;
   background-image: radial-gradient(rgba(0, 0, 0, 0.1), rgba(55, 55, 55, 0.1)); }
@@ -437,17 +438,19 @@ li {
     height: 100%;
     width: 100%; }
   .welcome__message {
-    color: black;
-    font-family: sans-serif;
+    color: #D6EAF8;
+    font-family: 'Carme', sans-serif;
     font-size: 3.2rem; }
     .welcome__message__top {
       position: absolute;
-      margin-top: 30rem;
-      margin-left: 25rem; }
+      text-transform: uppercase;
+      margin-top: 35rem;
+      margin-left: 20rem; }
     .welcome__message__bottom {
       position: absolute;
+      text-transform: uppercase;
       margin-top: 40rem;
-      margin-left: 25rem; }
+      margin-left: 20.5rem; }
 
 .about {
   background-color: white;
