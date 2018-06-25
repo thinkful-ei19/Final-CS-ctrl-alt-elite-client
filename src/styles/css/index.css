@@ -718,3 +718,38 @@ li {
 .dashboard {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
   height: 100vh; }
+
+.settings {
+  text-align: center;
+  padding: 1rem; }
+  .settings__change-theme {
+    padding: 1rem;
+    margin-bottom: 5rem;
+    margin-top: 3rem; }
+    .settings__change-theme__header {
+      font-size: 2.4rem; }
+    .settings__change-theme__drop-down {
+      width: 15rem;
+      padding: .5rem 1rem;
+      font-size: 1.8rem; }
+    .settings__change-theme__option {
+      padding: .5rem 1rem;
+      font-size: 1.8rem; }
+  .settings__change-password__form {
+    margin: 0 auto;
+    width: 50%; }
+  .settings__change-password__header {
+    font-size: 2.4rem; }
+  .settings__change-password__label {
+    font-size: 1.6rem; }
+  .settings__change-password__input {
+    font-size: 1.9rem;
+    font-family: inherit;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    margin: 1rem auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #E5E8E8;
+    border-bottom: 1px solid #E5E8E8;
+    display: block;
+    transition: all .3s; }
