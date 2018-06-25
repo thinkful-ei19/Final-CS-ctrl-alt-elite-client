@@ -294,7 +294,7 @@ li {
   text-align: center;
   max-width: 60rem;
   text-transform: uppercase;
-  color: black;
+  color: #616A6B;
   display: inline-block;
   margin-right: 20rem; }
   .calendar__header-row__previous {
@@ -759,7 +759,6 @@ li {
   text-align: center; }
 
 .dashboard {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
   height: 100vh; }
 
 .settings {
