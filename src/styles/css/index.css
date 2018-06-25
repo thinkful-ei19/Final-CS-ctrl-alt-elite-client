@@ -501,11 +501,11 @@ li {
 .about-us {
   background-color: #333;
   color: white;
-  padding: 5rem; }
+  padding: 15rem; }
   .about-us__header {
     text-align: center;
     font-size: 1.8rem;
-    padding-bottom: 2rem;
+    padding-bottom: 10rem;
     font-family: 'Carme', sans-serif;
     text-transform: uppercase; }
   .about-us__person {
@@ -514,7 +514,8 @@ li {
     text-align: center;
     font-family: 'Roboto', sans-serif; }
     .about-us__person__list__item {
-      padding: .5rem; }
+      padding: .5rem;
+      line-height: .5; }
     .about-us__person__list__name {
       font-size: 1.8rem; }
     .about-us__person__list__portfolio {
@@ -525,7 +526,7 @@ li {
           text-decoration: underline; }
     .about-us__person__list__github {
       display: inline-block;
-      margin: 0 .5rem; }
+      margin: 0 .6rem; }
     .about-us__person__list__linkedin {
       display: inline-block;
       margin: 0 .5rem; }
