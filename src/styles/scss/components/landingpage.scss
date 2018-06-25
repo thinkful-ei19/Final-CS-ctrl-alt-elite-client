@@ -54,7 +54,7 @@
         font-family: sans-serif;
 
         &:hover {
-            color: $color-one;
+            color: $color-schedulr-name;
         }
 
         &:before {
@@ -98,7 +98,7 @@
     }
 
     &__message {
-        color:#AED6F1;
+        color: $color-message;
         font-family: 'Carme', sans-serif;
         font-size: 3.7rem;
       
@@ -144,6 +144,34 @@
     }
 }
 
+.whats-new {
+    background-color: white;
+    padding: 10rem 40rem;
+
+
+    &__header {
+        text-align: center;
+        font-size: 4.2rem;
+        font-family: 'Carme', sans-serif;
+        text-transform: uppercase;
+    }
+
+    &__left {
+        display: inline-block;
+        padding-top: 5rem;
+        width: 40%;
+        vertical-align: middle;
+    }
+    
+    &__right {
+        width: 60%;
+        padding-top: 5rem;
+        display: inline-block;
+        font-size: 1.8rem;
+        vertical-align: middle;
+
+    }
+}
 
 .about-us {
     background-color: #333;
