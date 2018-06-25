@@ -6,6 +6,7 @@ import Navigation from './navigation';
 import requiresLogin from './requires-login';
 import background from '../media/whiteHoriz.jpg';
 import { changeTheme } from '../actions/auth';
+import ChangePasswordForm from './change-password';
 
 const sectionStyle = {
     backgroundSize: "100% 100%",
@@ -25,24 +26,25 @@ export class Settings extends React.Component {
     changeTheme(value) {
         if (value !== 'null') {
             this.props.dispatch(changeTheme(this.props.authToken, value, this.props.currentUser.id))
+            window.location.reload();
         }
     }
 
     render() {
-        console.log(this.props)
         return (
-            <section style={ sectionStyle }>
+            <section className="settings" style={ sectionStyle }>
                 <Navigation/>
                 <div className="settings__change-theme">
-                    <h2>Select Theme</h2>
+                    <h2 className="settings__change-theme__header">Select Theme</h2>
                     <select onChange={(event) => this.changeTheme(event.target.value)} className="settings__change-theme__drop-down">
-                        <option value="null"></option>
-                        <option value="light">Light</option>
-                        <option value="dark">Dark</option>
+                        <option className="settings__change-theme__option" value="null"></option>
+                        <option className="settings__change-theme__option" value="light">Light</option>
+                        <option className="settings__change-theme__option" value="dark">Dark</option>
                     </select>
                 </div>
                 <div className="settings__change-password">
-                    <h2>Change Password</h2>
+                    <h2 className="settings__change-password__header" >Change Password</h2>
+                    <ChangePasswordForm authToken={this.props.authToken} userId={this.props.currentUser.id} />
                 </div>
             </section>
         )

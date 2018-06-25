@@ -14,10 +14,12 @@ import Clients from './components/clients';
 import Settings from './components/settings';
 
 
-// import './app.css';
-import './styles/css/index.css'
 
 export class App extends React.Component {
+    constructor(props) {
+        super(props) 
+    }
+
     componentDidUpdate(prevProps) {
         if (!prevProps.loggedIn && this.props.loggedIn) {
             // When we are logged in, refresh the auth token periodically
@@ -48,6 +50,15 @@ export class App extends React.Component {
     }
 
     render() {
+        try {
+            if (this.props.currentUser.options.theme === 'dark') {
+                require('./styles/css/index-dark.css')
+            } else {
+                require('./styles/css/index.css')
+            }
+        } catch(err) {
+            require('./styles/css/index.css')            
+        }
         return (
             
             <div className="app">
@@ -68,6 +79,7 @@ export class App extends React.Component {
 
 const mapStateToProps = state => ({
     hasAuthToken: state.auth.authToken !== null,
+    currentUser: state.auth.currentUser,
     loggedIn: state.auth.currentUser !== null
 });
 

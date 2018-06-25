@@ -174,3 +174,31 @@ export const changeTheme = (authToken, theme, userId) => (dispatch) => {
     })
 
 }
+
+export const changePassword = (authToken, password, userId) => (dispatch) => {
+
+    const updateObject = {
+        password: password
+    }
+    console.log(updateObject)
+    fetch(`${API_BASE_URL}/change-password/${userId}`, {
+        method: 'PUT', 
+        body: JSON.stringify(updateObject),
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${authToken}`
+            }
+    })
+    .then((res) => {
+        res.json()
+    })
+    .then(() => {
+        dispatch(getUserInfoById(authToken, userId))
+        alert('Password has been changed!')
+    })
+    .catch((result) => {
+        console.error(result)
+    })
+
+}
