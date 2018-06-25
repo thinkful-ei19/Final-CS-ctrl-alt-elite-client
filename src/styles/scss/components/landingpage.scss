@@ -10,6 +10,11 @@
     // }
 }
 
+.logo {
+    margin: 20rem 20rem 0rem;
+    max-width: 30%;
+}
+
 #app-name {
     font-size: 80px;
     margin-top: 6rem;
@@ -92,20 +97,21 @@
 
     &__message {
         color:$color-one;
-        font-family: 'Carme', sans-serif;
-        font-size: 3.2rem;
+        font-family: 'Arial';
+        font-size: 2rem;
+      
 
         &__top {
             position: absolute;
             text-transform: uppercase;
-            margin-top: 35rem;
+            margin-top: 2rem;
             margin-left: 20rem;
         }
         &__bottom {
             position: absolute;
             text-transform: uppercase;
-            margin-top: 40rem;
-            margin-left: 20.5rem;
+            margin-top: 6rem;
+            margin-left: 21.5rem;
         }
     }
 }
@@ -135,32 +141,6 @@
     }
 }
 
-.whats-new {
-    background-color: white;
-    padding: 10rem 40rem;
-
-    &__header {
-        text-align: center;
-        font-size: 3.2rem;
-        font-family: 'Candal', cursive;
-    }
-
-    &__left {
-        display: inline-block;
-        padding-top: 5rem;
-        width: 50%;
-        vertical-align: middle;
-    }
-    
-    &__right {
-        width: 50%;
-        padding-top: 5rem;
-        display: inline-block;
-        font-size: 1.8rem;
-        vertical-align: middle;
-
-    }
-}
 
 .about-us {
     background-color: #333;
@@ -217,7 +197,3 @@
     }
 }
 
-.logo {
-    margin: 14rem 2rem;
-    max-width: 10%;
-}

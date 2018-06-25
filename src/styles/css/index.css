@@ -380,6 +380,10 @@ li {
 .landing-page {
   font-family: 'Roboto', sans-serif; }
 
+.logo {
+  margin: 20rem 20rem 0rem;
+  max-width: 30%; }
+
 #app-name {
   font-size: 80px;
   margin-top: 6rem; }
@@ -439,18 +443,18 @@ li {
     width: 100%; }
   .welcome__message {
     color: #D6EAF8;
-    font-family: 'Carme', sans-serif;
-    font-size: 3.2rem; }
+    font-family: 'Arial';
+    font-size: 2rem; }
     .welcome__message__top {
       position: absolute;
       text-transform: uppercase;
-      margin-top: 35rem;
+      margin-top: 2rem;
       margin-left: 20rem; }
     .welcome__message__bottom {
       position: absolute;
       text-transform: uppercase;
-      margin-top: 40rem;
-      margin-left: 20.5rem; }
+      margin-top: 6rem;
+      margin-left: 21.5rem; }
 
 .about {
   background-color: white;
@@ -465,25 +469,6 @@ li {
     font-family: 'Candal', cursive; }
   .about__right {
     width: 50%;
-    display: inline-block;
-    font-size: 1.8rem;
-    vertical-align: middle; }
-
-.whats-new {
-  background-color: white;
-  padding: 10rem 40rem; }
-  .whats-new__header {
-    text-align: center;
-    font-size: 3.2rem;
-    font-family: 'Candal', cursive; }
-  .whats-new__left {
-    display: inline-block;
-    padding-top: 5rem;
-    width: 50%;
-    vertical-align: middle; }
-  .whats-new__right {
-    width: 50%;
-    padding-top: 5rem;
     display: inline-block;
     font-size: 1.8rem;
     vertical-align: middle; }
@@ -516,10 +501,6 @@ li {
     .about-us__person__list__linkedin {
       display: inline-block;
       margin: 0 .5rem; }
-
-.logo {
-  margin: 14rem 2rem;
-  max-width: 10%; }
 
 .weekly-view {
   padding: 1rem;

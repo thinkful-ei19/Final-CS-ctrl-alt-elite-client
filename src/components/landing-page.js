@@ -39,6 +39,7 @@ export default function LandingPage(props) {
             
             <nav className="nav">
                 <img className="nav__header" />
+               
                 <a className="nav__button">Home</a>
                 <a className="nav__button">About</a> 
                 <Link to="/login">
@@ -52,7 +53,7 @@ export default function LandingPage(props) {
                 <div className="welcome">
                     <div className="welcome__screen">
                         <span className="welcome__message">
-            <img className="logo" src={Logo}/>
+                        <img className="logo" src={Logo}/>
                             <h1 className="welcome__message__top">Making appointments</h1>
                             <h1 className="welcome__message__bottom"> has never been easier</h1>
                         </span>
