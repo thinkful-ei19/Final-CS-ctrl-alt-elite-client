@@ -4,6 +4,8 @@
     // background-image: linear-gradient(to right, rgba(black, .05), rgba(black, .1));
     width: 70%;
     overflow-y: auto;
+    display: inline-block;
+    margin-right: 5rem;
 
     &__weekly {
         font-size: 2rem;
