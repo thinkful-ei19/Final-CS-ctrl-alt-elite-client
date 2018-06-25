@@ -477,6 +477,8 @@ li {
     display: inline-block;
     font-size: 1.8rem;
     vertical-align: middle; }
+  .about__list__item__details {
+    color: #616A6B; }
 
 .whats-new {
   background-color: white;
@@ -497,6 +499,8 @@ li {
     display: inline-block;
     font-size: 1.8rem;
     vertical-align: middle; }
+  .whats-new__list__item__details {
+    color: #616A6B; }
 
 .about-us {
   background-color: #333;

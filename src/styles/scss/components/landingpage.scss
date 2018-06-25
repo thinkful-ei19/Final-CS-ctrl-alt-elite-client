@@ -142,6 +142,14 @@
         vertical-align: middle;
 
     }
+
+    &__list{
+        &__item{
+            &__details{
+                color: $color-gray;
+            }
+        }
+    }
 }
 
 .whats-new {
@@ -170,6 +178,14 @@
         font-size: 1.8rem;
         vertical-align: middle;
 
+    }
+
+    &__list {
+        &__item{
+            &__details{
+                color: $color-gray;
+            }
+        }
     }
 }
 
