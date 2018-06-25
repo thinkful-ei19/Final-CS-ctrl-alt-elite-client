@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Carme");
 .selected-date {
   border-radius: 20%;
   background-image: radial-gradient(rgba(0, 0, 0, 0.1), rgba(55, 55, 55, 0.1)); }
@@ -13,6 +14,9 @@
 
 .current-day {
   color: #3c48a0; }
+
+.bold {
+  color: #2980B9; }
 
 * {
   padding: 0;
@@ -379,6 +383,11 @@ li {
 .landing-page {
   font-family: 'Roboto', sans-serif; }
 
+.logo {
+  max-width: 6%;
+  float: left;
+  margin: -1rem 1rem; }
+
 #app-name {
   font-size: 80px;
   margin-top: 6rem; }
@@ -391,7 +400,7 @@ li {
   height: 95vh; }
 
 .nav {
-  padding: 2rem;
+  padding: 2.7rem;
   text-align: right;
   position: fixed;
   width: 100%;
@@ -405,18 +414,15 @@ li {
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
-    font-family: 'Carter One', cursive; }
+    font-family: sans-serif; }
     .nav__button:hover {
-      color: black; }
+      color: #2980B9; }
     .nav__button:before {
       content: "";
       position: absolute;
       width: 100%;
-      height: 1rem;
-      bottom: 0;
       left: 0;
       background-color: #000;
-      opacity: .3;
       visibility: hidden;
       -webkit-transform: scaleX(0);
       transform: scaleX(0);
@@ -428,29 +434,31 @@ li {
       transform: scale(1); }
 
 .welcome {
-  background-image: url("../images/head.jpg");
+  background-image: url("../images/office.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
   width: 100%; }
   .welcome__screen {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
     width: 100%; }
   .welcome__message {
-    color: white;
-    font-family: 'Candal', cursive;
-    font-size: 3.2rem; }
+    color: #AED6F1;
+    font-family: 'Carme', sans-serif;
+    font-size: 3.7rem; }
     .welcome__message__top {
       position: absolute;
-      margin-top: 30rem;
-      margin-left: 25rem; }
+      text-transform: uppercase;
+      margin-top: 45rem;
+      margin-left: 18rem; }
     .welcome__message__bottom {
       position: absolute;
-      margin-top: 40rem;
-      margin-left: 25rem; }
+      text-transform: uppercase;
+      margin-top: 51rem;
+      margin-left: 19.5rem; }
 
 .about {
   background-color: white;
@@ -462,7 +470,8 @@ li {
     vertical-align: middle; }
   .about__header {
     font-size: 3.2rem;
-    font-family: 'Candal', cursive; }
+    font-family: 'Carme', sans-serif;
+    text-transform: uppercase; }
   .about__right {
     width: 50%;
     display: inline-block;
@@ -474,15 +483,16 @@ li {
   padding: 10rem 40rem; }
   .whats-new__header {
     text-align: center;
-    font-size: 3.2rem;
-    font-family: 'Candal', cursive; }
+    font-size: 4.2rem;
+    font-family: 'Carme', sans-serif;
+    text-transform: uppercase; }
   .whats-new__left {
     display: inline-block;
     padding-top: 5rem;
-    width: 50%;
+    width: 40%;
     vertical-align: middle; }
   .whats-new__right {
-    width: 50%;
+    width: 60%;
     padding-top: 5rem;
     display: inline-block;
     font-size: 1.8rem;
@@ -495,11 +505,14 @@ li {
   .about-us__header {
     text-align: center;
     font-size: 1.8rem;
-    padding-bottom: 2rem; }
+    padding-bottom: 2rem;
+    font-family: 'Carme', sans-serif;
+    text-transform: uppercase; }
   .about-us__person {
     display: inline-block;
     width: 25%;
-    text-align: center; }
+    text-align: center;
+    font-family: 'Roboto', sans-serif; }
     .about-us__person__list__item {
       padding: .5rem; }
     .about-us__person__list__name {
