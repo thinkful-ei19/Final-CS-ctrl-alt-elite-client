@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Carme');
+
 .landing-page {
     
     // text-align: center;
@@ -6,6 +8,13 @@
     // &__button {
     //     text-align: center;
     // }
+}
+
+.logo {
+    // margin: 20rem 20rem 0rem;
+    max-width: 6%;
+    float: left;
+    margin: -1rem 1rem;
 }
 
 #app-name {
@@ -23,7 +32,7 @@
 }
 
 .nav {
-    padding: 2rem;
+    padding: 2.7rem;
     text-align: right;
     position: fixed;
     width: 100%;
@@ -42,21 +51,21 @@
         color: white;
         text-decoration: none;
         font-size: 1.5rem;
-        font-family: 'Carter One', cursive;
+        font-family: sans-serif;
 
         &:hover {
-            color: black;
+            color: $color-schedulr-name;
         }
 
         &:before {
             content: "";
             position: absolute;
             width: 100%;
-            height: 1rem;
-            bottom: 0;
+            // height: 1rem;
+            // bottom: 0;
             left: 0;
             background-color: #000;
-            opacity: .3;
+            // opacity: .3;
             visibility: hidden;
             -webkit-transform: scaleX(0);
             transform: scaleX(0);
@@ -73,7 +82,7 @@
 }
 
 .welcome {
-    background-image: url('../images/head.jpg');
+    background-image: url('../images/office.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -81,7 +90,7 @@
     // margin-top: 6.5rem;
 
     &__screen {
-        background-image: linear-gradient(to right, rgba(white, .15), rgba(white, .15));
+        background-image: linear-gradient(to right, rgba(white, .1), rgba(white, .1));
         background-repeat: no-repeat;
         background-size: cover;
         height: 100%;
@@ -89,19 +98,22 @@
     }
 
     &__message {
-        color: white;
-        font-family: 'Candal', cursive;
-        font-size: 3.2rem;
+        color: $color-message;
+        font-family: 'Carme', sans-serif;
+        font-size: 3.7rem;
+      
 
         &__top {
             position: absolute;
-            margin-top: 30rem;
-            margin-left: 25rem;
+            text-transform: uppercase;
+            margin-top: 45rem;
+            margin-left: 18rem;
         }
         &__bottom {
             position: absolute;
-            margin-top: 40rem;
-            margin-left: 25rem;
+            text-transform: uppercase;
+            margin-top: 51rem;
+            margin-left: 19.5rem;
         }
     }
 }
@@ -119,7 +131,8 @@
 
     &__header {
         font-size: 3.2rem;
-        font-family: 'Candal', cursive;
+        font-family: 'Carme', sans-serif;
+        text-transform: uppercase;
     }
 
     &__right {
@@ -135,21 +148,23 @@
     background-color: white;
     padding: 10rem 40rem;
 
+
     &__header {
         text-align: center;
-        font-size: 3.2rem;
-        font-family: 'Candal', cursive;
+        font-size: 4.2rem;
+        font-family: 'Carme', sans-serif;
+        text-transform: uppercase;
     }
 
     &__left {
         display: inline-block;
         padding-top: 5rem;
-        width: 50%;
+        width: 40%;
         vertical-align: middle;
     }
     
     &__right {
-        width: 50%;
+        width: 60%;
         padding-top: 5rem;
         display: inline-block;
         font-size: 1.8rem;
@@ -161,12 +176,14 @@
 .about-us {
     background-color: #333;
     color: white;
-    padding: 5rem;
+    padding: 15rem;
 
     &__header {
         text-align: center;
         font-size: 1.8rem;
-        padding-bottom: 2rem;
+        padding-bottom: 10rem;
+        font-family: 'Carme', sans-serif;
+        text-transform: uppercase;
     }
 
     &__people {
@@ -177,15 +194,18 @@
         display: inline-block;
         width: 25%;
         text-align: center;
+        font-family: 'Roboto', sans-serif;
         
         &__list {
 
             &__item {
                 padding: .5rem;
+                line-height: .5;
             }
 
             &__name {
                 font-size: 1.8rem;
+                
             }
 
             &__portfolio {
@@ -202,7 +222,7 @@
 
             &__github {
                 display: inline-block;
-                margin: 0 .5rem;
+                margin: 0 .6rem;
             }
 
             &__linkedin {
@@ -212,3 +232,4 @@
         }
     }
 }
+
