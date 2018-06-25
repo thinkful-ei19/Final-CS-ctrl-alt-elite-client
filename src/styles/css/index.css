@@ -482,12 +482,13 @@ li {
 
 .whats-new {
   background-color: white;
-  padding: 10rem 40rem; }
+  padding: 20rem 40rem; }
   .whats-new__header {
     text-align: center;
     font-size: 4.2rem;
     font-family: 'Carme', sans-serif;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    line-height: 1.2; }
   .whats-new__left {
     display: inline-block;
     padding-top: 5rem;

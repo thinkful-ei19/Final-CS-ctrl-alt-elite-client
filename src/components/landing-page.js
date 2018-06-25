@@ -6,7 +6,10 @@ import background from '../media/pencil.jpg';
 import githubIcon from '../styles/images/github/GitHub-Mark-Light-32px.png';
 import linkedInIcon from '../styles/images/linkedin/In-White-14px.png';
 import Logo from '../media/schedulrLogoSized.png';
-import { icon } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import IconButton from '@material-ui/core/IconButton';
+import SvgIcon from '@material-ui/core/SvgIcon';
 // const sectionStyle = {
 //     backgroundSize: "100% 100%",
 //     height: "100VH",
@@ -40,8 +43,7 @@ export default function LandingPage(props) {
             <nav className="nav">
                 <img className="nav__header" />
                <img className="logo" src={Logo}/>
-                <a className="nav__button">Home</a>
-                <a className="nav__button">About</a> 
+                {/* <a className="nav__button">Home</a> */}
                 <Link to="/login">
                     <span className="nav__button">Login</span>
                 </Link>
@@ -97,10 +99,15 @@ export default function LandingPage(props) {
                 <h3 className="whats-new__list__item__header"><b className="bold">Schedulr</b> can go wherever your phone goes</h3>
                     <p className="whats-new__list__item__details">Enjoy all of the features <b className="bold">Schedulr</b> has to offer on mobile! Whether you are the one visiting your clients or not, <b className="bold">Schedulr</b> will always be with you.</p>
                 </div>
+                
             </div>
             <div className="about-us">
                 <h4 className="about-us__header">This web application crafted and designed by:</h4>
-                <i class="fas fa-github" aria-hidden="true"></i>
+                <i class="fab fa-github-alt"></i>
+
+                <FontAwesomeIcon icon="github-alt" />
+
+                <i class="fa-coffee"></i>
                 <div className="about-us__people">
                     <div className="about-us__person">
                         <ul className="about-us__person__list">
