@@ -182,6 +182,8 @@
         text-align: center;
         font-size: 1.8rem;
         padding-bottom: 2rem;
+        font-family: 'Carme', sans-serif;
+        text-transform: uppercase;
     }
 
     &__people {
@@ -192,6 +194,7 @@
         display: inline-block;
         width: 25%;
         text-align: center;
+        font-family: 'Roboto', sans-serif;
         
         &__list {
 
@@ -201,6 +204,7 @@
 
             &__name {
                 font-size: 1.8rem;
+                
             }
 
             &__portfolio {

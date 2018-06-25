@@ -505,11 +505,14 @@ li {
   .about-us__header {
     text-align: center;
     font-size: 1.8rem;
-    padding-bottom: 2rem; }
+    padding-bottom: 2rem;
+    font-family: 'Carme', sans-serif;
+    text-transform: uppercase; }
   .about-us__person {
     display: inline-block;
     width: 25%;
-    text-align: center; }
+    text-align: center;
+    font-family: 'Roboto', sans-serif; }
     .about-us__person__list__item {
       padding: .5rem; }
     .about-us__person__list__name {

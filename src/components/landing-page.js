@@ -105,7 +105,7 @@ export default function LandingPage(props) {
                         <ul className="about-us__person__list">
                             <li className="about-us__person__list__item about-us__person__list__name">Julie Kim</li>
                             <li className="about-us__person__list__item about-us__person__list__portfolio">
-                                <a className="about-us__person__list__portfolio__text" href="" target="blank">Visit her webpage</a>
+                                <a className="about-us__person__list__portfolio__text" href="http://www.itsjuliek.com" target="blank">Visit her webpage</a>
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__github">
                                 <a href="https://github.com/joulay" target="blank"><img src={githubIcon}/></a>                                                
