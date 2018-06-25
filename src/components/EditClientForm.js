@@ -98,15 +98,16 @@ class EditClientForm extends React.Component {
                     </SvgIcon>
                 </IconButton>
                 <Dialog
+                    className="client__dialog"
                     open={this.state.open}
                     onClose={this.handleClose}
                     aria-labelledby="form-dialog-title"
                     onChange={(event) => this.handleSubmitValue(event)}
                 >
-                    <DialogTitle id="form-dialog-title">Update Client Information</DialogTitle>
+                    <DialogTitle className="client__dialog__text" id="form-dialog-title">Update Client Information</DialogTitle>
                     <DialogContent>
                         <TextField
-                            className="appointments__text" 
+                            className="client__text" 
                             autoFocus
                             margin="dense"
                             id="name"
@@ -115,7 +116,7 @@ class EditClientForm extends React.Component {
                             fullWidth
                             value={this.state.name}
                         /><TextField
-                            className="appointments__text" 
+                            className="client__text" 
                             autoFocus
                             margin="dense"
                             id="phone"
@@ -125,7 +126,7 @@ class EditClientForm extends React.Component {
                             value={this.state.phone}
                         />
                         <TextField
-                            className="appointments__text" 
+                            className="client__text" 
                             autoFocus
                             margin="dense"
                             id="email"

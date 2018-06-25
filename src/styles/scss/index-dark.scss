@@ -1,0 +1,19 @@
+@import 'variables/colors-dark';
+@import 'variables/font';
+@import 'mixins/mediaqueries';
+@import 'mixins/utils';
+@import 'global';
+
+
+@import './components/button';
+@import './components/navigation';
+@import './components/login-form';
+@import './components/calendar';
+@import './components/appointments';
+@import './components/schedule';
+@import './components/landingpage';
+@import './components/weekly';
+@import './components/report';
+@import './components/clients';
+@import './components/dashboard';
+@import './components/settings';

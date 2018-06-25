@@ -109,7 +109,7 @@ class AptForm extends React.Component {
           <option key={client.id} value={client.id}>{client.name}</option>
         )
       })
-      dropDownMenu = <select onChange={(event) => { this.selectClient(event.target.value) }} defaultValue='blank'>
+      dropDownMenu = <select className="appointments__select-client" onChange={(event) => { this.selectClient(event.target.value) }} defaultValue='blank'>
       <option style={{ display: 'none' }} disabled value='blank'></option>
       {buildOptions}
     </select>

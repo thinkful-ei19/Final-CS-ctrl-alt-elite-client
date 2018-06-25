@@ -2,18 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import Navigation from './navigation';
-
 import requiresLogin from './requires-login';
-import background from '../media/whiteHoriz.jpg';
 import { changeTheme } from '../actions/auth';
 import ChangePasswordForm from './change-password';
 
-const sectionStyle = {
-    backgroundSize: "100% 100%",
-    height: "100VH",
-    backgroundRepeat: "no-repeat",
-    backgroundImage: `url(${background})`
-  };
+import lightBackground from '../media/whiteHoriz.jpg';
+import darkBackground from '../media/darkMountain.jpg';
 
 export class Settings extends React.Component {
 
@@ -31,6 +25,21 @@ export class Settings extends React.Component {
     }
 
     render() {
+        let sectionStyle = {
+            backgroundSize: "100% 100%",
+            height: "100VH",
+            backgroundRepeat: "no-repeat",
+            backgroundImage: `url(${lightBackground})`
+        };
+        const theme = this.props.currentUser.options.theme;
+        if (theme === 'dark') {
+            sectionStyle = {
+                backgroundSize: "100% 100%",
+                height: "100VH",
+                backgroundRepeat: "no-repeat",
+                backgroundImage: `url(${darkBackground})`
+            }
+        }
         return (
             <section className="settings" style={ sectionStyle }>
                 <Navigation/>

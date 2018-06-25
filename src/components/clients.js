@@ -7,15 +7,9 @@ import FilterClients from './FilterClients';
 
 import requiresLogin from './requires-login';
 
-import background from '../media/whiteHoriz.jpg';
+import lightBackground from '../media/whiteHoriz.jpg';
+import darkBackground from '../media/darkMountain.jpg';
 
-
-const sectionStyle = {
-    backgroundSize: "100% 100%",
-    height: "100VH",
-    backgroundRepeat: "no-repeat",
-    backgroundImage: `url(${background})`
-  };
 
 export class Clients extends React.Component {
 
@@ -26,6 +20,21 @@ export class Clients extends React.Component {
     }
 
     render() {
+        let sectionStyle = {
+            backgroundSize: "100% 100%",
+            height: "100VH",
+            backgroundRepeat: "no-repeat",
+            backgroundImage: `url(${lightBackground})`
+        };
+        const theme = this.props.currentUser.options.theme;
+        if (theme === 'dark') {
+            sectionStyle = {
+                backgroundSize: "100% 100%",
+                height: "100VH",
+                backgroundRepeat: "no-repeat",
+                backgroundImage: `url(${darkBackground})`
+            }
+        }
         return (
             <section style={ sectionStyle }>
                 <div>
