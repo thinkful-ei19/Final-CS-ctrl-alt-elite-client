@@ -396,7 +396,7 @@ li {
   text-align: right;
   position: fixed;
   width: 100%;
-  background-image: linear-gradient(to right, rgba(51, 51, 51, 0.9), rgba(51, 51, 51, 0.9));
+  background-image: linear-gradient(to right, rgba(214, 234, 248, 0.9), rgba(214, 234, 248, 0.9));
   text-transform: uppercase; }
   .nav__button {
     padding: 1.5rem;
@@ -408,7 +408,7 @@ li {
     font-size: 1.5rem;
     font-family: sans-serif; }
     .nav__button:hover {
-      color: black; }
+      color: #D6EAF8; }
     .nav__button:before {
       content: "";
       position: absolute;
@@ -516,6 +516,10 @@ li {
     .about-us__person__list__linkedin {
       display: inline-block;
       margin: 0 .5rem; }
+
+.logo {
+  margin: 14rem 2rem;
+  max-width: 10%; }
 
 .weekly-view {
   padding: 1rem;

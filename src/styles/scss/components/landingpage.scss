@@ -29,7 +29,7 @@
     text-align: right;
     position: fixed;
     width: 100%;
-    background-image: linear-gradient(to right, rgba(#333, .9), rgba(#333, .9));
+    background-image: linear-gradient(to right, rgba(#D6EAF8, .9), rgba(#D6EAF8, .9));
     text-transform: uppercase;
 
     &__header {
@@ -47,7 +47,7 @@
         font-family: sans-serif;
 
         &:hover {
-            color: black;
+            color: $color-one;
         }
 
         &:before {
@@ -215,4 +215,9 @@
             }
         }
     }
+}
+
+.logo {
+    margin: 14rem 2rem;
+    max-width: 10%;
 }

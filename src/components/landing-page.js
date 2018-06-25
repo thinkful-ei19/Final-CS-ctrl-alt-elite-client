@@ -4,7 +4,7 @@ import background from '../media/pencil.jpg';
 
 import githubIcon from '../styles/images/github/GitHub-Mark-Light-32px.png';
 import linkedInIcon from '../styles/images/linkedin/In-White-14px.png';
-import Logo from '../media/schedulrLogo.png';
+import Logo from '../media/schedulrLogoSized.png';
 
 // const sectionStyle = {
 //     backgroundSize: "100% 100%",
@@ -40,7 +40,7 @@ export default function LandingPage(props) {
                 <div className="welcome">
                     <div className="welcome__screen">
                         <span className="welcome__message">
-            {/* <img src={Logo}/> */}
+            <img className="logo" src={Logo}/>
                             <h1 className="welcome__message__top">Making appointments</h1>
                             <h1 className="welcome__message__bottom"> has never been easier</h1>
                         </span>
