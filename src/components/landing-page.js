@@ -6,7 +6,7 @@ import background from '../media/pencil.jpg';
 import githubIcon from '../styles/images/github/GitHub-Mark-Light-32px.png';
 import linkedInIcon from '../styles/images/linkedin/In-White-14px.png';
 import Logo from '../media/schedulrLogoSized.png';
-
+import { icon } from '@fortawesome/fontawesome-svg-core'
 // const sectionStyle = {
 //     backgroundSize: "100% 100%",
 //     height: "100VH",
@@ -100,6 +100,7 @@ export default function LandingPage(props) {
             </div>
             <div className="about-us">
                 <h4 className="about-us__header">This web application crafted and designed by:</h4>
+                <i class="fas fa-github" aria-hidden="true"></i>
                 <div className="about-us__people">
                     <div className="about-us__person">
                         <ul className="about-us__person__list">
@@ -108,7 +109,8 @@ export default function LandingPage(props) {
                                 <a className="about-us__person__list__portfolio__text" href="http://www.itsjuliek.com" target="blank">Visit her webpage</a>
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__github">
-                                <a href="https://github.com/joulay" target="blank"><img src={githubIcon}/></a>                                                
+                                <a href="https://github.com/joulay" target="blank"><img src={githubIcon}/></a> 
+                                                                               
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__linkedin">
                                 <a href="https://www.linkedin.com/in/joulay/" target="blank"><img style={{width: '28px'}} src={linkedInIcon}/></a>                        
