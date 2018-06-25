@@ -322,8 +322,6 @@ li {
   flex-direction: row;
   text-align: left;
   padding: 1rem; }
-  .appointments__select-client {
-    background-color: #E5E8E8; }
   .appointments__edit {
     visibility: hidden; }
   .appointments__delete {
@@ -346,17 +344,19 @@ li {
       color: #999; }
   .appointments__dialog {
     transform: scale(1.3); }
-    .appointments__dialog > * > * > *, .appointments__dialog > * > * > * > * {
-      color: black !important; }
     .appointments__dialog > div:nth-of-type(2) {
-      background-color: #E5E8E8; }
+      background-color: #1a1919; }
+    .appointments__dialog__text > h2 {
+      color: white !important; }
+    .appointments__dialog__content > * {
+      color: white !important; }
   .appointments__text {
     font-size: 1.5rem; }
   .appointments__button {
     font-size: 1rem; }
   .appointments__input * {
     font-size: 1rem;
-    color: black !important; }
+    color: white !important; }
   .appointments__time {
     display: inline-block; }
   .appointments__schedule-li {
@@ -672,18 +672,6 @@ li {
       color: #999;
       font-size: 1.5rem;
       line-height: 1.2; }
-  .client__dialog {
-    transform: scale(1.3); }
-    .client__dialog > div:nth-of-type(2) {
-      background-color: #E5E8E8; }
-    .client__dialog > * > * > *, .client__dialog > * > * > * > * {
-      color: black !important; }
-    .client__dialog__text > h2 {
-      color: black !important; }
-    .client__dialog__content > * {
-      color: black !important; }
-  .client__text {
-    font-size: 1.5rem; }
   .client__edit-form {
     float: right;
     visibility: hidden; }

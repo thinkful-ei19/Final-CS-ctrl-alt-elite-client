@@ -10,7 +10,8 @@ import WeeklyView from './weekly-view'
 import background from '../media/whiteHoriz.jpg';
 import requiresLogin from './requires-login';
 // import AptForm from './AptForm';
-import oceanBackground from '../media/whiteHoriz.jpg';
+import lightBackground from '../media/whiteHoriz.jpg';
+import darkBackground from '../media/darkMountain.jpg';
 
 export class Dashboard extends React.Component {
 
@@ -27,26 +28,17 @@ export class Dashboard extends React.Component {
             backgroundSize: "100% 100%",
             height: "100VH",
             backgroundRepeat: "no-repeat",
-            backgroundImage: `url(${oceanBackground})`
+            backgroundImage: `url(${lightBackground})`
         };
-        switch (this.props.theme) {
-            case 'default':
-                sectionStyle = {
-                    backgroundSize: "100% 100%",
-                    height: "100VH",
-                    backgroundRepeat: "no-repeat",
-                    backgroundImage: `url(${oceanBackground})`
-                };
-            case 'ocean':
-                sectionStyle = {
-                    backgroundSize: "100% 100%",
-                    height: "100VH",
-                    backgroundRepeat: "no-repeat",
-                    backgroundImage: `url(${oceanBackground})`
-                };
+        const theme = this.props.currentUser.options.theme;
+        if (theme === 'dark') {
+            sectionStyle = {
+                backgroundSize: "100% 100%",
+                height: "100VH",
+                backgroundRepeat: "no-repeat",
+                backgroundImage: `url(${darkBackground})`
+            }
         }
-
-
         if (this.props.calendar === 'weekly') {
             return (
                 <section style={ sectionStyle }>
@@ -83,7 +75,7 @@ const mapStateToProps = state => {
         selectedDate: state.calendarReducer.selectedDate,
         selectedTab: state.tabsReducer.selectedTab,
         calendar: state.calendarReducer.calendar,
-        theme: state.tabsReducer.theme
+
     }
 };
 

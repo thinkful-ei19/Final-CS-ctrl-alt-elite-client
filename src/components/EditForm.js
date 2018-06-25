@@ -134,11 +134,11 @@ class EditForm extends React.Component {
                     aria-labelledby="form-dialog-title"
                     onChange={(event) => this.handleSubmitValue(event)}
                 >
-                    <DialogTitle id="form-dialog-title">Updater Appointment Information</DialogTitle>
-                    <DialogContent>
-                        <DialogContentText>
+                    <DialogTitle id="form-dialog-title" className="appointments__dialog__text">Updater Appointment Information</DialogTitle>
+                    <DialogContent className="appointments__dialog__content">
+                        <DialogContentText className="appointments__dialog__text">
                             Fill out this form with client information in order to update an existing appointment.
-                </DialogContentText>
+                        </DialogContentText>
                         {dropDownMenu}
                         <TextField
                             className="appointments__input"
@@ -170,6 +170,7 @@ class EditForm extends React.Component {
                             value={this.state.email}
                         />
                         <TextField
+                            className="appointments__input"
                             autoFocus
                             margin="dense"
                             type="date"

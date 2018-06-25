@@ -3,20 +3,29 @@ import { connect } from 'react-redux';
 import requiresLogin from './requires-login';
 import Navigation from './navigation';
 import LineGraph from './reportsLineGraph';
-import background from '../media/whiteHoriz.jpg';
 
-
-const sectionStyle = {
-    backgroundSize: "100% 100%",
-    height: "100VH",
-    backgroundRepeat: "no-repeat",
-    backgroundImage: `url(${background})`
-  };
-
+import lightBackground from '../media/whiteHoriz.jpg';
+import darkBackground from '../media/darkMountain.jpg';
 
 class Reports extends React.Component {
 
     render() {
+        let sectionStyle = {
+            backgroundSize: "100% 100%",
+            height: "100VH",
+            backgroundRepeat: "no-repeat",
+            backgroundImage: `url(${lightBackground})`
+        };
+        const theme = this.props.currentUser.options.theme;
+        if (theme === 'dark') {
+            sectionStyle = {
+                backgroundSize: "100% 100%",
+                height: "100VH",
+                backgroundRepeat: "no-repeat",
+                backgroundImage: `url(${darkBackground})`
+            }
+        }
+
         return (
             <section style={ sectionStyle }>
                 <div className="report">
