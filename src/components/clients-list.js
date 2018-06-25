@@ -27,8 +27,8 @@ export class ClientsList extends React.Component {
 
         const clientList = sortedClientList.map((client) => {
             return (
-                <div className="client">
-                 <ul className="client__list" key={client.id} button>
+                <div key={client.id} className="client">
+                 <ul className="client__list" key={client.id}>
                         <li className="client__list__name">{client.name}</li>
                         <li className="client__list__phone">{client.phone}</li>
                         <li className="client__list__email">{client.email}</li>

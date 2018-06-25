@@ -77,6 +77,16 @@ class Navigation extends React.Component {
                     </li>
 
                     <li className="navigation__item">
+                        <Link to="/settings"
+                            onClick={() => {
+                                this.props.dispatch(changeTab('settings'))
+                                this.toggleMenu()
+                            }}
+                            className="navigation__link">Settings
+                        </Link>
+                    </li>
+
+                    <li className="navigation__item">
                         <a 
                           href="" 
                             onClick={(e) => {

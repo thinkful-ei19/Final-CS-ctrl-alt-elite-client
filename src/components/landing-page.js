@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { API_BASE_URL } from '../config';
 import background from '../media/pencil.jpg';
 
 import githubIcon from '../styles/images/github/GitHub-Mark-Light-32px.png';
@@ -14,6 +15,15 @@ import linkedInIcon from '../styles/images/linkedin/In-White-14px.png';
 
 export default function LandingPage(props) {
 
+    //Wake the heroku server up.
+    fetch(`${API_BASE_URL}`, {
+        method: 'GET', 
+        headers: {
+            'Accept': 'application/json',
+          }
+    })
+    .then(res => console.log('Sent artbitrary get request to heroku server to wake it up')).catch(err => {});
+
     return(
         <section className="landing-page">
             {/* <div className="landing-page">
@@ -26,13 +36,15 @@ export default function LandingPage(props) {
             </div> */}
             <nav className="nav">
                 <img className="nav__header" />
-                <a className="nav__button">Home</a>
-                <a className="nav__button">About</a> 
-                <a className="nav__button">What's new?</a>
+                <span className="nav__button">Home</span>
+                <span className="nav__button">About</span> 
+                <span className="nav__button">What's new?</span>
                 <Link to="/login">
-                    <a className="nav__button">Login</a>
+                    <span className="nav__button">Login</span>
                 </Link>
-                <a className="nav__button">Signup</a>
+                <Link to="/register">
+                    <span className="nav__button">Signup</span>
+                </Link>
             </nav>
             <div className="head">
                 <div className="welcome">

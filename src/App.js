@@ -11,6 +11,7 @@ import Reports from './components/reports';
 
 import { refreshAuthToken } from './actions/auth';
 import Clients from './components/clients';
+import Settings from './components/settings';
 
 
 // import './app.css';
@@ -58,6 +59,7 @@ export class App extends React.Component {
                 <Route exact path="/clients" component={Clients} />
                 <Route exact path="/register" component={RegistrationPage} />
                 <Route exact path="/reports" component={Reports} />
+                <Route exact path="/settings" component={Settings} />
             </div>
             
         );
