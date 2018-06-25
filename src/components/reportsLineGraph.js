@@ -7,7 +7,7 @@ export default class LineGraph extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            name: '',
+            name: moment().format('MMM').toUpperCase(),
             click: false
         };
     }
@@ -196,12 +196,12 @@ export default class LineGraph extends React.Component{
                                 strokeWidth: .5
                             }}/>
                         </LineChart>
-                    <p className="instructions report__message">Click graph to see appointment history</p>
                     </div>
                     <div className="report__right">
                         {/* <button 
                             className="btn login-button"
                             onClick={() => this.handleBackClick()}>Back</button> */}
+                        <p className="instructions report__message">Click graph to see appointment history</p>
                         <h1>Monthly Appointments History</h1>
                         <h2>{this.state.name}</h2>
                         <h3>{apptPercentage}% of your appointments were from {this.state.name}</h3> <br />
