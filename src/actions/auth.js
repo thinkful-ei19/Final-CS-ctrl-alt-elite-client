@@ -146,3 +146,31 @@ export const refreshAuthToken = () => (dispatch, getState) => {
             clearAuthToken(authToken);
     });
 };
+
+
+export const changeTheme = (authToken, theme, userId) => (dispatch) => {
+    
+    const updateObject = {
+        theme: theme
+    }
+    console.log(updateObject)
+    fetch(`${API_BASE_URL}/change-theme/${userId}`, {
+        method: 'PUT', 
+        body: JSON.stringify(updateObject),
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${authToken}`
+            }
+    })
+    .then((res) => {
+        res.json()
+    })
+    .then(() => {
+        dispatch(getUserInfoById(authToken, userId))
+    })
+    .catch((result) => {
+        console.error(result)
+    })
+
+}
