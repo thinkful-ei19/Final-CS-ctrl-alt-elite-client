@@ -11,8 +11,10 @@
 }
 
 .logo {
-    margin: 20rem 20rem 0rem;
-    max-width: 30%;
+    // margin: 20rem 20rem 0rem;
+    max-width: 6%;
+    float: left;
+    margin: -1rem 1rem;
 }
 
 #app-name {
@@ -30,11 +32,11 @@
 }
 
 .nav {
-    padding: 2rem;
+    padding: 2.7rem;
     text-align: right;
     position: fixed;
     width: 100%;
-    background-image: linear-gradient(to right, rgba(#D6EAF8, .9), rgba(#D6EAF8, .9));
+    background-image: linear-gradient(to right, rgba(#333, .9), rgba(#333, .9));
     text-transform: uppercase;
 
     &__header {
@@ -80,7 +82,7 @@
 }
 
 .welcome {
-    background-image: url('../images/head.jpg');
+    background-image: url('../images/office.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -96,22 +98,22 @@
     }
 
     &__message {
-        color:$color-one;
-        font-family: 'Arial';
-        font-size: 2rem;
+        color:#AED6F1;
+        font-family: 'Carme', sans-serif;
+        font-size: 3.7rem;
       
 
         &__top {
             position: absolute;
             text-transform: uppercase;
-            margin-top: 2rem;
-            margin-left: 20rem;
+            margin-top: 45rem;
+            margin-left: 18rem;
         }
         &__bottom {
             position: absolute;
             text-transform: uppercase;
-            margin-top: 6rem;
-            margin-left: 21.5rem;
+            margin-top: 51rem;
+            margin-left: 19.5rem;
         }
     }
 }
@@ -129,7 +131,8 @@
 
     &__header {
         font-size: 3.2rem;
-        font-family: 'Candal', cursive;
+        font-family: 'Carme', sans-serif;
+        text-transform: uppercase;
     }
 
     &__right {
