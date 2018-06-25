@@ -520,7 +520,9 @@ li {
 .weekly-view {
   padding: 1rem;
   width: 70%;
-  overflow-y: auto; }
+  overflow-y: auto;
+  display: inline-block;
+  margin-right: 5rem; }
   .weekly-view__weekly {
     font-size: 2rem;
     color: #616A6B;
