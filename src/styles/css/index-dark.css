@@ -42,7 +42,8 @@ body {
   padding: 0rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  line-height: 1.7; }
+  line-height: 1.7;
+  color: white; }
 
 .app {
   display: flex;
@@ -86,10 +87,10 @@ li {
     .btn--white::after {
       background-color: #fff; }
   .btn--green {
-    background-color: #491619;
+    background-color: #000036;
     color: #fff; }
     .btn--green::after {
-      background-color: #491619; }
+      background-color: #000036; }
   .btn::after {
     content: "";
     display: inline-block;
@@ -107,10 +108,10 @@ li {
 
 .btn-text:link, .btn-text:visited {
   font-size: 1rem;
-  color: #491619;
+  color: #000036;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 1px solid #491619;
+  border-bottom: 1px solid #000036;
   padding: 3px;
   transition: all .2s; }
 
@@ -153,7 +154,7 @@ li {
     position: fixed;
     top: 6.5rem;
     right: 6.5rem;
-    background-image: radial-gradient(#491619, black);
+    background-image: radial-gradient(#000036, black);
     z-index: 100;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
     @media (max-width: 60em) {
@@ -256,7 +257,7 @@ li {
     transition: all .3s; }
     .login-form__input:focus {
       outline: none;
-      border-bottom: 1px solid #491619; }
+      border-bottom: 1px solid #000036; }
     .login-form__input:focus:invalid {
       border-color: #a33; }
     .login-form__input::-webkit-input-placeholder {
@@ -289,7 +290,7 @@ li {
   text-align: center;
   max-width: 60rem;
   text-transform: uppercase;
-  color: #616A6B;
+  color: white;
   display: inline-block;
   margin-right: 20rem; }
   .calendar__header-row__previous {
@@ -312,7 +313,7 @@ li {
     padding: 4% 0 4% 0; }
     .calendar__blocks-row__blocks:hover {
       cursor: pointer;
-      background-color: #EBF5FB;
+      background-color: #1a1919;
       border-radius: 20%; }
 
 .appointments {
@@ -321,6 +322,8 @@ li {
   flex-direction: row;
   text-align: left;
   padding: 1rem; }
+  .appointments__select-client {
+    background-color: #E5E8E8; }
   .appointments__edit {
     visibility: hidden; }
   .appointments__delete {
@@ -343,12 +346,17 @@ li {
       color: #999; }
   .appointments__dialog {
     transform: scale(1.3); }
+    .appointments__dialog > * > * > *, .appointments__dialog > * > * > * > * {
+      color: black !important; }
+    .appointments__dialog > div:nth-of-type(2) {
+      background-color: #E5E8E8; }
   .appointments__text {
     font-size: 1.5rem; }
   .appointments__button {
     font-size: 1rem; }
   .appointments__input * {
-    font-size: 1rem; }
+    font-size: 1rem;
+    color: black !important; }
   .appointments__time {
     display: inline-block; }
   .appointments__schedule-li {
@@ -357,7 +365,11 @@ li {
     overflow-y: auto; }
   .appointments__add-appointment {
     font-size: 2rem;
-    background-image: linear-gradient(to left, rgba(73, 22, 25, 0.8), rgba(73, 22, 25, 0.8)); }
+    background-image: linear-gradient(to left, rgba(0, 0, 54, 0.8), rgba(0, 0, 54, 0.8)); }
+  .appointments__list__time {
+    color: #c9c9c9; }
+  .appointments__list__name {
+    color: #c9c9c9; }
 
 .appointments-form {
   font-size: 1.5rem !important;
@@ -660,6 +672,18 @@ li {
       color: #999;
       font-size: 1.5rem;
       line-height: 1.2; }
+  .client__dialog {
+    transform: scale(1.3); }
+    .client__dialog > div:nth-of-type(2) {
+      background-color: #E5E8E8; }
+    .client__dialog > * > * > *, .client__dialog > * > * > * > * {
+      color: black !important; }
+    .client__dialog__text > h2 {
+      color: black !important; }
+    .client__dialog__content > * {
+      color: black !important; }
+  .client__text {
+    font-size: 1.5rem; }
   .client__edit-form {
     float: right;
     visibility: hidden; }

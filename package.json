@@ -31,6 +31,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "build-css-dark": "node-sass-chokidar src/styles/scss/index-dark.scss src/styles/index-dark.css",
+    "watch-css-dark": "npm run build-css-dark && node-sass-chokidar src/styles/scss/index-dark.scss src/styles/css/index-dark.css --watch --recursive",    
     "build-css": "node-sass-chokidar src/styles/scss/index.scss -o src/styles/css",
     "watch-css": "npm run build-css && node-sass-chokidar src/styles/scss/index.scss -o src/styles/css --watch --recursive",
     "deploy": "npm run build && netlify deploy -p ./build"

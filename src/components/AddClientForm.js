@@ -67,7 +67,7 @@ handleClickOpen = () => {
 
   render() {
     return (
-      <div>
+      <div className="client__add-form">
         <IconButton className="add-client-button" aria-label="add client" onClick={this.handleClickOpen}>
             <SvgIcon>
             <path xmlns="http://www.w3.org/2000/svg" d="M15,12c2.21,0,4-1.79,4-4s-1.79-4-4-4s-4,1.79-4,4S12.79,12,15,12z M6,10V8c0-0.55-0.45-1-1-1h0C4.45,7,4,7.45,4,8v2H2   c-0.55,0-1,0.45-1,1v0c0,0.55,0.45,1,1,1h2v2c0,0.55,0.45,1,1,1h0c0.55,0,1-0.45,1-1v-2h2c0.55,0,1-0.45,1-1v0c0-0.55-0.45-1-1-1H6   z M15,14c-2.67,0-8,1.34-8,4v1c0,0.55,0.45,1,1,1h14c0.55,0,1-0.45,1-1v-1C23,15.34,17.67,14,15,14z"/>
@@ -75,6 +75,7 @@ handleClickOpen = () => {
         </IconButton>
         {/* <Button onClick={this.handleClickOpen}>Add Client</Button> */}
         <Dialog
+          className="client__dialog"
           open={this.state.open}
           onClose={this.handleClose}
           aria-labelledby="form-dialog-title"
@@ -83,6 +84,7 @@ handleClickOpen = () => {
           <DialogTitle id="form-dialog-title">Add New Client</DialogTitle>
           <DialogContent>
             <TextField
+              className="client__text" 
               autoFocus
               margin="dense"
               id="name"
@@ -92,6 +94,7 @@ handleClickOpen = () => {
               value={this.state.name}
             />
             <TextField
+              className="client__text" 
               autoFocus
               margin="dense"
               id="phone"
@@ -101,6 +104,7 @@ handleClickOpen = () => {
               value={this.state.phone}
             />
             <TextField
+              className="client__text" 
               autoFocus
               margin="dense"
               id="email"

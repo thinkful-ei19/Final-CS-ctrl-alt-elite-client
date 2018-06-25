@@ -8,8 +8,9 @@
     text-align: center;
     max-width: 60rem; 
     text-transform: uppercase; 
-    color: #616A6B;
+    // color: #616A6B;
     // border: 2px solid pink;
+    color: $color-font;
     display: inline-block;
     margin-right: 20rem;
 
@@ -51,7 +52,7 @@
             
             &:hover {
                 cursor: pointer;
-                background-color: #EBF5FB;
+                background-color: $color-five;
                 border-radius: 20%; 
             }
 
