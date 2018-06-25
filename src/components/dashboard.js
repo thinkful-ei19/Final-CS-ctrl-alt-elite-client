@@ -50,7 +50,7 @@ export class Dashboard extends React.Component {
         if (this.props.calendar === 'weekly') {
             return (
                 <section style={ sectionStyle }>
-                    <div>
+                    <div className="dashboard">
                         <Navigation/>
                         <div className="components">
                             <WeeklyView />
@@ -63,7 +63,7 @@ export class Dashboard extends React.Component {
         }
         return (
             <section style={ sectionStyle }>
-                <div className="dashboard">
+                    <div className="dashboard">
                     <Navigation/>
                     <div className="components">
                         <Calendar />
