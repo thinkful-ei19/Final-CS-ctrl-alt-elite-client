@@ -1,5 +1,5 @@
 .report {
-    color: $color-gray;
+    color: $color-font;
     padding: 0 2rem;
     margin-top: 5rem;
 
@@ -50,7 +50,6 @@
     }
 
     &__message {
-        font-size: 1.8rem;
         text-align: left;
     }
 } 

@@ -155,7 +155,8 @@ export default class LineGraph extends React.Component{
                             onClick={() => this.handleBackClick()}>Back</button> */}
 
                         <h1>Monthly Appointments History</h1>
-                        <h2>{this.state.name}</h2> <p className="report__message">Click graph to see appointment history</p>
+                        <p className="report__message">Click graph to see appointment history</p>
+                        <h2>{this.state.name}</h2> 
                         <h3>{apptPercentage}% of your appointments were from {this.state.name}</h3> <br />
                         <ul className="report__list">
                             {apptDataList}
