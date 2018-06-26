@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
-import background from '../media/workspace.jpg';
+import background from '../media/wB.jpg';
 import RegistrationForm from './registration-form';
 
 const sectionStyle = {
@@ -21,7 +21,6 @@ export function RegistrationPage(props) {
         <section style={ sectionStyle }>
             <div>
                 <div className="register">
-                    {/* <h1>Register New User</h1> */}
                     <p className="register__p">Back to <Link to="/login">Login</Link></p>
                     <RegistrationForm />
                     <br/>
