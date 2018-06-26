@@ -25,3 +25,9 @@
 .bold {
     color: $color-schedulr-name;
 }
+
+.phone-hide {
+    @include respond(large-phone) {
+        visibility: hidden;
+    }
+}

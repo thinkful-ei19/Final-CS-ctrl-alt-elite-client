@@ -6,6 +6,27 @@
     overflow-y: auto;
     display: inline-block;
     margin-right: 5rem;
+    
+    @include respond(tab-land) {
+        width: 60%;
+    }
+    @include respond(tab-port) {
+        width: 50%;
+    }
+
+    &__toggle {
+        @include respond(large-phone) {
+            visibility: visible;
+        }
+    }
+
+    &__toggle svg {
+        @include respond(large-phone) {
+            margin-top: 40rem;
+            width: 200%;
+            height: 200%;
+        }
+    }
 
     &__weekly {
         font-size: 2rem;
@@ -73,6 +94,10 @@
 
         &__li { //appointments
             font-size: 2rem;
+
+            @include respond(tab-port) {
+                font-size: 1.5rem;
+            }
 
             &:nth-of-type(odd) { //Row
             //     // background-color: #EAEDED;

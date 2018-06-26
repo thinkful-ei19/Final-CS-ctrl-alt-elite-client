@@ -18,6 +18,9 @@
 .bold {
   color: #2980B9; }
 
+@media (max-width: 45em) {
+  .phone-hide {
+    visibility: hidden; } }
 * {
   padding: 0;
   margin: 0;
@@ -317,6 +320,9 @@ svg {
   color: #ccc;
   display: inline-block;
   margin-right: 20rem; }
+  @media (max-width: 45em) {
+    .calendar__toggle {
+      visibility: hidden; } }
   .calendar__header-row__previous {
     display: inline-block;
     margin: 2rem; }
@@ -608,6 +614,20 @@ svg {
   overflow-y: auto;
   display: inline-block;
   margin-right: 5rem; }
+  @media (max-width: 85.375em) {
+    .weekly-view {
+      width: 60%; } }
+  @media (max-width: 60em) {
+    .weekly-view {
+      width: 50%; } }
+  @media (max-width: 45em) {
+    .weekly-view__toggle {
+      visibility: visible; } }
+  @media (max-width: 45em) {
+    .weekly-view__toggle svg {
+      margin-top: 40rem;
+      width: 200%;
+      height: 200%; } }
   .weekly-view__weekly {
     font-size: 2rem;
     color: #ccc;
@@ -643,6 +663,9 @@ svg {
     height: 70vh; }
   .weekly-view__hourly__li {
     font-size: 2rem; }
+    @media (max-width: 60em) {
+      .weekly-view__hourly__li {
+        font-size: 1.5rem; } }
     .weekly-view__hourly__li:nth-of-type(odd) {
       background-image: linear-gradient(to right, rgba(84, 153, 199, 0.1), rgba(84, 153, 199, 0.1)); }
     .weekly-view__hourly__li:nth-of-type(even) {
