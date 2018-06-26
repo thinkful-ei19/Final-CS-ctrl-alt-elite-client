@@ -27,8 +27,8 @@ export class RegistrationForm extends React.Component {
                 onSubmit={this.props.handleSubmit(values =>
                     this.onSubmit(values)
                 )}>
-                <label className="login-form__label" htmlFor="fullName">Full Name</label>
-                <Field component={Input} type="text" name="fullName" />
+                {/* <label className="login-form__label" htmlFor="fullName">Full Name</label>
+                <Field component={Input} type="text" name="fullName" /> */}
                 <label className="login-form__label" htmlFor="username">Username</label>
                 <Field
                     component={Input}

@@ -245,11 +245,14 @@ svg {
     top: 0;
     transform: rotate(-135deg); }
 
+.login {
+  display: flex; }
+
 .login-form {
   font-size: 2.2rem;
+  display: inline-block;
   margin: 0 auto;
   padding: 10rem;
-  text-align: left;
   font-family: 'Roboto', sans-serif;
   color: #616A6B; }
   .login-form__input {
@@ -286,9 +289,19 @@ svg {
 .register {
   margin: 0 auto;
   padding: 5rem; }
+  .register__parent {
+    display: flex; }
+  .register__back-button {
+    display: inline-block;
+    width: 17rem; }
+  .register__back-button svg {
+    float: left;
+    margin-right: 1rem;
+    transform: scale(1.5); }
   .register__p {
     font-size: 2.1rem;
-    font-family: 'Roboto', sans-serif; }
+    font-family: 'Roboto', sans-serif;
+    transform: translateY(-17.5%); }
 
 .calendar {
   font-family: 'Roboto', sans-serif;
@@ -338,7 +351,9 @@ svg {
   .appointments:hover .appointments__edit, .appointments:hover .appointments__delete {
     visibility: visible; }
   .appointments__list {
-    margin-right: 10rem; }
+    margin-right: 10rem;
+    max-width: 15rem;
+    overflow-wrap: break-word; }
     .appointments__list__time {
       color: #3c48a0;
       line-height: 1.2; }
@@ -691,9 +706,7 @@ svg {
     line-height: 1.2; }
   .report__message {
     font-size: 1.8rem;
-    text-align: left;
-    margin-top: 10rem;
-    margin-left: 10rem; }
+    text-align: left; }
 
 .linechart {
   text-align: center; }
@@ -792,6 +805,9 @@ svg {
     width: 2rem;
     fill: #999; }
 
+.search svg {
+  color: black; }
+
 .components {
   padding-top: 5rem;
   text-align: center; }
@@ -827,7 +843,6 @@ svg {
   .settings__change-password__label {
     font-size: 1.2rem;
     font-weight: 700;
-    margin-left: 2rem;
     margin-top: .7rem;
     display: block; }
   .settings__change-password__input {
