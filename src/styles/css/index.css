@@ -238,11 +238,14 @@ li {
     top: 0;
     transform: rotate(-135deg); }
 
+.login {
+  display: flex; }
+
 .login-form {
   font-size: 2.2rem;
+  display: inline-block;
   margin: 0 auto;
   padding: 10rem;
-  text-align: left;
   font-family: 'Roboto', sans-serif; }
   .login-form__input {
     font-size: 1.9rem;
@@ -252,7 +255,6 @@ li {
     background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid #E5E8E8;
     border-bottom: 1px solid #E5E8E8;
-    width: 60%;
     display: block;
     transition: all .3s; }
     .login-form__input:focus {
@@ -280,9 +282,19 @@ li {
 .register {
   margin: 0 auto;
   padding: 5rem; }
+  .register__parent {
+    display: flex; }
+  .register__back-button {
+    display: inline-block;
+    width: 17rem; }
+  .register__back-button svg {
+    float: left;
+    margin-right: 1rem;
+    transform: scale(1.5); }
   .register__p {
     font-size: 2.1rem;
-    font-family: 'Roboto', sans-serif; }
+    font-family: 'Roboto', sans-serif;
+    transform: translateY(-17.5%); }
 
 .calendar {
   font-family: 'Roboto', sans-serif;
@@ -331,12 +343,14 @@ li {
   .appointments:hover .appointments__edit, .appointments:hover .appointments__delete {
     visibility: visible; }
   .appointments__list {
-    margin-right: 10rem; }
+    margin-right: 10rem;
+    overflow-wrap: break-word;
+    max-width: 30rem; }
     .appointments__list__time {
-      color: #3c48a0;
+      color: #373737;
       line-height: 1.2; }
     .appointments__list__name {
-      color: #616A6B;
+      color: #373737;
       line-height: 1.4; }
     .appointments__list__phone, .appointments__list__email {
       color: #999;
@@ -366,10 +380,6 @@ li {
   .appointments__add-appointment {
     font-size: 2rem;
     background-image: linear-gradient(to left, rgba(214, 234, 248, 0.8), rgba(214, 234, 248, 0.8)); }
-  .appointments__list__time {
-    color: #373737; }
-  .appointments__list__name {
-    color: #373737; }
 
 .appointments-form {
   font-size: 1.5rem !important;
@@ -600,7 +610,7 @@ li {
       text-decoration: underline; }
 
 .report {
-  color: #616A6B;
+  color: black;
   padding: 0 2rem;
   margin-top: 5rem; }
   .report__left {
@@ -734,6 +744,9 @@ li {
     height: 2rem;
     width: 2rem;
     fill: #999; }
+
+.search svg {
+  color: black; }
 
 .components {
   padding-top: 5rem;

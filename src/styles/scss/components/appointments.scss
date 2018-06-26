@@ -28,13 +28,17 @@
     
     &__list {
         margin-right: 10rem;
+        overflow-wrap: break-word;
+        max-width: 30rem;
 
         &__time {
-            color: $color-purple;
+            // color: $color-purple;
+            color: $color-four;
             line-height: 1.2;
         }
         &__name {
-            color: $color-gray;
+            // color: $color-gray;
+            color: $color-four;
             line-height: 1.4;
         }
         &__phone, &__email {
@@ -87,17 +91,6 @@
     &__add-appointment {
         font-size: 2rem;
         background-image: linear-gradient(to left, rgba($color-one, .8), rgba($color-one, .8));
-    }
-
-    &__list {
-
-        &__time {
-            color: $color-four;
-        }
-
-        &__name {
-            color: $color-four;
-        }
     }
 }
 

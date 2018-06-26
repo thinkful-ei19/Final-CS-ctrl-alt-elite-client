@@ -19,7 +19,7 @@ export function LogIn(props) {
     }
 
     return (
-        <section style={ sectionStyle }>
+        <section className="login" style={ sectionStyle }>
             <div className="login-form">
                 <h1>Welcome!</h1>
                 <br/>
