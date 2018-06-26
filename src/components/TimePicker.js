@@ -16,16 +16,16 @@ const styles = theme => ({
 });
 
 function TimePicker(props) {
-  const { classes } = props;
+  // const { classes } = props;
 
   return (
-    <form className={classes.container} noValidate>
+    <form className="appointments-form" noValidate>
       <TextField
+        className="appointments__input appointments__time"
         id="time"
-        label="Appointment Times"
+        label=" "
         type="time"
-        defaultValue="10:00"
-        className={classes.textField}
+        defaultValue='10:00'
         InputLabelProps={{
           shrink: true,
         }}

@@ -4,38 +4,50 @@ import {connect} from 'react-redux';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import ConfirmDelete from './ConfirmDelete';
+import EditForm from './EditForm';
 import moment from 'moment';
+import AptForm from './AptForm';
 
 function ScheduleList(props) {
   
   let buildList;
-  try {
-    const appointments = props.currentUser.appointments.filter((apt) => {
-      if (moment(apt.time).format('MM DD YYYY') === moment(props.date).format('MM DD YYYY')) {
-        return apt
-      }
-    });
+  try {    
+    let appointments;
+    if (props.selectedAppointment !== null && props.calendar === 'weekly') {
+      appointments = [props.selectedAppointment];
+    } else {
+      appointments = props.currentUser.appointments.filter((apt) => {
+        if (moment(apt.time).format('YYYY MM DD') === moment(props.selectedDate).format('YYYY MM DD')) {
+          return apt;
+        }
+      }).sort((a,b) => {return moment(a.time).valueOf() - moment(b.time).valueOf()});
+    }
+    console.log(appointments)
     buildList = appointments.map((apt) => {
       return (
-      <ListItem key={apt.id} button>
-        <ListItemText
-        primary={
-          <div>
-            <ul>
-              <li>{moment(apt.time).format('MMMM Do YYYY, h:mm:ss A')}</li>              
-              <li>Name: {apt.client.name}</li>              
-              <li>Phone: {apt.client.phone}</li>
-              <li>Email: {apt.client.email}</li>
-              <li>Notes: {apt.notes}</li>
+      // <ListItem key={apt.id} button>
+      //   <ListItemText
+      //   primary={
+        <div key={apt.id} className="appointments">
+            <ul className="appointments__list schedule-li">
+              <li className="appointments__list__time">{moment(apt.time).format('MMMM Do, h:mm A')}</li>              
+              <li className="appointments__list__name">{apt.client.name}</li>              
+              <li className="appointments__list__phone">{apt.client.phone}</li>
+              <li className="appointments__list__email">{apt.client.email}</li>
+              <li className="appointments__list__notes">{apt.notes}</li>
             </ul>
-          </div>
-        } />
-      </ListItem>
+          <EditForm aptTime={moment(apt.time).format('YYYY MM DD HH mm')} aptInfo={apt} aptId={apt.id} />
+          <ConfirmDelete aptId={apt.id} />
+        </div>
+      //   } />
+      // </ListItem>
       )
     })
     return (
-      <div >
-        <List component="nav">
+      <div className="appointments-part2">
+        <AptForm />
+        <List component="nav" className="appointments__schedule-list">
           {buildList}
         </List>
       </div>
@@ -56,7 +68,9 @@ function ScheduleList(props) {
 
 const mapStateToProps = state => ({
   currentUser: state.auth.currentUser,
-  date: state.appointmentReducer.date
+  selectedDate: state.calendarReducer.selectedDate,
+  selectedAppointment: state.appointmentReducer.selectedAppointment,
+  calendar: state.calendarReducer.calendar
 });
 
 export default connect(mapStateToProps)(ScheduleList);

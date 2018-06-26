@@ -4,6 +4,11 @@
     box-sizing: inherit;
 }
 
+
+a {
+    text-decoration:none;
+}
+
 html {
     //This defines what 1rem is;
     font-size: 62.5%; //1 rem = 10px; 10px / 16px = 62.5%
@@ -31,6 +36,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     line-height: 1.7;
+    color: $color-font;
 }
 
 .app {
@@ -45,4 +51,9 @@ body {
 
 button {
     cursor: pointer;
+}
+
+li {
+    line-height: 1.7;
+    list-style-type: none;
 }

@@ -1,21 +1,14 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
+// import Paper from '@material-ui/core/Paper';
 import ScheduleList from './schedule-list';
 import AptForm from './AptForm';
 
-export default function PaperSheet(props) {
+export default function Schedule(props) {
   // const { classes } = props;
   return (
-    <div>
-      <Paper className="schedule">
-          <AptForm />
-        <Typography variant="headline" component="h3">
-          Schedule
-        </Typography>
+      <div className="schedule">
         <ScheduleList />
-      </Paper>
-    </div>
+      </div>
   );
 }

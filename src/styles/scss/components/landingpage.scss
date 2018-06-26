@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css?family=Carme');
+
+.landing-page {
+    
+    // text-align: center;
+    font-family: 'Roboto', sans-serif;
+
+    // &__button {
+    //     text-align: center;
+    // }
+}
+
+.logo {
+    // margin: 20rem 20rem 0rem;
+    max-width: 6%;
+    float: left;
+    margin: -1rem 1rem;
+}
+
+#app-name {
+    font-size: 80px;
+    margin-top: 6rem;
+}
+
+#app-description {
+    font-size: 20px;
+}
+
+.head {
+    background-color: $color-three;
+    height: 95vh;
+}
+
+.nav {
+    padding: 2.7rem;
+    text-align: right;
+    position: fixed;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(#333, .9), rgba(#333, .9));
+    text-transform: uppercase;
+
+    &__header {
+
+    }
+
+    &__button {
+        padding: 1.5rem;
+        margin: 0 2.5rem;      
+        cursor: pointer;
+        position: relative;
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-family: sans-serif;
+
+        &:hover {
+            color: $color-schedulr-name;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            // height: 1rem;
+            // bottom: 0;
+            left: 0;
+            background-color: #000;
+            // opacity: .3;
+            visibility: hidden;
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-transition: all 0.3s ease-in-out 0s;
+            transition: all 0.3s ease-in-out 0s;
+        }
+
+        &:hover:before {
+            visibility: visible;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+}
+
+.welcome {
+    background-image: url('../images/office.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    // margin-top: 6.5rem;
+
+    &__screen {
+        background-image: linear-gradient(to right, rgba(white, .1), rgba(white, .1));
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__message {
+        color: $color-message;
+        font-family: 'Carme', sans-serif;
+        font-size: 3.7rem;
+      
+
+        &__top {
+            position: absolute;
+            text-transform: uppercase;
+            margin-top: 45rem;
+            margin-left: 18rem;
+        }
+        &__bottom {
+            position: absolute;
+            text-transform: uppercase;
+            margin-top: 51rem;
+            margin-left: 19.5rem;
+        }
+    }
+}
+
+.about {
+    background-color: white;
+    height: 70vh;
+    padding: 20rem 40rem;
+
+    &__left {
+        display: inline-block;
+        width: 50%;
+        vertical-align: middle;
+    }
+
+    &__header {
+        font-size: 3.2rem;
+        font-family: 'Carme', sans-serif;
+        text-transform: uppercase;
+    }
+
+    &__right {
+        width: 50%;
+        display: inline-block;
+        font-size: 1.8rem;
+        vertical-align: middle;
+
+    }
+}
+
+.whats-new {
+    background-color: white;
+    padding: 10rem 40rem;
+
+
+    &__header {
+        text-align: center;
+        font-size: 4.2rem;
+        font-family: 'Carme', sans-serif;
+        text-transform: uppercase;
+    }
+
+    &__left {
+        display: inline-block;
+        padding-top: 5rem;
+        width: 40%;
+        vertical-align: middle;
+    }
+    
+    &__right {
+        width: 60%;
+        padding-top: 5rem;
+        display: inline-block;
+        font-size: 1.8rem;
+        vertical-align: middle;
+
+    }
+}
+
+.about-us {
+    background-color: #333;
+    color: white;
+    padding: 15rem;
+
+    &__header {
+        text-align: center;
+        font-size: 1.8rem;
+        padding-bottom: 10rem;
+        font-family: 'Carme', sans-serif;
+        text-transform: uppercase;
+    }
+
+    &__people {
+
+    }
+
+    &__person {
+        display: inline-block;
+        width: 25%;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        
+        &__list {
+
+            &__item {
+                padding: .5rem;
+                line-height: .5;
+            }
+
+            &__name {
+                font-size: 1.8rem;
+                
+            }
+
+            &__portfolio {
+                font-size: 1.2rem;
+
+                &__text {
+                    color: grey;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            &__github {
+                display: inline-block;
+                margin: 0 .6rem;
+            }
+
+            &__linkedin {
+                display: inline-block;
+                margin: 0 .5rem;
+            }
+        }
+    }
+}
+

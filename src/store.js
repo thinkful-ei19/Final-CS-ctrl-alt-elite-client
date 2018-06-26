@@ -4,13 +4,19 @@ import thunk from 'redux-thunk';
 import { loadAuthToken } from './local-storage';
 import authReducer from './reducers/auth';
 import appointmentReducer from './reducers/appointment';
+import calendarReducer from './reducers/calendar';
+import tabsReducer from './reducers/tabs';
+import clientsReducer from './reducers/clients';
 import { setAuthToken, refreshAuthToken } from './actions/auth';
 
 const store = createStore(
     combineReducers({
         form: formReducer,
         auth: authReducer,
-        appointmentReducer
+        appointmentReducer,
+        clientsReducer,
+        calendarReducer,
+        tabsReducer,
     }),
     applyMiddleware(thunk)
 );

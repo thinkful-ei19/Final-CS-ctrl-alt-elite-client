@@ -1,0 +1,64 @@
+.calendar {
+ 
+    // margin-left: auto;
+    // margin-right: auto;
+    // padding-top: 5rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    max-width: 60rem; 
+    text-transform: uppercase; 
+    // color: #616A6B;
+    // border: 2px solid pink;
+    color: $color-font;
+    display: inline-block;
+    margin-right: 20rem;
+
+    &__header-row {
+
+        &__previous {
+            display: inline-block;
+            margin: 2rem;
+        }
+
+        &__next {
+            display: inline-block;
+            margin: 2rem;            
+        }
+
+        &__header {
+            display: inline-block;
+            padding-bottom: 5rem;
+            min-width: 30rem;
+        }
+    }
+
+    &__days {
+
+        &__day {
+            display: inline-block;
+            width: 14.2%;
+            font-weight: 700;
+        }
+    }
+
+    &__blocks-row {
+
+
+        &__blocks {
+            display: inline-block;
+            width: 14.2%;
+            padding: 4% 0 4% 0 ;
+            
+            &:hover {
+                cursor: pointer;
+                background-color: $color-five;
+                border-radius: 20%; 
+            }
+
+            // &:nth-child(7n+1), &:nth-child(7n+7) {
+            //     color: red;
+            // }
+        }
+    }
+}

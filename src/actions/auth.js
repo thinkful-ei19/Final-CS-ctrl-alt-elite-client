@@ -58,7 +58,6 @@ export const getUserInfo = (authToken, username) => dispatch => {
     .then(res => res.json())
     .then(res => {
         if (res !== 'User Not Found') {
-            console.log(res)
             dispatch(authSuccess(res))
         } else {
             console.log(`Could not find information for user: ${username}`)
@@ -78,7 +77,6 @@ export const getUserInfoById = (authToken, id) => dispatch => {
     .then(res => res.json())
     .then(res => {
         if (res !== 'User Not Found') {
-            console.log(res)
             dispatch(authSuccess(res))
         } else {
             console.log(`Could not find information for user ID: ${id}`)
@@ -148,3 +146,59 @@ export const refreshAuthToken = () => (dispatch, getState) => {
             clearAuthToken(authToken);
     });
 };
+
+
+export const changeTheme = (authToken, theme, userId) => (dispatch) => {
+    
+    const updateObject = {
+        theme: theme
+    }
+    console.log(updateObject)
+    fetch(`${API_BASE_URL}/change-theme/${userId}`, {
+        method: 'PUT', 
+        body: JSON.stringify(updateObject),
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${authToken}`
+            }
+    })
+    .then((res) => {
+        res.json()
+    })
+    .then(() => {
+        dispatch(getUserInfoById(authToken, userId))
+    })
+    .catch((result) => {
+        console.error(result)
+    })
+
+}
+
+export const changePassword = (authToken, password, userId) => (dispatch) => {
+
+    const updateObject = {
+        password: password
+    }
+    console.log(updateObject)
+    fetch(`${API_BASE_URL}/change-password/${userId}`, {
+        method: 'PUT', 
+        body: JSON.stringify(updateObject),
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${authToken}`
+            }
+    })
+    .then((res) => {
+        res.json()
+    })
+    .then(() => {
+        dispatch(getUserInfoById(authToken, userId))
+        alert('Password has been changed!')
+    })
+    .catch((result) => {
+        console.error(result)
+    })
+
+}

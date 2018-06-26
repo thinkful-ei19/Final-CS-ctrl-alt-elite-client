@@ -1,10 +1,12 @@
 .navigation {
+    font-family: 'Roboto', sans-serif;
+    backface-visibility: hidden;
     &__checkbox {
         display: none;
     }
 
     &__button {
-        background-color: $color-one;
+        background-color: $color-three;
         height: 7rem;
         width: 7rem;
         position: fixed;
@@ -12,13 +14,13 @@
         right: 6rem;
         border-radius: 50%;
         z-index: 102;
-        box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        box-shadow: 0 1rem 3rem rgba($color-four, .2);
         text-align: center;
         cursor: pointer;
 
         @include respond(tab-port) {
-            top: 4rem;
-            right: 4rem;
+            top: 3rem;
+            right: 3rem;
         }
         @include respond(phone) {
             top: 3rem;
@@ -78,12 +80,12 @@
         &:visited {
             display: inline-block;
             font-size: 3rem;
-            font-weight: 300;
+            font-weight: 500;
             padding: 1rem 2rem;
-            color: $color-white;
+            color: $color-gray;
             text-decoration: none;
             text-transform: uppercase;
-            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+            // background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-four 50%);
             background-size: 230%;
             transition: all .4s;
         }
@@ -96,7 +98,7 @@
         &:hover,
         &:active {
             background-position: 100%;
-            color: $color-one;
+            color: $color-black;
             transform: translateX(1rem);
         }
     }
@@ -115,7 +117,7 @@
         width: 100%;
     }
 
-    //icon
+    //hamburger-icon
     &__icon {
         position: relative;
         margin-top: 3.4rem;
@@ -125,7 +127,7 @@
         &::after {
             width: 3rem;
             height: 2px;
-            background-color: $color-two;
+            background-color: $color-four;
             display: inline-block;
         }
 

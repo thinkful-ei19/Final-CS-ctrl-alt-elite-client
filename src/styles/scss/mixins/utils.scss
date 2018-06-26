@@ -1,0 +1,27 @@
+.selected-date {
+    // background-color: #aaf;
+    // border: 1px solid #D5DBDB; 
+    border-radius: 20%; 
+    background-image: radial-gradient(rgba(transparent, .1), rgba($color-four, .1));
+}
+
+.appointment-date {
+    color: $color-upcoming-date;
+    // background-color: #aaa;
+}
+
+.previous-appointment-date {
+    color: $color-previous-date;;
+}
+
+.other-month-date {
+    color: #aaa;
+}
+
+.current-day {
+    color: $color-purple;
+}
+
+.bold {
+    color: $color-schedulr-name;
+}

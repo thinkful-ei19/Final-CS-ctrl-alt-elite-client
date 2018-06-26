@@ -1,0 +1,139 @@
+.weekly-view {
+//each block fixed width and flexbox 8 pieces each row starting from months days
+    padding: 1rem;
+    // background-image: linear-gradient(to right, rgba(black, .05), rgba(black, .1));
+    width: 70%;
+    overflow-y: auto;
+    display: inline-block;
+    margin-right: 5rem;
+
+    &__weekly {
+        font-size: 2rem;
+        color: $color-gray;  
+        text-align: center;
+
+        &__previous {
+            display: inline-block;
+            margin: 2rem;
+        }
+
+        &__next {
+            display: inline-block;
+            margin: 2rem;            
+        }
+
+        &__month {
+            display: inline-block;
+            padding-bottom: 5rem;
+            min-width: 30rem;
+        }
+        
+        &__header {
+            // display: flex;
+            // flex: 1;
+            // justify-content: space-around;
+        }
+    
+        &__days { 
+
+            &__day {
+                // border: .5px solid #EAEDED;
+                display: inline-block;
+                width: 12.5%;
+                color: $color-gray;  
+                font-weight: 700;           
+                text-align: center; 
+            }
+        }
+    
+        &__ul {
+            display: flex;
+            
+        }
+
+        &__li {
+            width: 12.5%;
+            font-size: 2rem;        
+            text-align: center; 
+        }
+
+        &__month {
+            text-transform: uppercase;
+        }
+    }
+    
+    &__hourly {
+
+        &__ul {
+            color: $color-gray;
+            display: flex;
+            flex-direction: column;
+            height: 70vh;
+        }
+
+        &__li { //appointments
+            font-size: 2rem;
+
+            &:nth-of-type(odd) { //Row
+            //     // background-color: #EAEDED;
+            //     // border: .5px solid #EAEDED;
+            //     // opacity: 0.5;
+            //     color: $color-black;
+            background-image: linear-gradient(to right, rgba(#5499C7, .1), rgba(#5499C7, .1))
+            }
+
+            &:nth-of-type(even) { 
+                background-image: linear-gradient(to right, rgba(white, .1), rgba(white, .1))
+            }
+
+            &__hour {
+
+                &__row {
+                    display: flex;
+
+                    &__block {
+                        align-self: middle;
+                        height: 5vh;
+                        width: 12.5%;
+                        padding: 2rem;
+                        // margin-bottom: 1rem;
+                        // border: 1px solid black;
+                        white-space: nowrap;
+                        justify-content: center;
+                        text-overflow: ellipsis;
+                        display: flex;
+                        align-items: center;
+                        &:nth-of-type(1) { //Column
+                            color: $color-gray;
+                         }                    
+                    }
+
+                    &__time {
+                       
+                    }
+                }
+            }
+        }
+    }
+
+    &__appointment {
+        
+        &__ul {
+            font-size: 2rem;
+            overflow: hidden;
+        }
+
+        &__li {
+            font-size: 1.25rem;
+            text-align: center; 
+        }
+
+        &__client {
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -3,14 +3,23 @@ import { connect } from 'react-redux';
 import { Route, withRouter } from 'react-router-dom';
 
 import LandingPage from './components/landing-page';
+import LogIn from './components/login';
 import Dashboard from './components/dashboard';
 import RegistrationPage from './components/registration-page';
+import WeeklyView from './components/weekly-view';
+import Reports from './components/reports';
+
 import { refreshAuthToken } from './actions/auth';
+import Clients from './components/clients';
+import Settings from './components/settings';
 
 
-// import './app.css';
 
 export class App extends React.Component {
+    constructor(props) {
+        super(props) 
+    }
+
     componentDidUpdate(prevProps) {
         if (!prevProps.loggedIn && this.props.loggedIn) {
             // When we are logged in, refresh the auth token periodically
@@ -41,14 +50,27 @@ export class App extends React.Component {
     }
 
     render() {
+        try {
+            if (this.props.currentUser.options.theme === 'dark') {
+                require('./styles/css/index-dark.css')
+            } else {
+                require('./styles/css/index.css')
+            }
+        } catch(err) {
+            require('./styles/css/index.css')            
+        }
         return (
             
             <div className="app">
                 {/* <HeaderBar /> */}
-                
                 <Route exact path="/" component={LandingPage} />
+                <Route exact path="/login" component={LogIn} />
                 <Route exact path="/dashboard" component={Dashboard} />
+                <Route exact path="/weekly" component={WeeklyView} />                
+                <Route exact path="/clients" component={Clients} />
                 <Route exact path="/register" component={RegistrationPage} />
+                <Route exact path="/reports" component={Reports} />
+                <Route exact path="/settings" component={Settings} />
             </div>
             
         );
@@ -57,6 +79,7 @@ export class App extends React.Component {
 
 const mapStateToProps = state => ({
     hasAuthToken: state.auth.authToken !== null,
+    currentUser: state.auth.currentUser,
     loggedIn: state.auth.currentUser !== null
 });
 

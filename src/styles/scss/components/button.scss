@@ -1,0 +1,105 @@
+.btn {
+    float: center; 
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        border-radius: 10rem;
+        transition: all .2s;
+        display: inline-block;
+        position: relative;
+
+        //Change for the <button> element
+        border: none;
+        cursor: pointer;
+    }
+    &:hover {
+        outline: none;
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    &:active, 
+    &:focus {
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+    }
+    &--white {
+        background-color: $color-white;
+        color: $color-four;
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &--green {
+        background-color: $color-one;
+        color: $color-white;
+        &::after {
+            background-color: $color-one;
+        }
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+    &--animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+}
+
+.btn-text {
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        color: $color-one;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-one;
+        padding: 3px;
+        transition: all .2s;
+    }
+
+    // &:hover {
+    //     background-color: $color-one;
+    //     color: $color-white;
+    //     box-shadow: 0 1rem rgba($color-black, .15);
+    //     transform: translateY(-2px);
+    // }
+
+    // &:active {
+    //     box-shadow: 0 1rem rgba($color-black, .15);
+    //     transform: translateY(0);
+    // }
+}
+
+
+.login-button, .register-button {
+    // border-radius: 5px;
+    margin-top: 20px;
+    float: center;
+    color: $color-purple;
+    font-weight: 400;
+    background-color: 'white';
+    // border: 1px solid $color-five;
+    // width: 100%;
+    // padding: 1.5rem 2rem;
+    // background-color: #CCD1D1;
+    // color: white;
+    // font-size: 2.2rem;
+}
