@@ -9,7 +9,7 @@
 
     &__weekly {
         font-size: 2rem;
-        color: $color-gray;  
+        color: $color-calendar;  
         text-align: center;
 
         &__previous {
@@ -40,7 +40,7 @@
                 // border: .5px solid #EAEDED;
                 display: inline-block;
                 width: 12.5%;
-                color: $color-gray;  
+                color: $color-calendar;  
                 font-weight: 700;           
                 text-align: center; 
             }
@@ -109,7 +109,7 @@
                     }
 
                     &__time {
-                       
+                       color: $color-calendar;
                     }
                 }
             }
