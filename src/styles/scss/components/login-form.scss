@@ -3,9 +3,9 @@
     font-size: 2.2rem;
     margin: 0 auto;
     padding: 10rem;
-
     text-align: left;
     font-family: 'Roboto', sans-serif;
+    color: $color-gray;
     // float: right;
 
     &__input {
@@ -16,15 +16,15 @@
         // color: ;
         border-radius: 5px;
         background-color: rgba($color-white, .5);
-        border: 1px solid $color-five;
-        border-bottom: 1px solid $color-five;
+        border: 1px solid $color-grey-light-1;
+        // border-bottom: 1px solid #D6EAF8;
         width: 50%;
         display: block;
         transition: all .3s;
         
         &:focus {
             outline: none;
-            border-bottom: 1px solid $color-one;
+            // border-bottom: 1px solid $color-one;
         }
 
         &:focus:invalid {
