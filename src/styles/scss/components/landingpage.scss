@@ -1,79 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Carme');
 
-@media screen and (min-width: 320px) {
-    .nav {
-        padding: 2.7rem;
-        text-align: right;
-        position: fixed;
-        width: 100%;
-        background-image: linear-gradient(to right, rgba(#333, .9), rgba(#333, .9));
-        text-transform: uppercase;
-    
-        &__header {
-    
-        }
-    
-        &__button {
-            padding: 1.5rem;
-            margin: 0 2.5rem;      
-            cursor: pointer;
-            position: relative;
-            color: white;
-            text-decoration: none;
-            font-size: 1.5rem;
-            font-family: sans-serif;
-    
-            &:hover {
-                color: $color-schedulr-name;
-            }
-    
-            &:before {
-                content: "";
-                position: absolute;
-                width: 100%;
-                // height: 1rem;
-                // bottom: 0;
-                left: 0;
-                background-color: #000;
-                // opacity: .3;
-                visibility: hidden;
-                -webkit-transform: scaleX(0);
-                transform: scaleX(0);
-                -webkit-transition: all 0.3s ease-in-out 0s;
-                transition: all 0.3s ease-in-out 0s;
-            }
-    
-            &:hover:before {
-                visibility: visible;
-                -webkit-transform: scale(1);
-                transform: scale(1);
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 640px) {
-    .instructions {
-        background-color: #616161;
-        color: #f0f0f0;
-        text-align: center;
-        margin: auto;
-        width: 100%;
-        padding: 2px 0px;
-    }
-}
-
-@media screen and (min-width: 960px) {
-    .instructions {
-        background-color: #616161;
-        color: #f0f0f0;
-        text-align: center;
-        margin: auto;
-        width: 100%;
-        padding: 2px 0px;
-    }
-}
-
 .landing-page {
     
     // text-align: center;
@@ -105,7 +31,55 @@
     height: 95vh;
 }
 
+.nav {
+    padding: 2.7rem;
+    text-align: right;
+    position: fixed;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(#333, .9), rgba(#333, .9));
+    text-transform: uppercase;
 
+    &__header {
+
+    }
+
+    &__button {
+        padding: 1.5rem;
+        margin: 0 2.5rem;      
+        cursor: pointer;
+        position: relative;
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-family: sans-serif;
+
+        &:hover {
+            color: $color-schedulr-name;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            // height: 1rem;
+            // bottom: 0;
+            left: 0;
+            background-color: #000;
+            // opacity: .3;
+            visibility: hidden;
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-transition: all 0.3s ease-in-out 0s;
+            transition: all 0.3s ease-in-out 0s;
+        }
+
+        &:hover:before {
+            visibility: visible;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+}
 
 .welcome {
     background-image: url('../images/office.jpg');
