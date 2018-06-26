@@ -6,7 +6,6 @@ import background from '../media/pencil.jpg';
 import githubIcon from '../styles/images/github/GitHub-Mark-Light-32px.png';
 import linkedInIcon from '../styles/images/linkedin/In-White-14px.png';
 import Logo from '../media/schedulrLogoSized.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import IconButton from '@material-ui/core/IconButton';
 import SvgIcon from '@material-ui/core/SvgIcon';
@@ -103,11 +102,7 @@ export default function LandingPage(props) {
             </div>
             <div className="about-us">
                 <h4 className="about-us__header">This web application crafted and designed by:</h4>
-                <i class="fab fa-github-alt"></i>
 
-                <FontAwesomeIcon icon="github-alt" />
-
-                <i class="fa-coffee"></i>
                 <div className="about-us__people">
                     <div className="about-us__person">
                         <ul className="about-us__person__list">

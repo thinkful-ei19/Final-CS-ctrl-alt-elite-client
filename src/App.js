@@ -15,9 +15,9 @@ import Settings from './components/settings';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
+// import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faStroopwafel)
+// library.add(faStroopwafel)
 
 export class App extends React.Component {
     constructor(props) {
