@@ -2,23 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { API_BASE_URL } from '../config';
 import background from '../media/pencil.jpg';
-
-import githubIcon from '../styles/images/github/GitHub-Mark-Light-32px.png';
-import linkedInIcon from '../styles/images/linkedin/In-White-14px.png';
+import githubIcon from '../styles/images/github/github.svg';
+import linkedInIcon from '../styles/images/linkedin/linkedin.svg';
 import Logo from '../media/schedulrLogoSized.png';
 
 import IconButton from '@material-ui/core/IconButton';
 import SvgIcon from '@material-ui/core/SvgIcon';
-// const sectionStyle = {
-//     backgroundSize: "100% 100%",
-//     height: "100VH",
-//     backgroundRepeat: "no-repeat",
-//     backgroundImage: `url(${background})`
-// };
-
 
 export default function LandingPage(props) {
-
     //Wake the heroku server up.
     fetch(`${API_BASE_URL}`, {
         method: 'GET', 
@@ -30,19 +21,10 @@ export default function LandingPage(props) {
 
     return(
         <section className="landing-page">
-            {/* <div className="landing-page">
-                <h1 id="app-name">SCHEDUL-R</h1>
-            
-                <p id="app-description">A simple appointment scheduling app with automated notifications</p>
-                <Link style={{ textDecoration: 'none' }} to="/login">
-                    <button className="btn login-button">GET STARTED</button>
-                </Link>
-            </div> */}
             
             <nav className="nav">
                 <img className="nav__header" />
                <img className="logo" src={Logo}/>
-                {/* <a className="nav__button">Home</a> */}
                 <Link to="/login">
                     <span className="nav__button">Login</span>
                 </Link>
