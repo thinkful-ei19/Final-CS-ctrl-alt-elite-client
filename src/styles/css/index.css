@@ -256,7 +256,7 @@ li {
     background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid #E5E8E8;
     border-bottom: 1px solid #E5E8E8;
-    width: 60%;
+    width: 50%;
     display: block;
     transition: all .3s; }
     .login-form__input:focus {
@@ -766,8 +766,8 @@ li {
   padding: 1rem; }
   .settings__change-theme {
     padding: 1rem;
-    margin-bottom: 5rem;
-    margin-top: 3rem; }
+    margin-bottom: 7rem;
+    margin-top: 11rem; }
     .settings__change-theme__header {
       font-size: 2.4rem; }
     .settings__change-theme__drop-down {
@@ -783,7 +783,11 @@ li {
   .settings__change-password__header {
     font-size: 2.4rem; }
   .settings__change-password__label {
-    font-size: 1.6rem; }
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: .7rem;
+    display: block; }
   .settings__change-password__input {
     font-size: 1.9rem;
     font-family: inherit;
@@ -792,6 +796,6 @@ li {
     margin: 1rem auto;
     background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid #E5E8E8;
-    border-bottom: 1px solid #E5E8E8;
+    border-bottom: 1px solid #D6EAF8;
     display: block;
     transition: all .3s; }
