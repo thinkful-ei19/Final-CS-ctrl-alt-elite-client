@@ -131,7 +131,7 @@
                 font-size: 5rem;
             }
             @include respond(small-phone) {
-                margin-top: 15rem;
+                margin-top: 28rem;
                 margin-left: 5rem;
                 font-size: 4rem;
             }
@@ -147,8 +147,8 @@
                 font-size: 5rem;
             }
             @include respond(small-phone) {
-                margin-top: 20rem;
-                margin-left: 5rem;
+                margin-top: 33rem;
+                margin-left: 8rem;
                 font-size: 4rem;
             }
         }
