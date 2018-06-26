@@ -271,7 +271,6 @@ svg {
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid #faf9f9;
-    width: 50%;
     display: block;
     transition: all .3s; }
     .login-form__input:focus {
@@ -400,10 +399,6 @@ svg {
   .appointments__add-appointment {
     font-size: 2rem;
     background-image: linear-gradient(to left, rgba(214, 234, 248, 0.8), rgba(214, 234, 248, 0.8)); }
-  .appointments__list__time {
-    color: #373737; }
-  .appointments__list__name {
-    color: #373737; }
 
 .appointments-form {
   font-size: 1.5rem !important;
