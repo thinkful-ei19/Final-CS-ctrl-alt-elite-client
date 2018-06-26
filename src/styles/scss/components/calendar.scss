@@ -10,7 +10,7 @@
     text-transform: uppercase; 
     // color: #616A6B;
     // border: 2px solid pink;
-    color: $color-gray;
+    color: $color-calendar;
     display: inline-block;
     margin-right: 20rem;
 
@@ -39,6 +39,8 @@
             display: inline-block;
             width: 14.2%;
             font-weight: 700;
+            color: $color-calendar;
+
         }
     }
 

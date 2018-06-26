@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
-import background from '../media/workspace.jpg';
+import background from '../media/wB.jpg';
 import RegistrationForm from './registration-form';
 import SvgIcon from '@material-ui/core/SvgIcon';
 

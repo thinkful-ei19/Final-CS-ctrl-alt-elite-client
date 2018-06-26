@@ -47,7 +47,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  color: black; }
+  color: #424949; }
 
 .app {
   display: flex;
@@ -62,6 +62,9 @@ button {
 li {
   line-height: 1.7;
   list-style-type: none; }
+
+svg {
+  color: #424949; }
 
 .btn {
   float: center; }
@@ -250,20 +253,20 @@ li {
   display: inline-block;
   margin: 0 auto;
   padding: 10rem;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  color: #616A6B; }
   .login-form__input {
     font-size: 1.9rem;
     font-family: inherit;
     padding: 1.5rem 3rem;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.5);
-    border: 1px solid #E5E8E8;
-    border-bottom: 1px solid #E5E8E8;
+    border: 1px solid #faf9f9;
+    width: 50%;
     display: block;
     transition: all .3s; }
     .login-form__input:focus {
-      outline: none;
-      border-bottom: 1px solid #D6EAF8; }
+      outline: none; }
     .login-form__input:focus:invalid {
       border-color: #a33; }
     .login-form__input::-webkit-input-placeholder {
@@ -322,7 +325,8 @@ li {
   .calendar__days__day {
     display: inline-block;
     width: 14.2%;
-    font-weight: 700; }
+    font-weight: 700;
+    color: #616A6B; }
   .calendar__blocks-row__blocks {
     display: inline-block;
     width: 14.2%;
@@ -652,6 +656,8 @@ li {
         align-items: center; }
         .weekly-view__hourly__li__hour__row__block:nth-of-type(1) {
           color: #616A6B; }
+      .weekly-view__hourly__li__hour__row__time {
+        color: #616A6B; }
   .weekly-view__appointment__ul {
     font-size: 2rem;
     overflow: hidden; }
@@ -659,9 +665,11 @@ li {
     font-size: 1.25rem;
     text-align: center; }
   .weekly-view__appointment__client {
-    cursor: pointer; }
+    cursor: pointer;
+    color: #616A6B; }
     .weekly-view__appointment__client:hover {
-      text-decoration: underline; }
+      color: #AED6F1;
+      text-decoration: none; }
 
 .report {
   color: #616A6B;
@@ -805,6 +813,7 @@ li {
   text-align: center; }
 
 .dashboard {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6));
   height: 100vh; }
 
 .settings {

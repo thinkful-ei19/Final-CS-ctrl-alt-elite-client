@@ -9,7 +9,7 @@
 
     &__weekly {
         font-size: 2rem;
-        color: $color-gray;  
+        color: $color-calendar;  
         text-align: center;
 
         &__previous {
@@ -40,7 +40,7 @@
                 // border: .5px solid #EAEDED;
                 display: inline-block;
                 width: 12.5%;
-                color: $color-gray;  
+                color: $color-calendar;  
                 font-weight: 700;           
                 text-align: center; 
             }
@@ -104,12 +104,12 @@
                         display: flex;
                         align-items: center;
                         &:nth-of-type(1) { //Column
-                            color: $color-gray;
-                         }                    
+                            color: $color-calendar;
+                        }                    
                     }
 
                     &__time {
-                       
+                       color: $color-calendar;
                     }
                 }
             }
@@ -130,9 +130,11 @@
 
         &__client {
             cursor: pointer;
+            color: $color-calendar;
 
             &:hover {
-                text-decoration: underline;
+                color: $color-highlight;
+                text-decoration: none;
             }
         }
     }
