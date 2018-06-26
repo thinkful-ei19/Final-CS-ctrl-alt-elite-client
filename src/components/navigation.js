@@ -92,6 +92,7 @@ class Navigation extends React.Component {
                             onClick={(e) => {
                             e.preventDefault();
                             this.logOut();
+                            window.location.reload();
                             }}
                           className="navigation__link">Logout
                         </a>
