@@ -28,15 +28,17 @@
     
     &__list {
         margin-right: 10rem;
-        max-width: 15rem;
         overflow-wrap: break-word;
+        max-width: 30rem;
 
         &__time {
-            color: $color-purple;
+            // color: $color-purple;
+            color: $color-four;
             line-height: 1.2;
         }
         &__name {
-            color: $color-gray;
+            // color: $color-gray;
+            color: $color-four;
             line-height: 1.4;
         }
         &__phone, &__email {
