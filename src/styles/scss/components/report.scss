@@ -14,6 +14,10 @@
     &__right {
         display: inline-block;
         width: 20%;
+
+        @include respond(tab-land) {
+            display: block;
+        }
     }
 
     &__title{
@@ -25,6 +29,9 @@
     &__list {
         height: 55vh;
         overflow-y: auto;
+        overflow-x: hidden;
+        overflow-wrap: break-word;
+        max-width: 30rem;
     }
 
     &__list-block {

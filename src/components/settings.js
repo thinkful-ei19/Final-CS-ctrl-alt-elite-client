@@ -6,8 +6,8 @@ import requiresLogin from './requires-login';
 import { changeTheme } from '../actions/auth';
 import ChangePasswordForm from './change-password';
 
-import lightBackground from '../media/whiteHoriz.jpg';
-import darkBackground from '../media/laptop.jpg';
+import lightBackground from '../media/laptop.jpg';
+import darkBackground from '../media/deskWhite.jpg';
 
 export class Settings extends React.Component {
 

@@ -7,8 +7,8 @@ import FilterClients from './FilterClients';
 
 import requiresLogin from './requires-login';
 
-import lightBackground from '../media/deskWhite.jpg';
-import darkBackground from '../media/laptop.jpg';
+import lightBackground from '../media/laptop.jpg';
+import darkBackground from '../media/deskWhite.jpg';
 
 
 export class Clients extends React.Component {

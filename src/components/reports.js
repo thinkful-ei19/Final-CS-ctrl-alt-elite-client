@@ -4,8 +4,9 @@ import requiresLogin from './requires-login';
 import Navigation from './navigation';
 import LineGraph from './reportsLineGraph';
 
-import lightBackground from '../media/whiteHoriz.jpg';
-import darkBackground from '../media/laptop.jpg';
+import lightBackground from '../media/laptop.jpg';
+import darkBackground from '../media/deskWhite.jpg';
+
 class Reports extends React.Component {
 
     render() {
