@@ -41,8 +41,8 @@ export class Settings extends React.Component {
             }
         }
         return (
-            <section className="settings">
-                <span className="overlay" style={ sectionStyle }>
+            <section className="settings" style={ sectionStyle }>
+                <span className="overlay">
                     <Navigation/>
                     <div className="settings__change-theme">
                         <h2 className="settings__change-theme__header">Select Theme</h2>

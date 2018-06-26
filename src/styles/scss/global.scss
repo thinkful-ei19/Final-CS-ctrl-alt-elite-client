@@ -63,7 +63,11 @@ svg {
 }
 
 .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     background-image: linear-gradient(to right, rgba($color-overlay, .6), rgba($color-overlay, .6));
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    padding: 1px;
 }

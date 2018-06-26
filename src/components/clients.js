@@ -37,7 +37,7 @@ export class Clients extends React.Component {
         }
         return (
             <section style={ sectionStyle }>
-                <div>
+                <div className="overlay">
                     <Navigation/>
                     <FilterClients user={this.props.currentUser} />
                 </div>
