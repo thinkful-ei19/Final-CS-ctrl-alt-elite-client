@@ -256,7 +256,7 @@ li {
     background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid #E5E8E8;
     border-bottom: 1px solid #E5E8E8;
-    width: 60%;
+    width: 50%;
     display: block;
     transition: all .3s; }
     .login-form__input:focus {
@@ -294,7 +294,7 @@ li {
   text-align: center;
   max-width: 60rem;
   text-transform: uppercase;
-  color: black;
+  color: #616A6B;
   display: inline-block;
   margin-right: 20rem; }
   .calendar__header-row__previous {
@@ -489,15 +489,18 @@ li {
     display: inline-block;
     font-size: 1.8rem;
     vertical-align: middle; }
+  .about__list__item__details {
+    color: #616A6B; }
 
 .whats-new {
   background-color: white;
-  padding: 10rem 40rem; }
+  padding: 20rem 40rem; }
   .whats-new__header {
     text-align: center;
     font-size: 4.2rem;
     font-family: 'Carme', sans-serif;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    line-height: 1.2; }
   .whats-new__left {
     display: inline-block;
     padding-top: 5rem;
@@ -509,6 +512,8 @@ li {
     display: inline-block;
     font-size: 1.8rem;
     vertical-align: middle; }
+  .whats-new__list__item__details {
+    color: #616A6B; }
 
 .about-us {
   background-color: #333;
@@ -754,7 +759,6 @@ li {
   text-align: center; }
 
 .dashboard {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
   height: 100vh; }
 
 .settings {
@@ -762,14 +766,17 @@ li {
   padding: 1rem; }
   .settings__change-theme {
     padding: 1rem;
-    margin-bottom: 5rem;
-    margin-top: 3rem; }
+    margin-bottom: 7rem;
+    margin-top: 11rem; }
     .settings__change-theme__header {
       font-size: 2.4rem; }
     .settings__change-theme__drop-down {
       width: 15rem;
       padding: .5rem 1rem;
-      font-size: 1.8rem; }
+      font-size: 1.8rem;
+      border: 1px solid #f0eeee; }
+    .settings__change-theme__drop-downt:focus {
+      outline: none; }
     .settings__change-theme__option {
       padding: .5rem 1rem;
       font-size: 1.8rem; }
@@ -779,7 +786,11 @@ li {
   .settings__change-password__header {
     font-size: 2.4rem; }
   .settings__change-password__label {
-    font-size: 1.6rem; }
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: .7rem;
+    display: block; }
   .settings__change-password__input {
     font-size: 1.9rem;
     font-family: inherit;
@@ -788,6 +799,8 @@ li {
     margin: 1rem auto;
     background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid #E5E8E8;
-    border-bottom: 1px solid #E5E8E8;
+    border-bottom: 1px solid #D6EAF8;
     display: block;
     transition: all .3s; }
+  .settings__change-password__input:focus {
+    outline: none; }

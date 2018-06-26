@@ -142,11 +142,19 @@
         vertical-align: middle;
 
     }
+
+    &__list{
+        &__item{
+            &__details{
+                color: $color-gray;
+            }
+        }
+    }
 }
 
 .whats-new {
     background-color: white;
-    padding: 10rem 40rem;
+    padding: 20rem 40rem;
 
 
     &__header {
@@ -154,6 +162,7 @@
         font-size: 4.2rem;
         font-family: 'Carme', sans-serif;
         text-transform: uppercase;
+        line-height: 1.2;
     }
 
     &__left {
@@ -170,6 +179,14 @@
         font-size: 1.8rem;
         vertical-align: middle;
 
+    }
+
+    &__list {
+        &__item{
+            &__details{
+                color: $color-gray;
+            }
+        }
     }
 }
 
@@ -223,11 +240,13 @@
             &__github {
                 display: inline-block;
                 margin: 0 .6rem;
+                // background: white;
             }
 
             &__linkedin {
                 display: inline-block;
                 margin: 0 .5rem;
+                // background: white;
             }
         }
     }

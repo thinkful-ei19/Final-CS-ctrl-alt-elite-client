@@ -2,21 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { API_BASE_URL } from '../config';
 import background from '../media/pencil.jpg';
-
-import githubIcon from '../styles/images/github/GitHub-Mark-Light-32px.png';
-import linkedInIcon from '../styles/images/linkedin/In-White-14px.png';
+import githubIcon from '../styles/images/github/github.svg';
+import linkedInIcon from '../styles/images/linkedin/linkedin.svg';
 import Logo from '../media/schedulrLogoSized.png';
 
-// const sectionStyle = {
-//     backgroundSize: "100% 100%",
-//     height: "100VH",
-//     backgroundRepeat: "no-repeat",
-//     backgroundImage: `url(${background})`
-// };
-
+import IconButton from '@material-ui/core/IconButton';
+import SvgIcon from '@material-ui/core/SvgIcon';
 
 export default function LandingPage(props) {
-
     //Wake the heroku server up.
     fetch(`${API_BASE_URL}`, {
         method: 'GET', 
@@ -28,20 +21,10 @@ export default function LandingPage(props) {
 
     return(
         <section className="landing-page">
-            {/* <div className="landing-page">
-                <h1 id="app-name">SCHEDUL-R</h1>
-            
-                <p id="app-description">A simple appointment scheduling app with automated notifications</p>
-                <Link style={{ textDecoration: 'none' }} to="/login">
-                    <button className="btn login-button">GET STARTED</button>
-                </Link>
-            </div> */}
             
             <nav className="nav">
                 <img className="nav__header" />
                <img className="logo" src={Logo}/>
-                <a className="nav__button">Home</a>
-                <a className="nav__button">About</a> 
                 <Link to="/login">
                     <span className="nav__button">Login</span>
                 </Link>
@@ -97,9 +80,11 @@ export default function LandingPage(props) {
                 <h3 className="whats-new__list__item__header"><b className="bold">Schedulr</b> can go wherever your phone goes</h3>
                     <p className="whats-new__list__item__details">Enjoy all of the features <b className="bold">Schedulr</b> has to offer on mobile! Whether you are the one visiting your clients or not, <b className="bold">Schedulr</b> will always be with you.</p>
                 </div>
+                
             </div>
             <div className="about-us">
                 <h4 className="about-us__header">This web application crafted and designed by:</h4>
+
                 <div className="about-us__people">
                     <div className="about-us__person">
                         <ul className="about-us__person__list">
@@ -108,7 +93,8 @@ export default function LandingPage(props) {
                                 <a className="about-us__person__list__portfolio__text" href="http://www.itsjuliek.com" target="blank">Visit her webpage</a>
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__github">
-                                <a href="https://github.com/joulay" target="blank"><img src={githubIcon}/></a>                                                
+                                <a href="https://github.com/joulay" target="blank"><img src={githubIcon}/></a> 
+                                                                               
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__linkedin">
                                 <a href="https://www.linkedin.com/in/joulay/" target="blank"><img style={{width: '28px'}} src={linkedInIcon}/></a>                        

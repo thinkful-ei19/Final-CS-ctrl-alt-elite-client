@@ -13,7 +13,11 @@ import { refreshAuthToken } from './actions/auth';
 import Clients from './components/clients';
 import Settings from './components/settings';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
 
+// library.add(faStroopwafel)
 
 export class App extends React.Component {
     constructor(props) {

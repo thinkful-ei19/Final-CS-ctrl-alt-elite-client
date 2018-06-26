@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Carme");
 .selected-date {
   border-radius: 20%;
   background-image: radial-gradient(rgba(0, 0, 0, 0.1), rgba(201, 201, 201, 0.1)); }
@@ -13,6 +14,9 @@
 
 .current-day {
   color: #3c48a0; }
+
+.bold {
+  color: #2980B9; }
 
 * {
   padding: 0;
@@ -252,7 +256,7 @@ li {
     background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid #1a1919;
     border-bottom: 1px solid #1a1919;
-    width: 60%;
+    width: 50%;
     display: block;
     transition: all .3s; }
     .login-form__input:focus {
@@ -290,7 +294,7 @@ li {
   text-align: center;
   max-width: 60rem;
   text-transform: uppercase;
-  color: white;
+  color: #616A6B;
   display: inline-block;
   margin-right: 20rem; }
   .calendar__header-row__previous {
@@ -322,6 +326,8 @@ li {
   flex-direction: row;
   text-align: left;
   padding: 1rem; }
+  .appointments__select-client {
+    background-color: #E5E8E8; }
   .appointments__edit {
     visibility: hidden; }
   .appointments__delete {
@@ -344,19 +350,17 @@ li {
       color: #999; }
   .appointments__dialog {
     transform: scale(1.3); }
+    .appointments__dialog > * > * > *, .appointments__dialog > * > * > * > * {
+      color: black !important; }
     .appointments__dialog > div:nth-of-type(2) {
-      background-color: #1a1919; }
-    .appointments__dialog__text > h2 {
-      color: white !important; }
-    .appointments__dialog__content > * {
-      color: white !important; }
+      background-color: #E5E8E8; }
   .appointments__text {
     font-size: 1.5rem; }
   .appointments__button {
     font-size: 1rem; }
   .appointments__input * {
     font-size: 1rem;
-    color: white !important; }
+    color: black !important; }
   .appointments__time {
     display: inline-block; }
   .appointments__schedule-li {
@@ -391,6 +395,11 @@ li {
 .landing-page {
   font-family: 'Roboto', sans-serif; }
 
+.logo {
+  max-width: 6%;
+  float: left;
+  margin: -1rem 1rem; }
+
 #app-name {
   font-size: 80px;
   margin-top: 6rem; }
@@ -403,7 +412,7 @@ li {
   height: 95vh; }
 
 .nav {
-  padding: 2rem;
+  padding: 2.7rem;
   text-align: right;
   position: fixed;
   width: 100%;
@@ -417,18 +426,15 @@ li {
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
-    font-family: 'Carter One', cursive; }
+    font-family: sans-serif; }
     .nav__button:hover {
-      color: black; }
+      color: #2980B9; }
     .nav__button:before {
       content: "";
       position: absolute;
       width: 100%;
-      height: 1rem;
-      bottom: 0;
       left: 0;
       background-color: #000;
-      opacity: .3;
       visibility: hidden;
       -webkit-transform: scaleX(0);
       transform: scaleX(0);
@@ -440,29 +446,31 @@ li {
       transform: scale(1); }
 
 .welcome {
-  background-image: url("../images/head.jpg");
+  background-image: url("../images/office.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
   width: 100%; }
   .welcome__screen {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
     width: 100%; }
   .welcome__message {
-    color: white;
-    font-family: 'Candal', cursive;
-    font-size: 3.2rem; }
+    color: #AED6F1;
+    font-family: 'Carme', sans-serif;
+    font-size: 3.7rem; }
     .welcome__message__top {
       position: absolute;
-      margin-top: 30rem;
-      margin-left: 25rem; }
+      text-transform: uppercase;
+      margin-top: 45rem;
+      margin-left: 18rem; }
     .welcome__message__bottom {
       position: absolute;
-      margin-top: 40rem;
-      margin-left: 25rem; }
+      text-transform: uppercase;
+      margin-top: 51rem;
+      margin-left: 19.5rem; }
 
 .about {
   background-color: white;
@@ -474,46 +482,57 @@ li {
     vertical-align: middle; }
   .about__header {
     font-size: 3.2rem;
-    font-family: 'Candal', cursive; }
+    font-family: 'Carme', sans-serif;
+    text-transform: uppercase; }
   .about__right {
     width: 50%;
     display: inline-block;
     font-size: 1.8rem;
     vertical-align: middle; }
+  .about__list__item__details {
+    color: #616A6B; }
 
 .whats-new {
   background-color: white;
-  padding: 10rem 40rem; }
+  padding: 20rem 40rem; }
   .whats-new__header {
     text-align: center;
-    font-size: 3.2rem;
-    font-family: 'Candal', cursive; }
+    font-size: 4.2rem;
+    font-family: 'Carme', sans-serif;
+    text-transform: uppercase;
+    line-height: 1.2; }
   .whats-new__left {
     display: inline-block;
     padding-top: 5rem;
-    width: 50%;
+    width: 40%;
     vertical-align: middle; }
   .whats-new__right {
-    width: 50%;
+    width: 60%;
     padding-top: 5rem;
     display: inline-block;
     font-size: 1.8rem;
     vertical-align: middle; }
+  .whats-new__list__item__details {
+    color: #616A6B; }
 
 .about-us {
   background-color: #333;
   color: white;
-  padding: 5rem; }
+  padding: 15rem; }
   .about-us__header {
     text-align: center;
     font-size: 1.8rem;
-    padding-bottom: 2rem; }
+    padding-bottom: 10rem;
+    font-family: 'Carme', sans-serif;
+    text-transform: uppercase; }
   .about-us__person {
     display: inline-block;
     width: 25%;
-    text-align: center; }
+    text-align: center;
+    font-family: 'Roboto', sans-serif; }
     .about-us__person__list__item {
-      padding: .5rem; }
+      padding: .5rem;
+      line-height: .5; }
     .about-us__person__list__name {
       font-size: 1.8rem; }
     .about-us__person__list__portfolio {
@@ -524,7 +543,7 @@ li {
           text-decoration: underline; }
     .about-us__person__list__github {
       display: inline-block;
-      margin: 0 .5rem; }
+      margin: 0 .6rem; }
     .about-us__person__list__linkedin {
       display: inline-block;
       margin: 0 .5rem; }
@@ -672,6 +691,18 @@ li {
       color: #999;
       font-size: 1.5rem;
       line-height: 1.2; }
+  .client__dialog {
+    transform: scale(1.3); }
+    .client__dialog > div:nth-of-type(2) {
+      background-color: #E5E8E8; }
+    .client__dialog > * > * > *, .client__dialog > * > * > * > * {
+      color: black !important; }
+    .client__dialog__text > h2 {
+      color: black !important; }
+    .client__dialog__content > * {
+      color: black !important; }
+  .client__text {
+    font-size: 1.5rem; }
   .client__edit-form {
     float: right;
     visibility: hidden; }
@@ -728,7 +759,6 @@ li {
   text-align: center; }
 
 .dashboard {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
   height: 100vh; }
 
 .settings {
@@ -736,14 +766,17 @@ li {
   padding: 1rem; }
   .settings__change-theme {
     padding: 1rem;
-    margin-bottom: 5rem;
-    margin-top: 3rem; }
+    margin-bottom: 7rem;
+    margin-top: 11rem; }
     .settings__change-theme__header {
       font-size: 2.4rem; }
     .settings__change-theme__drop-down {
       width: 15rem;
       padding: .5rem 1rem;
-      font-size: 1.8rem; }
+      font-size: 1.8rem;
+      border: 1px solid #f0eeee; }
+    .settings__change-theme__drop-downt:focus {
+      outline: none; }
     .settings__change-theme__option {
       padding: .5rem 1rem;
       font-size: 1.8rem; }
@@ -753,7 +786,11 @@ li {
   .settings__change-password__header {
     font-size: 2.4rem; }
   .settings__change-password__label {
-    font-size: 1.6rem; }
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: .7rem;
+    display: block; }
   .settings__change-password__input {
     font-size: 1.9rem;
     font-family: inherit;
@@ -762,6 +799,8 @@ li {
     margin: 1rem auto;
     background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid #1a1919;
-    border-bottom: 1px solid #1a1919;
+    border-bottom: 1px solid #000036;
     display: block;
     transition: all .3s; }
+  .settings__change-password__input:focus {
+    outline: none; }

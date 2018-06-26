@@ -4,8 +4,8 @@
     
     &__change-theme {
         padding: 1rem;
-        margin-bottom: 5rem;
-        margin-top: 3rem;
+        margin-bottom: 7rem;
+        margin-top: 11rem;
 
         &__header {
             font-size: 2.4rem;
@@ -14,7 +14,11 @@
         &__drop-down {
             width: 15rem;
             padding: .5rem 1rem;
-            font-size: 1.8rem;            
+            font-size: 1.8rem; 
+            border: 1px solid $color-grey-light-3;           
+        }
+        &__drop-downt:focus{
+            outline: none;
         }
 
         &__option {
@@ -35,7 +39,11 @@
         }
 
         &__label {
-            font-size: 1.6rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-left: 2rem;
+            margin-top: .7rem;
+            display: block;
         }
 
         &__input {
@@ -46,9 +54,13 @@
             margin: 1rem auto;
             background-color: rgba($color-white, .5);
             border: 1px solid $color-five;
-            border-bottom: 1px solid $color-five;
+            border-bottom: 1px solid $color-one;
             display: block;
             transition: all .3s;
+        }
+
+        &__input:focus{
+                outline: none;
         }
     }
 }
