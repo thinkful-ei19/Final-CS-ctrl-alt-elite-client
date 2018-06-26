@@ -6,12 +6,12 @@
 }
 
 .appointment-date {
-    color: #E74C3C;
+    color: $color-upcoming-date;
     // background-color: #aaa;
 }
 
 .previous-appointment-date {
-    color: #7FB3D5;
+    color: $color-previous-date;;
 }
 
 .other-month-date {
@@ -20,4 +20,8 @@
 
 .current-day {
     color: $color-purple;
+}
+
+.bold {
+    color: $color-schedulr-name;
 }
