@@ -6,8 +6,8 @@ import requiresLogin from './requires-login';
 import { changeTheme } from '../actions/auth';
 import ChangePasswordForm from './change-password';
 
-import lightBackground from '../media/whiteHoriz.jpg';
-import darkBackground from '../media/laptop.jpg';
+import lightBackground from '../media/laptop.jpg';
+import darkBackground from '../media/deskWhite.jpg';
 
 export class Settings extends React.Component {
 
@@ -41,8 +41,8 @@ export class Settings extends React.Component {
             }
         }
         return (
-            <section className="settings">
-                <span className="overlay" style={ sectionStyle }>
+            <section className="settings" style={ sectionStyle }>
+                <span className="overlay">
                     <Navigation/>
                     <div className="settings__change-theme">
                         <h2 className="settings__change-theme__header">Select Theme</h2>

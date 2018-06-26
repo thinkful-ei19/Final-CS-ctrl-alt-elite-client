@@ -4,8 +4,8 @@ import requiresLogin from './requires-login';
 import Navigation from './navigation';
 import LineGraph from './reportsLineGraph';
 
-import lightBackground from '../media/whiteHoriz.jpg';
-import darkBackground from '../media/darkMountain.jpg';
+import lightBackground from '../media/laptop.jpg';
+import darkBackground from '../media/deskWhite.jpg';
 
 class Reports extends React.Component {
 
@@ -28,11 +28,13 @@ class Reports extends React.Component {
 
         return (
             <section style={ sectionStyle }>
-                <div className="report">
-                    <Navigation />
-                    <h1 className="report__title">Annual Report</h1>
-                    <LineGraph user={this.props.currentUser}/>
-                </div>
+                <span className="overlay">
+                    <div className="report">
+                        <Navigation />
+                        <h1 className="report__title">Annual Report</h1>
+                        <LineGraph user={this.props.currentUser}/>
+                    </div>
+                </span>
             </section>
         );
     }
