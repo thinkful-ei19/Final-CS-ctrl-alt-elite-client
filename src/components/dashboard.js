@@ -11,7 +11,7 @@ import background from '../media/whiteHoriz.jpg';
 import requiresLogin from './requires-login';
 // import AptForm from './AptForm';
 import lightBackground from '../media/whiteHoriz.jpg';
-import darkBackground from '../media/darkMountain.jpg';
+import darkBackground from '../media/laptop.jpg';
 import oceanBackground from '../media/wB.jpg'; 
 
 export class Dashboard extends React.Component {
