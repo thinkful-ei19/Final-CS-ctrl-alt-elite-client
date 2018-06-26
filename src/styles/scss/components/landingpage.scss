@@ -159,6 +159,11 @@
     background-color: white;
     height: 70vh;
     padding: 20rem 40rem;
+    @include respond(tab-port) {
+        background-color: white;
+        height: 70vh;
+        padding: 0;
+    }
 
     &__left {
         display: inline-block;
@@ -170,6 +175,9 @@
         font-size: 3.2rem;
         font-family: 'Carme', sans-serif;
         text-transform: uppercase;
+        @include respond(tab-port) {
+            font-size: 4rem;
+        }
     }
 
     &__right {
@@ -192,7 +200,10 @@
 .whats-new {
     background-color: white;
     padding: 20rem 40rem;
-
+    @include respond(tab-port) {
+        background-color: white;
+        padding: 0;
+    }
 
     &__header {
         text-align: center;

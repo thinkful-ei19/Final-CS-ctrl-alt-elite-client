@@ -507,6 +507,11 @@ li {
   background-color: white;
   height: 70vh;
   padding: 20rem 40rem; }
+  @media (max-width: 60em) {
+    .about {
+      background-color: white;
+      height: 70vh;
+      padding: 0; } }
   .about__left {
     display: inline-block;
     width: 50%;
@@ -515,6 +520,9 @@ li {
     font-size: 3.2rem;
     font-family: 'Carme', sans-serif;
     text-transform: uppercase; }
+    @media (max-width: 60em) {
+      .about__header {
+        font-size: 4rem; } }
   .about__right {
     width: 50%;
     display: inline-block;
@@ -526,6 +534,10 @@ li {
 .whats-new {
   background-color: white;
   padding: 20rem 40rem; }
+  @media (max-width: 60em) {
+    .whats-new {
+      background-color: white;
+      padding: 0; } }
   .whats-new__header {
     text-align: center;
     font-size: 4.2rem;
