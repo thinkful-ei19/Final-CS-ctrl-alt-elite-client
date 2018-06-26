@@ -773,7 +773,8 @@ li {
     .settings__change-theme__drop-down {
       width: 15rem;
       padding: .5rem 1rem;
-      font-size: 1.8rem; }
+      font-size: 1.8rem;
+      border: 1px solid #f0eeee; }
     .settings__change-theme__option {
       padding: .5rem 1rem;
       font-size: 1.8rem; }
@@ -799,3 +800,5 @@ li {
     border-bottom: 1px solid #D6EAF8;
     display: block;
     transition: all .3s; }
+  .settings__change-password__input:focus {
+    outline: none; }

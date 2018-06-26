@@ -14,7 +14,8 @@
         &__drop-down {
             width: 15rem;
             padding: .5rem 1rem;
-            font-size: 1.8rem;            
+            font-size: 1.8rem; 
+            border: 1px solid $color-grey-light-3;           
         }
 
         &__option {
@@ -53,6 +54,12 @@
             border-bottom: 1px solid $color-one;
             display: block;
             transition: all .3s;
+        }
+
+        &__input:focus{
+                outline: none;
+
+    
         }
     }
 }
