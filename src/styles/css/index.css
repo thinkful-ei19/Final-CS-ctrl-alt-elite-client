@@ -396,66 +396,20 @@ svg {
 .schedule-li {
   font-size: 15px; }
 
-@media screen and (min-width: 320px) {
-  .nav {
-    padding: 2.7rem;
-    text-align: right;
-    position: fixed;
-    width: 100%;
-    background-image: linear-gradient(to right, rgba(51, 51, 51, 0.9), rgba(51, 51, 51, 0.9));
-    text-transform: uppercase; }
-    .nav__button {
-      padding: 1.5rem;
-      margin: 0 2.5rem;
-      cursor: pointer;
-      position: relative;
-      color: white;
-      text-decoration: none;
-      font-size: 1.5rem;
-      font-family: sans-serif; }
-      .nav__button:hover {
-        color: #2980B9; }
-      .nav__button:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        left: 0;
-        background-color: #000;
-        visibility: hidden;
-        -webkit-transform: scaleX(0);
-        transform: scaleX(0);
-        -webkit-transition: all 0.3s ease-in-out 0s;
-        transition: all 0.3s ease-in-out 0s; }
-      .nav__button:hover:before {
-        visibility: visible;
-        -webkit-transform: scale(1);
-        transform: scale(1); } }
-
-@media screen and (min-width: 640px) {
-  .instructions {
-    background-color: #616161;
-    color: #f0f0f0;
-    text-align: center;
-    margin: auto;
-    width: 100%;
-    padding: 2px 0px; } }
-
-@media screen and (min-width: 960px) {
-  .instructions {
-    background-color: #616161;
-    color: #f0f0f0;
-    text-align: center;
-    margin: auto;
-    width: 100%;
-    padding: 2px 0px; } }
-
-.landing-page {
-  font-family: 'Roboto', sans-serif; }
-
 .logo {
   max-width: 6%;
   float: left;
   margin: -1rem 1rem; }
+  @media (max-width: 60em) {
+    .logo {
+      max-width: 9%; } }
+  @media (max-width: 25em) {
+    .logo {
+      max-width: 17%;
+      margin: 0rem 0rem; } }
+
+.landing-page {
+  font-family: 'Roboto', sans-serif; }
 
 #app-name {
   font-size: 80px;
@@ -467,6 +421,44 @@ svg {
 .head {
   background-color: #F4F4F4;
   height: 95vh; }
+
+.nav {
+  padding: 2.7rem;
+  text-align: right;
+  position: fixed;
+  width: 100%;
+  background-image: linear-gradient(to right, rgba(51, 51, 51, 0.9), rgba(51, 51, 51, 0.9));
+  text-transform: uppercase; }
+  .nav__button {
+    padding: 1.5rem;
+    margin: 0 2.5rem;
+    cursor: pointer;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: sans-serif; }
+    @media (max-width: 25em) {
+      .nav__button {
+        font-size: 2.5rem;
+        margin: 0rem 0.5rem; } }
+    .nav__button:hover {
+      color: #2980B9; }
+    .nav__button:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      left: 0;
+      background-color: #000;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s; }
+    .nav__button:hover:before {
+      visibility: visible;
+      -webkit-transform: scale(1);
+      transform: scale(1); }
 
 .welcome {
   background-image: url("../images/office.jpg");
@@ -487,13 +479,33 @@ svg {
     .welcome__message__top {
       position: absolute;
       text-transform: uppercase;
-      margin-top: 45rem;
-      margin-left: 18rem; }
+      margin-top: 30rem;
+      margin-left: 5rem; }
+      @media (max-width: 60em) {
+        .welcome__message__top {
+          margin-top: 27rem;
+          margin-left: 3rem;
+          font-size: 5rem; } }
+      @media (max-width: 25em) {
+        .welcome__message__top {
+          margin-top: 15rem;
+          margin-left: 5rem;
+          font-size: 4rem; } }
     .welcome__message__bottom {
       position: absolute;
       text-transform: uppercase;
-      margin-top: 51rem;
-      margin-left: 19.5rem; }
+      margin-top: 40rem;
+      margin-left: 10.5rem; }
+      @media (max-width: 60em) {
+        .welcome__message__bottom {
+          margin-top: 35rem;
+          margin-left: 8.5rem;
+          font-size: 5rem; } }
+      @media (max-width: 25em) {
+        .welcome__message__bottom {
+          margin-top: 20rem;
+          margin-left: 5rem;
+          font-size: 4rem; } }
 
 .about {
   background-color: white;
