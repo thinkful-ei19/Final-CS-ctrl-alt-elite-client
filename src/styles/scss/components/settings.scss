@@ -17,6 +17,9 @@
             font-size: 1.8rem; 
             border: 1px solid $color-grey-light-3;           
         }
+        &__drop-downt:focus{
+            outline: none;
+        }
 
         &__option {
             padding: .5rem 1rem;
@@ -58,8 +61,6 @@
 
         &__input:focus{
                 outline: none;
-
-    
         }
     }
 }

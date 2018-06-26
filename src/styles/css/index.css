@@ -775,6 +775,8 @@ li {
       padding: .5rem 1rem;
       font-size: 1.8rem;
       border: 1px solid #f0eeee; }
+    .settings__change-theme__drop-downt:focus {
+      outline: none; }
     .settings__change-theme__option {
       padding: .5rem 1rem;
       font-size: 1.8rem; }
