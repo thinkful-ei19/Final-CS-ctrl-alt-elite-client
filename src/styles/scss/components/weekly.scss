@@ -104,8 +104,8 @@
                         display: flex;
                         align-items: center;
                         &:nth-of-type(1) { //Column
-                            color: $color-gray;
-                         }                    
+                            color: $color-calendar;
+                        }                    
                     }
 
                     &__time {
@@ -130,9 +130,11 @@
 
         &__client {
             cursor: pointer;
+            color: $color-calendar;
 
             &:hover {
-                text-decoration: underline;
+                color: $color-highlight;
+                text-decoration: none;
             }
         }
     }

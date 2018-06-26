@@ -650,9 +650,11 @@ svg {
     font-size: 1.25rem;
     text-align: center; }
   .weekly-view__appointment__client {
-    cursor: pointer; }
+    cursor: pointer;
+    color: #616A6B; }
     .weekly-view__appointment__client:hover {
-      text-decoration: underline; }
+      color: #AED6F1;
+      text-decoration: none; }
 
 .report {
   color: #616A6B;
