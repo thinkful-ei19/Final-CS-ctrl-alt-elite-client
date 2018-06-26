@@ -7,7 +7,7 @@ import FilterClients from './FilterClients';
 
 import requiresLogin from './requires-login';
 
-import lightBackground from '../media/whiteHoriz.jpg';
+import lightBackground from '../media/deskWhite.jpg';
 import darkBackground from '../media/laptop.jpg';
 
 

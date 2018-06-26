@@ -61,3 +61,9 @@ li {
 svg {
     color: $color-font;
 }
+
+.overlay {
+    background-image: linear-gradient(to right, rgba($color-overlay, .6), rgba($color-overlay, .6));
+    width: 100vw;
+    height: 100vh;
+}

@@ -70,6 +70,11 @@ li {
 svg {
   color: #424949; }
 
+.overlay {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6));
+  width: 100vw;
+  height: 100vh; }
+
 .btn {
   float: center; }
   .btn, .btn:link, .btn:visited {
@@ -266,6 +271,7 @@ svg {
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid #faf9f9;
+    width: 50%;
     display: block;
     transition: all .3s; }
     .login-form__input:focus {

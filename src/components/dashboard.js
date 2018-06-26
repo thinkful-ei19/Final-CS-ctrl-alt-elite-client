@@ -10,7 +10,7 @@ import WeeklyView from './weekly-view'
 import background from '../media/whiteHoriz.jpg';
 import requiresLogin from './requires-login';
 // import AptForm from './AptForm';
-import lightBackground from '../media/whiteHoriz.jpg';
+import lightBackground from '../media/deskSide.jpg';
 import darkBackground from '../media/laptop.jpg';
 import oceanBackground from '../media/wB.jpg'; 
 
