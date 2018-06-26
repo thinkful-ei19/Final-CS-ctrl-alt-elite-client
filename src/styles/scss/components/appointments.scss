@@ -28,6 +28,8 @@
     
     &__list {
         margin-right: 10rem;
+        max-width: 15rem;
+        overflow-wrap: break-word;
 
         &__time {
             color: $color-purple;
