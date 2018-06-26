@@ -484,7 +484,7 @@ li {
           font-size: 5rem; } }
       @media (max-width: 25em) {
         .welcome__message__top {
-          margin-top: 15rem;
+          margin-top: 28rem;
           margin-left: 5rem;
           font-size: 4rem; } }
     .welcome__message__bottom {
@@ -499,8 +499,8 @@ li {
           font-size: 5rem; } }
       @media (max-width: 25em) {
         .welcome__message__bottom {
-          margin-top: 20rem;
-          margin-left: 5rem;
+          margin-top: 33rem;
+          margin-left: 8rem;
           font-size: 4rem; } }
 
 .about {
