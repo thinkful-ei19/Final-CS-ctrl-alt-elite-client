@@ -14,6 +14,13 @@
     display: inline-block;
     margin-right: 20rem;
 
+    &__toggle {
+        
+        @include respond(large-phone) {
+            visibility: hidden;
+        }
+    }
+
     &__header-row {
 
         &__previous {
