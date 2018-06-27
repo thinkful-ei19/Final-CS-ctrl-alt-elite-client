@@ -162,7 +162,7 @@
     @include respond(tab-port) {
         background-color: white;
         height: 70vh;
-        padding: 0;
+        padding: 30px 50px;
     }
 
     &__left {
@@ -175,9 +175,25 @@
         font-size: 3.2rem;
         font-family: 'Carme', sans-serif;
         text-transform: uppercase;
-        @include respond(tab-port) {
-            font-size: 4rem;
+
+        &__first {
+            @include respond(tab-port) {
+                font-size: 4rem;
+            }
         }
+
+        &__second {
+            @include respond(tab-port) {
+                font-size: 4rem;
+            }
+        }
+
+        &__third {
+            @include respond(tab-port) {
+                font-size: 4rem;
+            }
+        }
+
     }
 
     &__right {
@@ -197,12 +213,21 @@
     }
 }
 
+.phone-image {
+    width: 70%;
+    @include respond(tab-port) {
+        width: 55%;
+        margin-left: 8rem;
+    }
+}
+
 .whats-new {
     background-color: white;
     padding: 20rem 40rem;
     @include respond(tab-port) {
         background-color: white;
         padding: 0;
+        padding-bottom: 10rem;
     }
 
     &__header {
@@ -211,6 +236,9 @@
         font-family: 'Carme', sans-serif;
         text-transform: uppercase;
         line-height: 1.2;
+        @include respond(tab-port) {
+            font-size: 3rem;
+        }
     }
 
     &__left {
@@ -218,6 +246,9 @@
         padding-top: 5rem;
         width: 40%;
         vertical-align: middle;
+        @include respond(tab-port) {
+            padding-top: 4rem;
+        }
     }
     
     &__right {
@@ -226,7 +257,9 @@
         display: inline-block;
         font-size: 1.8rem;
         vertical-align: middle;
-
+        @include respond(tab-port) {
+            padding: 0;
+        }
     }
 
     &__list {
@@ -249,6 +282,9 @@
         padding-bottom: 10rem;
         font-family: 'Carme', sans-serif;
         text-transform: uppercase;
+        @include respond(tab-port) {
+            padding-bottom: 8rem;
+        }
     }
 
     &__people {
@@ -270,7 +306,9 @@
 
             &__name {
                 font-size: 1.8rem;
-                
+                @include respond(tab-port) {
+                    line-height: 1;
+                }
             }
 
             &__portfolio {
