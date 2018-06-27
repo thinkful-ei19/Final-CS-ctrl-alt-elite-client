@@ -1058,6 +1058,9 @@ svg {
   .client:hover .client__edit-form, .client:hover .client__delete-form {
     visibility: visible; }
 
+.client-list-div {
+  text-align: center; }
+
 .add-client-button-flexbox {
   display: flex;
   justify-content: flex-end; }
@@ -1078,7 +1081,7 @@ svg {
   .search__input {
     font-family: inherit;
     font-size: inherit;
-    color: white;
+    color: #424949;
     background-color: #fff;
     border: none;
     padding: 1.7rem 1.5rem;
