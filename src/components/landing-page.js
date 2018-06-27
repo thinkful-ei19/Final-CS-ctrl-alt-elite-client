@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { API_BASE_URL } from '../config';
-import background from '../media/pencil.jpg';
 import githubIcon from '../styles/images/github/githubwhite.png';
 import linkedInIcon from '../styles/images/linkedin/linkedin.svg';
 import Logo from '../media/schedulrLogoSized.png';
