@@ -5,12 +5,14 @@ import {
     AUTH_SUCCESS,
     AUTH_ERROR
 } from '../actions/auth';
+import { USERNAME_TAKEN } from '../actions/register';
 
 const initialState = {
     authToken: null, // authToken !== null does not mean it has been validated
     currentUser: null,
     loading: false,
-    error: null
+    error: null,
+    usernameTaken: false
 };
 
 export default function reducer(state = initialState, action) {
@@ -38,6 +40,10 @@ export default function reducer(state = initialState, action) {
             loading: false,
             error: action.error
         });
+    } else if (action.type === USERNAME_TAKEN) {
+        return Object.assign({}, state, {
+            usernameTaken: true
+        })
     }
 
     return state;

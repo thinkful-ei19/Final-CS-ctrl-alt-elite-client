@@ -11,6 +11,11 @@
     color: $color-gray;
     // float: right;
 
+    &__message {
+        color: red;
+        font-size: 2rem;
+    }
+
     &__input {
         font-size: 1.9rem;
         font-family: inherit;
