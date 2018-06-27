@@ -18,6 +18,10 @@
         margin: 11rem auto 7rem auto;
         text-align: center;
 
+        @include respond(phone-land) {
+            margin: 2rem auto;
+        }
+
         &__header {
             font-size: 2.4rem;
         }
@@ -87,3 +91,4 @@
         }
     }
 }
+

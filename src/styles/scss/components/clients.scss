@@ -14,6 +14,13 @@
     margin: 10rem auto;
     transform: scale(1.4);
     width: 30%;
+
+    @include respond(phone-land) {
+        display: inline-block;
+    }
+    @include respond(phone) {
+        width: 50%;
+    }
 }
 
 .client-list-div {
@@ -116,10 +123,17 @@
     justify-content: center;
     margin-top: 12.5rem;
 
+    @include respond(phone-land) {
+        display: inline-block;
+        margin-left: 2rem;
+        margin-right: 10rem;
+        vertical-align: top;
+    }
+
     &__input {
         font-family: inherit;
         font-size: inherit;
-        color: inherit;
+        color: $color-font-opposite;
         background-color: $color-white;
         border: none;
         padding: 1.7rem 1.5rem;
@@ -127,10 +141,19 @@
         width: 20%;
         transition: all .2s;
         margin-right: -3.25rem;
+
+        @include respond(tab-land) {
+            font-size: 1.8rem;
+            width: 30rem;
+        }
+
         &:focus {
             outline: none;
             width: 25%;
             background-color: $color-white;
+            @include respond(tab-land) {
+                width: 35rem;
+            }
         }
         &::-webkit-input-placeholder {
             font-weight: 100;
