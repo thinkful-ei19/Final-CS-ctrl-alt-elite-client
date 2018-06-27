@@ -31,9 +31,7 @@
 
 .client {
     padding: 1rem;
-    @include respond(small-phone){
-        padding: .1rem;
-    }
+
     &__list {
         display: inline-block;
 
