@@ -43,7 +43,7 @@
         overflow-y: auto;
         overflow-x: hidden;
         overflow-wrap: break-word;
-
+        text-align: left;
         @include respond(tab-land) {
             height: 70vh;
         }

@@ -913,7 +913,8 @@ svg {
     height: 70vh;
     overflow-y: auto;
     overflow-x: hidden;
-    overflow-wrap: break-word; }
+    overflow-wrap: break-word;
+    text-align: left; }
     @media (max-width: 85.375em) {
       .report__list {
         height: 70vh; } }
