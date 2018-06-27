@@ -168,6 +168,9 @@
     background-color: white;
     height: 70vh;
     padding: 20rem 40rem;
+    @include respond(tab-land) {
+        padding: 50px 50px 0px 50px;   
+    }
     @include respond(tab-port) {
         background-color: white;
         height: 70vh;
@@ -269,8 +272,14 @@
 }
 
 .whats-new {
+    display: block;
     background-color: white;
     padding: 20rem 40rem;
+
+    @include respond(tab-land) {
+        padding: 0rem 5rem 5rem 5rem;
+    }
+
     @include respond(tab-port) {
         background-color: white;
         padding: 0;
@@ -325,6 +334,16 @@
     background-color: #333;
     color: white;
     padding: 15rem;
+    display: block;
+
+    @include respond(tab-land) {
+        padding: 10rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 5rem;
+    }
+
     @include respond(small-phone) {   
         padding: 5rem 2rem;  
     }
@@ -381,7 +400,10 @@
                         text-decoration: underline;
                     }
                 }
-
+                @include respond(tab-land) {
+                    font-size: 2.4rem;
+                    line-height: 1.3;
+                }
                 @include respond(phone) {
                     font-size: 2.4rem;
                     line-height: 1.3;

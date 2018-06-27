@@ -8,6 +8,19 @@
     text-align: left;
     padding: 1rem;
 
+    &__schedule-list {
+
+        @include respond(phone-land) {
+            height: 50vh;
+            overflow-y: auto;
+        }
+
+        @include respond(phone) {
+            height: 33vh;
+            overflow-y: auto;
+        }
+    }
+
     &__select-client {
         background-color: $color-form;
     }
@@ -52,6 +65,14 @@
 
     &__dialog {
         transform: scale(1.3);       
+
+        @include respond(phone-land) {
+            transform: scale(1);
+        }
+
+        @include respond(phone) {
+            transform: scale(1.2);
+        }
 
         & > * > * > *, & > * > * > * > * {
             color: $color-form-font !important;
