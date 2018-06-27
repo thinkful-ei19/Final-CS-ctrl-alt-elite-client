@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link, Redirect } from 'react-router-dom';
 import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, CartesianGrid } from 'recharts';
 import moment from 'moment';
+import SvgIcon from '@material-ui/core/SvgIcon';
 
 
 export default class LineGraph extends React.Component{
@@ -21,12 +23,12 @@ export default class LineGraph extends React.Component{
 
     handleBackClick() {
         this.setState({
-            name: '',
             click: false
         });
     }
 
 	render () {
+        console.log(this.state);
            let apptInfo = []; 
            let janCount = 0;
            let febCount = 0;
@@ -98,6 +100,7 @@ export default class LineGraph extends React.Component{
            );
        });
 
+       console.log(apptDataList);
     
        const data = [
         {name: 'JAN', appointments: janCount},
@@ -115,9 +118,45 @@ export default class LineGraph extends React.Component{
     ]
 
     const apptPercentage = Math.floor((apptInfo.length / totalAppointmentsForUser) * 100);
-
+            if(this.state.click === true && apptDataList.length === 0) {
+                return (
+                    <div className="report__right">
+                    <Link className="register__back-button" to="/reports">
+                        <SvgIcon onClick={() => this.handleBackClick()}>
+                            <path xmlns="http://www.w3.org/2000/svg" d="M20,11H6.83l2.88-2.88c0.39-0.39,0.39-1.02,0-1.41l0,0c-0.39-0.39-1.02-0.39-1.41,0l-4.59,4.59 c-0.39,0.39-0.39,1.02,0,1.41l4.59,4.59c0.39,0.39,1.02,0.39,1.41,0l0,0c0.39-0.39,0.39-1.02,0-1.41L6.83,13H20c0.55,0,1-0.45,1-1 v0C21,11.45,20.55,11,20,11z"/>
+                        </SvgIcon>
+                    </Link>
+                        <div className="report__center">
+                            <h1>Monthly Appointments History</h1>
+                            <h3>There were no appointments during the month of {this.state.name}</h3>
+                        </div>
+                    </div>
+                )
+            }
+            if(this.state.click === true) {
+                return (
+                    <div className="report__right">
+                    <Link className="register__back-button" to="/reports">
+                        <SvgIcon onClick={() => this.handleBackClick()}>
+                            <path xmlns="http://www.w3.org/2000/svg" d="M20,11H6.83l2.88-2.88c0.39-0.39,0.39-1.02,0-1.41l0,0c-0.39-0.39-1.02-0.39-1.41,0l-4.59,4.59 c-0.39,0.39-0.39,1.02,0,1.41l4.59,4.59c0.39,0.39,1.02,0.39,1.41,0l0,0c0.39-0.39,0.39-1.02,0-1.41L6.83,13H20c0.55,0,1-0.45,1-1 v0C21,11.45,20.55,11,20,11z"/>
+                        </SvgIcon>
+                    </Link>
+                        <div className="report__center">
+                            <h1>Monthly Appointments History</h1>
+                            <h2>{this.state.name}</h2> 
+                            <h3>{apptPercentage}% of your appointments were from {this.state.name}</h3>
+                            <ul className="report__list">
+                                {apptDataList}
+                            </ul>
+                        </div>
+                    </div>
+                )
+            }
             return(
                 <div>
+                    <div>
+                    <p className="report__message">Click graph to see appointment history</p>
+                    </div>
                     <ResponsiveContainer minWidth={420} minHeight={300} maxWidth={1960} maxHeight={1280} className="linechart report__left">
                         <LineChart 
                             // width={900} 
@@ -148,19 +187,6 @@ export default class LineGraph extends React.Component{
                             }}/>
                         </LineChart>
                     </ResponsiveContainer>
-                    <div className="report__right">
-                        {/* <button 
-                            className="btn login-button"
-                            onClick={() => this.handleBackClick()}>Back</button> */}
-
-                        <h1>Monthly Appointments History</h1>
-                        <p className="report__message">Click graph to see appointment history</p>
-                        <h2>{this.state.name}</h2> 
-                        <h3>{apptPercentage}% of your appointments were from {this.state.name}</h3>
-                        <ul className="report__list">
-                            {apptDataList}
-                        </ul>
-                    </div>
                  </div>
              );
         // }
