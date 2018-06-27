@@ -13,6 +13,9 @@
     @if $breakpoint == phone {
         @media (max-width: 40em) { @content }; //640px / 16 = 40em
     }
+    @if $breakpoint == phone-land {
+        @media(max-width: 60em) and (max-height: 40em) { @content };
+    }
     @if $breakpoint == large-phone {
         @media (max-width: 45em) { @content };
     }
