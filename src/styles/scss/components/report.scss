@@ -12,11 +12,10 @@
     }
 
     &__left {
-        vertical-align: top;
         display: block;
         margin-top: 8rem;
         margin-left: 0rem;
-        
+
         @include respond(phone-land) {
             margin-top: 0rem;
         }
@@ -43,7 +42,7 @@
         overflow-y: auto;
         overflow-x: hidden;
         overflow-wrap: break-word;
-
+        text-align: left;
         @include respond(tab-land) {
             height: 70vh;
         }

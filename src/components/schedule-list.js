@@ -37,8 +37,10 @@ function ScheduleList(props) {
               <li className="appointments__list__email">{apt.client.email}</li>
               <li className="appointments__list__notes">{apt.notes}</li>
             </ul>
-          <EditForm aptTime={moment(apt.time).format('YYYY MM DD HH mm')} aptInfo={apt} aptId={apt.id} />
-          <ConfirmDelete aptId={apt.id} />
+            <div className="appointments__list__options">
+              <EditForm aptTime={moment(apt.time).format('YYYY MM DD HH mm')} aptInfo={apt} aptId={apt.id} />
+              <ConfirmDelete aptId={apt.id} />
+            </div>
         </div>
       //   } />
       // </ListItem>
@@ -47,6 +49,7 @@ function ScheduleList(props) {
     if (buildList.length === 0) {
       return (
         <div >
+          <AptForm />
           <List component="nav">
             <span className="appointments__message">No Appointments</span>
           </List>
@@ -64,6 +67,7 @@ function ScheduleList(props) {
   } catch(err){
     return (
       <div >
+        <AptForm />
         <List component="nav">
           <span>No Appointments</span>
         </List>
