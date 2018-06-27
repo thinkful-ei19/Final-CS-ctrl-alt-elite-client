@@ -916,4 +916,5 @@ svg {
       outline: none; }
     .settings__change-password__button {
       display: block;
-      margin: 2rem auto; }
+      margin: 2rem auto;
+      color: #3c48a0; }
