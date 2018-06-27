@@ -74,18 +74,23 @@
 
     &__add-form {
         margin-right: 2.75rem;
+        @include respond(small-phone) {
+            margin-right:-1.7rem;
+        }
     }
 
     &__edit-form {
         float: right;
         visibility: hidden;
-        // display: inline-block;
     }
+    
 
     &__delete-form {
         float: right;
         visibility: hidden;
-        // display: inline-block;
+        @include respond(small-phone) {
+            margin-right:1.5rem;
+        }
     }
 
     &:hover {

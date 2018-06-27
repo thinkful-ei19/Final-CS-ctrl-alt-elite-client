@@ -962,12 +962,18 @@ svg {
     font-size: 1.5rem; }
   .client__add-form {
     margin-right: 2.75rem; }
+    @media (max-width: 25em) {
+      .client__add-form {
+        margin-right: -1.7rem; } }
   .client__edit-form {
     float: right;
     visibility: hidden; }
   .client__delete-form {
     float: right;
     visibility: hidden; }
+    @media (max-width: 25em) {
+      .client__delete-form {
+        margin-right: 1.5rem; } }
   .client:hover .client__edit-form, .client:hover .client__delete-form {
     visibility: visible; }
 
