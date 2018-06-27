@@ -1,19 +1,31 @@
 .report {
     color: $color-font;
     padding: 0 2rem;
-    margin-top: 5rem;
+    margin-top: 2rem;
+
+    @include respond(phone-land) {
+        margin-top: 0rem;
+        margin-left: -8rem;
+    }
+    @include respond(phone) {
+        margin-left: -10rem;
+    }
 
     &__left {
         vertical-align: top;
-        display: inline-block;
-        width: 62.5%;
-        margin-top: 10rem;
+        display: block;
+        margin-top: 8rem;
         margin-left: 0rem;
+        
+        @include respond(phone-land) {
+            margin-top: 0rem;
+        }
     }
 
     &__right {
-        display: inline-block;
-        width: 20%;
+        display: block;
+        margin: 0 auto;
+        width: 40%;
 
         @include respond(tab-land) {
             display: block;
@@ -27,15 +39,22 @@
     }
 
     &__list {
-        height: 55vh;
+        height: 35vh;
         overflow-y: auto;
         overflow-x: hidden;
         overflow-wrap: break-word;
-        max-width: 30rem;
+
+        @include respond(tab-land) {
+            height: 30vh;
+        }
+        @include respond(phone-land) {
+            margin-top: 0rem;
+            display: inline-block;
+        }
     }
 
     &__list-block {
-        padding: 1rem 0;
+        padding: 1rem 1rem;
     }
 
     &__list-item {

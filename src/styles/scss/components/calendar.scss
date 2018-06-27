@@ -58,6 +58,9 @@
                 font-size: 2rem;
                 min-width: 20rem;
             }
+            @include respond(phone) {
+                margin-top: 4rem;
+            }
             
         }
     }

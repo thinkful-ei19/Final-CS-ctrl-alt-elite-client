@@ -370,6 +370,9 @@ svg {
         margin: 0;
         font-size: 2rem;
         min-width: 20rem; } }
+    @media (max-width: 40em) {
+      .calendar__header-row__header {
+        margin-top: 4rem; } }
   .calendar__days__day {
     display: inline-block;
     width: 14.2%;
@@ -872,16 +875,26 @@ svg {
 .report {
   color: white;
   padding: 0 2rem;
-  margin-top: 5rem; }
+  margin-top: 2rem; }
+  @media (max-width: 60em) and (max-height: 40em) {
+    .report {
+      margin-top: 0rem;
+      margin-left: -8rem; } }
+  @media (max-width: 40em) {
+    .report {
+      margin-left: -10rem; } }
   .report__left {
     vertical-align: top;
-    display: inline-block;
-    width: 62.5%;
-    margin-top: 10rem;
+    display: block;
+    margin-top: 8rem;
     margin-left: 0rem; }
+    @media (max-width: 60em) and (max-height: 40em) {
+      .report__left {
+        margin-top: 0rem; } }
   .report__right {
-    display: inline-block;
-    width: 20%; }
+    display: block;
+    margin: 0 auto;
+    width: 40%; }
     @media (max-width: 85.375em) {
       .report__right {
         display: block; } }
@@ -890,13 +903,19 @@ svg {
     font-size: 2.5rem;
     margin-bottom: 5rem; }
   .report__list {
-    height: 55vh;
+    height: 35vh;
     overflow-y: auto;
     overflow-x: hidden;
-    overflow-wrap: break-word;
-    max-width: 30rem; }
+    overflow-wrap: break-word; }
+    @media (max-width: 85.375em) {
+      .report__list {
+        height: 30vh; } }
+    @media (max-width: 60em) and (max-height: 40em) {
+      .report__list {
+        margin-top: 0rem;
+        display: inline-block; } }
   .report__list-block {
-    padding: 1rem 0; }
+    padding: 1rem 1rem; }
   .report__list-item__time {
     color: #3c48a0;
     line-height: 1.2; }
@@ -928,6 +947,12 @@ svg {
   margin: 10rem auto;
   transform: scale(1.4);
   width: 30%; }
+  @media (max-width: 60em) and (max-height: 40em) {
+    .client-list {
+      display: inline-block; } }
+  @media (max-width: 40em) {
+    .client-list {
+      width: 50%; } }
 
 .client-list-div {
   overflow-y: auto;
@@ -987,10 +1012,16 @@ svg {
   align-items: center;
   justify-content: center;
   margin-top: 12.5rem; }
+  @media (max-width: 60em) and (max-height: 40em) {
+    .search {
+      display: inline-block;
+      margin-left: 2rem;
+      margin-right: 10rem;
+      vertical-align: top; } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
-    color: inherit;
+    color: black;
     background-color: #fff;
     border: none;
     padding: 1.7rem 1.5rem;
@@ -998,6 +1029,10 @@ svg {
     width: 20%;
     transition: all .2s;
     margin-right: -3.25rem; }
+    @media (max-width: 85.375em) {
+      .search__input {
+        font-size: 1.8rem;
+        width: 30rem; } }
     .search__input:focus {
       outline: none;
       width: 25%;
@@ -1005,24 +1040,27 @@ svg {
       @media (max-width: 25em) {
         .search__input:focus {
           width: 50%; } }
-    .search__input::-webkit-input-placeholder {
-      font-weight: 100;
-      color: #ccc; }
-    @media (max-width: 25em) {
-      .search__input {
-        width: 40%; } }
-  .search__input:focus + .search__button {
-    background-color: #f0eeee; }
-  .search__button {
-    border: none;
-    background-color: #f4f2f2; }
-    .search__button:focus {
-      outline: none; }
-    .search__button:active {
-      transform: translateY(2px); }
-    @media (max-width: 25em) {
-      .search__button {
-        margin-left: 10rem; } }
+  @media (max-width: 25em) and (max-width: 85.375em) {
+    .search__input:focus {
+      width: 35rem; } }
+      .search__input:focus::-webkit-input-placeholder {
+        font-weight: 100;
+        color: #ccc; }
+      @media (max-width: 25em) {
+        .search__input:focus {
+          width: 40%; } }
+    .search__input__input:focus + .search__input__button {
+      background-color: #f0eeee; }
+    .search__input__button {
+      border: none;
+      background-color: #f4f2f2; }
+      .search__input__button:focus {
+        outline: none; }
+      .search__input__button:active {
+        transform: translateY(2px); }
+      @media (max-width: 25em) {
+        .search__input__button {
+          margin-left: 10rem; } }
   .search__icon {
     height: 2rem;
     width: 2rem;
@@ -1056,6 +1094,9 @@ svg {
   .settings__change-theme {
     margin: 11rem auto 7rem auto;
     text-align: center; }
+    @media (max-width: 60em) and (max-height: 40em) {
+      .settings__change-theme {
+        margin: 2rem auto; } }
     .settings__change-theme__header {
       font-size: 2.4rem; }
     .settings__change-theme__drop-down {
