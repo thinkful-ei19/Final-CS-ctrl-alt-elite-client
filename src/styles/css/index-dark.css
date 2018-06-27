@@ -968,9 +968,6 @@ svg {
 
 .client {
   padding: 1rem; }
-  @media (max-width: 25em) {
-    .client {
-      padding: .1rem; } }
   .client__list {
     display: inline-block; }
     .client__list__name {
