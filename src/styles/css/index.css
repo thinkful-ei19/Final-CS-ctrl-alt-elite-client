@@ -10,7 +10,7 @@
   color: #7FB3D5; }
 
 .other-month-date {
-  color: #aaa; }
+  color: #BDC3C7; }
 
 .current-day {
   color: #3c48a0;
@@ -926,7 +926,7 @@ svg {
       margin-left: -10rem; } }
   .report__left {
     display: block;
-    margin-top: 8rem;
+    margin-top: 15rem;
     margin-left: 0rem; }
     @media (max-width: 60em) and (max-height: 40em) {
       .report__left {
