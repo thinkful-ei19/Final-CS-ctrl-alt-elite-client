@@ -48,10 +48,8 @@ export class ClientsList extends React.Component {
             )
          });
 
-         console.log(clientList);
         
         if (clientList.length === 0) {
-            console.log('NULL');
             return (
                 <div className="client-list">
                     <div className="client-list-div">
@@ -60,7 +58,6 @@ export class ClientsList extends React.Component {
                 </div>
             )
         } else {
-            console.log('NOT NULL');
             return (
                 <div className="client-list">
                     <div className="add-client-button-flexbox">
