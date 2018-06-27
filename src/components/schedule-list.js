@@ -48,7 +48,7 @@ function ScheduleList(props) {
       return (
         <div >
           <List component="nav">
-            <span className="appointments__message">No Appointments to show</span>
+            <span className="appointments__message">No Appointments</span>
           </List>
         </div>
       );
@@ -65,7 +65,7 @@ function ScheduleList(props) {
     return (
       <div >
         <List component="nav">
-          <span>No Appointments to show</span>
+          <span>No Appointments</span>
         </List>
       </div>
     );
