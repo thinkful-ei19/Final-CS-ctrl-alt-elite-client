@@ -20,8 +20,18 @@
 .bold {
   color: #7FB3D5; }
 
+@media (max-width: 60em) and (max-height: 40em) {
+  .phone-hide {
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    visibility: hidden; } }
+
 @media (max-width: 45em) {
   .phone-hide {
+    position: fixed !important;
+    left: 0;
+    top: 0;
     visibility: hidden; } }
 
 * {
@@ -409,15 +419,25 @@ svg {
   .appointments__select-client {
     background-color: white; }
   .appointments__edit {
+    display: inline-block;
     visibility: hidden; }
   .appointments__delete {
+    display: inline-block;
     visibility: hidden; }
+    .appointments__delete__header > h2, .appointments__delete__header + div > p {
+      font-size: 2rem; }
+    .appointments__delete__confirm > span, .appointments__delete__cancel > span {
+      font-size: 2rem; }
   .appointments:hover .appointments__edit, .appointments:hover .appointments__delete {
     visibility: visible; }
   .appointments__list {
     margin-right: 10rem;
     overflow-wrap: break-word;
     max-width: 30rem; }
+    .appointments__list__options {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row; }
     .appointments__list__time {
       color: #3c48a0;
       line-height: 1.2; }
@@ -439,7 +459,12 @@ svg {
       .appointments__dialog {
         transform: scale(1.2); } }
     .appointments__dialog > * > * > *, .appointments__dialog > * > * > * > * {
-      color: black !important; }
+      color: black !important;
+      font-size: 1.5rem; }
+    .appointments__dialog > div > div > h2, .appointments__dialog > div > div > p, .appointments__dialog > div > div > div > label {
+      font-size: 2rem; }
+    .appointments__dialog > div > div > select, .appointments__dialog > div > div > div > div > input {
+      font-size: 1.5rem; }
     .appointments__dialog > div:nth-of-type(2) {
       background-color: white; }
   .appointments__text {
@@ -462,8 +487,9 @@ svg {
     font-size: 2rem; }
 
 .appointments-form {
-  font-size: 1.5rem !important;
   display: inline-block; }
+  .appointments-form > div > div > input {
+    font-size: 1.5rem; }
 
 .appointments-specify {
   text-align: right;
@@ -891,7 +917,6 @@ svg {
     .report {
       margin-left: -10rem; } }
   .report__left {
-    vertical-align: top;
     display: block;
     margin-top: 8rem;
     margin-left: 0rem; }
@@ -960,38 +985,48 @@ svg {
   width: 30%; }
   @media (max-width: 60em) and (max-height: 40em) {
     .client-list {
-      display: inline-block; } }
+      display: inline-block;
+      width: auto; } }
   @media (max-width: 40em) {
     .client-list {
-      width: 50%; } }
+      width: 70%; } }
 
 .client-list-div {
   overflow-y: auto;
-  height: 40vh;
-  text-align: center; }
+  height: 40vh; }
 
 .client {
-  padding: 1rem; }
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between; }
   .client__list {
-    display: inline-block; }
+    display: inline-block;
+    vertical-align: middle; }
     .client__list__name {
       font-size: 1.5rem;
       color: #616A6B;
       line-height: 1.4; }
+      @media (max-width: 60em) and (max-height: 40em) {
+        .client__list__name {
+          font-size: 1.4rem; } }
     .client__list__phone, .client__list__email {
       color: #999;
       font-size: 1.5rem;
-      line-height: 1.2; }
+      line-height: 1.2;
+      font-size: 1.2rem; }
   .client__dialog {
     transform: scale(1.3); }
     .client__dialog > div:nth-of-type(2) {
       background-color: white; }
     .client__dialog > * > * > *, .client__dialog > * > * > * > * {
-      color: black !important; }
-    .client__dialog__text > h2 {
-      color: black !important; }
-    .client__dialog__content > * {
-      color: black !important; }
+      color: black !important;
+      font-size: 1.5rem; }
+    .client__dialog > div > div > h2, .client__dialog > div > div > p, .client__dialog > div > div > div > label {
+      font-size: 2rem; }
+    .client__dialog > div > div > select, .client__dialog > div > div > div > div > input {
+      font-size: 1.5rem; }
+    .client__dialog > div:nth-of-type(2) {
+      background-color: white; }
   .client__text {
     font-size: 1.5rem; }
   .client__add-form {
@@ -1000,11 +1035,15 @@ svg {
       .client__add-form {
         margin-right: -1.7rem; } }
   .client__edit-form {
-    float: right;
+    display: inline-block;
     visibility: hidden; }
   .client__delete-form {
-    float: right;
+    display: inline-block;
     visibility: hidden; }
+    .client__delete-form__header > h2, .client__delete-form__header + div > p {
+      font-size: 2rem; }
+    .client__delete-form__confirm > span, .client__delete-form__cancel > span {
+      font-size: 2rem; }
     @media (max-width: 25em) {
       .client__delete-form {
         margin-right: 1.5rem; } }

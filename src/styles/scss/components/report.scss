@@ -12,11 +12,10 @@
     }
 
     &__left {
-        vertical-align: top;
         display: block;
         margin-top: 8rem;
         margin-left: 0rem;
-        
+
         @include respond(phone-land) {
             margin-top: 0rem;
         }

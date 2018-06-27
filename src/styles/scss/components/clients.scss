@@ -15,36 +15,44 @@
     transform: scale(1.4);
     width: 30%;
 
+
     @include respond(phone-land) {
         display: inline-block;
+        width: auto;
     }
     @include respond(phone) {
-        width: 50%;
+        width: 70%;
     }
 } 
 
 .client-list-div {
     overflow-y: auto;
     height: 40vh;
-    text-align: center;
 }
 
 .client {
     padding: 1rem;
+    display: flex;
+    justify-content: space-between;
 
     &__list {
         display: inline-block;
+        vertical-align: middle;
 
         &__name {
             font-size: 1.5rem;
             color: $color-gray;
             line-height: 1.4;
+            @include respond(phone-land) {
+                font-size: 1.4rem;
+            }
         }
         
         &__phone, &__email {
             color: $color-grey-dark-3;
             font-size: 1.5rem;
             line-height: 1.2;
+            font-size: 1.2rem;
         }
     }
     
@@ -59,17 +67,20 @@
 
         & > * > * > *, & > * > * > * > * {
             color: $color-form-font !important;
+            font-size: 1.5rem;
         }
 
-        &__text {
-            & > h2 {
-                color: $color-form-font !important;
-            }
+        & > div > div > h2, & > div > div > p, & > div > div > div > label  {
+            font-size: 2rem;
         }
 
-        &__content {
-            & > * {
-                color: $color-form-font !important;
+        & > div > div > select, & > div > div > div > div > input {
+            font-size: 1.5rem;
+        }
+
+        & > div {
+            &:nth-of-type(2) {
+                background-color: $color-form;
             }
         }
     }
@@ -86,14 +97,23 @@
     }
 
     &__edit-form {
-        float: right;
+        display: inline-block;
         visibility: hidden;
     }
     
 
     &__delete-form {
-        float: right;
+        display: inline-block;
         visibility: hidden;
+
+        &__header > h2, &__header + div > p {
+            font-size: 2rem;
+        }
+
+        &__confirm > span, &__cancel > span {
+            font-size: 2rem;
+        }
+
         @include respond(small-phone) {
             margin-right:1.5rem;
         }
