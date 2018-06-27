@@ -20,6 +20,8 @@
 
 .current-day {
     color: $color-purple;
+    border: .5px dotted $color-purple;
+    border-radius: 20%;
 }
 
 .bold {

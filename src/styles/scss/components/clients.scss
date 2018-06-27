@@ -21,7 +21,7 @@
     @include respond(phone) {
         width: 50%;
     }
-}
+} 
 
 .client-list-div {
     overflow-y: auto;
@@ -31,7 +31,9 @@
 
 .client {
     padding: 1rem;
-
+    @include respond(small-phone){
+        padding: .1rem;
+    }
     &__list {
         display: inline-block;
 
@@ -80,18 +82,23 @@
 
     &__add-form {
         margin-right: 2.75rem;
+        @include respond(small-phone) {
+            margin-right:-1.7rem;
+        }
     }
 
     &__edit-form {
         float: right;
         visibility: hidden;
-        // display: inline-block;
     }
+    
 
     &__delete-form {
         float: right;
         visibility: hidden;
-        // display: inline-block;
+        @include respond(small-phone) {
+            margin-right:1.5rem;
+        }
     }
 
     &:hover {
@@ -104,18 +111,8 @@
 .add-client-button-flexbox {
     display: flex;
     justify-content: flex-end;
-    // transform: translateY(30%);
 }
 
-// .filter{
-//     &__input{
-//         display: inline;
-//     }
-// }
-// display: flex;
-// flex: 1;
-// justify-content: space-around;
-// width: 50%;
 
 .search {
     flex: 0 0 40%;
@@ -129,6 +126,7 @@
         margin-left: 2rem;
         margin-right: 10rem;
         vertical-align: top;
+        width: 40%;
     }
 
     &__input {
@@ -142,6 +140,7 @@
         width: 20%;
         transition: all .2s;
         margin-right: -3.25rem;
+        border: .5px solid #999;
 
         @include respond(tab-land) {
             font-size: 1.8rem;
@@ -152,6 +151,8 @@
             outline: none;
             width: 25%;
             background-color: $color-white;
+            @include respond(small-phone) {
+                width: 50%;
             @include respond(tab-land) {
                 width: 35rem;
             }
@@ -159,6 +160,9 @@
         &::-webkit-input-placeholder {
             font-weight: 100;
             color: $color-grey-light-4;
+        }
+        @include respond(small-phone) {
+            width: 40%;
         }
     }
     &__input:focus + &__button {
@@ -173,6 +177,10 @@
         &:active {
             transform: translateY(2px);
         }
+        @include respond(small-phone) {
+            margin-left: 10rem;
+        }
+    }
     }
     &__icon {
         height: 2rem;
