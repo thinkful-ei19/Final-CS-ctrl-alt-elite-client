@@ -52,7 +52,7 @@ export class ChangePasswordForm extends React.Component {
                     validate={[required, nonEmpty, matchesPassword]}
                 />
                 <button
-                    className="btn"
+                    className="btn settings__change-password__button"
                     type="submit"
                     disabled={this.props.pristine || this.props.submitting}>
                     Submit

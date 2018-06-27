@@ -1,11 +1,22 @@
 .settings {
-    text-align: center;
-    padding: 1rem;
+    // text-align: center;
+    display: block;
+    width: 100%;
+
+    &__flex {
+        display: flex;
+    }
     
+    &__options {
+        display: inline-block;
+        margin: 0 auto;
+    }
+
     &__change-theme {
-        padding: 1rem;
-        margin-bottom: 7rem;
-        margin-top: 11rem;
+        // margin-bottom: 7rem;
+        // margin-top: 11rem;
+        margin: 11rem auto 7rem auto;
+        text-align: center;
 
         &__header {
             font-size: 2.4rem;
@@ -28,10 +39,15 @@
     }
 
     &__change-password {
-        
+        text-align: center;
+
         &__form {
-            margin: 0 auto;
-            width: 50%;
+            width: 100%;
+        }
+
+        &__form div .form-error {
+            text-align: left;
+            margin-left: 2.5rem;
         }
 
         &__header {
@@ -42,7 +58,10 @@
             font-size: 1.2rem;
             font-weight: 700;
             margin-top: .7rem;
+            text-align: left;
+            margin-left: 2.5rem;
             display: block;
+            
         }
 
         &__input {
@@ -54,12 +73,17 @@
             background-color: rgba($color-white, .5);
             border: 1px solid $color-five;
             border-bottom: 1px solid $color-one;
-            display: block;
             transition: all .3s;
         }
 
         &__input:focus{
                 outline: none;
+        }
+
+        &__button {
+            display: block;
+            margin: 2rem auto;
+            color: $color-purple
         }
     }
 }

@@ -21,7 +21,8 @@
         // border-bottom: 1px solid #D6EAF8;
         display: block;
         transition: all .3s;
-        
+        width: 100%;        
+
         &:focus {
             outline: none;
             // border-bottom: 1px solid $color-one;
@@ -51,6 +52,10 @@
         transition: all .3s;
         transform: translateY(-4rem);
     }
+
+    &__button {
+        //See buttons.scss
+    }
 }
 
 .form-error{
@@ -68,6 +73,9 @@
     &__back-button {
         display: inline-block;
         width: 17rem;
+        position: fixed;
+        left: 5rem;
+        top: 4rem;
     }
 
     &__back-button svg {
