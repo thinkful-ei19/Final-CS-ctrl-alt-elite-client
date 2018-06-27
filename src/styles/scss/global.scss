@@ -60,6 +60,9 @@ li {
 
 svg {
     color: $color-font;
+    @include respond(small-phone) {
+        width: .7rem;
+    }
 }
 
 .overlay {

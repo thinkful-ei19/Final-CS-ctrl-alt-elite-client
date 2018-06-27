@@ -69,6 +69,9 @@ li {
 
 svg {
   color: #424949; }
+  @media (max-width: 25em) {
+    svg {
+      width: .7rem; } }
 
 .overlay {
   position: fixed;
@@ -932,6 +935,9 @@ svg {
 
 .client {
   padding: 1rem; }
+  @media (max-width: 25em) {
+    .client {
+      padding: .1rem; } }
   .client__list {
     display: inline-block; }
     .client__list__name {
@@ -990,9 +996,15 @@ svg {
       outline: none;
       width: 25%;
       background-color: #fff; }
+      @media (max-width: 25em) {
+        .search__input:focus {
+          width: 50%; } }
     .search__input::-webkit-input-placeholder {
       font-weight: 100;
       color: #ccc; }
+    @media (max-width: 25em) {
+      .search__input {
+        width: 40%; } }
   .search__input:focus + .search__button {
     background-color: #f0eeee; }
   .search__button {
@@ -1002,6 +1014,9 @@ svg {
       outline: none; }
     .search__button:active {
       transform: translateY(2px); }
+    @media (max-width: 25em) {
+      .search__button {
+        margin-left: 10rem; } }
   .search__icon {
     height: 2rem;
     width: 2rem;
