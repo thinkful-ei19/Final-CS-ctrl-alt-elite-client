@@ -568,6 +568,11 @@ svg {
         text-align: center;
         width: 100%;
         margin: 0; } }
+    vertical-align: middle; }
+    @media (max-width: 25em) {
+      .about__left {
+        display: block;
+        text-align: center; } }
   .about__header {
     font-size: 3.2rem;
     font-family: 'Carme', sans-serif;
