@@ -910,13 +910,13 @@ svg {
     font-size: 2.5rem;
     margin-bottom: 5rem; }
   .report__list {
-    height: 35vh;
+    height: 70vh;
     overflow-y: auto;
     overflow-x: hidden;
     overflow-wrap: break-word; }
     @media (max-width: 85.375em) {
       .report__list {
-        height: 30vh; } }
+        height: 70vh; } }
     @media (max-width: 60em) and (max-height: 40em) {
       .report__list {
         margin-top: 0rem;
@@ -935,7 +935,10 @@ svg {
     font-size: 1.5rem;
     line-height: 1.2; }
   .report__message {
-    text-align: left; }
+    text-align: center;
+    font-size: 1.5rem; }
+  .report__center {
+    text-align: center; }
 
 .linechart {
   text-align: center; }
