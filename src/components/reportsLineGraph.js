@@ -118,11 +118,10 @@ export default class LineGraph extends React.Component{
 
             return(
                 <div>
-                    <div className="linechart report__left">
+                    <ResponsiveContainer minWidth={420} minHeight={300} maxWidth={1960} maxHeight={1280} className="linechart report__left">
                         <LineChart 
-                            
-                            width={900} 
-                            height={375} 
+                            // width={900} 
+                            // height={375} 
                             data={data}
                             margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
                             onClick={(e) => {         
@@ -148,7 +147,7 @@ export default class LineGraph extends React.Component{
                                 strokeWidth: .5
                             }}/>
                         </LineChart>
-                    </div>
+                    </ResponsiveContainer>
                     <div className="report__right">
                         {/* <button 
                             className="btn login-button"
@@ -157,7 +156,7 @@ export default class LineGraph extends React.Component{
                         <h1>Monthly Appointments History</h1>
                         <p className="report__message">Click graph to see appointment history</p>
                         <h2>{this.state.name}</h2> 
-                        <h3>{apptPercentage}% of your appointments were from {this.state.name}</h3> <br />
+                        <h3>{apptPercentage}% of your appointments were from {this.state.name}</h3>
                         <ul className="report__list">
                             {apptDataList}
                         </ul>
