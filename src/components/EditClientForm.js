@@ -150,7 +150,7 @@ class EditClientForm extends React.Component {
                         }}
                             type="submit"
                             color="primary">
-                            Edit
+                            Save
                         </Button>
                     </DialogActions>
                 </Dialog>

@@ -278,6 +278,9 @@ svg {
   padding: 10rem;
   font-family: 'Roboto', sans-serif;
   color: #616A6B; }
+  .login-form__message {
+    color: red;
+    font-size: 2rem; }
   .login-form__input {
     font-size: 1.9rem;
     font-family: inherit;
@@ -455,6 +458,8 @@ svg {
   .appointments__add-appointment {
     font-size: 2rem;
     background-image: linear-gradient(to left, rgba(214, 234, 248, 0.8), rgba(214, 234, 248, 0.8)); }
+  .appointments__message {
+    font-size: 2rem; }
 
 .appointments-form {
   font-size: 1.5rem !important;
@@ -958,7 +963,8 @@ svg {
 
 .client-list-div {
   overflow-y: auto;
-  height: 40vh; }
+  height: 40vh;
+  text-align: center; }
 
 .client {
   padding: 1rem; }

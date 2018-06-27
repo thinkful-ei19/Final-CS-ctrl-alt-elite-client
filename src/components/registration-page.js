@@ -29,7 +29,7 @@ export function RegistrationPage(props) {
                         <p className="register__p">Back to Login</p>
                     </Link>
                     <br/>
-                <RegistrationForm />
+                <RegistrationForm usernameTaken={props.usernameTaken} />
                 <br/>
             </div>
         </section>
@@ -37,7 +37,8 @@ export function RegistrationPage(props) {
 }
 
 const mapStateToProps = state => ({
-    loggedIn: state.auth.currentUser !== null
+    loggedIn: state.auth.currentUser !== null,
+    usernameTaken: state.auth.usernameTaken
 });
 
 export default connect(mapStateToProps)(RegistrationPage);
