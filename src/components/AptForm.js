@@ -28,15 +28,8 @@ class AptForm extends React.Component {
     };
   }
 
-
-  // componentDidMount() {
-  //   const decodedToken = jwtDecode(this.props.authToken)
-  //   const username = decodedToken.sub
-  //   this.props.dispatch(getUserInfo(this.props.authToken, username));
-  // }
-
   handleClickOpen = () => {
-    this.setState({ open: true });
+    this.setState({ open: true, date: this.props.selectedDate });
   };
 
   handleClose = () => {
@@ -86,7 +79,6 @@ class AptForm extends React.Component {
   }
 
   selectClient(id) {
-    console.log('Is running');
     const component = this;
     this.props.currentUser.clients.forEach((client) => {
       if (client.id === id) {
@@ -102,6 +94,7 @@ class AptForm extends React.Component {
   }
 
   render() {
+    console.log(this.state)
     let dropDownMenu;
     if (this.props.currentUser.clients.length > 0) {
       const buildOptions = this.props.currentUser.clients.map((client) => {
@@ -182,6 +175,7 @@ class AptForm extends React.Component {
               className="appointments__input"
               type="date"
               id="date"
+              value={this.state.date}
             />
             <TimePicker props={this.state.time}/>
             <TextField
@@ -257,7 +251,8 @@ const mapStateToProps = state => {
   // console.log('STATE:', state.auth.currentUser.id);
   return {
     authToken: state.auth.authToken,
-    currentUser: state.auth.currentUser
+    currentUser: state.auth.currentUser,
+    selectedDate: state.calendarReducer.selectedDate
   }
 };
 
