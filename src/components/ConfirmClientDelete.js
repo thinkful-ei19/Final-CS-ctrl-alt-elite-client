@@ -40,17 +40,17 @@ class ConfirmClientDelete extends React.Component {
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
         >
-          <DialogTitle id="alert-dialog-title">{"Confirm Client Deletion"}</DialogTitle>
+          <DialogTitle className="client__delete-form__header" id="alert-dialog-title">{"Confirm Client Deletion"}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
               Are you sure you want to delete this client?
             </DialogContentText>
           </DialogContent>
           <DialogActions>
-            <Button onClick={this.handleClose} color="primary">
+            <Button className="client__delete-form__cancel" onClick={this.handleClose} color="primary">
               Cancel
             </Button>
-            <Button onClick={() => {
+            <Button className="client__delete-form__confirm" onClick={() => {
               this.props.dispatch(deleteClient(this.props.authToken, this.props.clientId, this.props.currentUser.id));
               this.handleClose();
               }}
