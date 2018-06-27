@@ -44,14 +44,23 @@ function ScheduleList(props) {
       // </ListItem>
       )
     })
+    if (buildList.length === 0) {
+      return (
+        <div >
+          <List component="nav">
+            <span className="appointments__message">No Appointments to show</span>
+          </List>
+        </div>
+      );
+    } 
     return (
-      <div className="appointments-part2">
-        <AptForm />
-        <List component="nav" className="appointments__schedule-list">
-          {buildList}
-        </List>
-      </div>
-    );
+        <div className="appointments-part2">
+          <AptForm />
+          <List component="nav" className="appointments__schedule-list">
+            {buildList}
+          </List>
+        </div>
+      );
   } catch(err){
     return (
       <div >
