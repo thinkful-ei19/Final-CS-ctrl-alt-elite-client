@@ -86,9 +86,9 @@ export default function LandingPage(props) {
                 <div className="about-us__people">
                     <div className="about-us__person">
                         <ul className="about-us__person__list">
-                            <li className="about-us__person__list__item about-us__person__list__name">Julie Kim</li>
+                            {/* <li className="about-us__person__list__item about-us__person__list__name">Julie Kim</li> */}
                             <li className="about-us__person__list__item about-us__person__list__portfolio">
-                                <a className="about-us__person__list__portfolio__text" href="http://www.itsjuliek.com" target="blank">Visit her webpage</a>
+                                <a className="about-us__person__list__portfolio__text" href="http://www.itsjuliek.com" target="blank">Julie Kim</a>
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__github">
                                 <a href="https://github.com/joulay" target="blank"><img src={githubIcon}/></a> 
@@ -101,9 +101,9 @@ export default function LandingPage(props) {
                     </div>
                     <div className="about-us__person">
                         <ul className="about-us__person__list">
-                            <li className="about-us__person__list__item about-us__person__list__name">Alexa Scott</li>
+                            {/* <li className="about-us__person__list__item about-us__person__list__name">Alexa Scott</li> */}
                             <li className="about-us__person__list__item about-us__person__list__portfolio">
-                                <a className="about-us__person__list__portfolio__text" href="" target="blank">Visit her webpage</a>
+                                <a className="about-us__person__list__portfolio__text" href="" target="blank">Alexa Scott</a>
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__github">
                                 <a href="https://github.com/AlexaScott33" target="blank"><img src={githubIcon}/></a>                                                
@@ -115,9 +115,9 @@ export default function LandingPage(props) {
                     </div>
                     <div className="about-us__person">
                         <ul className="about-us__person__list">
-                            <li className="about-us__person__list__item about-us__person__list__name">Joshua Hutchinson</li>
+                            {/* <li className="about-us__person__list__item about-us__person__list__name">Joshua Hutchinson</li> */}
                             <li className="about-us__person__list__item about-us__person__list__portfolio">
-                                <a className="about-us__person__list__portfolio__text" href="" target="blank">Visit his webpage</a>
+                                <a className="about-us__person__list__portfolio__text" href="" target="blank">Josh Hutchinson</a>
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__github">
                                 <a href="https://github.com/JTHUTCH94" target="blank"><img src={githubIcon}/></a>                                                
@@ -129,9 +129,9 @@ export default function LandingPage(props) {
                     </div>
                     <div className="about-us__person">
                         <ul className="about-us__person__list">
-                            <li className="about-us__person__list__item about-us__person__list__name">Christopher Whiteman</li>
+                            {/* <li className="about-us__person__list__item about-us__person__list__name">Christopher Whiteman</li> */}
                             <li className="about-us__person__list__item about-us__person__list__portfolio">
-                                <a className="about-us__person__list__portfolio__text" href="http://www.chris-whiteman.com" target="blank">Visit his webpage</a>
+                                <a className="about-us__person__list__portfolio__text" href="http://www.chris-whiteman.com" target="blank">Christopher Whiteman</a>
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__github">
                                 <a href="https://github.com/cjszk" target="blank"><img src={githubIcon}/></a>                                                
