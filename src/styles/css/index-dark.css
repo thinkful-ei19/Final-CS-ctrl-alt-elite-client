@@ -465,7 +465,8 @@ svg {
   position: fixed;
   width: 100%;
   background-image: linear-gradient(to right, rgba(51, 51, 51, 0.9), rgba(51, 51, 51, 0.9));
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  z-index: 100; }
   .nav__button {
     padding: 1.5rem;
     margin: 0 2.5rem;
@@ -558,6 +559,15 @@ svg {
       padding: 30px 32px; } }
   .about__left {
     display: inline-block;
+    width: 45%;
+    margin-right: 3rem;
+    vertical-align: middle; }
+    @media (max-width: 40em) {
+      .about__left {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin: 0; } }
     vertical-align: middle; }
     @media (max-width: 25em) {
       .about__left {
@@ -586,7 +596,8 @@ svg {
       .about__header__third {
         font-size: 3.5rem; } }
   .about__right {
-    width: 50%;
+    width: 45%;
+    margin-left: 3rem;
     display: inline-block;
     font-size: 1.8rem;
     vertical-align: middle; }
@@ -596,6 +607,9 @@ svg {
   .about__list {
     display: inline-block;
     text-align: none; }
+    @media (max-width: 40em) {
+      .about__list {
+        display: block; } }
     @media (max-width: 25em) {
       .about__list {
         display: inline-flex;
@@ -662,7 +676,7 @@ svg {
   padding: 15rem; }
   @media (max-width: 25em) {
     .about-us {
-      padding: 11rem; } }
+      padding: 5rem 2rem; } }
   .about-us__header {
     text-align: center;
     font-size: 1.8rem;
@@ -697,6 +711,10 @@ svg {
         color: grey; }
         .about-us__person__list__portfolio__text:hover {
           text-decoration: underline; }
+      @media (max-width: 40em) {
+        .about-us__person__list__portfolio {
+          font-size: 2.4rem;
+          line-height: 1.3; } }
     .about-us__person__list__github {
       display: inline-block;
       margin: 0 .6rem; }
