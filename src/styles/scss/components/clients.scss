@@ -10,7 +10,6 @@
 }
 
 .client-list {
-    // margin: 15rem 15rem 15rem 30%;
     margin: 10rem auto;
     transform: scale(1.4);
     width: 30%;
@@ -28,15 +27,15 @@
         display: inline-block;
 
         &__name {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: $color-gray;
             line-height: 1.4;
         }
         
         &__phone, &__email {
             color: $color-grey-dark-3;
-            font-size: 1.5rem;
-            line-height: 1.2;
+            font-size: 1.3rem;
+            line-height: 1;
         }
     }
     

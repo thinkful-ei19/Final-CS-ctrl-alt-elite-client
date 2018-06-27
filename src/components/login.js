@@ -23,8 +23,10 @@ export function LogIn(props) {
             <div className="login-form">
                 <h1>Welcome!</h1>
                 <br/>
-                <LoginForm />
-                <br/>Don't have an account? <Link style={{ textDecoration: 'none' }} to="/register">Register</Link>
+                    <LoginForm />
+                    <div className="register-line">
+                        <br/>Don't have an account? <Link style={{ textDecoration: 'none' }} to="/register">Register</Link>
+                    </div>
             </div>
         </section>
     );

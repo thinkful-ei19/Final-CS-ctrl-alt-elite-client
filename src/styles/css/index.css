@@ -74,7 +74,7 @@ svg {
   position: fixed;
   top: 0;
   left: 0;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
   width: 100%;
   height: 100%;
   padding: 1px; }
@@ -264,7 +264,7 @@ svg {
 .login-form {
   font-size: 2.2rem;
   display: inline-block;
-  margin: 0 auto;
+  margin: 2rem auto;
   padding: 10rem;
   font-family: 'Roboto', sans-serif;
   color: #616A6B; }
@@ -311,9 +311,12 @@ svg {
     margin-right: 1rem;
     transform: scale(1.5); }
   .register__p {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
     font-family: 'Roboto', sans-serif;
     transform: translateY(-17.5%); }
+
+.register-line {
+  margin-top: 4rem; }
 
 .calendar {
   font-family: 'Roboto', sans-serif;
@@ -712,13 +715,19 @@ svg {
   .report__right {
     display: inline-block;
     width: 20%; }
+    @media (max-width: 85.375em) {
+      .report__right {
+        display: block; } }
   .report__title {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 5rem; }
   .report__list {
     height: 55vh;
-    overflow-y: auto; }
+    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    max-width: 30rem; }
   .report__list-block {
     padding: 1rem 0; }
   .report__list-item__time {
@@ -762,13 +771,13 @@ svg {
   .client__list {
     display: inline-block; }
     .client__list__name {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       color: #616A6B;
       line-height: 1.4; }
     .client__list__phone, .client__list__email {
       color: #999;
-      font-size: 1.5rem;
-      line-height: 1.2; }
+      font-size: 1.3rem;
+      line-height: 1; }
   .client__dialog {
     transform: scale(1.3); }
     .client__dialog > div:nth-of-type(2) {
