@@ -164,11 +164,19 @@
         height: 70vh;
         padding: 30px 50px;
     }
+    @include respond(small-phone) {
+        padding: 30px 32px;
+    }
 
     &__left {
         display: inline-block;
-        width: 50%;
+        // width: 50%;
         vertical-align: middle;
+        @include respond(small-phone) {
+            display: block;
+            text-align: center;
+            // width: 0%;
+        }
     }
 
     &__header {
@@ -180,17 +188,26 @@
             @include respond(tab-port) {
                 font-size: 4rem;
             }
+            @include respond(small-phone) {
+                font-size: 3.5rem;
+            }
         }
 
         &__second {
             @include respond(tab-port) {
                 font-size: 4rem;
             }
+            @include respond(small-phone) {
+                font-size: 3.5rem;
+            }
         }
 
         &__third {
             @include respond(tab-port) {
                 font-size: 4rem;
+            }
+            @include respond(small-phone) {
+                font-size: 3.5rem;
             }
         }
 
@@ -201,11 +218,22 @@
         display: inline-block;
         font-size: 1.8rem;
         vertical-align: middle;
-
+        @include respond(tab-port) {
+            margin-left: 8rem;
+        }
     }
 
     &__list{
+        display: inline-block;
+        text-align: none;
+        @include respond(small-phone) {
+            display: inline-flex;
+            text-align: center;
+        }
         &__item{
+            @include respond(small-phone) {
+                padding-right: 1rem;
+            }
             &__details{
                 color: $color-gray;
             }
@@ -218,6 +246,9 @@
     @include respond(tab-port) {
         width: 55%;
         margin-left: 8rem;
+    }
+    @include respond(small-phone) {
+        margin-left: 3rem;
     }
 }
 
@@ -238,6 +269,9 @@
         line-height: 1.2;
         @include respond(tab-port) {
             font-size: 3rem;
+        }
+        @include respond(small-phone) {
+            font-size: 2.5rem;
         }
     }
 
@@ -275,6 +309,9 @@
     background-color: #333;
     color: white;
     padding: 15rem;
+    @include respond(small-phone) {   
+        padding: 11rem;  
+    }
 
     &__header {
         text-align: center;
@@ -284,6 +321,9 @@
         text-transform: uppercase;
         @include respond(tab-port) {
             padding-bottom: 8rem;
+        }
+        @include respond(small-phone) {   
+            padding-bottom: 6rem; 
         }
     }
 
@@ -308,6 +348,10 @@
                 font-size: 1.8rem;
                 @include respond(tab-port) {
                     line-height: 1;
+                }
+                @include respond(tab-port) {
+                    font-size: 2.1rem;
+                    //padding-left: 1rem;
                 }
             }
 

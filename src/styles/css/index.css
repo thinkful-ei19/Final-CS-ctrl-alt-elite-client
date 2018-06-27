@@ -512,10 +512,16 @@ li {
       background-color: white;
       height: 70vh;
       padding: 30px 50px; } }
+  @media (max-width: 25em) {
+    .about {
+      padding: 30px 32px; } }
   .about__left {
     display: inline-block;
-    width: 50%;
     vertical-align: middle; }
+    @media (max-width: 25em) {
+      .about__left {
+        display: block;
+        text-align: center; } }
   .about__header {
     font-size: 3.2rem;
     font-family: 'Carme', sans-serif;
@@ -523,19 +529,41 @@ li {
     @media (max-width: 60em) {
       .about__header__first {
         font-size: 4rem; } }
+    @media (max-width: 25em) {
+      .about__header__first {
+        font-size: 3.5rem; } }
     @media (max-width: 60em) {
       .about__header__second {
         font-size: 4rem; } }
+    @media (max-width: 25em) {
+      .about__header__second {
+        font-size: 3.5rem; } }
     @media (max-width: 60em) {
       .about__header__third {
         font-size: 4rem; } }
+    @media (max-width: 25em) {
+      .about__header__third {
+        font-size: 3.5rem; } }
   .about__right {
     width: 50%;
     display: inline-block;
     font-size: 1.8rem;
     vertical-align: middle; }
-  .about__list__item__details {
-    color: #616A6B; }
+    @media (max-width: 60em) {
+      .about__right {
+        margin-left: 8rem; } }
+  .about__list {
+    display: inline-block;
+    text-align: none; }
+    @media (max-width: 25em) {
+      .about__list {
+        display: inline-flex;
+        text-align: center; } }
+    @media (max-width: 25em) {
+      .about__list__item {
+        padding-right: 1rem; } }
+    .about__list__item__details {
+      color: #616A6B; }
 
 .phone-image {
   width: 70%; }
@@ -543,6 +571,9 @@ li {
     .phone-image {
       width: 55%;
       margin-left: 8rem; } }
+  @media (max-width: 25em) {
+    .phone-image {
+      margin-left: 3rem; } }
 
 .whats-new {
   background-color: white;
@@ -561,6 +592,9 @@ li {
     @media (max-width: 60em) {
       .whats-new__header {
         font-size: 3rem; } }
+    @media (max-width: 25em) {
+      .whats-new__header {
+        font-size: 2.5rem; } }
   .whats-new__left {
     display: inline-block;
     padding-top: 5rem;
@@ -585,6 +619,9 @@ li {
   background-color: #333;
   color: white;
   padding: 15rem; }
+  @media (max-width: 25em) {
+    .about-us {
+      padding: 11rem; } }
   .about-us__header {
     text-align: center;
     font-size: 1.8rem;
@@ -594,6 +631,9 @@ li {
     @media (max-width: 60em) {
       .about-us__header {
         padding-bottom: 8rem; } }
+    @media (max-width: 25em) {
+      .about-us__header {
+        padding-bottom: 6rem; } }
   .about-us__person {
     display: inline-block;
     width: 25%;
@@ -607,6 +647,9 @@ li {
       @media (max-width: 60em) {
         .about-us__person__list__name {
           line-height: 1; } }
+      @media (max-width: 60em) {
+        .about-us__person__list__name {
+          font-size: 2.1rem; } }
     .about-us__person__list__portfolio {
       font-size: 1.2rem; }
       .about-us__person__list__portfolio__text {
