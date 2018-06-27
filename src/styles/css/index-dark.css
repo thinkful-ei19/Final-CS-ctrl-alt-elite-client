@@ -13,7 +13,9 @@
   color: #aaa; }
 
 .current-day {
-  color: #3c48a0; }
+  color: #3c48a0;
+  border: 0.5px dotted #3c48a0;
+  border-radius: 50%; }
 
 .bold {
   color: #2980B9; }
@@ -384,7 +386,7 @@ svg {
     padding: 4% 0 4% 0; }
     .calendar__blocks-row__blocks:hover {
       cursor: pointer;
-      background-color: #E5E8E8;
+      background-color: #707B7C;
       border-radius: 20%; }
 
 .appointments {
@@ -941,7 +943,7 @@ svg {
   padding: 1.5rem 3rem;
   font-size: 1.4rem;
   border-radius: 5px;
-  border: 1px solid #E5E8E8; }
+  border: 1px solid #707B7C; }
 
 .client-list {
   margin: 10rem auto;
@@ -1134,7 +1136,7 @@ svg {
       border-radius: 5px;
       margin: 1rem auto;
       background-color: rgba(255, 255, 255, 0.5);
-      border: 1px solid #E5E8E8;
+      border: 1px solid #707B7C;
       border-bottom: 1px solid #ABB2B9;
       transition: all .3s; }
     .settings__change-password__input:focus {

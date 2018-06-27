@@ -13,7 +13,9 @@
   color: #aaa; }
 
 .current-day {
-  color: #3c48a0; }
+  color: #3c48a0;
+  border: 0.5px dotted #3c48a0;
+  border-radius: 50%; }
 
 .bold {
   color: #2980B9; }
