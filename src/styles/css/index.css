@@ -166,12 +166,12 @@ svg {
     cursor: pointer; }
     @media (max-width: 60em) {
       .navigation__button {
-        top: 3rem;
-        right: 3rem; } }
+        top: 4rem;
+        right: 4rem; } }
     @media (max-width: 40em) {
       .navigation__button {
-        top: 3rem;
-        right: 3rem; } }
+        top: 2.75rem;
+        right: 2.75rem; } }
   .navigation__background {
     height: 6rem;
     width: 6rem;
@@ -336,6 +336,19 @@ svg {
   color: #616A6B;
   display: inline-block;
   margin-right: 20rem; }
+  @media (max-width: 60em) {
+    .calendar {
+      max-width: 50rem;
+      margin-right: 0rem;
+      margin-top: 10rem; } }
+  @media (max-width: 60em) and (max-height: 40em) {
+    .calendar {
+      margin-top: -5rem;
+      max-width: 35rem; } }
+  @media (max-width: 40em) {
+    .calendar {
+      margin: 0rem;
+      max-width: 100%; } }
   @media (max-width: 45em) {
     .calendar__toggle {
       visibility: hidden; } }
@@ -349,6 +362,11 @@ svg {
     display: inline-block;
     padding-bottom: 5rem;
     min-width: 30rem; }
+    @media (max-width: 60em) and (max-height: 40em) {
+      .calendar__header-row__header {
+        margin: 0;
+        font-size: 2rem;
+        min-width: 20rem; } }
   .calendar__days__day {
     display: inline-block;
     width: 14.2%;
@@ -369,6 +387,14 @@ svg {
   flex-direction: row;
   text-align: left;
   padding: 1rem; }
+  @media (max-width: 60em) and (max-height: 40em) {
+    .appointments__schedule-list {
+      height: 50vh;
+      overflow-y: auto; } }
+  @media (max-width: 40em) {
+    .appointments__schedule-list {
+      height: 33vh;
+      overflow-y: auto; } }
   .appointments__select-client {
     background-color: white; }
   .appointments__edit {
@@ -395,6 +421,12 @@ svg {
       color: #999; }
   .appointments__dialog {
     transform: scale(1.3); }
+    @media (max-width: 60em) and (max-height: 40em) {
+      .appointments__dialog {
+        transform: scale(1); } }
+    @media (max-width: 40em) {
+      .appointments__dialog {
+        transform: scale(1.2); } }
     .appointments__dialog > * > * > *, .appointments__dialog > * > * > * > * {
       color: black !important; }
     .appointments__dialog > div:nth-of-type(2) {
@@ -429,6 +461,14 @@ svg {
   width: 40rem;
   margin-top: 15rem;
   vertical-align: top; }
+  @media (max-width: 60em) {
+    .schedule {
+      margin-top: 10rem;
+      margin-left: 5rem; } }
+  @media (max-width: 40em) {
+    .schedule {
+      margin: 0;
+      width: 90%; } }
 
 .schedule-li {
   font-size: 15px; }
@@ -549,6 +589,9 @@ svg {
   background-color: white;
   height: 70vh;
   padding: 20rem 40rem; }
+  @media (max-width: 85.375em) {
+    .about {
+      padding: 50px 50px 0px 50px; } }
   @media (max-width: 60em) {
     .about {
       background-color: white;
@@ -626,8 +669,12 @@ svg {
       margin-left: 3rem; } }
 
 .whats-new {
+  display: block;
   background-color: white;
   padding: 20rem 40rem; }
+  @media (max-width: 85.375em) {
+    .whats-new {
+      padding: 0rem 5rem 5rem 5rem; } }
   @media (max-width: 60em) {
     .whats-new {
       background-color: white;
@@ -668,7 +715,14 @@ svg {
 .about-us {
   background-color: #333;
   color: white;
-  padding: 15rem; }
+  padding: 15rem;
+  display: block; }
+  @media (max-width: 85.375em) {
+    .about-us {
+      padding: 10rem; } }
+  @media (max-width: 60em) {
+    .about-us {
+      padding: 5rem; } }
   @media (max-width: 25em) {
     .about-us {
       padding: 5rem 2rem; } }
@@ -706,6 +760,10 @@ svg {
         color: grey; }
         .about-us__person__list__portfolio__text:hover {
           text-decoration: underline; }
+      @media (max-width: 85.375em) {
+        .about-us__person__list__portfolio {
+          font-size: 2.4rem;
+          line-height: 1.3; } }
       @media (max-width: 40em) {
         .about-us__person__list__portfolio {
           font-size: 2.4rem;
@@ -955,6 +1013,12 @@ svg {
 .components {
   padding-top: 5rem;
   text-align: center; }
+  @media (max-width: 60em) and (max-height: 40em) {
+    .components {
+      padding-top: 0; } }
+  @media (max-width: 40em) {
+    .components {
+      padding-top: 0; } }
 
 .dashboard {
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
