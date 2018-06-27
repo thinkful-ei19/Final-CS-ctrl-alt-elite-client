@@ -146,11 +146,12 @@ svg {
 
 .login-button, .register-button {
   margin-top: 20px;
-  color: #3c48a0;
+  color: #7FB3D5;
   font-weight: 400;
-  background-color: 'white';
+  background-color: white;
   display: block;
-  margin: 3.5rem auto; }
+  margin: 3.5rem auto;
+  border: 1px solid #7FB3D5; }
 
 .navigation {
   font-family: 'Roboto', sans-serif;
@@ -286,7 +287,6 @@ svg {
     font-family: inherit;
     padding: 1.5rem 3rem;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid #faf9f9;
     display: block;
     transition: all .3s;

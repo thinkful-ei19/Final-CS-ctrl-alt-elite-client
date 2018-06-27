@@ -25,7 +25,7 @@ export function LogIn(props) {
                 <br/>
                     <LoginForm />
                     <div className="register-line">
-                        <br/>Don't have an account? <Link style={{ textDecoration: 'none' }} to="/register">Register</Link>
+                        <br/>Don't have an account? <Link style={{ textDecoration: 'none', color: '#2E86C1' }} to="/register">Register</Link>
                     </div>
             </div>
         </section>
