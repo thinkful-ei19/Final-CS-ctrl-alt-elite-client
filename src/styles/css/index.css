@@ -300,17 +300,25 @@ svg {
   .login-form__label {
     font-size: 1.2rem;
     font-weight: 700;
-    margin-left: 2rem;
-    margin-top: .7rem;
+    padding-left: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     display: block; }
   .login-form__input:placeholder-shown + .login-form__label {
     opacity: 0;
     visibility: hidden;
     transition: all .3s;
     transform: translateY(-4rem); }
+  .login-form__form > div > label {
+    display: block;
+    position: relative;
+    margin-bottom: 2rem; }
 
 .form-error {
-  color: red; }
+  color: red;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  position: absolute; }
 
 .register {
   margin: 0 auto;
