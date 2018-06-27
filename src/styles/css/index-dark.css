@@ -273,6 +273,9 @@ svg {
   padding: 10rem;
   font-family: 'Roboto', sans-serif;
   color: #616A6B; }
+  .login-form__message {
+    color: red;
+    font-size: 2rem; }
   .login-form__input {
     font-size: 1.9rem;
     font-family: inherit;

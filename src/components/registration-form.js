@@ -21,6 +21,10 @@ export class RegistrationForm extends React.Component {
     }
 
     render() {
+        let message;
+        if (this.props.usernameTaken === true) {
+            message = "Sorry, that username is unavailable"
+        }
         return (
             <form
                 className="login-form"
@@ -29,6 +33,7 @@ export class RegistrationForm extends React.Component {
                 )}>
                 {/* <label className="login-form__label" htmlFor="fullName">Full Name</label>
                 <Field component={Input} type="text" name="fullName" /> */}
+                <span className="login-form__message">{message}</span>
                 <label className="login-form__label" htmlFor="username">Username</label>
                 <Field
                     component={Input}
