@@ -928,7 +928,8 @@ svg {
 
 .client-list-div {
   overflow-y: auto;
-  height: 40vh; }
+  height: 40vh;
+  text-align: center; }
 
 .client {
   padding: 1rem; }

@@ -12,9 +12,15 @@ import EditClientForm from './EditClientForm';
 import requiresLogin from './requires-login';
 
 export class ClientsList extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            message: 'There are no clients that match your search'
+        };
+    }
 
     render() {
-
+        
         const sortFunction = (a, b) => {
             if (a.name < b.name) {
                 return -1;
@@ -41,18 +47,32 @@ export class ClientsList extends React.Component {
                 </div>
             )
          });
+
+         console.log(clientList);
         
-         
-        return (
-            <div className="client-list">
-                <div className="add-client-button-flexbox">
-                    <AddClientForm/>
+        if (clientList.length === 0) {
+            console.log('NULL');
+            return (
+                <div className="client-list">
+                    <div className="client-list-div">
+                    {this.state.message}
+                    </div>
                 </div>
-                <div className="client-list-div">
-                {clientList}
+            )
+        } else {
+            console.log('NOT NULL');
+            return (
+                <div className="client-list">
+                    <div className="add-client-button-flexbox">
+                        <AddClientForm/>
+                    </div>
+                    <div className="client-list-div">
+                    {clientList}
+                    </div>
                 </div>
-            </div>
-        )
+            )
+        }
+        
     }
 }
 
