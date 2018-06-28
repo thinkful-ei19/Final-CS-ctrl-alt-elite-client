@@ -48,7 +48,7 @@ function ScheduleList(props) {
         <div >
           <AptForm />
           <List component="nav">
-            <span className="appointments__message">No Appointments</span>
+            <div className="appointments__message">No Appointments</div>
           </List>
         </div>
       );

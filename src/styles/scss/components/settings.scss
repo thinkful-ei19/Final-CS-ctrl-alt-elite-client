@@ -95,12 +95,10 @@
     &__user {
         margin-top:10rem;
         font-size:1rem;
-        color: $color-highlight;
+        color: $color-name;
         position: fixed;
         left: 3vw;
-        &__username{
-            font-family: 'Carme', sans-serif;
-        }
+
     }
 }
 

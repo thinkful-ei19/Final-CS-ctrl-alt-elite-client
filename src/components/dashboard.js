@@ -54,6 +54,7 @@ export class Dashboard extends React.Component {
                 <div className="dashboard">
                     <Navigation/>
                     <div className="components">
+                    <h2 className="dashboard__welcome">Logged in as {this.props.currentUser.username}</h2>
                         <Calendar />
                         <Schedule />
                     </div>
