@@ -19,5 +19,8 @@
 
     &__welcome {
         padding: 0rem 5rem;
+        position: fixed;
+        color: $color-grey-dark-1;
+        top: 94vh;
     }
 }
