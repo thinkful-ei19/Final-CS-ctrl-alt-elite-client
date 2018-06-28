@@ -637,8 +637,7 @@ svg {
 
 .about {
   background-color: white;
-  height: 70vh;
-  padding: 20rem 40rem; }
+  padding: 10rem 10rem; }
   @media (max-width: 85.375em) {
     .about {
       padding: 50px 50px 0px 50px; } }
@@ -650,47 +649,17 @@ svg {
   @media (max-width: 25em) {
     .about {
       padding: 30px 32px; } }
-  .about__left {
-    display: inline-block;
-    width: 45%;
-    margin-right: 3rem;
-    vertical-align: middle; }
-    @media (max-width: 40em) {
-      .about__left {
-        display: block;
-        text-align: center;
-        width: 100%;
-        margin: 0; } }
   .about__header {
-    font-size: 3.2rem;
+    display: block;
+    font-size: 4.8rem;
     font-family: 'Carme', sans-serif;
     text-transform: uppercase; }
-    @media (max-width: 60em) {
-      .about__header__first {
-        font-size: 4rem; } }
-    @media (max-width: 25em) {
-      .about__header__first {
-        font-size: 3.5rem; } }
-    @media (max-width: 60em) {
-      .about__header__second {
-        font-size: 4rem; } }
-    @media (max-width: 25em) {
-      .about__header__second {
-        font-size: 3.5rem; } }
-    @media (max-width: 60em) {
-      .about__header__third {
-        font-size: 4rem; } }
-    @media (max-width: 25em) {
-      .about__header__third {
-        font-size: 3.5rem; } }
-  .about__right {
-    width: 45%;
+  .about__content {
     margin-left: 3rem;
-    display: inline-block;
-    font-size: 1.8rem;
-    vertical-align: middle; }
+    display: block;
+    font-size: 1.8rem; }
     @media (max-width: 60em) {
-      .about__right {
+      .about__content {
         margin-left: 8rem; } }
   .about__list {
     display: inline-block;
@@ -702,11 +671,21 @@ svg {
       .about__list {
         display: inline-flex;
         text-align: center; } }
-    @media (max-width: 25em) {
-      .about__list__item {
-        padding-right: 1rem; } }
-    .about__list__item__details {
-      color: #616A6B; }
+    .about__list__item {
+      display: block;
+      padding: 10rem 10rem; }
+      @media (max-width: 25em) {
+        .about__list__item {
+          padding-right: 1rem; } }
+      .about__list__item__details {
+        color: #616A6B; }
+      .about__list__item__image {
+        width: 45%;
+        margin: 1rem; }
+      .about__list__item__overlap {
+        width: 60rem;
+        position: absolute;
+        margin-left: 50rem; }
 
 .phone-image {
   width: 70%; }
