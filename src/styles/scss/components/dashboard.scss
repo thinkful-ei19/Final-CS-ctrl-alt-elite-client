@@ -16,4 +16,8 @@
 .dashboard {
     background-image: linear-gradient(to right, rgba($color-overlay, .8), rgba($color-overlay, .8));
     height: 100vh;
+
+    &__welcome {
+        padding: 0rem 5rem;
+    }
 }

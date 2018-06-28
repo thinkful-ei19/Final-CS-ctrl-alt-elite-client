@@ -45,6 +45,7 @@ export class Dashboard extends React.Component {
             return (
                 <section style={ sectionStyle }>
                     <div className="dashboard">
+                        <h2 className="dashboard__welcome">Welcome, {this.props.currentUser.username}!</h2>
                         <Navigation/>
                         <div className="components">
                             <WeeklyView />
@@ -57,7 +58,8 @@ export class Dashboard extends React.Component {
         }
         return (
             <section style={ sectionStyle }>
-                    <div className="dashboard">
+                <div className="dashboard">
+                    <h2 className="dashboard__welcome">Welcome, {this.props.currentUser.username}!</h2>
                     <Navigation/>
                     <div className="components">
                         <Calendar />
