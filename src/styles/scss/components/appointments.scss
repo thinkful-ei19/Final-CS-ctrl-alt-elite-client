@@ -156,5 +156,10 @@
 
 .appointments-specify {
     text-align: right;
-    padding: 0 2rem;
+    padding: 0 1.2rem;
+
+    & > button > span > svg {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
 }

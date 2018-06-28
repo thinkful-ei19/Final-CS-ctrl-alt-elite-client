@@ -29,7 +29,7 @@ export class ClientsList extends React.Component {
 
         const clientList = sortedClientList.map((client) => {
             return (
-                <div key={client.id} className="client">
+                <li key={client.id} className="client">
                     <ul className="client__list" key={client.id}>
                         <li className="client__list__name">{client.name}</li>
                         <li className="client__list__phone">{client.phone}</li>
@@ -42,7 +42,7 @@ export class ClientsList extends React.Component {
                     {/* <div className="client__name">{client.name}</div>
                     <div className="client__phone">{client.phone}</div> 
                     <div className="client__email">{client.email}</div> */}
-                </div>
+                </li>
             )
          });
 
@@ -63,9 +63,9 @@ export class ClientsList extends React.Component {
                     <div className="add-client-button-flexbox">
                         <AddClientForm/>
                     </div>
-                    <div className="client__list__div">
+                    <ul className="client__list__div">
                     {clientList}
-                    </div>
+                    </ul>
                 </div>
             )
         }
