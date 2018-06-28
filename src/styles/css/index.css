@@ -503,6 +503,9 @@ svg {
   text-align: right;
   padding: 0 2rem; }
 
+.MuiList-root-32 {
+  text-align: left; }
+
 .schedule {
   display: inline-block;
   width: 40rem;
