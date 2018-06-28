@@ -19,6 +19,7 @@ function ScheduleList(props) {
         if (moment(apt.time).format('YYYY MM DD') === moment(props.selectedDate).format('YYYY MM DD')) {
           return apt;
         }
+        return;
       }).sort((a,b) => {return moment(a.time).valueOf() - moment(b.time).valueOf()});
     }
     buildList = appointments.map((apt) => {

@@ -162,7 +162,7 @@ export default class LineGraph extends React.Component{
                             margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
                             onClick={(e) => {         
                                 if (e !== null) {
-                                this.handleClick(e.activeLabel)
+                                this.handleClick(e.activeLabel);
                                 }   
                             }}>
                              <CartesianGrid strokeDasharray="3 3" />

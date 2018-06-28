@@ -12,7 +12,7 @@
     }
 
     &__change-theme {
-        margin: 11rem auto 7rem auto;
+        margin: 15rem auto 7rem auto;
         text-align: center;
 
         @include respond(phone-land) {
@@ -90,6 +90,16 @@
             color: $color-previous-date;
             background-color: white;
             border: 1px solid $color-previous-date;
+        }
+    }
+    &__user {
+        margin-top:10rem;
+        font-size:1rem;
+        color: $color-highlight;
+        position: fixed;
+        left: 3vw;
+        &__username{
+            font-family: 'Carme', sans-serif;
         }
     }
 }

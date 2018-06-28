@@ -14,7 +14,6 @@ https://github.com/thinkful-ei19/Final-CS-ctrl-alt-elite-react-native
 ### Front-End
 * React
 * Redux
-* React Native
 * HTML
 * CSS
 
