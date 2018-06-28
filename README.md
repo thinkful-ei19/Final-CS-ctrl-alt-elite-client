@@ -22,8 +22,7 @@ Reports
 <img width="1282" alt="screen shot 2018-06-28 at 2 35 26 pm" src="https://user-images.githubusercontent.com/24361293/42062875-10bb3a1a-7ae4-11e8-8763-c88ba979740f.png">
 
 Settings
-<img width="1286" alt="screen shot 2018-06-28 at 2 39 53 pm" src="https://user-images.githubusercontent.com/24361293/42062891-2042fb12-7ae4-11e8-9f2f-fceae75aaa9e.png">
-
+<img width="1281" alt="screen shot 2018-06-28 at 3 02 52 pm" src="https://user-images.githubusercontent.com/24361293/42062968-6cf0c016-7ae4-11e8-8e83-bbc67c9a4b36.png">
 
 Light Theme
 
