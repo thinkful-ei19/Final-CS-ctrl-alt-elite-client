@@ -52,7 +52,9 @@ export class ClientsList extends React.Component {
             return (
                 <div className="client-list">
                     <div className="client-list-div">
-                    {this.state.message}
+                        <div className="client-list-div-message">
+                            {this.state.message}
+                        </div>
                     </div>
                 </div>
             )
