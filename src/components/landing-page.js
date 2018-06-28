@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { API_BASE_URL } from '../config';
-import githubIcon from '../styles/images/github/githubwhite.png';
-import linkedInIcon from '../styles/images/linkedin/linkedin.svg';
+import githubIcon from '../styles/images/github/githubWhite.png';
+import linkedInIcon from '../styles/images/linkedin/linkedInWhite.png';
 import Logo from '../media/schedulrLogoSized.png';
 
 export default function LandingPage(props) {
@@ -84,7 +84,7 @@ export default function LandingPage(props) {
                         <ul className="about-us__person__list">
                             {/* <li className="about-us__person__list__item about-us__person__list__name">Julie Kim</li> */}
                             <li className="about-us__person__list__item about-us__person__list__portfolio">
-                                <a className="about-us__person__list__portfolio__text" href="http://www.itsjuliek.com" target="blank">Julie Kim</a>
+                                <a className="about-us__person__list__portfolio__text" href="http://www.itsjuliek.com" target="blank">JULIE KIM</a>
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__github">
                                 <a href="https://github.com/joulay" target="blank"><img alt="github icon" src={githubIcon}/></a> 
@@ -99,7 +99,7 @@ export default function LandingPage(props) {
                         <ul className="about-us__person__list">
                             {/* <li className="about-us__person__list__item about-us__person__list__name">Alexa Scott</li> */}
                             <li className="about-us__person__list__item about-us__person__list__portfolio">
-                                <a className="about-us__person__list__portfolio__text" href="" target="blank">Alexa Scott</a>
+                                <a className="about-us__person__list__portfolio__text" href="" target="blank">ALEXA SCOTT</a>
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__github">
                                 <a href="https://github.com/AlexaScott33" target="blank"><img alt="github icon" src={githubIcon}/></a>                                                
@@ -113,7 +113,7 @@ export default function LandingPage(props) {
                         <ul className="about-us__person__list">
                             {/* <li className="about-us__person__list__item about-us__person__list__name">Joshua Hutchinson</li> */}
                             <li className="about-us__person__list__item about-us__person__list__portfolio">
-                                <a className="about-us__person__list__portfolio__text" href="" target="blank">Josh Hutchinson</a>
+                                <a className="about-us__person__list__portfolio__text" href="" target="blank">JOSH HUTCHINSON</a>
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__github">
                                 <a href="https://github.com/JTHUTCH94" target="blank"><img alt="linkedIn icon" src={githubIcon}/></a>                                                
@@ -127,7 +127,7 @@ export default function LandingPage(props) {
                         <ul className="about-us__person__list">
                             {/* <li className="about-us__person__list__item about-us__person__list__name">Christopher Whiteman</li> */}
                             <li className="about-us__person__list__item about-us__person__list__portfolio">
-                                <a className="about-us__person__list__portfolio__text" href="http://www.chris-whiteman.com" target="blank">Chris Whiteman</a>
+                                <a className="about-us__person__list__portfolio__text" href="http://www.chris-whiteman.com" target="blank">CHRIS WHITEMAN</a>
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__github">
                                 <a href="https://github.com/cjszk" target="blank"><img alt="github icon" src={githubIcon}/></a>                                                

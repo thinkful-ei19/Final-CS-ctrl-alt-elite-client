@@ -1,5 +1,4 @@
 .settings {
-    // text-align: center;
     display: block;
     width: 100%;
 
@@ -13,8 +12,6 @@
     }
 
     &__change-theme {
-        // margin-bottom: 7rem;
-        // margin-top: 11rem;
         margin: 11rem auto 7rem auto;
         text-align: center;
 
@@ -24,6 +21,7 @@
 
         &__header {
             font-size: 2.4rem;
+            padding-bottom: .5rem;
         }
 
         &__drop-down {
@@ -52,6 +50,7 @@
         &__form div .form-error {
             text-align: left;
             margin-left: 2.5rem;
+            padding-top:.8rem;
         }
 
         &__header {
@@ -61,7 +60,8 @@
         &__label {
             font-size: 1.2rem;
             font-weight: 700;
-            margin-top: .7rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
             text-align: left;
             margin-left: 2.5rem;
             display: block;
@@ -86,8 +86,10 @@
 
         &__button {
             display: block;
-            margin: 2rem auto;
-            color: $color-purple
+            margin: 3.5rem auto;
+            color: $color-previous-date;
+            background-color: white;
+            border: 1px solid $color-previous-date;
         }
     }
 }
