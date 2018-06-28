@@ -9,9 +9,6 @@ Landing Page
 Login Page 
 <img width="1284" alt="screen shot 2018-06-28 at 2 30 09 pm" src="https://user-images.githubusercontent.com/24361293/42062379-475cf09c-7ae2-11e8-8d13-bebe477efcbb.png">
 
-Settings - Light Theme
-<img width="1281" alt="screen shot 2018-06-28 at 3 02 52 pm" src="https://user-images.githubusercontent.com/24361293/42062968-6cf0c016-7ae4-11e8-8e83-bbc67c9a4b36.png">
-
 Dashboard - Dark Theme
 <img width="1282" alt="screen shot 2018-06-28 at 2 40 57 pm" src="https://user-images.githubusercontent.com/24361293/42063211-7b5fe4d2-7ae5-11e8-9015-b8009a993ea7.png">
 
@@ -27,8 +24,8 @@ Reports - Dark Theme
 Reports - Dark Theme
 <img width="1282" alt="screen shot 2018-06-28 at 2 41 58 pm" src="https://user-images.githubusercontent.com/24361293/42063288-c6b72ada-7ae5-11e8-8977-d4908a3eb5d2.png">
 
-Settings - Dark Theme
-<img width="1279" alt="screen shot 2018-06-28 at 2 40 41 pm" src="https://user-images.githubusercontent.com/24361293/42062909-32ee23a4-7ae4-11e8-8b91-4356c38e354b.png">
+Settings - Light Theme
+<img width="1281" alt="screen shot 2018-06-28 at 3 02 52 pm" src="https://user-images.githubusercontent.com/24361293/42062968-6cf0c016-7ae4-11e8-8e83-bbc67c9a4b36.png">
 
 ## View the Backend code here:
 https://github.com/thinkful-ei19/Final-CS-ctrl-alt-elite-server
