@@ -804,20 +804,19 @@ svg {
       @media (max-width: 60em) {
         .about-us__person__list__name {
           font-size: 2.1rem; } }
-    .about-us__person__list__portfolio {
-      font-size: 1.2rem; }
-      .about-us__person__list__portfolio__text {
-        color: grey; }
-        .about-us__person__list__portfolio__text:hover {
-          text-decoration: underline; }
-      @media (max-width: 85.375em) {
-        .about-us__person__list__portfolio {
-          font-size: 2.4rem;
-          line-height: 1.3; } }
-      @media (max-width: 40em) {
-        .about-us__person__list__portfolio {
-          font-size: 2.4rem;
-          line-height: 1.3; } }
+    .about-us__person__list__portfolio__text {
+      color: grey;
+      font-size: 1.9rem; }
+      .about-us__person__list__portfolio__text:hover {
+        text-decoration: underline; }
+    @media (max-width: 85.375em) {
+      .about-us__person__list__portfolio {
+        font-size: 2.4rem;
+        line-height: 1.3; } }
+    @media (max-width: 40em) {
+      .about-us__person__list__portfolio {
+        font-size: 2.4rem;
+        line-height: 1.3; } }
     .about-us__person__list__github {
       display: inline-block;
       margin: 0 .6rem; }
