@@ -33,7 +33,10 @@ Dashboard - Dark Theme
 Dashboard Weekly - Dark Theme
 <img width="1283" alt="screen shot 2018-06-28 at 2 43 52 pm" src="https://user-images.githubusercontent.com/24361293/42063267-a84e26e8-7ae5-11e8-833e-0d3c4b3bd9df.png">
 
-Clients - Dark Theme
+Clients - Dark Theme 
+<img width="1281" alt="screen shot 2018-06-28 at 3 23 20 pm" src="https://user-images.githubusercontent.com/24361293/42063608-59fa6df6-7ae7-11e8-8721-03c79aeaadd8.png">
+
+Reports - Dark Theme
 <img width="1283" alt="screen shot 2018-06-28 at 2 43 07 pm" src="https://user-images.githubusercontent.com/24361293/42063279-b96a99de-7ae5-11e8-84b2-babd0bf74a60.png">
 
 Reports - Dark Theme
