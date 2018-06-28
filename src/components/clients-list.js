@@ -68,8 +68,7 @@ export class ClientsList extends React.Component {
                     </div>
                 </div>
             )
-        }
-        
+        }   
     }
 }
 
