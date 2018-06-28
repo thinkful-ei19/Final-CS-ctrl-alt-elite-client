@@ -13,7 +13,7 @@ export default function LandingPage(props) {
             'Accept': 'application/json',
           }
     })
-    .then(res => console.log('Sent artbitrary get request to heroku server to wake it up')).catch(err => {});
+    .then(res => console.log('Sent artbitrary get request to heroku server to wake it up...', res)).catch(err => {});
 
     return(
         <section className="landing-page">
