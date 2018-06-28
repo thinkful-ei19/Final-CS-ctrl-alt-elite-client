@@ -19,7 +19,6 @@ export default function LandingPage(props) {
         <section className="landing-page">
             
             <nav className="nav">
-                <img className="nav__header" />
                <img alt="logo" className="logo" src={Logo}/>
                 <Link to="/login">
                     <span className="nav__button">Login</span>
