@@ -152,7 +152,7 @@ export default class LineGraph extends React.Component{
             return(
                 <div>
                     <div>
-                    <p className="report__message">Click graph to see appointment history</p>
+                    
                     </div>
                     <ResponsiveContainer minWidth={420} minHeight={300} maxWidth={1960} maxHeight={1280} className="linechart report__left">
                         <LineChart 
@@ -184,6 +184,8 @@ export default class LineGraph extends React.Component{
                             }}/>
                         </LineChart>
                     </ResponsiveContainer>
+
+                    <p className="report__message">Click graph to see appointment history</p>
                  </div>
              );
         // }

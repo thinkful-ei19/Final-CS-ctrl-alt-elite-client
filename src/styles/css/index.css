@@ -10,7 +10,7 @@
   color: #7FB3D5; }
 
 .other-month-date {
-  color: #aaa; }
+  color: #BDC3C7; }
 
 .current-day {
   color: #3c48a0;
@@ -926,7 +926,7 @@ svg {
       margin-left: -10rem; } }
   .report__left {
     display: block;
-    margin-top: 8rem;
+    margin-top: 15rem;
     margin-left: 0rem; }
     @media (max-width: 60em) and (max-height: 40em) {
       .report__left {
@@ -1063,6 +1063,9 @@ svg {
   .client:hover .client__edit-form, .client:hover .client__delete-form {
     visibility: visible; }
 
+.client-list-div {
+  text-align: center; }
+
 .add-client-button-flexbox {
   display: flex;
   justify-content: flex-end; }
@@ -1083,7 +1086,7 @@ svg {
   .search__input {
     font-family: inherit;
     font-size: inherit;
-    color: white;
+    color: #424949;
     background-color: #fff;
     border: none;
     padding: 1.7rem 1.5rem;

@@ -131,6 +131,10 @@
     }
 }
 
+.client-list-div {
+    text-align: center;
+}
+
 .add-client-button-flexbox {
     display: flex;
     justify-content: flex-end;
@@ -155,7 +159,7 @@
     &__input {
         font-family: inherit;
         font-size: inherit;
-        color: $color-font-opposite;
+        color: $color-input;
         background-color: $color-white;
         border: none;
         padding: 1.7rem 1.5rem;

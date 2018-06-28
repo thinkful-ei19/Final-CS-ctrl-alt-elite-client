@@ -10,7 +10,7 @@
   color: #7FB3D5; }
 
 .other-month-date {
-  color: #aaa; }
+  color: #717D7E; }
 
 .current-day {
   color: #3c48a0;
@@ -230,7 +230,7 @@ svg {
     font-size: 3rem;
     font-weight: 500;
     padding: 1rem 2rem;
-    color: #616A6B;
+    color: #c9c9c9;
     text-decoration: none;
     text-transform: uppercase;
     background-size: 230%;
@@ -288,7 +288,7 @@ svg {
   margin: 2rem auto;
   padding: 10rem;
   font-family: 'Roboto', sans-serif;
-  color: #616A6B; }
+  color: #c9c9c9; }
   .login-form__message {
     color: red;
     font-size: 2rem; }
@@ -703,7 +703,7 @@ svg {
       .about__list__item {
         padding-right: 1rem; } }
     .about__list__item__details {
-      color: #616A6B; }
+      color: #c9c9c9; }
 
 .phone-image {
   width: 70%; }
@@ -757,7 +757,7 @@ svg {
       .whats-new__right {
         padding: 0; } }
   .whats-new__list__item__details {
-    color: #616A6B; }
+    color: #c9c9c9; }
 
 .about-us {
   background-color: #333;
@@ -871,7 +871,7 @@ svg {
     .weekly-view__weekly__month {
       text-transform: uppercase; }
   .weekly-view__hourly__ul {
-    color: #616A6B;
+    color: #c9c9c9;
     display: flex;
     flex-direction: column;
     height: 70vh; }
@@ -926,7 +926,7 @@ svg {
       margin-left: -10rem; } }
   .report__left {
     display: block;
-    margin-top: 8rem;
+    margin-top: 15rem;
     margin-left: 0rem; }
     @media (max-width: 60em) and (max-height: 40em) {
       .report__left {
@@ -962,7 +962,7 @@ svg {
     line-height: 1.2; }
   .report__list-item__name {
     font-size: 1.5rem;
-    color: #616A6B;
+    color: #c9c9c9;
     line-height: 1.4; }
   .report__list-item__phone, .report__list-item__email {
     color: #999;
@@ -972,7 +972,8 @@ svg {
     text-align: center;
     font-size: 1.5rem; }
   .report__center {
-    text-align: center; }
+    text-align: center;
+    font-size: 1.5rem; }
 
 .linechart {
   text-align: center; }
@@ -1003,6 +1004,10 @@ svg {
   overflow-y: auto;
   height: 40vh; }
 
+.client-list-div-message {
+  font-size: 1.5rem;
+  text-align: center; }
+
 .client {
   padding: 1rem;
   display: flex;
@@ -1012,7 +1017,7 @@ svg {
     vertical-align: middle; }
     .client__list__name {
       font-size: 1.5rem;
-      color: #616A6B;
+      color: #c9c9c9;
       line-height: 1.4; }
       @media (max-width: 60em) and (max-height: 40em) {
         .client__list__name {
@@ -1058,6 +1063,9 @@ svg {
   .client:hover .client__edit-form, .client:hover .client__delete-form {
     visibility: visible; }
 
+.client-list-div {
+  text-align: center; }
+
 .add-client-button-flexbox {
   display: flex;
   justify-content: flex-end; }
@@ -1078,7 +1086,7 @@ svg {
   .search__input {
     font-family: inherit;
     font-size: inherit;
-    color: black;
+    color: #373737;
     background-color: #fff;
     border: none;
     padding: 1.7rem 1.5rem;

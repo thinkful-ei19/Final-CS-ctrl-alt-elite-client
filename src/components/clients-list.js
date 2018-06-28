@@ -63,7 +63,7 @@ export class ClientsList extends React.Component {
                     <div className="add-client-button-flexbox">
                         <AddClientForm/>
                     </div>
-                    <div className="client-list-div">
+                    <div className="client__list__div">
                     {clientList}
                     </div>
                 </div>
