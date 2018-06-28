@@ -49,12 +49,12 @@ export class App extends React.Component {
     render() {
         try {
             if (this.props.currentUser.options.theme === 'dark') {
-                require('./styles/css/index-dark.css')
+                import('./styles/css/index-dark.css');
             } else {
-                require('./styles/css/index.css')
+                import('./styles/css/index.css');
             }
         } catch(err) {
-            require('./styles/css/index.css')            
+            import('./styles/css/index.css');            
         }
         return (
             
