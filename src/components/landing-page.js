@@ -5,6 +5,18 @@ import githubIcon from '../styles/images/github/githubWhite.png';
 import linkedInIcon from '../styles/images/linkedin/linkedInWhite.png';
 import Logo from '../media/schedulrLogoSized.png';
 
+import ssOne from '../styles/images/screenshot-1.png';
+import ssTwo from '../styles/images/screenshot-2.png';
+import ssThree from '../styles/images/screenshot-3.png';
+import ssFour from '../styles/images/screenshot-4.png';
+import ssFive from '../styles/images/screenshot-5.png';
+import ssSix from '../styles/images/screenshot-6.png';
+import ssSeven from '../styles/images/screenshot-7.png';
+import ssEight from '../styles/images/screenshot-8.png';
+import ssNine from '../styles/images/screenshot-9.png';
+import ssTen from '../styles/images/screenshot-10.png';
+
+
 export default function LandingPage(props) {
     //Wake the heroku server up.
     fetch(`${API_BASE_URL}`, {
@@ -37,44 +49,52 @@ export default function LandingPage(props) {
                     </div>
                 </div>
             </div>
-            <div className="about">
-                <div className="about__left">           
-                    <span className="about__header">     
-                        <h2 className="about__header__first">The perfect</h2>
-                        <h2 className="about__header__second">business</h2>
-                        <h2 className="about__header__third">companion</h2>                    
-                    </span>
-                </div>
-                <div className="about__right">
+            <div className="about">            
+                <h2 className="about__header">The perfect business companion</h2>              
+                <div className="about__content">
                     <ul className="about__list">
                         <li className="about__list__item">
                             <h3 className="about__list__item__header">Fast, expressive and convenient</h3>
                             <p className="about__list__item__details"><b className="bold">Schedulr</b> shows your appointments with an interactive calendar 
                                 and allows you full flexibility and control.</p>
+                            <img className="about__list__item__image" src={ssOne}/>
+                            <img className="about__list__item__image" src={ssThree}/>
+                        </li>
+                        <li className="about__list__item">
+                            <h3 className="about__list__item__header">Customization at your fingertips</h3>
+                            <p className="about__list__item__details">A truly great user experience is one that can be made personal. 
+                            <b className="bold"> Schedulr</b> offers different themes for a more personalized user experience.</p>
+                            <img className="about__list__item__image about__list__item__overlap" src={ssTwo}/>
+                            <img className="about__list__item__image" src={ssNine}/>
                         </li>
                         <li className="about__list__item">
                             <h3 className="about__list__item__header">Automated reminders</h3>
                             <p className="about__list__item__details">Let <b className="bold">Schedulr</b> do the tedious work for you. Reminders for clients?
                                 No problem! <b className="bold">Schedulr</b> will do it for you.</p>
+                            <img className="about__list__item__image" src={ssSeven}/>
                         </li>
                         <li className="about__list__item">
                             <h3 className="about__list__item__header">Detailed Reports</h3>
                             <p className="about__list__item__details">Good planning isn't just about appointments.
                             <b className="bold">Schedulr</b> can show you information about your clientele with its own reports!</p>
+                            <img className="about__list__item__image" src={ssFive}/>
+                            <img className="about__list__item__image" src={ssSix}/>
                         </li>
+
+
+
                     </ul>
                 </div>
             </div>
             <div className="whats-new">
                 <h2 className="whats-new__header">Always on the go? Our mobile app has you covered!</h2>
                 <div className="whats-new__left">
-                    <img alt="iPhone pic of mobile app" className="phone-image" src="https://www.boostmobile.com/content/dam/boostmobile/en/products/phones/apple-iphone-6s-plus/space-gray/iphone6sPlus_SpaceGray_front@3x.png.transform/pdpCarousel/image.jpg" />
+                    <img alt="iPhone pic of mobile app" className="phone-image" src={ssTen} />
                 </div>
                 <div className="whats-new__right">
                 <h3 className="whats-new__list__item__header"><b className="bold">Schedulr</b> can go wherever your phone goes</h3>
                     <p className="whats-new__list__item__details">Enjoy all of the features <b className="bold">Schedulr</b> has to offer on mobile! Whether you are the one visiting your clients or not, <b className="bold">Schedulr</b> will always be with you.</p>
                 </div>
-                
             </div>
             <div className="about-us">
                 <h4 className="about-us__header">This web application crafted and designed by:</h4>
