@@ -59,6 +59,7 @@ https://github.com/thinkful-ei19/Final-CS-ctrl-alt-elite-react-native
 * Redux
 * HTML
 * CSS
+* SCSS 
 
 ### Back-End
 * Node
