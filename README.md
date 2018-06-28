@@ -1,9 +1,6 @@
 # Schedulr
 
-An application designed for......
-
-## View the Project live here:
-https://schedulr.netlify.com/
+[Schedulr](https://schedulr.netlify.com/) provides a fast and easy way for business owners to schedule and keep track of all of their appointments with their clients. NEED MORE HERE
 
 ## View the Backend code here:
 https://github.com/thinkful-ei19/Final-CS-ctrl-alt-elite-server
