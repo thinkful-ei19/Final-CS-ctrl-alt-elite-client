@@ -28,7 +28,6 @@ export default class LineGraph extends React.Component{
     }
 
 	render () {
-        console.log(this.state);
            let apptInfo = []; 
            let janCount = 0;
            let febCount = 0;
@@ -99,8 +98,6 @@ export default class LineGraph extends React.Component{
                 </li>
            );
        });
-
-       console.log(apptDataList);
     
        const data = [
         {name: 'JAN', appointments: janCount},

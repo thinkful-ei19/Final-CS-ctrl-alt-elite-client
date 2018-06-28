@@ -86,7 +86,6 @@ export const getUserInfoById = (authToken, id) => dispatch => {
 }
 
 export const login = (username, password) => dispatch => {
-    console.log(`logging in user: ${username}`);
     dispatch(authRequest());
     return (
         fetch(`${API_BASE_URL}/login`, {
@@ -153,7 +152,7 @@ export const changeTheme = (authToken, theme, userId) => (dispatch) => {
     const updateObject = {
         theme: theme
     }
-    console.log(updateObject)
+
     fetch(`${API_BASE_URL}/change-theme/${userId}`, {
         method: 'PUT', 
         body: JSON.stringify(updateObject),
@@ -180,7 +179,6 @@ export const changePassword = (authToken, password, userId) => (dispatch) => {
     const updateObject = {
         password: password
     }
-    console.log(updateObject)
     fetch(`${API_BASE_URL}/change-password/${userId}`, {
         method: 'PUT', 
         body: JSON.stringify(updateObject),

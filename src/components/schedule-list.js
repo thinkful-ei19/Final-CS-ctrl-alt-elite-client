@@ -21,7 +21,6 @@ function ScheduleList(props) {
         }
       }).sort((a,b) => {return moment(a.time).valueOf() - moment(b.time).valueOf()});
     }
-    console.log(appointments)
     buildList = appointments.map((apt) => {
       return (
       // <ListItem key={apt.id} button>

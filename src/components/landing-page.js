@@ -5,9 +5,6 @@ import githubIcon from '../styles/images/github/githubwhite.png';
 import linkedInIcon from '../styles/images/linkedin/linkedin.svg';
 import Logo from '../media/schedulrLogoSized.png';
 
-import IconButton from '@material-ui/core/IconButton';
-import SvgIcon from '@material-ui/core/SvgIcon';
-
 export default function LandingPage(props) {
     //Wake the heroku server up.
     fetch(`${API_BASE_URL}`, {

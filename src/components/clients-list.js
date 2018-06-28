@@ -4,9 +4,8 @@ import {connect} from 'react-redux';
 import ConfirmClientDelete from './ConfirmClientDelete';
 import EditClientForm from './EditClientForm';
 
-
-
 import requiresLogin from './requires-login';
+
 
 export class ClientsList extends React.Component {
     constructor(props) {
