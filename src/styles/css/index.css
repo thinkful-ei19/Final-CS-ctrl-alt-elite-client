@@ -972,7 +972,8 @@ svg {
     text-align: center;
     font-size: 1.5rem; }
   .report__center {
-    text-align: center; }
+    text-align: center;
+    font-size: 1.5rem; }
 
 .linechart {
   text-align: center; }
@@ -1002,6 +1003,10 @@ svg {
 .client-list-div {
   overflow-y: auto;
   height: 40vh; }
+
+.client-list-div-message {
+  font-size: 1.5rem;
+  text-align: center; }
 
 .client {
   padding: 1rem;

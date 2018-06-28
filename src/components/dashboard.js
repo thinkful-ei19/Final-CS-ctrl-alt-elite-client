@@ -7,13 +7,13 @@ import Navigation from './navigation';
 // import { setDate } from '../actions/appointment';
 import Calendar from './calendar';
 import WeeklyView from './weekly-view'
-import background from '../media/whiteHoriz.jpg';
+// import background from '../media/whiteHoriz.jpg';
 import requiresLogin from './requires-login';
 // import AptForm from './AptForm';
 
 import lightBackground from '../media/laptop.jpg';
 import darkBackground from '../media/deskWhite.jpg';
-import oceanBackground from '../media/wB.jpg'; 
+// import oceanBackground from '../media/wB.jpg'; 
 
 export class Dashboard extends React.Component {
 

@@ -1,15 +1,11 @@
 import React from 'react';
 import AddClientForm from './AddClientForm';
 import {connect} from 'react-redux';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import ConfirmClientDelete from './ConfirmClientDelete';
 import EditClientForm from './EditClientForm';
 
-
-
 import requiresLogin from './requires-login';
+
 
 export class ClientsList extends React.Component {
     constructor(props) {
@@ -55,7 +51,9 @@ export class ClientsList extends React.Component {
             return (
                 <div className="client-list">
                     <div className="client-list-div">
-                    {this.state.message}
+                        <div className="client-list-div-message">
+                            {this.state.message}
+                        </div>
                     </div>
                 </div>
             )

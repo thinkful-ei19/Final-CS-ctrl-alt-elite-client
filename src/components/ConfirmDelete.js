@@ -26,9 +26,6 @@ class ConfirmDelete extends React.Component {
   };
 
   render() {
-    // console.log('currentUser id', this.props.currentUser.id);
-    // console.log('authToken', this.props.authToken);
-    // console.log('this is the aptId to delete', this.props.aptId);
     return (
       <div className="appointments__delete">
         <IconButton className="appointments" aria-label="Delete" onClick={this.handleClickOpen}>

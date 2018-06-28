@@ -94,7 +94,6 @@ class AptForm extends React.Component {
   }
 
   render() {
-    console.log(this.state)
     let dropDownMenu;
     if (this.props.currentUser.clients.length > 0) {
       const buildOptions = this.props.currentUser.clients.map((client) => {

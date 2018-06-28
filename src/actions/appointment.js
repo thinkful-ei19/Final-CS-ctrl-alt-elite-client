@@ -33,7 +33,6 @@ export const selectAppointment = apt => ({
 })
 
 export const addClient = (authToken, client, id) => (dispatch) => {
-    console.log(`adding client: ${client}`);
     fetch(`${API_BASE_URL}/clients/${id}`, {
         method: 'POST', 
         body: JSON.stringify(client),
@@ -46,7 +45,6 @@ export const addClient = (authToken, client, id) => (dispatch) => {
     .then(res => normalizeResponseErrors(res))
     .then(res => res.json())
     .then(response => {
-        console.log('this is response when adding a client:', response);
         dispatch(addAppointmentSuccess(response));
         dispatch(getUserInfoById(authToken, id))
     }).catch(err => {
@@ -56,7 +54,6 @@ export const addClient = (authToken, client, id) => (dispatch) => {
 
 
 export const addAppointment = (authToken, appointment, id) => (dispatch) => {
-    console.log('DISPATCHING');
     dispatch(addAppointmentRequest());
     const newAppointment = { 
         time: moment(String(appointment.date + ' ' + appointment.time)).format(),
@@ -110,7 +107,6 @@ export const deleteAppointmentError = error => ({
 
 export const deleteAppointment = (authToken, id, userId) => (dispatch) => {
     dispatch(deleteAppointmentRequest());
-    console.log(`deleting appointment with aptId: ${id} for user: ${userId}`);
     fetch(`${API_BASE_URL}/appointments/${id}`, {
         method: 'DELETE', 
         body: JSON.stringify({userId}),
@@ -122,7 +118,6 @@ export const deleteAppointment = (authToken, id, userId) => (dispatch) => {
     })
     .then(res => normalizeResponseErrors(res))
     .then(appointment => {
-        console.log(appointment);
         dispatch(deleteAppointmentSuccess(appointment))
     })
     .then(() => {
@@ -144,8 +139,6 @@ export const editAppointment = (authToken, values, id, userId) => (dispatch) => 
             phone: values.phone,
         }
     }
-
-    console.log('updateOBJ!!', updateObject.client);
 
     fetch(`${API_BASE_URL}/appointments/${id}`, {
         method: 'PUT', 

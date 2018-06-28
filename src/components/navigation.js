@@ -15,7 +15,6 @@ class Navigation extends React.Component {
     }
 
     logOut() {
-        console.log('clearing authToken and logging out user');
         this.props.dispatch(clearAuth());
         clearAuthToken();
     }
@@ -97,11 +96,10 @@ class Navigation extends React.Component {
                           className="navigation__link">Logout
                         </a>
                     </li>
-
                 </ul>
             </nav>
         </div>
-        )
+        );
     }
 }
 

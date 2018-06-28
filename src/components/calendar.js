@@ -10,7 +10,6 @@ import IconButton from '@material-ui/core/IconButton';
 class Calendar extends React.Component {
 
     toggleCalendar() {
-        console.log(this)
         this.props.dispatch(toggleCalendar('weekly'))
     }
 
@@ -64,8 +63,7 @@ class Calendar extends React.Component {
                 </IconButton>
                 </div>
                 <Days/>
-                <Dates/>
-                
+                <Dates/>         
             </div>
         )
     }

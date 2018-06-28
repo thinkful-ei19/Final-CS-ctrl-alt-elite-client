@@ -15,9 +15,7 @@ import Settings from './components/settings';
 
 
 export class App extends React.Component {
-    constructor(props) {
-        super(props) 
-    }
+    
 
     componentDidUpdate(prevProps) {
         if (!prevProps.loggedIn && this.props.loggedIn) {
