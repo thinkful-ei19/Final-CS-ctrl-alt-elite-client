@@ -1,9 +1,6 @@
 import React from 'react';
 import AddClientForm from './AddClientForm';
 import {connect} from 'react-redux';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import ConfirmClientDelete from './ConfirmClientDelete';
 import EditClientForm from './EditClientForm';
 

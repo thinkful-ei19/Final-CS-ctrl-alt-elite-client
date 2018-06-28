@@ -2,8 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 // import PropTypes from 'prop-types';
 import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import ConfirmDelete from './ConfirmDelete';
 import EditForm from './EditForm';
 import moment from 'moment';
