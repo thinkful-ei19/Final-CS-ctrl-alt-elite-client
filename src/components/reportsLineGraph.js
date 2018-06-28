@@ -140,7 +140,7 @@ export default class LineGraph extends React.Component{
                     </Link>
                         <div className="report__center">
                             <h1>Monthly Appointments History</h1>
-                            <h2>{this.state.name}</h2> 
+                            <h2 className="report__message">{this.state.name}</h2> 
                             <h3>{apptPercentage}% of your appointments were from {this.state.name}</h3>
                             <ul className="report__list">
                                 {apptDataList}
