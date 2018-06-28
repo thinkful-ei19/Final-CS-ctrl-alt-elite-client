@@ -972,7 +972,8 @@ svg {
     text-align: center;
     font-size: 1.5rem; }
   .report__center {
-    text-align: center; }
+    text-align: center;
+    font-size: 1.5rem; }
 
 .linechart {
   text-align: center; }
