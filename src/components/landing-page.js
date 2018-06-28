@@ -19,8 +19,8 @@ export default function LandingPage(props) {
         <section className="landing-page">
             
             <nav className="nav">
-                <img className="nav__header" />
-               <img className="logo" src={Logo}/>
+                <img alt="nav-header" className="nav__header" />
+               <img alt="logo" className="logo" src={Logo}/>
                 <Link to="/login">
                     <span className="nav__button">Login</span>
                 </Link>
@@ -69,7 +69,7 @@ export default function LandingPage(props) {
             <div className="whats-new">
                 <h2 className="whats-new__header">Always on the go? Our mobile app has you covered!</h2>
                 <div className="whats-new__left">
-                    <img className="phone-image" src="https://www.boostmobile.com/content/dam/boostmobile/en/products/phones/apple-iphone-6s-plus/space-gray/iphone6sPlus_SpaceGray_front@3x.png.transform/pdpCarousel/image.jpg" />
+                    <img alt="iPhone pic of mobile app" className="phone-image" src="https://www.boostmobile.com/content/dam/boostmobile/en/products/phones/apple-iphone-6s-plus/space-gray/iphone6sPlus_SpaceGray_front@3x.png.transform/pdpCarousel/image.jpg" />
                 </div>
                 <div className="whats-new__right">
                 <h3 className="whats-new__list__item__header"><b className="bold">Schedulr</b> can go wherever your phone goes</h3>
@@ -88,11 +88,11 @@ export default function LandingPage(props) {
                                 <a className="about-us__person__list__portfolio__text" href="http://www.itsjuliek.com" target="blank">Julie Kim</a>
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__github">
-                                <a href="https://github.com/joulay" target="blank"><img src={githubIcon}/></a> 
+                                <a href="https://github.com/joulay" target="blank"><img alt="github icon" src={githubIcon}/></a> 
                                                                                
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__linkedin">
-                                <a href="https://www.linkedin.com/in/joulay/" target="blank"><img style={{width: '28px'}} src={linkedInIcon}/></a>                        
+                                <a href="https://www.linkedin.com/in/joulay/" target="blank"><img alt="linkedIn icon" style={{width: '28px'}} src={linkedInIcon}/></a>                        
                             </li>
                         </ul>
                     </div>
@@ -103,10 +103,10 @@ export default function LandingPage(props) {
                                 <a className="about-us__person__list__portfolio__text" href="" target="blank">Alexa Scott</a>
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__github">
-                                <a href="https://github.com/AlexaScott33" target="blank"><img src={githubIcon}/></a>                                                
+                                <a href="https://github.com/AlexaScott33" target="blank"><img alt="github icon" src={githubIcon}/></a>                                                
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__linkedin">
-                                <a href="https://www.linkedin.com/in/alexa-scott-0a1040163/" target="blank"><img style={{width: '28px'}} src={linkedInIcon}/></a>                        
+                                <a href="https://www.linkedin.com/in/alexa-scott-0a1040163/" target="blank"><img alt="linkedIn icon" style={{width: '28px'}} src={linkedInIcon}/></a>                        
                             </li>
                         </ul>
                     </div>
@@ -117,10 +117,10 @@ export default function LandingPage(props) {
                                 <a className="about-us__person__list__portfolio__text" href="" target="blank">Josh Hutchinson</a>
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__github">
-                                <a href="https://github.com/JTHUTCH94" target="blank"><img src={githubIcon}/></a>                                                
+                                <a href="https://github.com/JTHUTCH94" target="blank"><img alt="linkedIn icon" src={githubIcon}/></a>                                                
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__linkedin">
-                                <a href="https://www.linkedin.com/in/hutchinson-joshua/" target="blank"><img style={{width: '28px'}} src={linkedInIcon}/></a>                        
+                                <a href="https://www.linkedin.com/in/hutchinson-joshua/" target="blank"><img alt="linkedIn icon" style={{width: '28px'}} src={linkedInIcon}/></a>                        
                             </li>
                         </ul>
                     </div>
@@ -131,10 +131,10 @@ export default function LandingPage(props) {
                                 <a className="about-us__person__list__portfolio__text" href="http://www.chris-whiteman.com" target="blank">Chris Whiteman</a>
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__github">
-                                <a href="https://github.com/cjszk" target="blank"><img src={githubIcon}/></a>                                                
+                                <a href="https://github.com/cjszk" target="blank"><img alt="github icon" src={githubIcon}/></a>                                                
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__linkedin">
-                                <a href="https://www.linkedin.com/in/christopher-whiteman-474a89162/" target="blank"><img style={{width: '28px'}} src={linkedInIcon}/></a>                        
+                                <a href="https://www.linkedin.com/in/christopher-whiteman-474a89162/" target="blank"><img alt="linkedIn icon" style={{width: '28px'}} src={linkedInIcon}/></a>                        
                             </li>
                         </ul>
                     </div>

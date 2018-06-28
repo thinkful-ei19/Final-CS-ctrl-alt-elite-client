@@ -44,7 +44,7 @@ export default class LineGraph extends React.Component{
 
            const totalAppointmentsForUser = this.props.user.appointments.length;
            
-           const filterAppts = this.props.user.appointments.map((appointment) => {
+           this.props.user.appointments.map((appointment) => {
            const formatTime = moment(appointment.time).format('MMMM Do YYYY');
            if (formatTime.includes('January')) {
                 janCount ++;
@@ -73,7 +73,7 @@ export default class LineGraph extends React.Component{
             }           
        });
 
-        const filterApptList = this.props.user.appointments.map((appointment) => {
+        this.props.user.appointments.map((appointment) => {
         const formatTime = moment(appointment.time).format('MMM').toUpperCase();
         const arrayOfTime = formatTime.split(' ');
         
@@ -125,7 +125,7 @@ export default class LineGraph extends React.Component{
                     </Link>
                         <div className="report__center">
                             <h1>Monthly Appointments History</h1>
-                            <h3>There were no appointments during the month of {this.state.name}</h3>
+                            <h3>There were no appointments during the month of {this.state.name} </h3>
                         </div>
                     </div>
                 )
