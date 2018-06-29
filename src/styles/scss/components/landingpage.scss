@@ -43,12 +43,16 @@
     @include respond(tab-port) {
         height: 50vh;
     }
-    @include respond(phone) {
-        height: 37.5vh;
-    }
     @include respond(phone-land) {
         height: 100vh;
     }
+    @include respond(phone) {
+        height: 37.5vh;
+    }
+    @include respond(small-phone) {
+        
+    }
+
 }
 
 .nav {
@@ -154,8 +158,8 @@
                 font-size: 5rem;
             }
             @include respond(small-phone) {
-                margin-top: 15rem;
-                font-size: 4rem;
+                margin-top: 12rem;
+                font-size: 3rem;
             }
         }
         &__bottom {
@@ -168,10 +172,15 @@
                 margin-left: 8.5rem;
                 font-size: 5rem;
             }
+            @include respond(phone) {
+                margin-left: 4rem;
+                // padding-right: 5rem;
+                transform: translateY(-50%);
+            }
             @include respond(small-phone) {
-                margin-top: 20rem;
-                margin-left: 8rem;
-                font-size: 4rem;
+                margin-top: 16rem;
+                margin-left: 5rem;
+                font-size: 3rem;
             }
         }
     }
@@ -218,7 +227,9 @@
         @include respond(phone-land) {
             height: 625vh;
         }
-
+        @include respond(small-phone) {
+            height: 300vh;
+        }
 
         &__item {
             display: flex;
@@ -267,6 +278,10 @@
                 margin: 5rem 0;
                 font-family: 'Carme', sans-serif;
                 text-transform: uppercase;
+                @include respond(phone) {
+                    text-align: center;
+                    margin: 2rem;
+                }
             }
 
             &__details {
@@ -332,7 +347,7 @@
                     margin-left: 20rem;
                     @include respond(phone) {
                         width: 50%;
-                        margin-left: 15rem;
+                        margin-left: 5rem;
                         margin-top: 5rem;
                     }
                 }
@@ -342,6 +357,9 @@
                 margin: 5rem 0;
                 font-family: 'Carme', sans-serif;
                 text-transform: uppercase;
+                @include respond(phone) {
+                    margin: 0rem;
+                }
             }
 
             &__details {
@@ -418,9 +436,11 @@
         line-height: 1.2;
         @include respond(tab-port) {
             font-size: 3rem;
+
         }
         @include respond(small-phone) {
-            font-size: 2.5rem;
+            font-size: 3rem;
+            padding-top: 6rem;
         }
     }
 
@@ -447,8 +467,23 @@
 
     &__list {
         &__item{
+            &__header{
+                font-size: 3rem;
+                text-transform: uppercase;
+                font-family: 'Carme', sans-serif;
+                @include respond(phone) {
+                    font-size: 2.2rem;
+                    padding-bottom: 1rem;
+                }
+                @include respond(small-phone) {
+                    font-size: 2.2rem;
+                    padding-top: 5rem;
+                    padding-bottom:2rem;
+                }
+            }
             &__details{
                 color: $color-gray;
+                font-size: 2.4rem;
             }
         }
     }

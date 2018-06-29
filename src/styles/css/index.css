@@ -552,12 +552,12 @@ svg {
   @media (max-width: 60em) {
     .head {
       height: 50vh; } }
-  @media (max-width: 40em) {
-    .head {
-      height: 37.5vh; } }
   @media (max-width: 60em) and (max-height: 40em) {
     .head {
       height: 100vh; } }
+  @media (max-width: 40em) {
+    .head {
+      height: 37.5vh; } }
 
 .nav {
   padding: 2.7rem;
@@ -635,8 +635,8 @@ svg {
           font-size: 5rem; } }
       @media (max-width: 25em) {
         .welcome__message__top {
-          margin-top: 15rem;
-          font-size: 4rem; } }
+          margin-top: 12rem;
+          font-size: 3rem; } }
     .welcome__message__bottom {
       position: absolute;
       text-transform: uppercase;
@@ -647,11 +647,15 @@ svg {
           margin-top: 25rem;
           margin-left: 8.5rem;
           font-size: 5rem; } }
+      @media (max-width: 40em) {
+        .welcome__message__bottom {
+          margin-left: 4rem;
+          transform: translateY(-50%); } }
       @media (max-width: 25em) {
         .welcome__message__bottom {
-          margin-top: 20rem;
-          margin-left: 8rem;
-          font-size: 4rem; } }
+          margin-top: 16rem;
+          margin-left: 5rem;
+          font-size: 3rem; } }
 
 .about {
   background-color: white;
@@ -687,6 +691,9 @@ svg {
     @media (max-width: 60em) and (max-height: 40em) {
       .about__list {
         height: 625vh; } }
+    @media (max-width: 25em) {
+      .about__list {
+        height: 300vh; } }
     .about__list__item {
       display: flex;
       justify-content: space-between; }
@@ -723,6 +730,10 @@ svg {
         margin: 5rem 0;
         font-family: 'Carme', sans-serif;
         text-transform: uppercase; }
+        @media (max-width: 40em) {
+          .about__list__item__header {
+            text-align: center;
+            margin: 2rem; } }
       .about__list__item__details {
         font-size: 2.4rem; }
     .about__list__item-two {
@@ -769,13 +780,16 @@ svg {
           @media (max-width: 40em) {
             .about__list__item-three__image__second {
               width: 50%;
-              margin-left: 15rem;
+              margin-left: 5rem;
               margin-top: 5rem; } }
       .about__list__item-three__header {
         font-size: 3.6rem;
         margin: 5rem 0;
         font-family: 'Carme', sans-serif;
         text-transform: uppercase; }
+        @media (max-width: 40em) {
+          .about__list__item-three__header {
+            margin: 0rem; } }
       .about__list__item-three__details {
         font-size: 2.4rem; }
     .about__list__item-four__image {
@@ -833,7 +847,8 @@ svg {
         font-size: 3rem; } }
     @media (max-width: 25em) {
       .whats-new__header {
-        font-size: 2.5rem; } }
+        font-size: 3rem;
+        padding-top: 6rem; } }
   .whats-new__left {
     display: inline-block;
     padding-top: 5rem;
@@ -851,8 +866,22 @@ svg {
     @media (max-width: 60em) {
       .whats-new__right {
         padding: 0; } }
+  .whats-new__list__item__header {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: 'Carme', sans-serif; }
+    @media (max-width: 40em) {
+      .whats-new__list__item__header {
+        font-size: 2.2rem;
+        padding-bottom: 1rem; } }
+    @media (max-width: 25em) {
+      .whats-new__list__item__header {
+        font-size: 2.2rem;
+        padding-top: 5rem;
+        padding-bottom: 2rem; } }
   .whats-new__list__item__details {
-    color: #616A6B; }
+    color: #616A6B;
+    font-size: 2.4rem; }
 
 .about-us {
   background-color: #333;
