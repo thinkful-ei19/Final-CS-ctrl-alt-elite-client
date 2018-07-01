@@ -19,7 +19,7 @@
     
     // text-align: center;
     font-family: 'Roboto', sans-serif;
-
+    color: #424949;
     // &__button {
     //     text-align: center;
     // }
@@ -37,7 +37,7 @@
 }
 
 .head {
-    background-color: $color-three;
+    background-color: #F4F4F4;
     height: 95vh;
 
     @include respond(tab-port) {
@@ -87,7 +87,7 @@
         }
 
         &:hover {
-            color: $color-schedulr-name;
+            color: #2980B9;
         }
 
         &:before {
@@ -144,7 +144,7 @@
     }
 
     &__message {
-        color: $color-message;
+        color: #AED6F1;
         font-family: 'Carme', sans-serif;
         font-size: 3.7rem;
     
@@ -482,7 +482,7 @@
                 }
             }
             &__details{
-                color: $color-gray;
+                color: #616A6B;
                 font-size: 2.4rem;
             }
         }
