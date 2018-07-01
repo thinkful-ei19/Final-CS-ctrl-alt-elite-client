@@ -537,7 +537,8 @@ svg {
       margin: 0rem 0rem; } }
 
 .landing-page {
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  color: #424949; }
 
 #app-name {
   font-size: 80px;
