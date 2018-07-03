@@ -2,9 +2,9 @@
 
 [Schedulr](https://schedulr.netlify.com/) provides a fast and easy way for business owners to schedule and keep track of all of their appointments with their clients. Utilizes an automated emailing system to send out confirmations and reminders.
 
-Demo Account__
-user: demo__
-password: password__
+Demo Account<br />
+user: demo<br />
+password: password<br />
 
 ## Screenshots
 
