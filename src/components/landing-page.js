@@ -179,7 +179,7 @@ export default function LandingPage(props) {
                         <ul className="about-us__person__list">
                             {/* <li className="about-us__person__list__item about-us__person__list__name">Alexa Scott</li> */}
                             <li className="about-us__person__list__item about-us__person__list__portfolio">
-                                <a className="about-us__person__list__portfolio__text" href="" target="blank">ALEXA SCOTT</a>
+                                <a className="about-us__person__list__portfolio__text" href="https://alexa-scott.netlify.com" target="blank">ALEXA SCOTT</a>
                             </li>
                             <li className="about-us__person__list__item about-us__person__list__github">
                                 <a href="https://github.com/AlexaScott33" target="blank"><img alt="github icon" src={githubIcon}/></a>                                                
