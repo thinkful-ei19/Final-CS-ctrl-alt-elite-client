@@ -600,7 +600,7 @@ svg {
       transform: scale(1); }
 
 .welcome {
-  background-image: url("../images/office.jpg");
+  background-image: url("../images/office-resized.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
