@@ -1,19 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux';
-// import Calendar from 'react-calendar';
 import {Redirect} from 'react-router-dom';
 import Schedule from './schedule';
 import Navigation from './navigation';
-// import { setDate } from '../actions/appointment';
 import Calendar from './calendar';
 import WeeklyView from './weekly-view'
-import background from '../media/whiteHoriz.jpg';
 import requiresLogin from './requires-login';
-// import AptForm from './AptForm';
 
 import lightBackground from '../media/laptop.jpg';
 import darkBackground from '../media/deskWhite.jpg';
-import oceanBackground from '../media/wB.jpg'; 
 
 export class Dashboard extends React.Component {
 
@@ -48,7 +43,6 @@ export class Dashboard extends React.Component {
                         <Navigation/>
                         <div className="components">
                             <WeeklyView />
-                            {/* <AptForm /> */}
                             <Schedule />                            
                         </div>
                     </div>
@@ -57,11 +51,11 @@ export class Dashboard extends React.Component {
         }
         return (
             <section style={ sectionStyle }>
-                    <div className="dashboard">
+                <div className="dashboard">
                     <Navigation/>
                     <div className="components">
+                    <h2 className="dashboard__welcome">Logged in as {this.props.currentUser.username}</h2>
                         <Calendar />
-                        {/* <AptForm /> */}
                         <Schedule />
                     </div>
                 </div>

@@ -26,13 +26,10 @@ class ConfirmDelete extends React.Component {
   };
 
   render() {
-    // console.log('currentUser id', this.props.currentUser.id);
-    // console.log('authToken', this.props.authToken);
-    // console.log('this is the aptId to delete', this.props.aptId);
     return (
-      <div>
-        <IconButton className="appointments__delete" aria-label="Delete" onClick={this.handleClickOpen}>
-        <DeleteIcon />
+      <div className="appointments__delete">
+        <IconButton className="appointments" aria-label="Delete" onClick={this.handleClickOpen}>
+          <DeleteIcon />
         </IconButton>
         <Dialog
           open={this.state.open}
@@ -40,17 +37,17 @@ class ConfirmDelete extends React.Component {
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
         >
-          <DialogTitle id="alert-dialog-title">{"Confirm Appointment Deletion"}</DialogTitle>
+          <DialogTitle className="appointments__delete__header" id="alert-dialog-title">{"Confirm Appointment Deletion"}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
               Are you sure you want to delete your appointment?
             </DialogContentText>
           </DialogContent>
           <DialogActions>
-            <Button onClick={this.handleClose} color="primary">
+            <Button className="appointments__delete__cancel" onClick={this.handleClose} color="primary">
               Cancel
             </Button>
-            <Button onClick={() => {
+            <Button className="appointments__delete__confirm" onClick={() => {
               this.props.dispatch(deleteAppointment(this.props.authToken, this.props.aptId, this.props.currentUser.id));
               this.handleClose();
               }}

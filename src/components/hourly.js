@@ -22,6 +22,7 @@ class Hourly extends React.Component {
                     && (moment(apt.time).valueOf()) <= (moment(this.props.dates[6].value).valueOf() + 86400000)) {
                         return apt;
                     }
+                    return;
                 })
                 .sort((a,b) => {return moment(a.time).valueOf() - moment(b.time).valueOf()})
             if (appointments[0]) {

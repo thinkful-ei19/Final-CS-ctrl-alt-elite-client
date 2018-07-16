@@ -103,8 +103,6 @@ class EditForm extends React.Component {
                 })
             }
         })
-
-
     }
 
     render() {
@@ -248,7 +246,6 @@ class EditForm extends React.Component {
 }
 
 const mapStateToProps = state => {
-    // console.log('STATE:', state.auth.currentUser.id);
     return {
         authToken: state.auth.authToken,
         currentUser: state.auth.currentUser

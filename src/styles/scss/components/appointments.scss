@@ -26,11 +26,22 @@
     }
 
     &__edit {
+        display: inline-block;
         visibility: hidden;
     }
 
-    &__delete{
+    &__delete {
+        display: inline-block;
         visibility: hidden;
+
+        &__header > h2, &__header + div > p {
+            font-size: 2rem;
+        }
+
+        &__confirm > span, &__cancel > span {
+            font-size: 2rem;
+        }
+
     }
     
     &:hover {
@@ -43,6 +54,12 @@
         margin-right: 10rem;
         overflow-wrap: break-word;
         max-width: 30rem;
+
+        &__options {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
 
         &__time {
             color: $color-purple;
@@ -76,6 +93,15 @@
 
         & > * > * > *, & > * > * > * > * {
             color: $color-form-font !important;
+            font-size: 1.5rem;
+        }
+
+        & > div > div > h2, & > div > div > p, & > div > div > div > label  {
+            font-size: 2rem;
+        }
+
+        & > div > div > select, & > div > div > div > div > input {
+            font-size: 1.5rem;
         }
 
         & > div {
@@ -115,17 +141,26 @@
 
     &__message {
         font-size: 2rem;
+        text-align: left;
     }
 }
 
 
 
 .appointments-form {
-    font-size: 1.5rem !important;
     display: inline-block;
+
+    & > div > div > input {
+        font-size: 1.5rem;
+    }
 }
 
 .appointments-specify {
     text-align: right;
-    padding: 0 2rem;
+    padding: 0 1.2rem;
+
+    & > button > span > svg {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
 }

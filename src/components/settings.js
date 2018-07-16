@@ -5,7 +5,7 @@ import Navigation from './navigation';
 import requiresLogin from './requires-login';
 import { changeTheme } from '../actions/auth';
 import ChangePasswordForm from './change-password';
-
+import SvgIcon from '@material-ui/core/SvgIcon';
 import lightBackground from '../media/laptop.jpg';
 import darkBackground from '../media/deskWhite.jpg';
 
