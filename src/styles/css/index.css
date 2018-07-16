@@ -590,7 +590,7 @@ svg {
       @media (max-width: 60em) {
         .welcome__message__bottom {
           margin-top: 35rem;
-          margin-left: 8.5rem;
+          margin-left: 5.5rem;
           font-size: 5rem; } }
       @media (max-width: 25em) {
         .welcome__message__bottom {
