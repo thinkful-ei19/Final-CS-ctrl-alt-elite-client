@@ -63,7 +63,7 @@ export class App extends React.Component {
                 <Route exact path="/" component={LandingPage} />
                 <Route exact path="/login" component={LogIn} />
                 <Route exact path="/dashboard" component={Dashboard} />
-                <Route exact path="/weekly" component={WeeklyView} />                
+                <Route exact path="/weekly" component={WeeklyView} />
                 <Route exact path="/clients" component={Clients} />
                 <Route exact path="/register" component={RegistrationPage} />
                 <Route exact path="/reports" component={Reports} />

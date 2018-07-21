@@ -645,8 +645,13 @@ svg {
       margin-left: 10.5rem; }
       @media (max-width: 60em) {
         .welcome__message__bottom {
+<<<<<<< HEAD
+          margin-top: 35rem;
+          margin-left: 5.5rem;
+=======
           margin-top: 25rem;
           margin-left: 8.5rem;
+>>>>>>> 0cdda47062728ac7dd92fd00710da37d36921017
           font-size: 5rem; } }
       @media (max-width: 40em) {
         .welcome__message__bottom {
