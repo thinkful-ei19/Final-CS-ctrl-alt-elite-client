@@ -650,8 +650,7 @@ svg {
           font-size: 5rem; } }
       @media (max-width: 40em) {
         .welcome__message__bottom {
-          margin-left: 4rem;
-          transform: translateY(-50%); } }
+          margin-left: 4rem; } }
       @media (max-width: 25em) {
         .welcome__message__bottom {
           margin-top: 16rem;
