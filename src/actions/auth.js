@@ -163,7 +163,8 @@ export const changeTheme = (authToken, theme, userId) => (dispatch) => {
             }
     })
     .then((res) => {
-        res.json()
+        console.log(res)
+        res.json();
     })
     .then(() => {
         dispatch(getUserInfoById(authToken, userId))
