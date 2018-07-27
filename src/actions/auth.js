@@ -180,7 +180,7 @@ export const changePassword = (authToken, password, userId) => (dispatch) => {
     const updateObject = {
         password: password
     }
-    fetch(`${API_BASE_URL}/change-password/${userId}`, {
+    fetch(`${API_BASE_URL}/users/${userId}`, {
         method: 'PUT', 
         body: JSON.stringify(updateObject),
         headers: {

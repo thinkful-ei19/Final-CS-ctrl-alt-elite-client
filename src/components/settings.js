@@ -55,7 +55,7 @@ export class Settings extends React.Component {
                         </div>
                         <div className="settings__change-password">
                             <h2 className="settings__change-password__header" >Change Password</h2>
-                            <ChangePasswordForm authToken={this.props.authToken} userId={this.props.currentUser.id} />
+                            <ChangePasswordForm currentUser={this.props.currentUser} authToken={this.props.authToken} userId={this.props.currentUser.id} />
                         </div>
                     </div>
                 </span>

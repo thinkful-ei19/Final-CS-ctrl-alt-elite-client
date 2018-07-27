@@ -950,7 +950,8 @@ svg {
   width: 70%;
   overflow-y: auto;
   display: inline-block;
-  margin-right: 5rem; }
+  margin-right: 5rem;
+  max-height: 90vh; }
   @media (max-width: 85.375em) {
     .weekly-view {
       width: 60%; } }
@@ -1124,6 +1125,9 @@ svg {
   @media (max-width: 40em) {
     .client-list {
       width: 70%; } }
+  @media (max-width: 25em) {
+    .client-list {
+      margin-left: 7.5rem; } }
 
 .client__list__div {
   overflow-y: auto;
