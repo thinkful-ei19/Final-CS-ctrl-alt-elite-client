@@ -20,7 +20,11 @@ export class ChangePasswordForm extends React.Component {
     }
 
     onSubmit(password) {
-        this.props.dispatch(changePassword(this.props.authToken, password, this.props.userId))
+        if (this.props.currentUser.username === 'demo') {
+            alert('Sorry, because this is a demo account, you cannot change the password.')
+        } else {
+            this.props.dispatch(changePassword(this.props.authToken, password, this.props.userId)) 
+        }
     }
 
     render() {

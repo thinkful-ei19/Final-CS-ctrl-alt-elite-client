@@ -23,6 +23,9 @@
     @include respond(phone) {
         width: 70%;
     }
+    @include respond(small-phone) {
+        margin-left: 7.5rem;
+    }
 } 
 
 .client__list__div {

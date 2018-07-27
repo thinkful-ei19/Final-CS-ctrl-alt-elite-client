@@ -645,18 +645,12 @@ svg {
       margin-left: 10.5rem; }
       @media (max-width: 60em) {
         .welcome__message__bottom {
-<<<<<<< HEAD
-          margin-top: 35rem;
-          margin-left: 5.5rem;
-=======
           margin-top: 25rem;
           margin-left: 8.5rem;
->>>>>>> 0cdda47062728ac7dd92fd00710da37d36921017
           font-size: 5rem; } }
       @media (max-width: 40em) {
         .welcome__message__bottom {
-          margin-left: 4rem;
-          transform: translateY(-50%); } }
+          margin-left: 4rem; } }
       @media (max-width: 25em) {
         .welcome__message__bottom {
           margin-top: 16rem;
@@ -956,7 +950,8 @@ svg {
   width: 70%;
   overflow-y: auto;
   display: inline-block;
-  margin-right: 5rem; }
+  margin-right: 5rem;
+  max-height: 90vh; }
   @media (max-width: 85.375em) {
     .weekly-view {
       width: 60%; } }
@@ -1130,6 +1125,9 @@ svg {
   @media (max-width: 40em) {
     .client-list {
       width: 70%; } }
+  @media (max-width: 25em) {
+    .client-list {
+      margin-left: 7.5rem; } }
 
 .client__list__div {
   overflow-y: auto;
